@@ -1,0 +1,104 @@
+{
+  "restaurant_id": 1,
+  "en": {
+    "section": "Special offers",
+    "offers": [
+      {
+        "id": 1,
+        "title": "Free Grilled sea bass and shellfish fettuccini",
+        "image": ".././admin/assets/img/home/media/7.jpeg",
+        "description": "Get free Grilled sea bass and shellfish fettuccini from orders higher than 28.00\u20ac!",
+        "details": [
+          { "text": "Only on Tuesdays", "class": "list-check" },
+          { "text": "Order higher than 28.00\u20ac", "class": "false" },
+          { "text": "Unless one Grilled sea bass and shellfish fettuccini is ordered", "class": "list-check" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Chip Friday",
+        "image": ".././admin/assets/img/home/media/11.jpeg",
+        "description": "10% Off for all dishes!",
+        "details": [
+          { "text": "Only on Friday", "class": "list-check" },
+          { "text": "All products", "class": "false" },
+          { "text": "Online order", "class": "list-check" }
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "section": "Offres sp\u00e9ciales",
+    "offers": [
+      {
+        "id": 1,
+        "title": "Grillades de bar et fettuccini aux fruits de mer offerts",
+        "image": ".././admin/assets/img/home/media/7.jpeg",
+        "description": "Obtenez des grillades de bar et fettuccini aux fruits de mer offerts pour toute commande de plus de 28,00\u20ac !",
+        "details": [
+          { "text": "Uniquement le mardi", "class": "list-check" },
+          { "text": "Commande sup\u00e9rieure \u00e0 28,00\u20ac", "class": "false" },
+          { "text": "Sauf si une grillade de bar et fettuccini aux fruits de mer est command\u00e9e", "class": "list-check" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Scampis \u00e0 l'ail et aux fruits de mer offerts",
+        "image": ".././admin/assets/img/home/media/7.jpeg",
+        "description": "Obtenez des scampis \u00e0 l'ail et aux fruits de mer offerts pour toute commande de plus de 15,60\u20ac !",
+        "details": [
+          { "text": "Uniquement le week-end", "class": "list-check" },
+          { "text": "Commande sup\u00e9rieure \u00e0 15,60\u20ac", "class": "false" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Vendredi \u00e0 th\u00e8me - R\u00e9duction de 10% sur tous les plats",
+        "image": ".././admin/assets/img/home/media/11.jpeg",
+        "description": "R\u00e9duction de 10% sur tous les plats !",
+        "details": [
+          { "text": "Uniquement le vendredi", "class": "list-check" },
+          { "text": "Tous les produits", "class": "list-check" },
+          { "text": "Commande en ligne", "class": "list-check" }
+        ]
+      }
+    ]
+  },
+  "nl": {
+    "section": "Speciale aanbiedingen",
+    "offers": [
+      {
+        "id": 1,
+        "title": "Gratis gegrilde zeebaars en schelpdierenfettuccini",
+        "image": ".././admin/assets/img/home/media/7.jpeg",
+        "description": "Ontvang gratis gegrilde zeebaars en schelpdierenfettuccini bij bestellingen van meer dan 28,00\u20ac!",
+        "details": [
+          { "text": "Alleen op dinsdag", "class": "list-check" },
+          { "text": "Bestelling van meer dan 28,00\u20ac", "class": "false" },
+          { "text": "Tenzij er \u00e9\u00e9n gegrilde zeebaars en schelpdierenfettuccini wordt besteld", "class": "list-check" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Scampi met knoflook en schelpdieren",
+        "image": ".././admin/assets/img/home/media/7.jpeg",
+        "description": "Ontvang gratis scampi met knoflook en schelpdieren bij bestellingen van meer dan 15,60\u20ac!",
+        "details": [
+          { "text": "Alleen in het weekend", "class": "list-check" },
+          { "text": "Bestelling van meer dan 15,60\u20ac", "class": "false" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Vrijdagkorting - 10% korting op alle gerechten",
+        "image": ".././admin/assets/img/home/media/11.jpeg",
+        "description": "10% korting op alle gerechten!",
+        "details": [
+          { "text": "Alleen op vrijdag", "class": "list-check" },
+          { "text": "Alle producten", "class": "list-check" },
+          { "text": "Online bestelling", "class": "list-check" }
+        ]
+      }
+    ]
+  }
+}

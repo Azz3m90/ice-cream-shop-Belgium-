@@ -1,0 +1,147 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#container {
+  overflow: hidden;
+  width: 100%;
+  margin: 50px auto;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+}
+h1 {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 26px;
+  /*color:#F00;*/
+  text-align: center;
+  font-weight: bold;
+}
+h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  margin-left: 5px;
+  background: #1c1c1c;
+  float: left;
+  text-align: center;
+  color: #fff;
+}
+h2 a {
+  text-decoration: none;
+  color: #fff;
+}
+h2:hover {
+  background: #424242;
+}
+h3 {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 35px;
+}
+h4 {
+  font: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  float: right;
+}
+h5 {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  margin-right: 10px;
+  margin-top: 0px;
+  width: 190px;
+  float: left;
+}
+h6 {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  margin-right: 10px;
+  margin-top: 0px;
+  padding: 5px;
+  width: 180px;
+  float: left;
+}
+h7 {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  margin-right: 10px;
+  margin-top: 0px;
+  padding: 5px;
+}
+.a {
+  width: 325px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.b {
+  width: 200px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.c {
+  width: 120px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #ccc;
+}
+.content_wrapper table {
+  border: 1px solid #f0f0f0;
+  width: 100%;
+}
+.content_wrapper table th {
+  background: #0b615e;
+  text-align: left;
+  color: #fff;
+  padding-left: 5px;
+  border: 1px solid #f0f0f0;
+}
+.content_wrapper table input[type='button'],
+.content_wrapper table select,
+.content_wrapper table a {
+  margin: 0px;
+}
+#subject {
+  width: 605px;
+}
+.content_wrapper table input[type='text'] {
+  width: 35px;
+  margin: 5px;
+}
+.content_wrapper table textarea {
+  width: 800px;
+  height: 380px;
+}
+.content_wrapper table input[type='submit'],
+.content_wrapper table h8 {
+  float: right;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding: 5px;
+  font-size: 12px;
+  color: #fff;
+  background: #1c1c1c;
+  cursor: pointer;
+  z-index: 99999;
+}
+.content_wrapper table input[type='submit']:hover,
+.content_wrapper table h8:hover {
+  background: #2e2e2e;
+}
+.content_wrapper table input[name='channel'] {
+  width: 590px;
+}
+#image {
+  width: 612px;
+  height: 30px;
+  border: 1px solid #f0f0f0;
+  background: #f1f1f1;
+}
