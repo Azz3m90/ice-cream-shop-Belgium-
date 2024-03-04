@@ -10,9 +10,10 @@
  <meta http-equiv="Pragma" content="no-cache" />
  <meta http-equiv="Expires" content="0" />
  <!-- Title -->
- <title>MATTHIAS AND SEA</title>
+ <title>GELATO NATURALE - Découvrez nos Saveurs Artisanales</title>
+
  <!-- Favicons -->
- <link rel="shortcut icon" href="assets/img/svg/matthias-and-sea.svg">
+ <link rel="shortcut icon" href="assets/img/svg/gelatonaturale.svg">
  <!--<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">-->
  <!-- Fonts -->
  <!--<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@100;200;400;500&display=swap" rel="stylesheet">-->
@@ -36,7 +37,7 @@
  <!-- Open Graph meta tags for social media sharing -->
  <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
  <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
- <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg">
+ <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
  <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index.php">
  <script src="./dist/js/menu/axios.min.js"></script>
  <script src="./dist/js/clearCache.js"></script>
@@ -47,7 +48,7 @@
  {
   "@context": "http://schema.org",
   "@type": "Restaurant",
-  "name": "Matthias and Sea",
+  "name": "gelatonaturale",
   "description": "Tarcienne's finest seafood restaurant.",
   "address": {
    "@type": "PostalAddress",
@@ -59,7 +60,7 @@
   },
   "priceRange": "€€",
   "url": "https://www.matthiasandsea.be/matthias-and-sea/index.php",
-  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg",
+  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
   "telephone": "+32-071-21-86-20"
  }
  </script>
@@ -67,15 +68,27 @@
 
 <body>
  <div id="body-wrapper" class="animsition">
-  <header id="header" class="light">
+ <header id="header" class="light">
    <div class="container">
     <div class="row">
-     <!-- Logo and navigation -->
-     <div class="col-md-3">
+    <style>
+    .italian-flag {
+      background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
+        display: inline-block;
+        padding: 10px;
+    }
+    .title {
+        font-size: 24px; /* Adjust the font size */
+        font-weight: bold; /* Add bold font weight */
+        margin-top: 10px; /* Add some top margin for spacing */
+        color: #333; /* Set the color to a darker shade for better readability */
+    }
+</style>
+     <div class="col-md-3 ">
       <!-- Logo -->
-      <div class="module module-logo dark">
-       <a href="index.php">
-        <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px; height: 100px;">
+      <div class="module module-logo dark italian-flag">
+       <a href="index-en.php">
+        <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
        </a>
       </div>
      </div>
@@ -86,33 +99,11 @@
         <li>
          <a href="index.php">Accueil</a>
         </li>
-        <li class="has-dropdown">
-         <a href="#">À Propos</a>
-         <div class="dropdown-container">
-          <ul class="dropdown-mega">
-           <li>
-            <a href="page-about.php">Qui sommes-nous</a>
-           </li>
-           <li>
-            <a href="page-gallery.php">Galerie</a>
-           </li>
-          </ul>
-          <div class="dropdown-image">
-           <img src="./assets/img/dropdown-about/dropdown-about.jpg" alt="">
-          </div>
-         </div>
-        </li>
         <li>
-         <a href="menu-grid-navigation.php">MENU</a>
+         <a href="page-gallery.php">Galerie</a>
         </li>
         <li>
          <a href="page-contact.php">Contact</a>
-        </li>
-        <li>
-         <a href="book-a-table.php">Réserver une table</a>
-        </li>
-        <li>
-         <a href="images.php">Traiteur </a>
         </li>
        </ul>
       </nav>

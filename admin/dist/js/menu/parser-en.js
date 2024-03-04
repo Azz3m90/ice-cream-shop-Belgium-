@@ -69,7 +69,7 @@ axios
         text += `<div class="col-lg-4 col-6">
             <!-- Menu Item -->
             <div class="menu-item menu-grid-item">
-                <img class="mb-4" src="./assets/img/matthiasandsea.jpg" style="width: 300px;height: 200px;" alt="${plateName}">
+                <img class="mb-4" src="./assets/img/gelatonaturale.svg" style="width: 300px;height: 200px;" alt="${plateName}">
                 <h6 class="mb-0">${plateName}</h6>
                 <span class="text-muted text-sm">${description}</span>
                 <div class="row align-items-center mt-4">

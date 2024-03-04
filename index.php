@@ -28,8 +28,8 @@
 </div>
 </div>
 </header>
+<!-- Header -->
 <header id="header-mobile" class="light">
- <!-- Mobile header content -->
  <div class="module module-nav-toggle">
   <a href="#" id="nav-toggle" data-toggle="panel-mobile">
    <span></span>
@@ -39,10 +39,14 @@
   </a>
  </div>
  <div class="module module-logo">
-  <a href="index.php">
-   <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
+  <a href="index-en.php">
+   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
   </a>
  </div>
+ <!-- Cart -->
+ <!--
+        <a href="#" class="module module-cart" data-toggle="panel-cart"><i class="ti ti-shopping-cart"></i><span class="notification">0</span></a>
+      -->
 </header>
 <!-- Section - Main -->
 <!-- Header / End -->
@@ -53,38 +57,40 @@
   <div class="container dark">
    <div class="slide-container">
     <div id="section-main-1-carousel-image" class="image inner-controls">
-     <div class="slide">
-      <div class="bg-image">
-       <img src="assets/img/home/caviar.webp" alt="caviar">
+        <!-- Image carousel -->
+        <div class="slide">
+          <div class="bg-image">
+            <img src="assets/img/icecream/carousel-1.jpg" alt="Vanilla Ice Cream">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="bg-image">
+            <img src="assets/img/icecream/carousel-2.jpg" alt="Chocolate Ice Cream">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="bg-image">
+            <img src="assets/img/icecream/carousel-3.jpg" alt="Strawberry Ice Cream">
+          </div>
+        </div>
       </div>
-     </div>
-     <div class="slide">
-      <div class="bg-image">
-       <img src="assets/img/home/media/10.jpeg" alt="">
-      </div>
-     </div>
-     <div class="slide">
-      <div class="bg-image">
-       <img src="assets/img/home/media/7.jpeg" alt="">
-      </div>
-     </div>
-    </div>
-    <div class="content dark">
-     <div id="section-main-1-carousel-content">
-      <div class="content-inner">
-       <h4 class="text-muted">Fruit de mer</h4>
-       <h1>Caviar</h1>
-       <div class="btn-group"></div>
-      </div>
-      <div class="content-inner">
-       <h3>Côté pastaio</h3>
-       <h5 class="text-muted mb-5">Ravioli faits main à la truffe noir!</h5>
-      </div>
-      <div class="content-inner">
-       <h1>Délicieux</h1>
-       <h5 class="text-muted mb-5">CÔTÉ CHALEUR POUR COMMENCER!</h5>
-      </div>
-     </div>
+      <!-- Content -->
+      <div class="content dark">
+        <div id="section-main-1-carousel-content">
+          <!-- Content slides -->
+          <div class="content-inner">
+            <h4 class="text-muted">Délice Gourmand</h4>
+            <h1>Glace</h1>
+          </div>
+          <div class="content-inner">
+            <h3>Saveurs Classiques</h3>
+            <h5 class="text-muted mb-5">Faites-vous plaisir avec nos saveurs classiques de vanille crémeuse, chocolat riche et fraise rafraîchissante.</h5>
+          </div>
+          <div class="content-inner">
+            <h1>Irresistible</h1>
+            <h5 class="text-muted mb-5">Satisfaites vos envies sucrées avec nos délicieuses créations de glaces!</h5>
+          </div>
+        </div>
      <nav class="content-nav">
       <a class="prev" href="#">
        <i class="ti ti-arrow-left"></i>
@@ -105,191 +111,82 @@
   <div class="image right col-md-6 offset-md-6">
    <div class="bg-image">
     <br>
-    <img src="assets/img/main/seafood.jpg" alt="">
+    <img src="assets/img/icecream/landing-image.jpg" alt="landing-image">
    </div>
   </div>
   <div class="container">
-   <div class="col-lg-5 col-md-9">
-    <h1>Les Meilleurs Fruits de Mer MATTHIAS AND SEA!</h1>
-    <p class="lead text-muted mb-5">Découvrez les délices de l'océan chez <strong>MATTHIAS AND SEA</strong>, niché dans
-     la charmante ville de Tarcienne. Notre restaurant est un joyau caché, offrant une expérience unique de dégustation
-     de fruits de mer qui saura captiver vos papilles. </p>
-   </div>
+  <div class="col-lg-5 col-md-9">
+   <h1>À propos de Notre Établissement</h1>
+   <p class="lead text-muted mb-5 text-justify">Notre établissement, ouvert en 2021 après des années de préparation, est spécialisé dans la production et la distribution de crèmes glacées et sorbets. Nous servons une variété de clients, notamment les glaciers, les restaurants, les collectivités, les grossistes et les épiceries fines, avec un service de livraison inclus. Notre engagement envers les produits naturels nous permet de répondre efficacement aux besoins de nos clients professionnels, en leur offrant des saveurs personnalisées. Pour les particuliers, nous proposons un salon de dégustation avec une terrasse magnifique, où ils peuvent savourer nos produits. De plus, ils ont la possibilité d'acheter nos glaces au litre et des gâteaux, selon les disponibilités, sans réservation préalable.</p>
   </div>
+ </div>
+  </div>
+  
  </section>
- <!-- Section - Menu -->
- <section class="section pb-0 protrude" hidden>
-  <div class="container">
-   <h1 class="mb-6">Notre menu</h1>
-  </div>
-  <!-- Section - Menu -->
-  <div class="container" id="MenuCarousel">
-   <div class="carousel" data-slick='{
-        "dots": true,
-        "slidesToShow": 3,
-        "slidesToScroll": 1,
-        "infinite": true,
-        "responsive": [
-          {
-            "breakpoint": 991,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 1
-            }
-          },
-          {
-            "breakpoint": 690,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1
-            }
-          }
-        ]
-      }' id="menuCarousel">
-    <!-- Here the injected menu elements will be added -->
-   </div>
-  </div>
-  <script>
-  // Function to render the menu elements
+<br>
 
-  function renderMenu(menuData) {
-   const menuCarouselContainer = document.getElementById('menuCarousel');
+        <!-- Section - Menu -->
+        <section class="section pb-0 protrude">
+            <div class="container">
+                <h1 class="mb-6"></h1>
+            </div>
 
-   menuData.forEach(category => {
-    // Create a div for each menu category
-    const categoryElement = document.createElement('div');
-    categoryElement.classList.add('menu-sample');
-    var relativePathFromDatabase = category.CategoryImage;
-    // Use the URL constructor to handle concatenation and normalization
-    var absoluteUrl = normalizeUrl(baseUrl, relativePathFromDatabase);
-    // Create the category content
-    categoryElement.innerHTML = `
-            <a href="menu-grid-navigation.php#${category.categoryName.replace(/\s+/g, '')}">
-              <img src="./assets/img/bg.png"  alt="${category.categoryName}" class="image">
-              <h5 class="title">${category.categoryName}</h5>
-            </a>
-          `;
+            <div class="menu-sample-carousel carousel inner-controls" data-slick='{
+                "dots": true,
+                "slidesToShow": 3,
+                "slidesToScroll": 1,
+                "infinite": true,
+                "responsive": [
+                    {
+                        "breakpoint": 991,
+                        "settings": {
+                            "slidesToShow": 2,
+                            "slidesToScroll": 1
+                        }
+                    },
+                    {
+                        "breakpoint": 690,
+                        "settings": {
+                            "slidesToShow": 1,
+                            "slidesToScroll": 1
+                        }
+                    }
+                ]
+            }'>
 
-    // Append the category to the container
-    menuCarouselContainer.appendChild(categoryElement);
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Burgers">
+                        <img src="./assets/img/surplace/surplace.jpg" alt="sur-place" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Sur place">Sur place</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pizza">
+                        <img src="./assets/img/ourcake/cake.jpg" alt="Nos bûches et gâteaux"  style="width: 500px;height:400px;">
+                        <h3 class="title" title="Nos bûches et gâteaux">Nos bûches et gâteaux</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pasta">
+                        <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Professionnels"> Profess- ionnels</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pasta">
+                        <img src="./assets/img/Reservations/reservation.jpg" alt="Réservations Traiteurs Évènements" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Réservations Traiteurs Évènements"> Bûches et Gâteaux</h3>
+                    </a>
+                </div>
+            </div>
 
-
-   });
-  }
-
-  // Define the URL for the JSON data file
-  const jsonUrl = './admin/php/dishes/load-dishes.php';
-
-  // Load the JSON data using Axios
-  axios.get(jsonUrl)
-   .then(response => {
-    const menuData = response.data.menu || []; // Use the menu data or default to an empty array
-    renderMenu(menuData);
-   })
-   .catch(error => {
-    console.error('Error loading JSON data:', error);
-    document.getElementById("menu-head").remove();
-    // You can provide a fallback behavior or display an error message to the user here.
-   });
-  </script>
- </section>
- <!-- Section - Offers -->
- <section class="section bg-light" hidden>
-  <!-- Section - Offers -->
-  <div class="container" id="Carousel">
-   <h1 id="offer-head" class="text-center mb-6">Offres spéciales</h1>
-
-   <div class="carousel" data-slick='{"dots": true}' id="specialOffers">
-    <!-- Here the injected special offer elements will be added -->
-   </div>
-  </div>
-  <script>
-  // Define the URL for the JSON data file
-  const url = './admin/php/offers/load_offers.php';
-
-  function normalizeUrl(baseUrl, relativePath) {
-   // Split the relative path into segments
-   var pathSegments = relativePath.split('/');
-
-   // Remove '../' and './' segments
-   var cleanedSegments = pathSegments.filter(function(segment) {
-    return segment !== '..' && segment !== '.';
-   });
-
-   // Join the cleaned segments
-   var cleanedPath = cleanedSegments.join('/');
-
-   // Combine with the base URL
-   var absoluteUrl = new URL(cleanedPath, baseUrl).href;
-
-   // Convert the URL
-   absoluteUrl = absoluteUrl.replace('/matthias-and-sea/matthias-and-sea/', '/matthias-and-sea/');
-
-
-   return absoluteUrl;
-  }
-  var baseUrl = "http://localhost/matthias-and-sea/";
-  // Function to render the special offer elements
-  function renderSpecialOffers(offersData) {
-   const specialOffersContainer = document.getElementById('specialOffers');
-
-   offersData.forEach(offer => {
-    // Create a div for each special offer
-    const specialOffer = document.createElement('div');
-    specialOffer.classList.add('special-offer');
-
-    var relativePathFromDatabase = offer.image;
-
-    // Use the URL constructor to handle concatenation and normalization
-    var absoluteUrl = normalizeUrl(baseUrl, relativePathFromDatabase);
-    // Create the special offer content
-    specialOffer.innerHTML = `
-                  <img src="./admin/${offer.image}" alt="" class="special-offer-image">
-                  <div class="special-offer-content">
-                    <h2 class="mb-2">${offer.title}</h2>
-                    <h5 class="text-muted mb-5">${offer.description}</h5>
-                    <ul class="list-check text-lg mb-0">
-                      ${offer.details
-                        .map(
-                          detail => `<li class="${detail.class}">${detail.text}</li>`
-                        )
-                        .join('')}
-                    </ul>
-                  </div>
-                `;
-
-    // Append the special offer to the container
-    specialOffersContainer.appendChild(specialOffer);
-   });
-  }
-
-  // Function to load JSON data from the specified URL
-  function loadJSONData(url, callback) {
-   fetch(url)
-    .then(response => response.json())
-    .then(data => callback(data))
-    .catch(error => console.error('Error loading JSON data:', error));
-  }
-
-  // Get the user's preferred language from the HTML lang attribute
-  const userLanguage = document.documentElement.lang;
-
-  // Example: Display the user's preferred language in the console
-  console.log(`User's Preferred Language: ${userLanguage}`);
-  // Load the JSON data and render the special offers
-  loadJSONData(url, function(data) {
-   try {
-    const offersData = data[userLanguage] || data['fr']; // Use the preferred language or default to English
-    renderSpecialOffers(offersData.offers);
-   } catch (error) {
-    document.getElementById("offer-head").remove();
-    // You can provide a fallback behavior or display an error message to the user here.
-   }
-  });
-  </script>
- </section>
+        </section>
  <!-- Section -->
- <section class="section section-lg dark bg-dark">
+ <section class="section section-lg dark bg-dark" hidden>
   <!-- BG Image -->
   <div class="bg-image bg-parallax">
    <div class="bg-video dark-overlay" data-src="assets/vid/seafood.mp4" data-type="video/mp4"></div>
@@ -314,7 +211,7 @@
    <div class="footer-first-row row">
     <div class="col-lg-3 text-center">
      <a href="index.php">
-      <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
+     <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 200px;" width="88"
        class="mt-5 mb-5">
      </a>
     </div>
@@ -421,7 +318,7 @@
 <nav id="panel-mobile">
  <div class="module module-logo bg-dark dark">
   <a href="#">
-   <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
   </a>
   <button class="close" data-toggle="panel-mobile">
    <i class="ti ti-close"></i>

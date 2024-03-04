@@ -9,9 +9,11 @@
  <meta http-equiv="Pragma" content="no-cache" />
  <meta http-equiv="Expires" content="0" />
  <!-- Title -->
- <title>MATTHIAS AND SEA</title>
+ <title>GELATO NATURALE - Ontdek Onze Ambachtelijke Smaakcombinaties</title>
+
+
  <!-- Favicons -->
- <link rel="shortcut icon" href="assets/img/svg/matthias-and-sea.svg">
+ <link rel="shortcut icon" href="assets/img/svg/gelatonaturale.svg">
  <!--<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">-->
  <!-- Fonts -->
  <!--<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@100;200;400;500&display=swap" rel="stylesheet">-->
@@ -33,7 +35,7 @@
  <!-- Open Graph meta tags for social media sharing -->
  <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
  <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
- <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg">
+ <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
  <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index-nl.php">
  <meta name="google-site-verification" content="sh4MDpPL9Ljv6PW11FN2obhXSK4QPfMnlmZtkr6NEh4" />
  <script src="./dist/js/menu/axios.min.js"></script>
@@ -44,7 +46,7 @@
  {
   "@context": "http://schema.org",
   "@type": "Restaurant",
-  "name": "Matthias and Sea",
+  "name": "gelatonaturale",
   "description": "Tarcienne's finest seafood restaurant.",
   "address": {
    "@type": "PostalAddress",
@@ -56,7 +58,7 @@
   },
   "priceRange": "€€",
   "url": "https://www.matthiasandsea.be/matthias-and-sea/index-nl.php",
-  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg",
+  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
   "telephone": "+32-071-21-86-20"
  }
  </script>
@@ -73,7 +75,7 @@
       <!-- Logo -->
       <div class="module module-logo dark">
        <a href="index-nl.php">
-        <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+        <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
        </a>
       </div>
      </div>
@@ -84,36 +86,11 @@
         <li>
          <a href="index-nl.php">Thuis</a>
         </li>
-        <li class="has-dropdown">
-         <a href="#">Over</a>
-         <div class="dropdown-container">
-          <ul class="dropdown-mega">
-           <li>
-            <a href="page-about-nl.php">Over ons</a>
-           </li>
-           <!--<li><a href="page-services-nl.php">Diensten</a></li>-->
-           <li>
+        <li>
             <a href="page-gallery-nl.php">Galerij</a>
            </li>
-           <!-- <li><a href="page-reviews-nl.php">Recensies</a></li><li><a href="page-faq-nl.php">FAQ</a></li> -->
-          </ul>
-          <div class="dropdown-image">
-           <img src="./assets/img/dropdown-about/dropdown-about.jpg" alt="">
-          </div>
-         </div>
-        </li>
-        <li>
-         <a href="menu-grid-navigation-nl.php">Menu</a>
-        </li>
-        <!--                           <li class="has-dropdown"><a href="#">Menu</a><div class="dropdown-container"><ul><li class="has-dropdown"><a href="#">Lijst</a><ul><li><a href="menu-list-navigation-nl.php">Navigatie</a></li><li><a href="menu-list-collapse-nl.php">Inklappen</a></li></ul></li><li class="has-dropdown"><a href="#">Raster</a><ul><li><a href="menu-grid-navigation.php">Menu</a></li><li><a href="menu-grid-collapse-nl.php">Inklappen</a></li></ul></li></ul></div></li><li><a href="page-offers-nl.php">Aanbiedingen</a></li>-->
         <li>
          <a href="page-contact-nl.php">Contact</a>
-        </li>
-        <li>
-         <a href="book-a-table-nl.php">Een tafel reserveren</a>
-        </li>
-        <li>
-         <a href="images-nl.php">Traiteur</a>
         </li>
        </ul>
       </nav>

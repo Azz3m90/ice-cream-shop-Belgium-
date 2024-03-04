@@ -47,7 +47,7 @@
  </div>
  <div class="module module-logo">
   <a href="index-nl.php">
-   <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
+   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
   </a>
  </div>
  <!-- Cart -->
@@ -129,7 +129,7 @@
  </section>
  <!-- Section -->
  <!--
-        <section class="section"><div class="container"><div class="row align-items-center flex-md-row-reverse"><div class="col-lg-4 offset-lg-2 col-md-6 mb-5 mb-md-0"><img src="assets/img/matthiasandsea.jpg" alt="" class="mb-5" width="130"><h4 class="mb-0">MATTHIAS AND SEA</h4><span class="text-muted">Adresse: Route de Philippeville 34 - 5651 Tarcienne</span><span class="text-muted">Cuisine: Fruits de mer</span><span class="text-muted">Budget: - 25 EUR</span><span class="text-muted">Modes de paiement: American Express</span><hr class="hr-md"><div class="row"><div class="col-sm-6 mb-3 mb-sm-0"><h6 class="mb-1 text-muted">Phone:</h6>
+        <section class="section"><div class="container"><div class="row align-items-center flex-md-row-reverse"><div class="col-lg-4 offset-lg-2 col-md-6 mb-5 mb-md-0"><img src="assets/img/gelatonaturale.svg" alt="" class="mb-5" width="130"><h4 class="mb-0">MATTHIAS AND SEA</h4><span class="text-muted">Adresse: Route de Philippeville 34 - 5651 Tarcienne</span><span class="text-muted">Cuisine: Fruits de mer</span><span class="text-muted">Budget: - 25 EUR</span><span class="text-muted">Modes de paiement: American Express</span><hr class="hr-md"><div class="row"><div class="col-sm-6 mb-3 mb-sm-0"><h6 class="mb-1 text-muted">Phone:</h6>
                                 +48 21200 2122 221
                             </div><div class="col-sm-6"><h6 class="mb-1 text-muted">E-mail:</h6><a href="#">hello@example.com</a></div></div><hr class="hr-md"><h6 class="mb-3 text-muted">Follow Us!</h6><a href="https://www.facebook.com/profile.php?id=100064692546589&ref=embed_page" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a></div><div class="col-lg-5 offset-lg-1 col-md-6"><div class="google-map h-500 shadow" data-lat="52.229675" data-lon="21.012230"></div></div></div></div></section>
       -->
@@ -140,7 +140,7 @@
    <div class="footer-first-row row">
     <div class="col-lg-3 text-center">
      <a href="index-nl.php">
-      <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
+      <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
        class="mt-5 mb-5">
      </a>
     </div>
@@ -328,7 +328,7 @@ include 'table-nl.php';
 <nav id="panel-mobile">
  <div class="module module-logo bg-dark dark">
   <a href="#">
-   <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
   </a>
   <button class="close" data-toggle="panel-mobile">
    <i class="ti ti-close"></i>

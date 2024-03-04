@@ -36,7 +36,7 @@
  <!-- Open Graph meta tags for social media sharing -->
  <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
  <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
- <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/./assets/img/matthiasandsea.jpg">
+ <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/./assets/img/gelatonaturale.svg">
  <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index.php">
  <script src="./dist/js/menu/axios.min.js"></script>
  <script src="./dist/js/clearCache.js"></script>
@@ -46,7 +46,7 @@
  {
   "@context": "http://schema.org",
   "@type": "Restaurant",
-  "name": "Matthias and Sea",
+  "name": "gelatonaturale",
   "description": "Tarcienne's finest seafood restaurant.",
   "address": {
    "@type": "PostalAddress",
@@ -58,7 +58,7 @@
   },
   "priceRange": "€€",
   "url": "https://www.matthiasandsea.be/matthias-and-sea/index.php",
-  "image": "https://www.matthiasandsea.be/matthias-and-sea/./assets/img/matthiasandsea.jpg",
+  "image": "https://www.matthiasandsea.be/matthias-and-sea/./assets/img/gelatonaturale.svg",
   "telephone": "+32-071-21-86-20"
  }
  </script>
@@ -97,7 +97,7 @@
       <!-- Logo -->
       <div class="module module-logo dark">
        <a href=".././index.php">
-        <img src="./assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+        <img src="./assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
        </a>
       </div>
      </div>

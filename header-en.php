@@ -10,9 +10,10 @@
  <meta http-equiv="Expires" content="0" />
 
  <!-- Title -->
- <title>MATTHIAS AND SEA</title>
+ <title>GELATO NATURALE - Discover Our Artisan Flavors</title>
+
  <!-- Favicons -->
- <link rel="shortcut icon" href="assets/img/svg/matthias-and-sea.svg">
+ <link rel="shortcut icon" href="assets/img/svg/gelatonaturale.svg">
  <!--<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">-->
  <!-- Fonts -->
  <!--<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@100;200;400;500&display=swap" rel="stylesheet">-->
@@ -34,7 +35,7 @@
  <!-- Open Graph meta tags for social media sharing -->
  <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
  <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
- <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg">
+ <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
  <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index-en.php">
  <meta property="og:type" content="website">
  <meta name="google-site-verification" content="sh4MDpPL9Ljv6PW11FN2obhXSK4QPfMnlmZtkr6NEh4" />
@@ -45,7 +46,7 @@
  {
   "@context": "http://schema.org",
   "@type": "Restaurant",
-  "name": "Matthias and Sea",
+  "name": "gelatonaturale",
   "description": "Tarcienne's finest seafood restaurant.",
   "address": {
    "@type": "PostalAddress",
@@ -57,7 +58,7 @@
   },
   "priceRange": "€€",
   "url": "https://www.matthiasandsea.be/matthias-and-sea/index-en.php",
-  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/matthiasandsea.jpg",
+  "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
   "telephone": "+32-071-21-86-20"
  }
  </script>
@@ -74,7 +75,7 @@
       <!-- Logo -->
       <div class="module module-logo dark">
        <a href="index-en.php">
-        <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+        <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
        </a>
       </div>
      </div>
@@ -85,48 +86,12 @@
         <li>
          <a href="index-en.php">Home</a>
         </li>
-        <!-- hiding other versions eng.Azzam-->
-        <!--
-                            <li class="has-dropdown"><a href="#">Home</a><div class="dropdown-container"><ul><li><a href="index-en.php">Home Basic</a></li><li><a href="index-burgers-en.php">Home Burgers</a></li><li><a href="index-slider-en.php">Home Fullwidth Slider</a></li><li><a href="index-video-en.php">Home Video</a></li><li><a href="index-fresh-en.php">Home Fresh <span class="badge badge-success">New</span></a></li><li><a href="index-dark-en.php">Home Dark <span class="badge badge-success">New</span></a></li></ul></div></li>
-                          -->
-        <li class="has-dropdown">
-         <a href="#">About</a>
-         <div class="dropdown-container">
-          <ul class="dropdown-mega">
-           <li>
-            <a href="page-about-en.php">About Us</a>
-           </li>
-           <!--<li><a href="page-services-en.php">Services</a></li>-->
-           <li>
-            <a href="page-gallery-en.php">Gallery</a>
-           </li>
-          </ul>
-          <div class="dropdown-image">
-           <img src="./assets/img/dropdown-about/dropdown-about.jpg" alt="">
-          </div>
-         </div>
-        </li>
         <li>
-         <a href="menu-grid-navigation-en.php">Menu</a>
+         <a href="page-gallery-en.php">Gallery</a>
         </li>
-        <!--<li class="has-dropdown"><a href="#">Menu</a><div class="dropdown-container"><ul><li class="has-dropdown"><a href="#">List</a><ul><li><a href="menu-list-navigation-en.php">Navigation</a></li><li><a href="menu-list-collapse-en.php">Collapse</a></li></ul></li><li class="has-dropdown"><a href="#">Grid</a><ul><li><a href="menu-grid-navigation-en.php">Menu</a></li><li><a href="menu-grid-collapse-en.php">Collapse</a></li></ul></li></ul></div></li><li><a href="page-offers-en.php">Offers</a></li>-->
         <li>
          <a href="page-contact-en.php">Contact</a>
         </li>
-        <li>
-         <a href="book-a-table-en.php">Book a table</a>
-        </li>
-        <li>
-         <a href="images-en.php">Caterer</a>
-        </li>
-        <!-- more options -->
-        <!--
-                            <li class="has-dropdown"><a href="#">More</a><div class="dropdown-container"><ul class="dropdown-mega"><li><a href="page-offer-single-en.php">Offer single</a></li><li><a href="page-product-en.php">Product</a></li><li><a href="book-a-table-en.php">Book a table</a></li><li><a href="checkout-en.php">Checkout</a></li><li><a href="confirmation-en.php">Confirmation</a></li><li><a href="blog-en.php">Blog</a></li><li><a href="blog-sidebar-en.php">Blog + Sidebar</a></li><li><a href="blog-post-en.php">Blog Post</a></li><li><a href="documentation/" target="_blank">Documentation</a></li></ul><div class="dropdown-image"><img src="http://assets.suelo.pl/soup/img/photos/dropdown-more.jpg" alt=""></div></div></li>
-                          -->
        </ul>
       </nav>
-      <!-- Order -->
-      <!--
-                    <div class="module left"><a href="menu-list-navigation-en.php" class="btn btn-outline-secondary"><span>Order</span></a></div>
--->
      </div>

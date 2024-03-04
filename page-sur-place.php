@@ -1,4 +1,4 @@
- <?php
+<?php
     include 'header.php';
 ?>
  <script src="./dist/js/menu/axios.min.js"></script>
@@ -18,13 +18,13 @@
     <hr class="dropdown-divider">
    </li>
    <li>
-    <a class="dropdown-item" href="page-about-en.php">
-     <i class="flag flag-united-kingdom"></i>English </a>
-   </li>
-   <li>
-    <a class="dropdown-item" href="page-about-nl.php">
-     <i class="flag-netherlands flag"></i>Dutch </a>
-   </li>
+     <a class="dropdown-item" href="sur-place-en.php">
+      <i class="flag flag-united-kingdom"></i>English </a>
+    </li>
+    <li>
+     <a class="dropdown-item" href="sur-place-nl.php">
+      <i class="flag-netherlands flag"></i>Dutch </a>
+    </li>
   </ul>
  </div>
  <!-- Cart -->
@@ -58,38 +58,148 @@
  <!-- Header / End -->
  <!-- Content -->
  <div id="content">
-  <!-- Page Title -->
-  <div class="page-title border-top">
-   <div class="container">
-    <div class="row">
-     <div class="col-lg-7 offset-lg-5">
-      <h1 class="mb-0">About Us</h1>
-      <h4 class="text-muted mb-0">Some informations about our restaurant</h4>
-     </div>
+<!-- Page Title -->
+<div class="page-title border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 offset-lg-5">
+                <h1 class="mb-0">Sur Place</h1>
+                <h4 class="text-muted mb-0">Salon de dégustation & terrasses: photos</h4>
+            </div>
+        </div>
     </div>
-   </div>
-  </div>
+</div>
+
+<!-- Section -->
+<section class="section section-bg-edge">
+    <div class="image left bottom col-md-7">
+        <div class="bg-image">
+            <!-- Add modern, visually appealing images here -->
+            <img src="./assets/img/surplace/surplace.jpg" alt="Salon de dégustation & terrasses">
+        </div>
+    </div>
+    <div class="container offset-md-1">
+        <div class="col-lg-5 offset-lg-7 col-md-6">
+            <h2 class="mb-5 ml-5">Nos Glaces:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Sorbets:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Notre production de sorbets est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Coupes de Glaces:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Une carte des glaces et sorbets est proposée avec un service à table. Cela varie en fonction de la production du moment.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Gaufres:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Notre production de gaufres maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des gaufres sera également disponible avec un service à table.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Crêpes:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Notre production de crêpes maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des crêpes sera également disponible avec un service à table.
+            </p>
+
+            <h2 class="mb-5 ml-5">Notre Ice Burgger:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Ice burgger est un véritable burger à mi-chemin entre un burger et une brioche à l'italienne qui est cuit au moment. Notre production d'Ice Burgger maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte d'Ice Burgger sera également disponible avec un service à table.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Glaces:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
+            </p>
+
+            <!-- Add similar sections for Sorbets, Coupes de Glaces, Gaufres, Crêpes, Ice Burgger, Boissons Chaudes, Apéros, and Services de Petite Restauration -->
+            
+            <h2 class="mb-5 ml-5">Nos Boissons Chaudes:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Dégustez notre sélection de boissons chaudes qui vous réchaufferont le cœur et l'âme. Que ce soit un café savoureux, un thé parfumé ou un chocolat chaud réconfortant, nos boissons chaudes de qualité vous raviront à tout moment de la journée.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Apéros:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Commencez votre repas avec style en savourant nos délicieux apéritifs. Que vous préfériez des planches de fromages et de charcuteries, des amuse-bouches fins ou des cocktails rafraîchissants, nos apéros sauront éveiller vos papilles et stimuler votre appétit pour la suite du repas.
+            </p>
+
+            <h2 class="mb-5 ml-5">Nos Services de Petit Restauration:</h2>
+            <p class="lead text-muted mb-5 ml-5">
+                Besoin d'une petite pause gourmande ou d'une collation rapide? Explorez notre sélection de plats légers et savoureux proposés dans notre service de petite restauration. Que ce soit des sandwiches frais, des salades croquantes ou des plats du jour faits maison, nous avons de quoi satisfaire toutes vos envies, même en cas de petite faim.
+            </p>
+        </div>
+    </div>
+</section>
+
+  <br>
+
+        <!-- Section - Menu -->
+        <section class="section pb-0 protrude">
+            <div class="container">
+                <h1 class="mb-6"></h1>
+            </div>
+
+            <div class="menu-sample-carousel carousel inner-controls" data-slick='{
+                "dots": true,
+                "slidesToShow": 3,
+                "slidesToScroll": 1,
+                "infinite": true,
+                "responsive": [
+                    {
+                        "breakpoint": 991,
+                        "settings": {
+                            "slidesToShow": 2,
+                            "slidesToScroll": 1
+                        }
+                    },
+                    {
+                        "breakpoint": 690,
+                        "settings": {
+                            "slidesToShow": 1,
+                            "slidesToScroll": 1
+                        }
+                    }
+                ]
+            }'>
+
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Burgers">
+                        <img src="./assets/img/surplace/surplace.jpg" alt="sur-place" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Sur place">Sur place</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pizza">
+                        <img src="./assets/img/ourcake/cake.jpg" alt="Nos bûches et gâteaux"  style="width: 500px;height:400px;">
+                        <h3 class="title" title="Nos bûches et gâteaux">Nos bûches et gâteaux</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pasta">
+                        <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Professionnels"> Profess- ionnels</h3>
+                    </a>
+                </div>
+                <!-- Menu Sample -->
+                <div class="menu-sample">
+                    <a href="menu-list-navigation.html#Pasta">
+                        <img src="./assets/img/Reservations/reservation.jpg" alt="Réservations Traiteurs Évènements" style="width: 500px;height:400px;">
+                        <h3 class="title" title="Réservations Traiteurs Évènements"> Bûches et Gâteaux</h3>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+ <!-- Section -->
   <!-- Section -->
-  <section class="section section-bg-edge">
-   <div class="image left bottom col-md-7">
-    <div class="bg-image">
-     <img src="./assets/img/Chef/Chef.jpg" alt="">
-    </div>
-   </div>
-   <div class="container offset-md-1">
-    <div class="col-lg-5 offset-lg-7 col-md-6 ">
-     <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-     <h2 class="mb-5 ml-5">Les Meilleurs Fruits de Mer à Tarcienne!</h2>
-     <p class="lead text-muted mb-5 ml-5">Découvrez les délices de l'océan chez Matthias et la Mer, niché dans la
-      charmante
-      ville de Tarcienne. Notre restaurant est un joyau caché, offrant une expérience unique de dégustation de fruits de
-      mer qui saura captiver vos papilles.</p>
-     <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
-    </div>
-   </div>
-  </section>
-  <!-- Section -->
-  <section class="section section-lg dark bg-dark">
+  <section class="section section-lg dark bg-dark" hidden>
    <!-- BG Image -->
    <div class="bg-image bg-parallax">
     <img src="./assets/img/Chef/bg-croissant.jpg" alt="">
@@ -315,11 +425,11 @@ include 'table-fr.php'
      <hr class="dropdown-divider">
     </li>
     <li>
-     <a class="dropdown-item" href="page-about-en.php">
+     <a class="dropdown-item" href="sur-place-en.php">
       <i class="flag flag-united-kingdom"></i>English </a>
     </li>
     <li>
-     <a class="dropdown-item" href="page-about-nl.php">
+     <a class="dropdown-item" href="sur-place-nl.php">
       <i class="flag-netherlands flag"></i>Dutch </a>
     </li>
    </ul>
