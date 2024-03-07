@@ -47,7 +47,7 @@
   </div>
   <div class="module module-logo">
    <a href="index.php">
-    <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
+    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;" width="88">
    </a>
   </div>
   <!-- Cart -->
@@ -69,152 +69,123 @@
         </div>
     </div>
 </div>
-
-<!-- Section -->
+          <!-- Section -->
+<!-- Nos Services de Petite Restauration -->
 <section class="section section-bg-edge">
-    <div class="image left bottom col-md-7">
-        <div class="bg-image">
-            <!-- Add modern, visually appealing images here -->
-            <img src="./assets/img/surplace/surplace.jpg" alt="Salon de dégustation & terrasses">
-        </div>
-    </div>
-    <div class="container offset-md-1">
+  <div class="image left bottom col-md-7">
+    <div class="bg-image">
+      <img src="./assets/img/surplace/services.jpg" alt="services">
+      </div>
+      </div>
+      <div class="container offset-md-1">
         <div class="col-lg-5 offset-lg-7 col-md-6">
-            <h2 class="mb-5 ml-5">Nos Glaces:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
-            </p>
+      <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+        <h2 class="mb-5 ml-5 ">Nos Services de Petite Restauration:</h2>
+        <p class="lead text-muted mb-5 ml-5">Experience the ocean's delights at Matthias and Sea, nestled in the charming
+        Besoin d'une petite pause gourmande ou d'une collation rapide? Explorez notre sélection de plats légers et savoureux proposés dans notre service de petite restauration. Que ce soit des sandwiches frais, des salades croquantes ou des plats du jour faits maison, nous avons de quoi satisfaire toutes vos envies, même en cas de petite faim.
+        </p>
+    <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+       </div>
+  </div>
+</section>  
+        <!-- Section - Offers -->
+        <section class="section bg-light">
 
-            <h2 class="mb-5 ml-5">Nos Sorbets:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Notre production de sorbets est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Coupes de Glaces:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Une carte des glaces et sorbets est proposée avec un service à table. Cela varie en fonction de la production du moment.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Gaufres:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Notre production de gaufres maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des gaufres sera également disponible avec un service à table.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Crêpes:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Notre production de crêpes maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des crêpes sera également disponible avec un service à table.
-            </p>
-
-            <h2 class="mb-5 ml-5">Notre Ice Burgger:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Ice burgger est un véritable burger à mi-chemin entre un burger et une brioche à l'italienne qui est cuit au moment. Notre production d'Ice Burgger maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte d'Ice Burgger sera également disponible avec un service à table.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Glaces:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
-            </p>
-
-            <!-- Add similar sections for Sorbets, Coupes de Glaces, Gaufres, Crêpes, Ice Burgger, Boissons Chaudes, Apéros, and Services de Petite Restauration -->
-            
-            <h2 class="mb-5 ml-5">Nos Boissons Chaudes:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Dégustez notre sélection de boissons chaudes qui vous réchaufferont le cœur et l'âme. Que ce soit un café savoureux, un thé parfumé ou un chocolat chaud réconfortant, nos boissons chaudes de qualité vous raviront à tout moment de la journée.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Apéros:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Commencez votre repas avec style en savourant nos délicieux apéritifs. Que vous préfériez des planches de fromages et de charcuteries, des amuse-bouches fins ou des cocktails rafraîchissants, nos apéros sauront éveiller vos papilles et stimuler votre appétit pour la suite du repas.
-            </p>
-
-            <h2 class="mb-5 ml-5">Nos Services de Petit Restauration:</h2>
-            <p class="lead text-muted mb-5 ml-5">
-                Besoin d'une petite pause gourmande ou d'une collation rapide? Explorez notre sélection de plats légers et savoureux proposés dans notre service de petite restauration. Que ce soit des sandwiches frais, des salades croquantes ou des plats du jour faits maison, nous avons de quoi satisfaire toutes vos envies, même en cas de petite faim.
-            </p>
-        </div>
-    </div>
-</section>
-
-  <br>
-
-        <!-- Section - Menu -->
-        <section class="section pb-0 protrude">
             <div class="container">
-                <h1 class="mb-6"></h1>
-            </div>
+                <!--<h1 class="text-center mb-6">Special offers</h1>-->
+                <div class="carousel" data-slick='{"dots": true}'>
+                    <!-- Nos Glaces -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/natural.jpg" alt="Nos Glaces" width="300px" height="300px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Glaces:</h2>
+                            <h5 class="text-muted mb-5">
+                                Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Sorbets -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/natural-drinks.jpg" alt="Nos Sorbets" width="400px" >
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Sorbets:</h2>
+                            <h5 class="text-muted mb-5">
+                                Notre production de sorbets est 100% naturelle à partir des produits frais. Nous proposons une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence. Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre dégustation.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Coupes de Glaces -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/coupes.jpg" alt="Nos Coupes de Glaces" width="400px" height="200px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Coupes de Glaces:</h2>
+                            <h5 class="text-muted mb-5">
+                                Une carte des glaces et sorbets est proposée avec un service à table. Cela varie en fonction de la production du moment.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Gaufres -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/gaufres.jpg" alt="Nos Gaufres" width="400px" height="200px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Gaufres:</h2>
+                            <h5 class="text-muted mb-5">
+                                Notre production de gaufres maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des gaufres sera également disponible avec un service à table.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Crêpes -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/crepes.jpg" alt="Nos Crêpes" width="400px" height="200px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Crêpes:</h2>
+                            <p class="lead text-muted mb-5">
+                                Notre production de crêpes maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte des crêpes sera également disponible avec un service à table.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Notre Ice Burgger -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/ice-burger.jpg" alt="Notre Ice Burgger" width="400px" height="200px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Notre Ice Burgger:</h2>
+                            <h5 class="text-muted mb-5">
+                                Ice burgger est un véritable burger à mi-chemin entre un burger et une brioche à l'italienne qui est cuit au moment. Notre production d'Ice Burgger maison vous est proposée avec plusieurs variantes : crème glacée, sorbets, chocolat. Libre à vous de les composer selon vos goûts. Une carte d'Ice Burgger sera également disponible avec un service à table.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Boissons Chaudes -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Nos Boissons Chaudes"  width="400px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Boissons Chaudes:</h2>
+                            <h5 class="text-muted mb-5">
+                                Dégustez notre sélection de boissons chaudes qui vous réchaufferont le cœur et l'âme. Que ce soit un café savoureux, un thé parfumé ou un chocolat chaud réconfortant, nos boissons chaudes de qualité vous raviront à tout moment de la journée.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Nos Apéros -->
+                    <div class="special-offer">
+                        <img src="./assets/img/surplace/nos-aperos.jpg" alt="Nos Apéros" width="400px" height="200px">
+                        <div class="special-offer-content">
+                            <h2 class="mb-5">Nos Apéros:</h2>
+                            <h5 class="text-muted mb-5">
+                                Commencez votre repas avec style en savourant nos délicieux apéritifs. Que vous préfériez des planches de fromages et de charcuteries, des amuse-bouches fins ou des cocktails rafraîchissants, nos apéros sauront éveiller vos papilles et stimuler votre appétit pour la suite du repas.
+                            </h5>
+                        </div>
+                    </div>
 
-            <div class="menu-sample-carousel carousel inner-controls" data-slick='{
-                "dots": true,
-                "slidesToShow": 3,
-                "slidesToScroll": 1,
-                "infinite": true,
-                "responsive": [
-                    {
-                        "breakpoint": 991,
-                        "settings": {
-                            "slidesToShow": 2,
-                            "slidesToScroll": 1
-                        }
-                    },
-                    {
-                        "breakpoint": 690,
-                        "settings": {
-                            "slidesToShow": 1,
-                            "slidesToScroll": 1
-                        }
-                    }
-                ]
-            }'>
 
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Burgers">
-                        <img src="./assets/img/surplace/surplace.jpg" alt="sur-place" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Sur place">Sur place</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pizza">
-                        <img src="./assets/img/ourcake/cake.jpg" alt="Nos bûches et gâteaux"  style="width: 500px;height:400px;">
-                        <h3 class="title" title="Nos bûches et gâteaux">Nos bûches et gâteaux</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pasta">
-                        <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Professionnels"> Profess- ionnels</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pasta">
-                        <img src="./assets/img/Reservations/reservation.jpg" alt="Réservations Traiteurs Évènements" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Réservations Traiteurs Évènements"> Bûches et Gâteaux</h3>
-                    </a>
+                    </div>
                 </div>
             </div>
 
         </section>
- <!-- Section -->
-  <!-- Section -->
-  <section class="section section-lg dark bg-dark" hidden>
-   <!-- BG Image -->
-   <div class="bg-image bg-parallax">
-    <img src="./assets/img/Chef/bg-croissant.jpg" alt="">
-   </div>
-   <div class="container text-center">
-    <div class="col-lg-8 offset-lg-2">
-     <h2 class="mb-3">Souhaitez-vous nous rendre visite ?</h2>
-     <h5 class="text-muted">Réservez une table dès maintenant !</h5>
-     <!--<a href="menu-list-navigation.php" class="btn btn-primary"><span>Commandez en ligne</span></a>-->
-     <a href="book-a-table.php" class="btn btn-outline-primary">
-      <span>Réservez une table</span>
-     </a>
-    </div>
-   </div>
-  </section>
+
+
+<?php
+  include 'carosuel-main.php';
+  ?>
   <!-- Pied de page -->
   <footer id="footer" class="bg-dark dark">
    <div class="container">
@@ -222,7 +193,7 @@
     <div class="footer-first-row row">
      <div class="col-lg-3 text-center">
       <a href="index.php">
-       <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
+       <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88"
         class="mt-5 mb-5">
       </a>
      </div>
@@ -316,94 +287,12 @@ include 'table-fr.php'
   <!-- Pied de page / Fin -->
  </div>
  <!-- Contenu / Fin -->
- <!-- Panneau de commande -->
- <div id="panel-cart">
-  <div class="panel-cart-container">
-   <div class="panel-cart-title">
-    <h5 class="title">Votre panier</h5>
-    <button class="close" data-toggle="panel-cart">
-     <i class="ti ti-close"></i>
-    </button>
-   </div>
-   <div class="panel-cart-content cart-details">
-    <table class="cart-table">
-     <tr>
-      <td class="title">
-       <span class="name">
-        <a href="#product-modal" data-toggle="modal">Burger au bœuf</a>
-       </span>
-       <span class="caption text-muted">Grand (500g)</span>
-      </td>
-      <td class="price">9,00 $</td>
-      <td class="actions">
-       <a href="#product-modal" data-toggle="modal" class="action-icon">
-        <i class="ti ti-pencil"></i>
-       </a>
-       <a href="#" class="action-icon">
-        <i class="ti ti-close"></i>
-       </a>
-      </td>
-     </tr>
-     <tr>
-      <td class="title">
-       <span class="name">
-        <a href="#product-modal" data-toggle="modal">Burger supplémentaire</a>
-       </span>
-       <span class="caption text-muted">Petit (200g)</span>
-      </td>
-      <td class="price text-success">9,00 $</td>
-      <td class="actions">
-       <a href="#product-modal" data-toggle="modal" class="action-icon">
-        <i class="ti ti-pencil"></i>
-       </a>
-       <a href="#" class="action-icon">
-        <i class="ti ti-close"></i>
-       </a>
-      </td>
-     </tr>
-    </table>
-    <div class="cart-summary">
-     <div class="row">
-      <div class="col-7 text-right text-muted">Total de la commande :</div>
-      <div class="col-5">
-       <strong>
-        <span class="cart-products-total">0,00 $</span>
-       </strong>
-      </div>
-     </div>
-     <div class="row">
-      <div class="col-7 text-right text-muted">Livraison :</div>
-      <div class="col-5">
-       <strong>
-        <span class="cart-delivery">0,00 $</span>
-       </strong>
-      </div>
-     </div>
-     <hr class="hr-sm">
-     <div class="row text-lg">
-      <div class="col-7 text-right text-muted">Total :</div>
-      <div class="col-5">
-       <strong>
-        <span class="cart-total">0,00 $</span>
-       </strong>
-      </div>
-     </div>
-    </div>
-    <div class="cart-empty">
-     <i class="ti ti-shopping-cart"></i>
-     <p>Votre panier est vide...</p>
-    </div>
-   </div>
-  </div>
-  <a href="paiement.php" class="panel-cart-action btn btn-secondary btn-block btn-lg">
-   <span>Passer à la caisse</span>
-  </a>
- </div>
+
  <!-- Panneau Mobile -->
  <nav id="panel-mobile">
   <div class="module module-logo bg-dark dark">
    <a href="#">
-    <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
    </a>
    <button class="close" data-toggle="panel-mobile">
     <i class="ti ti-close"></i>

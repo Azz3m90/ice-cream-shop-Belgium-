@@ -40,7 +40,7 @@
  </div>
  <div class="module module-logo">
   <a href="index-en.php">
-   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 75px;" width="88">
+   <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;" width="88">
   </a>
  </div>
  <!-- Cart -->
@@ -125,85 +125,9 @@
  </section>
 <br>
 
-        <!-- Section - Menu -->
-        <section class="section pb-0 protrude">
-            <div class="container">
-                <h1 class="mb-6"></h1>
-            </div>
-
-            <div class="menu-sample-carousel carousel inner-controls" data-slick='{
-                "dots": true,
-                "slidesToShow": 3,
-                "slidesToScroll": 1,
-                "infinite": true,
-                "responsive": [
-                    {
-                        "breakpoint": 991,
-                        "settings": {
-                            "slidesToShow": 2,
-                            "slidesToScroll": 1
-                        }
-                    },
-                    {
-                        "breakpoint": 690,
-                        "settings": {
-                            "slidesToShow": 1,
-                            "slidesToScroll": 1
-                        }
-                    }
-                ]
-            }'>
-
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Burgers">
-                        <img src="./assets/img/surplace/surplace.jpg" alt="sur-place" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Sur place">Sur place</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pizza">
-                        <img src="./assets/img/ourcake/cake.jpg" alt="Nos bûches et gâteaux"  style="width: 500px;height:400px;">
-                        <h3 class="title" title="Nos bûches et gâteaux">Nos bûches et gâteaux</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pasta">
-                        <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Professionnels"> Profess- ionnels</h3>
-                    </a>
-                </div>
-                <!-- Menu Sample -->
-                <div class="menu-sample">
-                    <a href="menu-list-navigation.html#Pasta">
-                        <img src="./assets/img/Reservations/reservation.jpg" alt="Réservations Traiteurs Évènements" style="width: 500px;height:400px;">
-                        <h3 class="title" title="Réservations Traiteurs Évènements"> Bûches et Gâteaux</h3>
-                    </a>
-                </div>
-            </div>
-
-        </section>
- <!-- Section -->
- <section class="section section-lg dark bg-dark" hidden>
-  <!-- BG Image -->
-  <div class="bg-image bg-parallax">
-   <div class="bg-video dark-overlay" data-src="assets/vid/seafood.mp4" data-type="video/mp4"></div>
-  </div>
-  <div class="container text-center">
-   <div class="row justify-content-center">
-    <div class="col-lg-8">
-     <!--<h2 class="mb-3">Consultez notre vidéo promotionnelle !</h2>-->
-     <h2>
-      <a href="book-a-table.php"> Réservez une table dès maintenant
-       <!--ou passez une commande en ligne--> !
-      </a>
-     </h2>
-    </div>
-   </div>
-  </div>
- </section>
+<?php
+  include 'carosuel-main.php';
+  ?>
  <!-- Pied de page -->
  <footer id="footer" class="bg-dark dark">
   <div class="container">
@@ -318,7 +242,7 @@
 <nav id="panel-mobile">
  <div class="module module-logo bg-dark dark">
   <a href="#">
-   <img src="assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+   <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
   </a>
   <button class="close" data-toggle="panel-mobile">
    <i class="ti ti-close"></i>

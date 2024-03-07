@@ -95,7 +95,7 @@
       <!-- Logo -->
       <div class="module module-logo dark">
        <a href=".././index-en.php">
-        <img src="./assets/img/gelatonaturale.svg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+        <img src="./assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
        </a>
       </div>
      </div>
