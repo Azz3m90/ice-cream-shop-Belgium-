@@ -58,269 +58,81 @@
              <!-- Header / End -->
              <!-- Content -->
              <div id="content">
-              <!-- Section - Main -->
-              <section class="section section-main section-main-1 bg-light">
-               <div class="container dark">
-                <div class="slide-container">
-                 <div id="section-main-1-carousel-image" class="image inner-controls">
-                  <div class="slide">
-                   <div class="bg-image">
-                    <img src="assets/img/home/caviar.webp" alt="caviar">
-                   </div>
-                  </div>
-                  <div class="slide">
-                   <div class="bg-image">
-                    <img src="assets/img/home/media/10.jpeg" alt="">
-                   </div>
-                  </div>
-                  <div class="slide">
-                   <div class="bg-image">
-                    <img src="assets/img/home/media/7.jpeg" alt="">
-                   </div>
-                  </div>
-                 </div>
-                 <div class="content dark">
-                  <div id="section-main-1-carousel-content">
-                   <div class="content-inner">
-                    <h4 class="text-muted">Fruit de mer</h4>
-                    <h1>Caviar</h1>
-                   </div>
-                   <div class="content-inner">
-                    <h3>Pastamaker's Hoek</h3>
-                    <h5 class="text-muted mb-5">Met de hand gemaakte Zwarte Truffel Ravioli!</h5>
-                   </div>
-                   <div class="content-inner">
-                    <h1>Delicious</h1>
-                    <h5 class="text-muted mb-5">CÔTÉ CHALEUR POUR COMMENCER!</h5>
-                   </div>
-                  </div>
-                  <nav class="content-nav">
-                   <a class="prev" href="#">
-                    <i class="ti ti-arrow-left"></i>
-                   </a>
-                   <a class="next" href="#">
-                    <i class="ti ti-arrow-right"></i>
-                   </a>
-                  </nav>
-                 </div>
-                </div>
-               </div>
-              </section>
-              <br>
-              <br>
-              <br>
-              <!-- Section - About -->
-              <section class="section section-bg-edge">
-               <div class="image right col-md-6 offset-md-6">
-                <div class="bg-image">
-                 <br>
-                 <img src="assets/img/main/seafood.jpg" alt="">
-                </div>
-               </div>
-               <div class="container">
-                <div class="col-lg-5 col-md-9">
-                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                 <h1>De Beste Zeevruchten in Tarcienne!</h1>
-                 <p class="lead text-muted mb-5">Ervaar de heerlijkheden van de oceaan bij <strong>MATTHIAS AND
-                   SEA</strong>,
-                  gelegen in het charmante stadje Tarcienne. Ons restaurant is een verborgen juweeltje en biedt een
-                  unieke
-                  eetervaring met zeevruchten die zeker uw smaakpapillen zal veroveren. </p>
-                </div>
-               </div>
-              </section>
-              <!-- Section - Menu -->
-              <section class="section pb-0 protrude" hidden>
-               <div class="container">
-                <h1 class="mb-6">Onze menukaart</h1>
+<!-- Sectie - Hoofd -->
+<section class="section section-main section-main-1 bg-light">
+ <div class="container dark">
+  <div class="slide-container">
+   <div id="section-main-1-carousel-image" class="image inner-controls">
+       <!-- Afbeeldingencarrousel -->
+       <div class="slide">
+         <div class="bg-image">
+           <img src="assets/img/icecream/carousel-1.jpg" alt="Vanille-ijs">
+         </div>
+       </div>
+       <div class="slide">
+         <div class="bg-image">
+           <img src="assets/img/icecream/carousel-2.jpg" alt="Chocolade-ijs">
+         </div>
+       </div>
+       <div class="slide">
+         <div class="bg-image">
+           <img src="assets/img/icecream/carousel-3.jpg" alt="Aardbeienijs">
+         </div>
+       </div>
+     </div>
+     <!-- Inhoud -->
+     <div class="content dark">
+       <div id="section-main-1-carousel-content">
+         <!-- Inhoudsslides -->
+         <div class="content-inner">
+           <h4 class="text-muted">Heerlijk Genot</h4>
+           <h1>IJs</h1>
+         </div>
+         <div class="content-inner">
+           <h3>Klassieke Smaken</h3>
+           <h5 class="text-muted mb-5">Verwen uzelf met onze klassieke smaken van romige vanille, rijke chocolade en verfrissende aardbei.</h5>
+         </div>
+         <div class="content-inner">
+           <h1>Onweerstaanbaar</h1>
+           <h5 class="text-muted mb-5">Voldoe aan uw zoete trek met onze heerlijke ijscreaties!</h5>
+         </div>
+       </div>
+    <nav class="content-nav">
+     <a class="prev" href="#">
+      <i class="ti ti-arrow-left"></i>
+     </a>
+     <a class="next" href="#">
+      <i class="ti ti-arrow-right"></i>
+     </a>
+    </nav>
+   </div>
+  </div>
+ </div>
+</section>
+<br>
+<br>
+<br>
+<!-- Sectie - Over Ons -->
+<section class="section section-bg-edge">
+ <div class="image right col-md-6 offset-md-6">
+  <div class="bg-image">
+   <br>
+   <img src="assets/img/icecream/landing-image.jpg" alt="landingsafbeelding">
+  </div>
+ </div>
+ <div class="container">
+ <div class="col-lg-5 col-md-9">
+  <h1>Over Onze Vestiging</h1>
+  <p class="lead text-muted mb-5 text-justify">Onze vestiging, geopend in 2021 na jaren van voorbereiding, is gespecialiseerd in de productie en distributie van ijs en sorbets. We bedienen een verscheidenheid aan klanten, waaronder ijssalons, restaurants, instellingen, groothandels en delicatessewinkels, met inbegrepen bezorgservice. Onze toewijding aan natuurlijke producten stelt ons in staat om efficiënt te voldoen aan de behoeften van onze professionele klanten door hen op maat gemaakte smaken aan te bieden. Voor particulieren bieden we een proefruimte met een prachtig terras, waar ze kunnen genieten van onze producten. Bovendien hebben ze de mogelijkheid om onze ijsjes per liter en taarten te kopen, afhankelijk van de beschikbaarheid, zonder voorafgaande reservering.</p>
+ </div>
+</div>
+ </div>
+ 
+</section>
 
-               </div>
-               <!-- Section - Menu -->
-               <div class="container" id="MenuCarousel">
-                <div class="carousel" data-slick='{
-        "dots": true,
-        "slidesToShow": 3,
-        "slidesToScroll": 1,
-        "infinite": true,
-        "responsive": [
-          {
-            "breakpoint": 991,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 1
-            }
-          },
-          {
-            "breakpoint": 690,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1
-            }
-          }
-        ]
-      }' id="menuCarousel">
-                 <!-- Here the injected menu elements will be added -->
-                </div>
-               </div>
-
-               <script>
-               // Function to render the menu elements
-               function renderMenu(menuData) {
-                const menuCarouselContainer = document.getElementById('menuCarousel');
-
-                menuData.forEach(category => {
-                 // Create a div for each menu category
-                 const categoryElement = document.createElement('div');
-                 categoryElement.classList.add('menu-sample');
-                 var relativePathFromDatabase = category.CategoryImage;
-                 // Use the URL constructor to handle concatenation and normalization
-                 var absoluteUrl = normalizeUrl(baseUrl, relativePathFromDatabase);
-                 // Create the category content
-                 categoryElement.innerHTML = `
-            <a href="menu-grid-navigation-nl.php#${category.categoryName.replace(/\s+/g, '')}">
-              <img src="./assets/img/bg.png"  alt="${category.categoryName}" class="image">
-              <h5 class="title">${category.categoryName}</h5>
-            </a>
-          `;
-
-                 // Append the category to the container
-                 menuCarouselContainer.appendChild(categoryElement);
-
-
-                });
-               }
-
-               // Define the URL for the JSON data file
-               const jsonUrl = './admin/php/dishes/load-dishes.php';
-
-               function normalizeUrl(baseUrl, relativePath) {
-                // Split the relative path into segments
-                var pathSegments = relativePath.split('/');
-
-                // Remove '../' and './' segments
-                var cleanedSegments = pathSegments.filter(function(segment) {
-                 return segment !== '..' && segment !== '.';
-                });
-
-                // Join the cleaned segments
-                var cleanedPath = cleanedSegments.join('/');
-
-                // Combine with the base URL
-                var absoluteUrl = new URL(cleanedPath, baseUrl).href;
-
-                // Convert the URL
-                absoluteUrl = absoluteUrl.replace('/matthias-and-sea/matthias-and-sea/', '/matthias-and-sea/');
-
-
-                return absoluteUrl;
-               }
-               var baseUrl = "http://localhost/matthias-and-sea/";
-               // Load the JSON data using Axios
-               axios.get(jsonUrl)
-                .then(response => {
-                 const menuData = response.data.menu || []; // Use the menu data or default to an empty array
-                 renderMenu(menuData);
-                })
-                .catch(error => {
-                 console.error('Error loading JSON data:', error);
-                 document.getElementById("menu-head").remove();
-                 // You can provide a fallback behavior or display an error message to the user here.
-                });
-               </script>
-              </section>
-              <!-- Section - Offers -->
-              <section class="section bg-light" hidden>
-
-               <!-- Section - Offers -->
-               <div class="container" id="Carousel">
-                <h1 id="offer-head" class="text-center mb-6">Speciale aanbiedingen</h1>
-
-                <div class="carousel" data-slick='{"dots": true}' id="specialOffers">
-                 <!-- Here the injected special offer elements will be added -->
-                </div>
-               </div>
-               <script>
-               // Define the URL for the JSON data file
-               const url = './admin/php/offers/load_offers.php';
-
-               // Function to render the special offer elements
-               function renderSpecialOffers(offersData) {
-                const specialOffersContainer = document.getElementById('specialOffers');
-
-                offersData.forEach(offer => {
-                 // Create a div for each special offer
-                 const specialOffer = document.createElement('div');
-                 specialOffer.classList.add('special-offer');
-                 var relativePathFromDatabase = offer.image;
-
-                 // Use the URL constructor to handle concatenation and normalization
-                 var absoluteUrl = normalizeUrl(baseUrl, relativePathFromDatabase);
-                 // Create the special offer content
-                 specialOffer.innerHTML = `
-                  <img src="./admin/${offer.image}" alt="" class="special-offer-image">
-                  <div class="special-offer-content">
-                    <h2 class="mb-2">${offer.title}</h2>
-                    <h5 class="text-muted mb-5">${offer.description}</h5>
-                    <ul class="list-check text-lg mb-0">
-                      ${offer.details
-                        .map(
-                          detail => `<li class="${detail.class}">${detail.text}</li>`
-                        )
-                        .join('')}
-                    </ul>
-                  </div>
-                `;
-
-                 // Append the special offer to the container
-                 specialOffersContainer.appendChild(specialOffer);
-                });
-               }
-
-               // Function to load JSON data from the specified URL
-               function loadJSONData(url, callback) {
-                fetch(url)
-                 .then(response => response.json())
-                 .then(data => callback(data))
-                 .catch(error => console.error('Error loading JSON data:', error));
-               }
-
-               // Get the user's preferred language from the HTML lang attribute
-               const userLanguage = document.documentElement.lang;
-
-               // Example: Display the user's preferred language in the console
-               console.log(`User's Preferred Language: ${userLanguage}`);
-               // Load the JSON data and render the special offers
-               loadJSONData(url, function(data) {
-                try {
-                 const offersData = data[userLanguage] || data[
-                  'fr']; // Use the preferred language or default to English
-                 renderSpecialOffers(offersData.offers);
-                } catch (error) {
-                 document.getElementById("offer-head").remove();
-                 // You can provide a fallback behavior or display an error message to the user here.
-                }
-               });
-               </script>
-              </section>
-              <!-- Section -->
-              <section class="section section-lg dark bg-dark">
-               <!-- BG Image -->
-               <div class="bg-image bg-parallax">
-                <div class="bg-video dark-overlay" data-src="assets/vid/seafood.mp4" data-type="video/mp4"></div>
-               </div>
-               <div class="container text-center">
-                <div class="row justify-content-center">
-                 <div class="col-lg-8">
-                  <!--<h2 class="mb-3">Bekijk onze promotievideo!</h2>-->
-                  <h2 class="">
-                   <a href="book-a-table-nl.php">Reserveer nu zelfs een tafel
-                    <!--of plaats een online bestelling-->!
-                   </a>
-                  </h2>
-                 </div>
-                </div>
-               </div>
-              </section>
+              <?php
+  include 'carosuel-main-nl.php';
+  ?>
               <!-- Footer -->
               <footer id="footer" class="bg-dark dark">
                <div class="container">

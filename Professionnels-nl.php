@@ -354,7 +354,7 @@ function validateEmail(email) {
    <div class="footer-first-row row">
     <div class="col-lg-3 text-center">
      <a href="index-nl.php">
-      <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
+     <img src="./assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88"
        class="mt-5 mb-5">
      </a>
     </div>
@@ -542,7 +542,7 @@ include 'table-nl.php';
 <nav id="panel-mobile">
  <div class="module module-logo bg-dark dark">
   <a href="#">
-   <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+  <img src="./assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
   </a>
   <button class="close" data-toggle="panel-mobile">
    <i class="ti ti-close"></i>
