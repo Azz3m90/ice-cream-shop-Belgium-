@@ -68,363 +68,278 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
 <!-- Header / End -->
 <!-- Content -->
 <div id="content">
-        <!-- Page Title -->
+ <!-- Paginatitel -->
 <div class="page-title border-top">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 offset-lg-5">
-            <h1 class="mb-0">Professionals</h1>
-<h4 class="text-muted mb-0">We kunnen aan al uw verzoeken voldoen voor fijne kruidenierswaren, cacaoproductie, sterrenrestaurants.
-Of u nu een Frans gastronomisch restaurant, Maghrebijn, Aziatisch of Italiaans bent, wij zullen uw kenmerkende ijs naar uw smaak, traditie en behoeften creëren.
-We bieden ook bezorgservice voor u.</h4>
-
+                <h1 class="mb-0">professionals</h1>
+                <h4 class="text-muted mb-0">We kunnen aan al uw verzoeken voldoen op het gebied van delicatessen, cacaoproductie, sterrenrestaurants, etc.
+Of u nu een Frans, Maghrebijns, Aziatisch, Italiaans gastronomisch restaurant bent, wij zullen uw kenmerkende ijs naar uw smaak, traditie en behoefte creëren.
+Wij bieden ook bezorgservice aan.</h4>
             </div>
         </div>
     </div>
 </div>
- <!-- Section -->
- <section class="section section-lg bg-dark">
-  <!-- Video Achtergrond -->
-  <!-- Achtergrondvideo -->
-   <!-- Vidéo de fond -->
+ 
+<!-- Sectie -->
+<section class="section section-lg bg-dark">
+   <!-- Achtergrondvideo -->
    <div class="bg-video dark-overlay">
-    <!-- BG Photo -->
-<img class="bg-image dark-overlay" src="./assets/img/professionals/professionals.jpg" alt="Professionals Background">
-
+    <!-- Achtergrondfoto -->
+    <img class="bg-image dark-overlay" src="./assets/img/professionals/professionals.jpg" alt="Achtergrond voor professionals">
    </div>
    <div class="container">
     <div class="row justify-content-center">
      <div class="col-lg-6">
-      <!-- Réserver une table -->
+      <!-- Tafel reserveren -->
       <div class="utility-box">
        <div class="utility-box-title bg-dark dark">
         <div class="bg-image">
-         <img src="./assets/img/professionals/prof.jpg" alt="bg-image">
+         <img src="./assets/img/professionals/prof.jpg" alt="Achtergrondafbeelding">
         </div>
-       <div>
-        <span class="icon icon-primary">
-         <i class="ti ti-bookmark-alt"></i>
-        </span>
-        <h4 class="mb-0">Reserveer een tafel</h4>
-        <p class="lead text-muted mb-0">Details over uw reservering.</p>
+        <div>
+         <span class="icon icon-primary">
+          <i class="ti ti-bookmark-alt"></i>
+         </span>
+         <h4 class="mb-0">Tafel reserveren</h4>
+         <p class="lead text-muted mb-0">Details over uw reservering.</p>
+        </div>
        </div>
-      </div>
-      <form id="booking-form" class="booking-form" data-validate>
+       <form id="booking-form" class="booking-form" method="post" data-validate>
     <div class="utility-box-content">
         <div class="form-group">
-            <label>Naam:</label>
-            <input type="text" name="name" class="form-control" placeholder="Naam" required>
+            <label for="name">Naam :</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Naam" required>
         </div>
         <div class="form-group">
-            <label>Voornaam:</label>
-            <input type="text" name="surname" class="form-control" placeholder="Voornaam" required>
+            <label for="surname">Voornaam :</label>
+            <input type="text" id="surname" name="surname" class="form-control" placeholder="Voornaam" required>
         </div>
         <div class="form-group">
-            <label>Bedrijf:</label>
-            <input type="text" name="company" class="form-control" placeholder="Bedrijf" required>
+            <label for="company">Bedrijf :</label>
+            <input type="text" id="company" name="company" class="form-control" placeholder="Bedrijf" required>
         </div>
         <div class="form-group">
-            <label>Telefoon:</label>
-            <input type="text" name="phone" class="form-control" placeholder="Telefoon" required>
+            <label for="phone">Telefoon :</label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Telefoon" required>
         </div>
         <div class="form-group">
-            <label>Email:</label>
-            <input type="email" name="email" class="form-control" placeholder="Email" required>
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
         </div>
         <div class="form-group">
-            <label>Bedrijfstak:</label>
-            <input type="text" name="sector" class="form-control" placeholder="Bedrijfstak" required>
+            <label for="sector">Sector :</label>
+            <input type="text" id="sector" name="sector" class="form-control" placeholder="Sector" required>
         </div>
         <div class="form-group">
-            <label>Gewenste Leverdatum:</label>
-            <input type="date" name="delivery_date" class="form-control" placeholder="Gewenste Leverdatum" required>
+            <label for="delivery_date">Gewenste leverdatum :</label>
+            <input type="date" id="delivery_date" name="delivery_date" class="form-control" placeholder="Gewenste leverdatum" required>
         </div>
         <div class="form-group">
-            <label>Leveringsadres:</label>
-            <input type="text" name="delivery_address" class="form-control" placeholder="Leveringsadres" required>
+            <label for="delivery_address">Afleveradres :</label>
+            <input type="text" id="delivery_address" name="delivery_address" class="form-control" placeholder="Afleveradres" required>
         </div>
         <div class="form-group">
-            <label>Opmerking:</label>
-            <textarea name="comment" class="form-control" placeholder="Opmerking"></textarea>
+            <label for="comment">Opmerking :</label>
+            <textarea id="comment" name="comment" class="form-control" placeholder="Opmerking"></textarea>
         </div>
         <div class="row">
             <div class="form-group">
-                <?php echo $status; ?>
                 <!-- HTML -->
                 <label><strong>Vul de Captcha-code in:</strong></label><br />
-                <input type="text" name="captcha" id="captcha" placeholder="Vul de Captcha-code in" />
-                <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'></p>
-                <p>Kunt u de afbeelding niet lezen? <a href='#' onclick='refreshCaptcha(event);'>Klik hier</a> om te vernieuwen</p>
+                <input type="text" id="captcha" name="captcha" placeholder="Vul de Captcha-code in" required>
+                <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id="captcha_image"></p>
+                <p>Kunt u de afbeelding niet lezen? <a href="#" onclick="refreshCaptcha(event);">Klik hier</a> om te vernieuwen</p>
             </div>
         </div>
     </div>
-    <input type="text" name="lang" class="form-control" value="nl" disabled required hidden>
+    <input type="text" id="lang" name="lang" class="form-control" value="nl" disabled required hidden>
     <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
-        <span class="description">Reservering maken!</span>
+        <span class="description">Reserveren!</span>
         <span class="success">
             <svg x="0px" y="0px" viewBox="0 0 32 32">
                 <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
             </svg>
         </span>
-        <span class="error">Opnieuw proberen...</span>
+        <span class="error">Probeer opnieuw...</span>
     </button>
 </form>
 
-      <style>
-      .btn-success {
-       background-color: #28a745;
-       /* Green color for success */
-       border-color: #28a745;
-      }
 
-      .btn-danger {
-       background-color: #dc3545;
-       /* Red color for error */
-       border-color: #dc3545;
-      }
+       <style>
+       .btn-success {
+        background-color: #28a745;
+        /* Groene kleur voor succes */
+        border-color: #28a745;
+       }
 
-      /* Modern modal styles */
-      #confirmationModal {
-       display: none;
-       position: fixed;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       background-color: white;
-       padding: 20px;
-       border-radius: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-       z-index: 1000;
-      }
+       .btn-danger {
+        background-color: #dc3545;
+        /* Rode kleur voor fout */
+        border-color: #dc3545;
+       }
 
-      #confirmationModal p {
-       margin-bottom: 20px;
-      }
+       /* Moderne modale stijlen */
+       #confirmationModal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+       }
 
-      #confirmationModal button {
-       padding: 10px;
-       background-color: #007bff;
-       color: white;
-       border: none;
-       border-radius: 5px;
-       cursor: pointer;
-      }
-      </style>
-      <!-- Simple confirmation modal -->
-      <!-- Simple confirmation modal -->
-      <div id="confirmationModal">
-       <div>
-        <p id="modalMessage"></p>
-        <button onclick="closeModal()">OK</button>
+       #confirmationModal p {
+        margin-bottom: 20px;
+       }
+
+       #confirmationModal button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       .invalid-input {
+    border: 1px solid red; /* Verander randkleur naar rood */
+}
+
+       </style>
+       <!-- Eenvoudige bevestigingsmodus -->
+       <!-- Eenvoudige bevestigingsmodus -->
+       <div id="confirmationModal">
+        <div>
+         <p id="modalMessage"></p>
+         <button onclick="closeModal()">OK</button>
+        </div>
        </div>
-      </div>
 
-
-
-      <script>
-                    // Get the current date and time
-    var currentDate = new Date();
-    
-    // Format the current date and time into the required format for the input element
-    var formattedCurrentDate = currentDate.getFullYear() + '-' + ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' + ('0' + currentDate.getDate()).slice(-2) + 'T' + ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + currentDate.getMinutes()).slice(-2);
-
-    // Set the minimum value of the input element to the formatted current date and time
-    document.getElementById("DateTime").min = formattedCurrentDate;
-function getCaptcha() {
-    axios.get('./php/booking/get-captcha.php')
-        .then(function(response) {
-            console.log('Captcha:', response.data.captcha);
-        })
-        .catch(function(error) {
-            console.error('Fout bij het ophalen van captcha:', error);
-        });
-}
-
-// Roep deze functie aan wanneer je de captcha-waarde wilt ophalen
-getCaptcha();
-
-function submitForm() {
-    const form = document.getElementById("booking-form");
-    const captchaInput = form.querySelector('input[name="captcha"]');
-    const captcha = captchaInput.value;
-
-    // Maak een FormData-object aan en voeg het captcha-veld toe
-    const formData = new FormData();
-    formData.append('captcha', captcha);
-
-    axios.post('./php/booking/validate-captcha.php', formData)
-        .then(response => {
-            console.log('Validatie reactie:', response.data.valid);
-
-            if (response.data.valid) {
-                const submitButton = form.querySelector(".btn-submit");
-                submitButton.removeAttribute('disabled');
-
-            } else {
-                openModal('De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.');
-                refreshCaptcha();
-            }
-        })
-        .catch(error => {
-            console.error('Fout bij het valideren van CAPTCHA:', error);
-        });
-}
-
-function openModal(message) {
-    modalMessage.innerText = message;
-    confirmationModal.style.display = 'block';
-}
-
-function refreshCaptcha(event) {
-    if (event) {
-        event.preventDefault();
-    }
-
-    var img = document.getElementById('captcha_image');
-
-    axios.get('./php/booking/captcha.php', {
-            params: {
-                rand: Math.random() * 1000
-            },
-            responseType: 'arraybuffer'
-        })
-        .then(function(response) {
-            var blob = new Blob([response.data], {
-                type: 'image/jpeg'
-            });
-            var imgUrl = URL.createObjectURL(blob);
-            img.src = imgUrl;
-            getCaptcha();
-        })
-        .catch(function(error) {
-            console.error('Fout bij het vernieuwen van CAPTCHA:', error);
-        });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
+       <script>
+   document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("booking-form");
     const submitButton = form.querySelector(".btn-submit");
-
-    const datetimeInput = form.querySelector('input[name="datetime"]');
+    const captchaInput = form.querySelector('input[name="captcha"]');
+    const captchaImage = document.getElementById('captcha_image');
     const confirmationModal = document.getElementById('confirmationModal');
     const modalMessage = document.getElementById('modalMessage');
-
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+        submitForm();
+    });
 
-        const formData = new FormData(form);
-        const selectedDateTime = new Date(formData.get('datetime'));
-        const captchaInput = form.querySelector('input[name="captcha"]');
+    captchaImage.addEventListener("click", function() {
+        refreshCaptcha();
+    });
+
+    function submitForm() {
         const captcha = captchaInput.value;
-
-        // Voeg de waarde van CAPTCHA toe aan FormData
+        const formData = new FormData(form);
         formData.append('captcha', captcha);
-        // Valideer elk vereist invoerveld
-        const inputs = form.querySelectorAll("[required]");
-        let isValid = true;
-        inputs.forEach(function(input) {
-            if (input.value.trim() === "") {
-                isValid = false;
-                // Optioneel: je kunt visuele feedback toevoegen voor de gebruiker, zoals een rode rand toevoegen aan het ongeldige invoerveld
-                input.style.border = "1px solid red";
-            } else {
-                // Reset de rand naar de standaardstijl
-                input.style.border = "";
+            // Valideer e-mail
+            const emailInput = form.querySelector('input[name="email"]');
+            const email = emailInput.value;
+            if (!validateEmail(email)) {
+                openModal('Voer een geldig e-mailadres in.');
+                emailInput.style.border = "1px solid red";
+                return false;
             }
-        });
 
-        // Controleer of de geselecteerde datum 14 februari 2024 is
-        if (selectedDateTime.getDate() === 14 && selectedDateTime.getMonth() === 1 && selectedDateTime.getFullYear() === 2024) {
-            openModal("Het spijt ons, al onze tafels zijn gereserveerd op 14 februari 2024");
-            return; // Voorkom verdere verwerking
-        }
-        // Als alle vereiste velden zijn ingevuld, verstuur het formulier
-        if (isValid) {
-            // Valideer CAPTCHA
-            axios.post('./php/booking/validate-captcha.php', formData)
-                .then(function(response) {
-                    console.log('Validatie reactie:', response.data.valid);
+            // Valideer elk vereist invoerveld
+            const inputs = form.querySelectorAll("[required]");
+            let isValid = true;
+            console.log(inputs);
+            inputs.forEach(function(input) {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    // Voeg een rode rand toe aan lege verplichte velden
+                    input.style.border = "1px solid red";
+                } else {
+                    // Reset de rand naar de standaardstijl
+                    input.style.border = "";
+                }
+            });
 
-                    if (response.data.valid) {
-                        // CAPTCHA is geldig, ga door met het verzenden van het formulier
-                        if (isDateTimeValid(selectedDateTime)) {
-                            submitButton.innerHTML = '<span class="description">Verzenden...</span>';
-
-                            axios.post('./php/booking/booking-form-nl.php', formData)
-                                .then(function(response) {
+            if (!isValid) {
+                // Als een verplicht veld leeg is, toon een foutmelding en voorkom het verzenden van het formulier
+                openModal("Vul alle verplichte velden in.");
+                return false;
+            }
+        axios.post('./php/booking/validate-captcha.php', formData)
+            .then(response => {
+                if (response.data.valid) {
+                    
+                        // Gebruik AJAX om de formuliergegevens te verzenden
+                        axios.post('./php/booking/booking-professionnels-nl.php', formData)
+                            .then(response => {
+                                console.log('Reactie op verzending van formulier:', response.data);
+                                if (response.data === 'success') {
                                     submitButton.innerHTML = '<span class="description">Reservering succesvol!</span>';
                                     submitButton.classList.remove('btn-secondary');
                                     submitButton.classList.remove('btn-submit');
                                     submitButton.classList.add('btn-success');
                                     submitButton.setAttribute('disabled', 'disabled');
-                                })
-                                .catch(function(error) {
-                                    submitButton.innerHTML = '<span class="error">Probeer het opnieuw...</span>';
-                                    submitButton.classList.remove('btn-submit');
-                                    submitButton.classList.remove('btn-secondary');
-                                    submitButton.classList.add('btn-danger');
-                                });
-                        } else {
-                            // Toon een foutmelding en voorkom het verzenden van het formulier
-                            modalMessage.innerText =
-                                'Ongeldige datum of tijd. Selecteer alstublieft een geldige datum en tijd binnen de toegestane uren.';
-                            confirmationModal.style.display = 'block';
-                            // Voorkom het verzenden van het formulier
-                            return false;
-                        }
-                    } else {
-                        // Toon een foutmelding en voorkom het verzenden van het formulier
-                        modalMessage.innerText = 'De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.';
-                        confirmationModal.style.display = 'block';
-                        // Voorkom het verzenden van het formulier
-                        return false;
-                    }
-                })
-                .catch(function(error) {
-                    console.error('Fout bij het valideren van CAPTCHA:', error);
-                });
-        } else {
-            // Optioneel: je kunt de gebruiker informeren dat er lege vereiste velden zijn
-            modalMessage.innerText = "Vul alle vereiste velden in.";
-            confirmationModal.style.display = 'block';
-        }
-    });
-
-    function isDateTimeValid(dateTime) {
-    const day = dateTime.getDay();
-    const hours = dateTime.getHours();
-    const minutes = dateTime.getMinutes();
-    switch (day) {
-        case 0: // Sunday
-            return (hours >= 18 && hours < 22) || (hours >= 12 && hours < 14);
-        case 1: // Monday
-            return hours >= 18 && hours < 22;
-        case 2: // Tuesday
-            return false; // Closed on Tuesday
-        case 3: // Wednesday
-            return hours >= 18 && hours < 22;
-        case 4: // Thursday
-            return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-        case 5: // Friday
-            return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-        case 6: // Saturday
-            return hours >= 18 && hours < 22;
-        default:
-            return false;
+                                } else {
+                                    openModal('Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Fout bij het verzenden van het formulier:', error);
+                                openModal('Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.');
+                            });
+                   
+                } else {
+                    openModal('De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.');
+                    refreshCaptcha();
+                }
+            })
+            .catch(error => {
+                console.error('Fout bij valideren CAPTCHA:', error);
+            });
     }
-}
+});
 
+function refreshCaptcha(event) {
+       if (event) {
+        event.preventDefault();
+       }
 
+       var img = document.getElementById('captcha_image');
 
-}); 
-   function openModal(message) {
+       axios.get('./php/booking/captcha.php', {
+         params: {
+          rand: Math.random() * 1000
+         },
+         responseType: 'arraybuffer'
+        })
+        .then(function(response) {
+         var blob = new Blob([response.data], {
+          type: 'image/jpeg'
+         });
+         var imgUrl = URL.createObjectURL(blob);
+         img.src = imgUrl;
+         getCaptcha();
+        })
+        .catch(function(error) {
+         console.error('Fout bij vernieuwen CAPTCHA:', error);
+        });
+      }
+      function openModal(message) {
         modalMessage.innerText = message;
         confirmationModal.style.display = 'block';
     }
-
-    function closeModal() {
-       document.getElementById('confirmationModal').style.display = 'none';
-      }
+function closeModal() {
+    document.getElementById('confirmationModal').style.display = 'none';
+}
+function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
 </script>
 
      </div>

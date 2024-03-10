@@ -114,56 +114,55 @@ Nous assurons aussi le servie de livraison pour vous.</h4>
          <p class="lead text-muted mb-0">Détails sur votre réservation.</p>
         </div>
        </div>
-       <form id="booking-form" class="booking-form" data-validate>
+       <form id="booking-form" class="booking-form" method="post" data-validate>
     <div class="utility-box-content">
         <div class="form-group">
-            <label>Nom :</label>
-            <input type="text" name="name" class="form-control" placeholder="Nom" required>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Nom" required>
         </div>
         <div class="form-group">
-            <label>Prénom :</label>
-            <input type="text" name="surname" class="form-control" placeholder="Prénom" required>
+            <label for="surname">Prénom :</label>
+            <input type="text" id="surname" name="surname" class="form-control" placeholder="Prénom" required>
         </div>
         <div class="form-group">
-            <label>Société :</label>
-            <input type="text" name="company" class="form-control" placeholder="Société" required>
+            <label for="company">Société :</label>
+            <input type="text" id="company" name="company" class="form-control" placeholder="Société" required>
         </div>
         <div class="form-group">
-            <label>Téléphone :</label>
-            <input type="text" name="phone" class="form-control" placeholder="Téléphone" required>
+            <label for="phone">Téléphone :</label>
+            <input type="text" id="phone" name="phone" class="form-control" placeholder="Téléphone" required>
         </div>
         <div class="form-group">
-            <label>Email :</label>
-            <input type="email" name="email" class="form-control" placeholder="Email" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
         </div>
         <div class="form-group">
-            <label>Secteur d’activité :</label>
-            <input type="text" name="sector" class="form-control" placeholder="Secteur d’activité" required>
+            <label for="sector">Secteur d’activité :</label>
+            <input type="text" id="sector" name="sector" class="form-control" placeholder="Secteur d’activité" required>
         </div>
         <div class="form-group">
-            <label>Date de livraison souhaitée :</label>
-            <input type="date" name="delivery_date" class="form-control" placeholder="Date de livraison souhaitée" required>
+            <label for="delivery_date">Date de livraison souhaitée :</label>
+            <input type="date" id="delivery_date" name="delivery_date" class="form-control" placeholder="Date de livraison souhaitée" required>
         </div>
         <div class="form-group">
-            <label>Adresse de livraison :</label>
-            <input type="text" name="delivery_address" class="form-control" placeholder="Adresse de livraison" required>
+            <label for="delivery_address">Adresse de livraison :</label>
+            <input type="text" id="delivery_address" name="delivery_address" class="form-control" placeholder="Adresse de livraison" required>
         </div>
         <div class="form-group">
-            <label>Commentaire :</label>
-            <textarea name="comment" class="form-control" placeholder="Commentaire"></textarea>
+            <label for="comment">Commentaire :</label>
+            <textarea id="comment" name="comment" class="form-control" placeholder="Commentaire"></textarea>
         </div>
         <div class="row">
             <div class="form-group">
-                <?php echo $status; ?>
                 <!-- HTML -->
                 <label><strong>Entrez le code Captcha :</strong></label><br />
-                <input type="text" name="captcha" id="captcha" placeholder="Entrez le code Captcha" />
-                <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'></p>
-                <p>Vous ne pouvez pas lire l'image ? <a href='#' onclick='refreshCaptcha(event);'>Cliquez ici</a> pour rafraîchir</p>
+                <input type="text" id="captcha" name="captcha" placeholder="Entrez le code Captcha" required>
+                <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id="captcha_image"></p>
+                <p>Vous ne pouvez pas lire l'image ? <a href="#" onclick="refreshCaptcha(event);">Cliquez ici</a> pour rafraîchir</p>
             </div>
         </div>
     </div>
-    <input type="text" name="lang" class="form-control" value="fr" disabled required hidden>
+    <input type="text" id="lang" name="lang" class="form-control" value="fr" disabled required hidden>
     <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
         <span class="description">Faire une réservation !</span>
         <span class="success">
@@ -174,6 +173,7 @@ Nous assurons aussi le servie de livraison pour vous.</h4>
         <span class="error">Réessayez...</span>
     </button>
 </form>
+
 
        <style>
        .btn-success {
@@ -214,6 +214,10 @@ Nous assurons aussi le servie de livraison pour vous.</h4>
         border-radius: 5px;
         cursor: pointer;
        }
+       .invalid-input {
+    border: 1px solid red; /* Change border color to red */
+}
+
        </style>
        <!-- Simple confirmation modal -->
        <!-- Simple confirmation modal -->
@@ -224,213 +228,127 @@ Nous assurons aussi le servie de livraison pour vous.</h4>
         </div>
        </div>
 
-
        <script>
-            // Get the current date and time
-    var currentDate = new Date();
-    
-    // Format the current date and time into the required format for the input element
-    var formattedCurrentDate = currentDate.getFullYear() + '-' + ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' + ('0' + currentDate.getDate()).slice(-2) + 'T' + ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + currentDate.getMinutes()).slice(-2);
-
-    // Set the minimum value of the input element to the formatted current date and time
-    document.getElementById("DateTime").min = formattedCurrentDate;
-function getCaptcha() {
-    axios.get('./php/booking/get-captcha.php')
-        .then(function(response) {
-            console.log('Captcha:', response.data.captcha);
-        })
-        .catch(function(error) {
-            console.error('Erreur lors de la récupération du captcha :', error);
-        });
-}
-
-// Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
-getCaptcha();
-
-function submitForm() {
-    const form = document.getElementById("booking-form");
-    const captchaInput = form.querySelector('input[name="captcha"]');
-    const captcha = captchaInput.value;
-
-    // Créer un objet FormData et ajouter le champ captcha
-    const formData = new FormData();
-    formData.append('captcha', captcha);
-
-    axios.post('./php/booking/validate-captcha.php', formData)
-        .then(response => {
-            console.log('Réponse de validation :', response.data.valid);
-
-            if (response.data.valid) {
-                const submitButton = form.querySelector(".btn-submit");
-                submitButton.removeAttribute('disabled');
-
-            } else {
-                openModal('Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.');
-                refreshCaptcha();
-            }
-        })
-        .catch(error => {
-            console.error('Erreur lors de la validation du CAPTCHA :', error);
-        });
-}
-
-function openModal(message) {
-    modalMessage.innerText = message;
-    confirmationModal.style.display = 'block';
-}
-
-function refreshCaptcha(event) {
-    if (event) {
-        event.preventDefault();
-    }
-
-    var img = document.getElementById('captcha_image');
-
-    axios.get('./php/booking/captcha.php', {
-            params: {
-                rand: Math.random() * 1000
-            },
-            responseType: 'arraybuffer'
-        })
-        .then(function(response) {
-            var blob = new Blob([response.data], {
-                type: 'image/jpeg'
-            });
-            var imgUrl = URL.createObjectURL(blob);
-            img.src = imgUrl;
-            getCaptcha();
-        })
-        .catch(function(error) {
-            console.error('Erreur lors de l\'actualisation du CAPTCHA :', error);
-        });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
+   document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("booking-form");
     const submitButton = form.querySelector(".btn-submit");
-
-    const datetimeInput = form.querySelector('input[name="datetime"]');
+    const captchaInput = form.querySelector('input[name="captcha"]');
+    const captchaImage = document.getElementById('captcha_image');
     const confirmationModal = document.getElementById('confirmationModal');
     const modalMessage = document.getElementById('modalMessage');
-
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+        submitForm();
+    });
 
-        const formData = new FormData(form);
-        const selectedDateTime = new Date(formData.get('datetime'));
-        const captchaInput = form.querySelector('input[name="captcha"]');
+    captchaImage.addEventListener("click", function() {
+        refreshCaptcha();
+    });
+
+    function submitForm() {
         const captcha = captchaInput.value;
-
-        // Inclure la valeur du CAPTCHA dans FormData
+        const formData = new FormData(form);
         formData.append('captcha', captcha);
-        // Valider chaque champ requis
-        const inputs = form.querySelectorAll("[required]");
-        let isValid = true;
-        inputs.forEach(function(input) {
-            if (input.value.trim() === "") {
-                isValid = false;
-                // Optionnel : vous pouvez ajouter un retour visuel pour l'utilisateur, comme ajouter une bordure rouge à l'entrée invalide
-                input.style.border = "1px solid red";
-            } else {
-                // Réinitialiser la bordure à son style par défaut
-                input.style.border = "";
+            // Validate email
+            const emailInput = form.querySelector('input[name="email"]');
+            const email = emailInput.value;
+            if (!validateEmail(email)) {
+                openModal('Please enter a valid email address.');
+                emailInput.style.border = "1px solid red";
+                return false;
             }
-        });
 
-        // Vérifier si la date sélectionnée est le 14 février 2024
-        if (selectedDateTime.getDate() === 14 && selectedDateTime.getMonth() === 1 && selectedDateTime.getFullYear() === 2024) {
-            openModal("Nous sommes désolé, toutes nos tables sont réservées le 14 février 2024");
-            return; // Empêcher le traitement ultérieur
-        }
-        // Si tous les champs requis sont remplis, soumettre le formulaire
-        if (isValid) {
-            // Valider CAPTCHA
-            axios.post('./php/booking/validate-captcha.php', formData)
-                .then(function(response) {
-                    console.log('Réponse de validation :', response.data.valid);
+            // Validate each required input
+            const inputs = form.querySelectorAll("[required]");
+            let isValid = true;
+            console.log(inputs);
+            inputs.forEach(function(input) {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    // Add red border to empty required fields
+                    input.style.border = "1px solid red";
+                } else {
+                    // Reset the border to its default style
+                    input.style.border = "";
+                }
+            });
 
-                    if (response.data.valid) {
-                        // CAPTCHA est valide, procéder à la soumission du formulaire
-                        if (isDateTimeValid(selectedDateTime)) {
-                            submitButton.innerHTML = '<span class="description">Envoi...</span>';
-
-                            axios.post('./php/booking/booking-form.php', formData)
-                                .then(function(response) {
-                                    submitButton.innerHTML = '<span class="description">Réservation réussie !</span>';
+            if (!isValid) {
+                // If any required field is empty, show an error message and prevent form submission
+                openModal("Please fill in all required fields.");
+                return false;
+            }
+        axios.post('./php/booking/validate-captcha.php', formData)
+            .then(response => {
+                if (response.data.valid) {
+                    
+                        // Use AJAX to submit the form data
+                        axios.post('./php/booking/booking-professionnels.php', formData)
+                            .then(response => {
+                                console.log('Form submission response:', response.data);
+                                if (response.data === 'success') {
+                                    submitButton.innerHTML = '<span class="description">Reservation Successful!</span>';
                                     submitButton.classList.remove('btn-secondary');
                                     submitButton.classList.remove('btn-submit');
                                     submitButton.classList.add('btn-success');
                                     submitButton.setAttribute('disabled', 'disabled');
-                                })
-                                .catch(function(error) {
-                                    submitButton.innerHTML = '<span class="error">Réessayer...</span>';
-                                    submitButton.classList.remove('btn-submit');
-                                    submitButton.classList.remove('btn-secondary');
-                                    submitButton.classList.add('btn-danger');
-                                });
-                        } else {
-                            // Afficher un message d'erreur et empêcher la soumission du formulaire
-                            modalMessage.innerText =
-                                'Date ou heure invalide. Veuillez sélectionner une date et une heure valides dans les plages horaires autorisées.';
-                            confirmationModal.style.display = 'block';
-                            // Empêcher la soumission du formulaire
-                            return false;
-                        }
-                    } else {
-                        // Afficher un message d'erreur et empêcher la soumission du formulaire
-                        modalMessage.innerText = 'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.';
-                        confirmationModal.style.display = 'block';
-                        // Empêcher la soumission du formulaire
-                        return false;
-                    }
-                })
-                .catch(function(error) {
-                    console.error('Erreur lors de la validation du CAPTCHA :', error);
-                });
-        } else {
-            // Optionnel : vous pouvez informer l'utilisateur qu'il y a des champs requis vides
-            modalMessage.innerText = "Veuillez remplir tous les champs obligatoires.";
-            confirmationModal.style.display = 'block';
-        }
-    });
-
-    function isDateTimeValid(dateTime) {
-    const day = dateTime.getDay();
-    const hours = dateTime.getHours();
-    const minutes = dateTime.getMinutes();
-    switch (day) {
-        case 0: // Sunday
-            return (hours >= 18 && hours < 22) || (hours >= 12 && hours < 14);
-        case 1: // Monday
-            return hours >= 18 && hours < 22;
-        case 2: // Tuesday
-            return false; // Closed on Tuesday
-        case 3: // Wednesday
-            return hours >= 18 && hours < 22;
-        case 4: // Thursday
-            return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-        case 5: // Friday
-            return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-        case 6: // Saturday
-            return hours >= 18 && hours < 22;
-        default:
-            return false;
+                                } else {
+                                    openModal('Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error submitting form:', error);
+                                openModal('Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.');
+                            });
+                   
+                } else {
+                    openModal('Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.');
+                    refreshCaptcha();
+                }
+            })
+            .catch(error => {
+                console.error('Error validating CAPTCHA:', error);
+            });
     }
-}
-
-
 });
 
-function openModal(message) {
+function refreshCaptcha(event) {
+       if (event) {
+        event.preventDefault();
+       }
+
+       var img = document.getElementById('captcha_image');
+
+       axios.get('./php/booking/captcha.php', {
+         params: {
+          rand: Math.random() * 1000
+         },
+         responseType: 'arraybuffer'
+        })
+        .then(function(response) {
+         var blob = new Blob([response.data], {
+          type: 'image/jpeg'
+         });
+         var imgUrl = URL.createObjectURL(blob);
+         img.src = imgUrl;
+         getCaptcha();
+        })
+        .catch(function(error) {
+         console.error('Error refreshing CAPTCHA:', error);
+        });
+      }
+      function openModal(message) {
         modalMessage.innerText = message;
         confirmationModal.style.display = 'block';
     }
-
-    function closeModal() {
-        document.getElementById('confirmationModal').style.display = 'none';
-    }
+function closeModal() {
+    document.getElementById('confirmationModal').style.display = 'none';
+}
+function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
 </script>
-
       </div>
      </div>
     </div>
@@ -443,7 +361,7 @@ function openModal(message) {
     <div class="footer-first-row row">
      <div class="col-lg-3 text-center">
       <a href="index.php">
-       <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88"
+       <img src="./assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88"
         class="mt-5 mb-5">
       </a>
      </div>
@@ -546,91 +464,11 @@ include 'table-fr.php'
   <!-- Pied de page / Fin -->
  </div>
  <!-- Content / End -->
- <!-- Panel Cart -->
- <div id="panel-cart">
-  <div class="panel-cart-container">
-   <div class="panel-cart-title">
-    <h5 class="title">Your Cart</h5>
-    <button class="close" data-toggle="panel-cart">
-     <i class="ti ti-close"></i>
-    </button>
-   </div>
-   <div class="panel-cart-content cart-details">
-    <table class="cart-table">
-     <tr>
-      <td class="title">
-       <span class="name">
-        <a href="#product-modal" data-toggle="modal">Beef Burger</a>
-       </span>
-       <span class="caption text-muted">Large (500g)</span>
-      </td>
-      <td class="price">$9.00</td>
-      <td class="actions">
-       <a href="#product-modal" data-toggle="modal" class="action-icon">
-        <i class="ti ti-pencil"></i>
-       </a>
-       <a href="#" class="action-icon">
-        <i class="ti ti-close"></i>
-       </a>
-      </td>
-     </tr>
-     <tr>
-      <td class="title">
-       <span class="name">
-        <a href="#product-modal" data-toggle="modal">Extra Burger</a>
-       </span>
-       <span class="caption text-muted">Small (200g)</span>
-      </td>
-      <td class="price text-success">$9.00</td>
-      <td class="actions">
-       <a href="#product-modal" data-toggle="modal" class="action-icon">
-        <i class="ti ti-pencil"></i>
-       </a>
-       <a href="#" class="action-icon">
-        <i class="ti ti-close"></i>
-       </a>
-      </td>
-     </tr>
-    </table>
-    <div class="cart-summary">
-     <div class="row">
-      <div class="col-7 text-right text-muted">Order total:</div>
-      <div class="col-5">
-       <strong>$ <span class="cart-products-total">0.00</span>
-       </strong>
-      </div>
-     </div>
-     <div class="row">
-      <div class="col-7 text-right text-muted">Devliery:</div>
-      <div class="col-5">
-       <strong>$ <span class="cart-delivery">0.00</span>
-       </strong>
-      </div>
-     </div>
-     <hr class="hr-sm">
-     <div class="row text-lg">
-      <div class="col-7 text-right text-muted">Total:</div>
-      <div class="col-5">
-       <strong>$ <span class="cart-total">0.00</span>
-       </strong>
-      </div>
-     </div>
-    </div>
-    <div class="cart-empty">
-     <i class="ti ti-shopping-cart"></i>
-     <p>Your cart is empty...</p>
-    </div>
-   </div>
-  </div>
-  <a href="checkout.php" class="panel-cart-action btn btn-secondary btn-block btn-lg">
-   <span>Go to checkout</span>
-  </a>
- </div>
  <!-- Panel Mobile -->
  <nav id="panel-mobile">
   <div class="module module-logo bg-dark dark">
    <a href="#">
-    <img src="assets/img/matthiasandsea.jpg" alt="matthiasandsea" style="width: 200px;height: 100px;" width="88">
+    <img src="./assets/img/gelatonaturale.svg" alt="gelatonaturale"  style="width: 200px;height: 100px;" width="88">
    </a>
    <button class="close" data-toggle="panel-mobile">
     <i class="ti ti-close"></i>
