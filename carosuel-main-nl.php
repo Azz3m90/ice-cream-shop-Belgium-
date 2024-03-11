@@ -36,7 +36,7 @@
 
         <!-- Voorbeeldmenu -->
         <div class="menu-sample">
-            <a href="./page-sur-place.php">
+            <a href="./page-sur-place-nl.php">
                 <img src="./assets/img/surplace/surplace.jpg" alt="Ter plaatse eten" style="width: 500px;height:400px;">
                 <h3 class="title" title="Ter plaatse eten">Ter plaatse</h3>
             </a>
@@ -50,14 +50,14 @@
         </div>
         <!-- Voorbeeldmenu -->
         <div class="menu-sample">
-            <a href="./Professionnels.php">
+            <a href="./Professionnels-nl.php">
                 <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
                 <h3 class="title" title="Professionals">Profi's</h3>
             </a>
         </div>
         <!-- Voorbeeldmenu -->
         <div class="menu-sample">
-            <a href="./reservation.php">
+            <a href="./reservation-nl.php">
                 <img src="./assets/img/Reservations/reservation.jpg" alt="Catering Evenementen Reserveringen" style="width: 500px;height:400px;">
                 <h3 class="title" title="Catering Evenementen Reserveringen">Catering Reserve- ringen</h3>
             </a>

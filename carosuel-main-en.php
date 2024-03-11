@@ -36,7 +36,7 @@
 
         <!-- Menu Sample -->
         <div class="menu-sample">
-            <a href="./page-sur-place.php">
+            <a href="./page-sur-place-en.php">
                 <img src="./assets/img/surplace/surplace.jpg" alt="On-site dining" style="width: 500px;height:400px;">
                 <h3 class="title" title="On-site dining">On-site Dining</h3>
             </a>
@@ -51,14 +51,14 @@
 
         <!-- Menu Sample -->
         <div class="menu-sample">
-            <a href="./Professionnels.php">
+            <a href="./Professionnels-en.php">
                 <img src="./assets/img/professionals/professionals.jpg" alt="Professionals" style="width: 500px;height:400px;">
                 <h3 class="title" title="Professionals">  Pros</h3>
             </a>
         </div>
         <!-- Menu Sample -->
         <div class="menu-sample">
-            <a href="./reservation.php">
+            <a href="./reservation-en.php">
                 <img src="./assets/img/Reservations/reservation.jpg" alt="Catering Events Reservations" style="width: 500px;height:400px;">
                 <h3 class="title" title="Catering Events Reservations">Catering Reserv- ations</h3>
             </a>

@@ -34,11 +34,11 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
     <hr class="dropdown-divider">
    </li>
    <li>
-     <a class="dropdown-item" href="./Professionnels-en.php">
+     <a class="dropdown-item" href="./page-reservation-en.php">
       <i class="flag flag-united-kingdom"></i>English </a>
     </li>
     <li>
-     <a class="dropdown-item" href="./Professionnels-nl.php">
+     <a class="dropdown-item" href="./page-reservation-nl.php">
       <i class="flag-netherlands flag"></i>Dutch </a>
     </li>
   </ul>
@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
-
+ 
 function openModal(message) {
         modalMessage.innerText = message;
         confirmationModal.style.display = 'block';
@@ -503,11 +503,21 @@ include 'table-fr.php'
        <tbody>
         <tr>
          <td class="title">Téléphone :</td>
-         <td class="content"><a href="tel:+071218620" target="_blank">071 21 86 20</a></td>
+         <td class="content">
+    <a href="tel:+0497476548" target="_blank">
+        <i class="fa fa-phone fa-lg"></i> 0497 47 65 48
+    </a>
+</td>
+
         </tr>
         <tr>
          <td class="title">Email :</td>
-         <td class="content"><a href="mailto:info@matthiasandsea.be" target="_blank">info@matthiasandsea.be</a></td>
+        <td class="content">
+    <a href="mailto:info@matthiasandsea.be" target="_blank">
+        <i class="fa fa-lg fa-envelope"></i> info@matthiasandsea.be
+    </a>
+</td>
+
         </tr>
        </tbody>
       </table>
@@ -637,30 +647,30 @@ include 'table-fr.php'
    </button>
   </div>
   <nav class="module module-navigation"></nav>
-  <!--language selector-->
-  <div class="dropdown col-12">
-   <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-    <i class="flag flag-france m-0"></i>
-   </a>
-   <ul class="dropdown-menu" aria-labelledby="Dropdown1">
-    <li>
-     <a class="dropdown-item" href="#">
-      <i class="flag-france flag"></i>Français <i class="fa fa-check text-success ms-2"></i>
-     </a>
-    </li>
-    <li>
-     <hr class="dropdown-divider">
-    </li>
-    <li>
-     <a class="dropdown-item" href="./Professionnels-en.php">
+ <!--language selector-->
+ <div class="dropdown col-md-2 right mt-5">
+  <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+   <i class="flag flag-france m-0"></i>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="Dropdown">
+   <li>
+    <a class="dropdown-item" href="#">
+     <i class="flag-france flag"></i>Français <i class="fa fa-check text-success ms-2"></i>
+    </a>
+   </li>
+   <li>
+    <hr class="dropdown-divider">
+   </li>
+   <li>
+     <a class="dropdown-item" href="./page-reservation-en.php">
       <i class="flag flag-united-kingdom"></i>English </a>
     </li>
     <li>
-     <a class="dropdown-item" href="./Professionnels-nl.php">
+     <a class="dropdown-item" href="./page-reservation-nl.php">
       <i class="flag-netherlands flag"></i>Dutch </a>
     </li>
-   </ul>
-  </div>
+  </ul>
+ </div>
   <?php
     include 'footer.php';
 ?>

@@ -201,11 +201,21 @@ include 'table-fr.php'
     <tbody>
       <tr>
         <td class="title">Téléphone :</td>
-        <td class="content"><a href="tel:+071218620" target="_blank">071 21 86 20</a></td>
+        <td class="content">
+    <a href="tel:+0497476548" target="_blank">
+        <i class="fa fa-phone fa-lg"></i> 0497 47 65 48
+    </a>
+</td>
+
       </tr>
       <tr>
         <td class="title">Email :</td>
-        <td class="content"><a href="mailto:info@matthiasandsea.be" target="_blank">info@matthiasandsea.be</a></td>
+       <td class="content">
+    <a href="mailto:info@matthiasandsea.be" target="_blank">
+        <i class="fa fa-lg fa-envelope"></i> info@matthiasandsea.be
+    </a>
+</td>
+
       </tr>
     </tbody>
   </table>
