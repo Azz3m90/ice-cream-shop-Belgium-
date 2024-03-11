@@ -1,6 +1,6 @@
 <div class="module module-social">
     <h6 class="text-sm mb-3">Suivez-nous !</h6>
-    <a href="https://www.facebook.com/profile.php?id=100064692546589&ref=embed_page"
+    <a href="https://www.facebook.com/gelatonaturaletarcienne"
         class="icon icon-social icon-circle icon-sm icon-facebook">
         <i class="fa fa-facebook"></i>
     </a>

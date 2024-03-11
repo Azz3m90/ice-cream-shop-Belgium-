@@ -4,7 +4,7 @@ require_once '.././config/config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-// Function to generate a stylish HTML email for clients
+// Function to generate stylish HTML email for clients
 function getClientEmailContent($name)
 {
     // HTML content for client email
@@ -48,17 +48,17 @@ function getClientEmailContent($name)
     <body>
         <div class='container'>
             <div class='header'>
-                <h1>Confirmation de réservation</h1>
+                <h1>Reservation Confirmation</h1>
             </div>
             <div class='content'>
-                <p>Bonjour $name,</p>
-                <p>Votre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.</p>
-                <p>Nous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.</p>
-                <p>Cordialement,</p>
-                <p>L'équipe de Gelato Naturale Tarcienne</p>
+                <p>Hello $name,</p>
+                <p>Your reservation has been successfully recorded. We thank you for your trust.</p>
+                <p>We will contact you shortly to confirm the details of your reservation.</p>
+                <p>Regards,</p>
+                <p>The Gelato Naturale Tarcienne Team</p>
             </div>
             <div class='footer'>
-                <p>Merci d'avoir choisi Gelato Naturale Tarcienne !</p>
+                <p>Thank you for choosing Gelato Naturale Tarcienne!</p>
             </div>
         </div>
     </body>
@@ -67,16 +67,16 @@ function getClientEmailContent($name)
     return $content;
 }
 
-// Function to generate a plain text email for clients
+// Function to generate plain text email for clients
 function getClientPlainTextContent($name)
 {
     // Plain text content for client email
-    $content = "Bonjour $name,\n\nVotre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.\nNous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.\n\nCordialement,\nL'équipe de Gelato Naturale Tarcienne";
+    $content = "Hello $name,\n\nYour reservation has been successfully recorded. We thank you for your trust.\nWe will contact you shortly to confirm the details of your reservation.\n\nRegards,\nThe Gelato Naturale Tarcienne Team";
 
     return $content;
 }
 
-// Function to generate a stylish HTML email for the store
+// Function to generate stylish HTML email for the store
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
     // HTML content for store email
@@ -133,17 +133,17 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     <body>
         <div class='container'>
             <div class='header'>
-                <h1>Nouvelle réservation</h1>
+                <h1>New Reservation</h1>
             </div>
             <div class='content'>
-                <p>Une nouvelle réservation a été enregistrée :</p>
+                <p>A new reservation has been recorded :</p>
                 <table>
                     <tr>
-                        <th>Champ</th>
-                        <th>Valeur</th>
+                        <th>Field</th>
+                        <th>Value</th>
                     </tr>
                     <tr>
-                        <td>Nom</td>
+                        <td>Name</td>
                         <td>$name</td>
                     </tr>
                     <tr>
@@ -151,25 +151,25 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                         <td>$email</td>
                     </tr>
                     <tr>
-                        <td>Téléphone</td>
+                        <td>Phone</td>
                         <td>$phone</td>
                     </tr>
                     <tr>
-                        <td>Date de livraison</td>
+                        <td>Delivery Date</td>
                         <td>$delivery_date</td>
                     </tr>
                     <tr>
-                        <td>Adresse de livraison</td>
+                        <td>Delivery Address</td>
                         <td>$delivery_address</td>
                     </tr>
                     <tr>
-                        <td>Commentaire</td>
+                        <td>Comment</td>
                         <td>$comment</td>
                     </tr>
                 </table>
             </div>
             <div class='footer'>
-                <p>Merci de gérer cette réservation rapidement.</p>
+                <p>Please handle this reservation promptly.</p>
             </div>
         </div>
     </body>
@@ -178,18 +178,18 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     return $content;
 }
 
-// Function to generate a plain text email for the store
+// Function to generate plain text email for the store
 function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
     // Plain text content for store email
-    $content = "Une nouvelle réservation a été enregistrée :\n\n"
-              . "Nom: $name\n"
+    $content = "A new reservation has been recorded :\n\n"
+              . "Name: $name\n"
               . "Email: $email\n"
-              . "Téléphone: $phone\n"
-              . "Date de livraison: $delivery_date\n"
-              . "Adresse de livraison: $delivery_address\n"
-              . "Commentaire: $comment\n\n"
-              . "Merci de gérer cette réservation rapidement.";
+              . "Phone: $phone\n"
+              . "Delivery Date: $delivery_date\n"
+              . "Delivery Address: $delivery_address\n"
+              . "Comment: $comment\n\n"
+              . "Please handle this reservation promptly.";
 
     return $content;
 }
@@ -231,7 +231,7 @@ if ($result->num_rows === 0) { // If email does not exist, proceed
     $mysql_db->query($insertSql);
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
-    $mail->Subject = 'Confirmation de réservation';
+    $mail->Subject = 'Reservation Confirmation';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
     $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
@@ -247,7 +247,7 @@ if ($result->num_rows === 0) { // If email does not exist, proceed
     }
     $mail->clearAllRecipients(); // Clear previous recipients
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
-    $mail->Subject = 'Nouvelle réservation - ' . $name;
+    $mail->Subject = 'New Reservation - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Plain text alternative
 
@@ -264,7 +264,7 @@ if ($result->num_rows === 0) { // If email does not exist, proceed
     // Email already exists in the database, do not add to the database
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
-    $mail->Subject = 'Confirmation de réservation';
+    $mail->Subject = 'Reservation Confirmation';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
     $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
@@ -278,7 +278,7 @@ if ($result->num_rows === 0) { // If email does not exist, proceed
     } 
     $mail->clearAllRecipients(); // Clear previous recipients
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
-    $mail->Subject = 'Nouvelle réservation - ' . $name;
+    $mail->Subject = 'New Reservation - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Plain text alternative
 

@@ -4,10 +4,10 @@ require_once '.././config/config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-// Function to generate a stylish HTML email for clients
+// Functie om een stijlvolle HTML-e-mail voor klanten te genereren
 function getClientEmailContent($name)
 {
-    // HTML content for client email
+    // HTML-inhoud voor e-mail naar klant
     $content = "
     <html>
     <head>
@@ -27,7 +27,7 @@ function getClientEmailContent($name)
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
             .header {
-                background-image: linear-gradient(to right, green, white, red);
+                background-color: #0073e6;
                 color: #ffffff;
                 text-align: center;
                 padding: 20px;
@@ -37,7 +37,7 @@ function getClientEmailContent($name)
                 padding: 20px;
             }
             .footer {
-                background-image: linear-gradient(to right, green, white, red);
+                background-color: #0073e6;
                 color: #ffffff;
                 text-align: center;
                 padding: 10px;
@@ -48,17 +48,17 @@ function getClientEmailContent($name)
     <body>
         <div class='container'>
             <div class='header'>
-                <h1>Confirmation de réservation</h1>
+                <h1>Bevestiging van reservering</h1>
             </div>
             <div class='content'>
-                <p>Bonjour $name,</p>
-                <p>Votre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.</p>
-                <p>Nous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.</p>
-                <p>Cordialement,</p>
-                <p>L'équipe de Gelato Naturale Tarcienne</p>
+                <p>Beste $name,</p>
+                <p>Uw reservering is succesvol geregistreerd. Wij danken u voor uw vertrouwen.</p>
+                <p>Wij zullen zo snel mogelijk contact met u opnemen om de details van uw reservering te bevestigen.</p>
+                <p>Met vriendelijke groet,</p>
+                <p>Team Gelato Naturale Tarcienne</p>
             </div>
             <div class='footer'>
-                <p>Merci d'avoir choisi Gelato Naturale Tarcienne !</p>
+                <p>Bedankt voor het kiezen van Gelato Naturale Tarcienne!</p>
             </div>
         </div>
     </body>
@@ -67,19 +67,19 @@ function getClientEmailContent($name)
     return $content;
 }
 
-// Function to generate a plain text email for clients
+// Functie om een platte tekst e-mail voor klanten te genereren
 function getClientPlainTextContent($name)
 {
-    // Plain text content for client email
-    $content = "Bonjour $name,\n\nVotre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.\nNous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.\n\nCordialement,\nL'équipe de Gelato Naturale Tarcienne";
+    // Platte tekst inhoud voor e-mail naar klant
+    $content = "Beste $name,\n\nUw reservering is succesvol geregistreerd. Wij danken u voor uw vertrouwen.\nWij zullen zo snel mogelijk contact met u opnemen om de details van uw reservering te bevestigen.\n\nMet vriendelijke groet,\nTeam Gelato Naturale Tarcienne";
 
     return $content;
 }
 
-// Function to generate a stylish HTML email for the store
+// Functie om een stijlvolle HTML-e-mail voor de winkel te genereren
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // HTML content for store email
+    // HTML-inhoud voor e-mail naar de winkel
     $content = "
     <html>
     <head>
@@ -99,7 +99,7 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
             .header {
-                background-image: linear-gradient(to right, green, white, red);
+                background-color: #0073e6;
                 color: #ffffff;
                 text-align: center;
                 padding: 20px;
@@ -109,7 +109,7 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                 padding: 20px;
             }
             .footer {
-                background-image: linear-gradient(to right, green, white, red);
+                background-color: #0073e6;
                 color: #ffffff;
                 text-align: center;
                 padding: 10px;
@@ -125,7 +125,7 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                 border-bottom: 1px solid #ddd;
             }
             th {
-                background-image: linear-gradient(to right, green, white, red);
+                background-color: #0073e6;
                 color: #ffffff;
             }
         </style>
@@ -133,43 +133,43 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     <body>
         <div class='container'>
             <div class='header'>
-                <h1>Nouvelle réservation</h1>
+                <h1>Nieuwe reservering</h1>
             </div>
             <div class='content'>
-                <p>Une nouvelle réservation a été enregistrée :</p>
+                <p>Er is een nieuwe reservering geregistreerd :</p>
                 <table>
                     <tr>
-                        <th>Champ</th>
-                        <th>Valeur</th>
+                        <th>Veld</th>
+                        <th>Waarde</th>
                     </tr>
                     <tr>
-                        <td>Nom</td>
+                        <td>Naam</td>
                         <td>$name</td>
                     </tr>
                     <tr>
-                        <td>Email</td>
+                        <td>E-mail</td>
                         <td>$email</td>
                     </tr>
                     <tr>
-                        <td>Téléphone</td>
+                        <td>Telefoon</td>
                         <td>$phone</td>
                     </tr>
                     <tr>
-                        <td>Date de livraison</td>
+                        <td>Leveringsdatum</td>
                         <td>$delivery_date</td>
                     </tr>
                     <tr>
-                        <td>Adresse de livraison</td>
+                        <td>Leveringsadres</td>
                         <td>$delivery_address</td>
                     </tr>
                     <tr>
-                        <td>Commentaire</td>
+                        <td>Opmerking</td>
                         <td>$comment</td>
                     </tr>
                 </table>
             </div>
             <div class='footer'>
-                <p>Merci de gérer cette réservation rapidement.</p>
+                <p>Bedankt voor het snel afhandelen van deze reservering.</p>
             </div>
         </div>
     </body>
@@ -178,26 +178,26 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     return $content;
 }
 
-// Function to generate a plain text email for the store
+// Functie om een platte tekst e-mail voor de winkel te genereren
 function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // Plain text content for store email
-    $content = "Une nouvelle réservation a été enregistrée :\n\n"
-              . "Nom: $name\n"
-              . "Email: $email\n"
-              . "Téléphone: $phone\n"
-              . "Date de livraison: $delivery_date\n"
-              . "Adresse de livraison: $delivery_address\n"
-              . "Commentaire: $comment\n\n"
-              . "Merci de gérer cette réservation rapidement.";
+    // Platte tekst inhoud voor e-mail naar de winkel
+    $content = "Er is een nieuwe reservering geregistreerd :\n\n"
+              . "Naam: $name\n"
+              . "E-mail: $email\n"
+              . "Telefoon: $phone\n"
+              . "Leveringsdatum: $delivery_date\n"
+              . "Leveringsadres: $delivery_address\n"
+              . "Opmerking: $comment\n\n"
+              . "Bedankt voor het snel afhandelen van deze reservering.";
 
     return $content;
 }
 
-// Create a new PHPMailer object
+// Maak een nieuw PHPMailer-object aan
 $mail = new PHPMailer();
 
-// Configure SMTP
+// Configureer SMTP
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
@@ -207,7 +207,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->CharSet = 'UTF-8';
 
-// Extract form data
+// Haal formuliergegevens op
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
 $company = trim($_POST['company']);
@@ -218,71 +218,71 @@ $delivery_date = trim($_POST['delivery_date']);
 $delivery_address = trim($_POST['delivery_address']);
 $comment = trim($_POST['comment']);
 
-// Check if email already exists in the database
+// Controleer of het e-mailadres al bestaat in de database
 $emailExistsQuery = "SELECT * FROM emails WHERE email = '$email'";
 $result = $mysql_db->query($emailExistsQuery);
 
-if ($result->num_rows === 0) { // If email does not exist, proceed
-    // Client email
-    // Store email
+if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, ga dan verder
+    // E-mail naar klant
+    // E-mail naar de winkel
     $insertSql = "INSERT INTO emails (name, surname, company, phone, email, sector, delivery_date, delivery_address, comment, creation_date, active)
     VALUES ('$name', '$surname', '$company', '$phone', '$email', '$sector', '$delivery_date', '$delivery_address', '$comment', current_timestamp(), 1)";
 
     $mysql_db->query($insertSql);
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
-    $mail->Subject = 'Confirmation de réservation';
+    $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
+    $mail->AltBody = getClientPlainTextContent($name); // Platte tekst alternatief
 
-    // Restaurant email
+    // E-mail naar het restaurant
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Send the restaurant email
+    // Verstuur de e-mail naar het restaurant
     if (!$mail->send()) {
         echo 'error';
     } else {
         echo 'success';
     }
-    $mail->clearAllRecipients(); // Clear previous recipients
+    $mail->clearAllRecipients(); // Wis eerdere ontvangers
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
-    $mail->Subject = 'Nouvelle réservation - ' . $name;
+    $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Plain text alternative
+    $mail->AltBody = $storePlainTextContent; // Platte tekst alternatief
 
-    // Send the restaurant email
+    // Verstuur de e-mail naar het restaurant
     if (!$mail->send()) {
         echo 'error';
     } else {
         echo 'success';
     }
-    // Close the database connection
+    // Sluit de databaseverbinding
     $mysql_db->close();
     
 } else {
-    // Email already exists in the database, do not add to the database
+    // E-mailadres bestaat al in de database, voeg niet toe aan de database
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
-    $mail->Subject = 'Confirmation de réservation';
+    $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
+    $mail->AltBody = getClientPlainTextContent($name); // Platte tekst alternatief
 
-    // Restaurant email
+    // E-mail naar het restaurant
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Send the restaurant email
+    // Verstuur de e-mail naar het restaurant
     if (!$mail->send()) {
         echo 'error';
     } 
-    $mail->clearAllRecipients(); // Clear previous recipients
+    $mail->clearAllRecipients(); // Wis eerdere ontvangers
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
-    $mail->Subject = 'Nouvelle réservation - ' . $name;
+    $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Plain text alternative
+    $mail->AltBody = $storePlainTextContent; // Platte tekst alternatief
 
-    // Send the restaurant email
+    // Verstuur de e-mail naar het restaurant
     if (!$mail->send()) {
         echo 'error';
     } else {

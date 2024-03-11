@@ -183,7 +183,7 @@
   </table>
 
   <h5 class="text-muted mb-3 mt-4">Social Media</h5>
-  <a href="https://www.facebook.com/profile.php?id=100064692546589&ref=embed_page"
+  <a href="https://www.facebook.com/gelatonaturaletarcienne"
     class="icon icon-social icon-circle icon-sm icon-facebook">
     <i class="fa fa-facebook"></i>
   </a>
