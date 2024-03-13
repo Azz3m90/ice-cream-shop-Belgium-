@@ -5,11 +5,11 @@ session_start();
 $captcha_code = '';
 $captcha_image_height = 50;
 $captcha_image_width = 130;
-$total_characters_on_image = 6;
+$total_characters_on_image = 4;
 
 //The characters that can be used in the CAPTCHA code.
 //avoid all confusing characters and numbers (For example: l, 1 and i)
-$possible_captcha_letters = 'bcdfghjkmnpqrstvwxyz23456789';
+$possible_captcha_letters = '23456789';
 $captcha_font = './monofont.ttf';
 
 $random_captcha_dots = 50;

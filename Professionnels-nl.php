@@ -144,7 +144,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="form-group">
                                     <label for="delivery_date">Gewenste leverdatum :</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
-                                        placeholder="Gewenste leverdatum" required>
+                                        placeholder="Gewenste leverdatum" min="<?php echo date('Y-m-d'); ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_address">Afleveradres :</label>
@@ -255,6 +255,19 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             captchaImage.addEventListener("click", function() {
                                 refreshCaptcha();
                             });
+
+                            function getCaptcha() {
+                                axios.get('./php/booking/get-captcha.php')
+                                    .then(function(response) {
+                                        console.log('Captcha:', response.data.captcha);
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Erreur lors de la récupération du captcha :', error);
+                                    });
+                            }
+
+                            // Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+                            getCaptcha();
 
                             function submitForm() {
                                 const captcha = captchaInput.value;

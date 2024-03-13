@@ -152,7 +152,8 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="form-group">
                                     <label for="delivery_date">Date de livraison souhaitée :</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
-                                        placeholder="Date de livraison souhaitée" required>
+                                        placeholder="Date de livraison souhaitée" min="<?php echo date('Y-m-d'); ?>"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_address">Adresse de livraison :</label>
