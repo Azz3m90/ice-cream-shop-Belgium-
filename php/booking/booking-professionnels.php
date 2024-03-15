@@ -4,200 +4,142 @@ require_once '.././config/config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-// Function to generate a stylish HTML email for clients
-function getClientEmailContent($name)
+// Fonction pour générer le contenu HTML élégant de l'e-mail pour les clients
+$image_dir = '../../assets/img/gelatonaturale.svg';
+function getClientEmailContent($name,)
 {
-    // HTML content for client email
-    $content = "
-    <html>
-    <head>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                width: 80%;
-                margin: 20px auto;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-                background-image: linear-gradient(to right, green, white, red);
-                color: #ffffff;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-            .content {
-                padding: 20px;
-            }
-            .footer {
-                background-image: linear-gradient(to right, green, white, red);
-                color: #ffffff;
-                text-align: center;
-                padding: 10px;
-                border-radius: 0 0 10px 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Confirmation de réservation</h1>
-            </div>
-            <div class='content'>
-                <p>Bonjour $name,</p>
-                <p>Votre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.</p>
-                <p>Nous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.</p>
+    // Contenu HTML de l'e-mail pour le client
+    $content = '<html>
+
+<head>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
+                <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale80px.svg" alt="Gelato Naturale" style="max-width: 80px; max-height: 80px;">
+                <h1 style="margin: 0;">Confirmation de réservation</h1>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
+                <p>Cher/Chère '.$name.',</p>
+                <p>Votre réservation a été enregistrée avec succès. Nous vous remercions pour votre confiance.</p>
+                <p>Nous vous contacterons dès que possible pour confirmer les détails de votre réservation.</p>
                 <p>Cordialement,</p>
-                <p>L'équipe de Gelato Naturale Tarcienne</p>
-            </div>
-            <div class='footer'>
-                <p>Merci d'avoir choisi Gelato Naturale Tarcienne !</p>
-            </div>
-        </div>
-    </body>
-    </html>";
+                <p>Équipe Gelato Naturale Tarcienne</p>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
+                <p>Merci d\'avoir choisi Gelato Naturale Tarcienne !</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>';
 
     return $content;
 }
 
-// Function to generate a plain text email for clients
+// Fonction pour générer le contenu texte brut de l'e-mail pour les clients
 function getClientPlainTextContent($name)
 {
-    // Plain text content for client email
-    $content = "Bonjour $name,\n\nVotre réservation a bien été enregistrée. Nous vous remercions pour votre confiance.\nNous vous contacterons dans les plus brefs délais pour confirmer les détails de votre réservation.\n\nCordialement,\nL'équipe de Gelato Naturale Tarcienne";
+    // Contenu texte brut de l'e-mail pour le client
+    $content = "Cher/Chère $name,\n\nVotre réservation a été enregistrée avec succès. Nous vous remercions pour votre confiance.\nNous vous contacterons dès que possible pour confirmer les détails de votre réservation.\n\nCordialement,\nÉquipe Gelato Naturale Tarcienne";
 
     return $content;
 }
 
-// Function to generate a stylish HTML email for the store
+// Fonction pour générer le contenu HTML élégant de l'e-mail pour le magasin
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // HTML content for store email
-    $content = "
-    <html>
-    <head>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                width: 80%;
-                margin: 20px auto;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-                background-image: linear-gradient(to right, green, white, red);
-                color: #ffffff;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-            .content {
-                padding: 20px;
-            }
-            .footer {
-                background-image: linear-gradient(to right, green, white, red);
-                color: #ffffff;
-                text-align: center;
-                padding: 10px;
-                border-radius: 0 0 10px 10px;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th, td {
-                padding: 8px;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
-            th {
-                background-image: linear-gradient(to right, green, white, red);
-                color: #ffffff;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Nouvelle réservation</h1>
-            </div>
-            <div class='content'>
-                <p>Une nouvelle réservation a été enregistrée :</p>
-                <table>
+    // Contenu HTML de l'e-mail pour le magasin
+    $content = '
+<html>
+
+<head>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
+                <h1 style="margin: 0;">Nouvelle réservation</h1>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
+                <p style="margin-top: 0;">Une nouvelle réservation a été enregistrée :</p>
+                <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
-                        <th>Champ</th>
-                        <th>Valeur</th>
+                        <td style="border-bottom: 1px solid #ddd;">Nom</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$name.'</td>
                     </tr>
                     <tr>
-                        <td>Nom</td>
-                        <td>$name</td>
+                        <td style="border-bottom: 1px solid #ddd;">E-mail</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$email.'</td>
                     </tr>
                     <tr>
-                        <td>Email</td>
-                        <td>$email</td>
+                        <td style="border-bottom: 1px solid #ddd;">Téléphone</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$phone.'</td>
                     </tr>
                     <tr>
-                        <td>Téléphone</td>
-                        <td>$phone</td>
+                        <td style="border-bottom: 1px solid #ddd;">Date de livraison</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_date.'</td>
                     </tr>
                     <tr>
-                        <td>Date de livraison</td>
-                        <td>$delivery_date</td>
+                        <td style="border-bottom: 1px solid #ddd;">Adresse de livraison</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_address.'</td>
                     </tr>
                     <tr>
-                        <td>Adresse de livraison</td>
-                        <td>$delivery_address</td>
-                    </tr>
-                    <tr>
-                        <td>Commentaire</td>
-                        <td>$comment</td>
+                        <td style="border-bottom: 1px solid #ddd;">Commentaire</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$comment.'</td>
                     </tr>
                 </table>
-            </div>
-            <div class='footer'>
-                <p>Merci de gérer cette réservation rapidement.</p>
-            </div>
-        </div>
-    </body>
-    </html>";
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
+                <p style="margin: 0;">Grazie per aver elaborato questa prenotazione rapidamente.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>';
 
     return $content;
 }
 
-// Function to generate a plain text email for the store
+// Fonction pour générer le contenu texte brut de l'e-mail pour le magasin
 function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // Plain text content for store email
+    // Contenu texte brut de l'e-mail pour le magasin
     $content = "Une nouvelle réservation a été enregistrée :\n\n"
               . "Nom: $name\n"
-              . "Email: $email\n"
+              . "E-mail: $email\n"
               . "Téléphone: $phone\n"
               . "Date de livraison: $delivery_date\n"
               . "Adresse de livraison: $delivery_address\n"
               . "Commentaire: $comment\n\n"
-              . "Merci de gérer cette réservation rapidement.";
+              . "Merci d'avoir traité cette réservation rapidement.";
 
     return $content;
 }
 
-// Create a new PHPMailer object
+// Créer un nouvel objet PHPMailer
 $mail = new PHPMailer();
 
-// Configure SMTP
+// Configurer SMTP
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
@@ -207,7 +149,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->CharSet = 'UTF-8';
 
-// Extract form data
+// Récupérer les données du formulaire
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
 $company = trim($_POST['company']);
@@ -218,13 +160,13 @@ $delivery_date = trim($_POST['delivery_date']);
 $delivery_address = trim($_POST['delivery_address']);
 $comment = trim($_POST['comment']);
 
-// Check if email already exists in the database
+// Vérifier si l'adresse e-mail existe déjà dans la base de données
 $emailExistsQuery = "SELECT * FROM emails WHERE email = '$email'";
 $result = $mysql_db->query($emailExistsQuery);
 
-if ($result->num_rows === 0) { // If email does not exist, proceed
-    // Client email
-    // Store email
+if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
+    // E-mail au client
+    // E-mail au magasin
     $insertSql = "INSERT INTO emails (name, surname, company, phone, email, sector, delivery_date, delivery_address, comment, creation_date, active)
     VALUES ('$name', '$surname', '$company', '$phone', '$email', '$sector', '$delivery_date', '$delivery_address', '$comment', current_timestamp(), 1)";
 
@@ -234,55 +176,55 @@ if ($result->num_rows === 0) { // If email does not exist, proceed
     $mail->Subject = 'Confirmation de réservation';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
+    $mail->AltBody = getClientPlainTextContent($name); // Alternative texte brut
 
-    // Restaurant email
+    // E-mail au magasin
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Send the restaurant email
+    // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
         echo 'error';
     } else {
         echo 'success';
     }
-    $mail->clearAllRecipients(); // Clear previous recipients
+    $mail->clearAllRecipients(); // Effacer les destinataires précédents
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nouvelle réservation - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Plain text alternative
+    $mail->AltBody = $storePlainTextContent; // Alternative texte brut
 
-    // Send the restaurant email
+    // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
         echo 'error';
     } else {
         echo 'success';
     }
-    // Close the database connection
+    // Fermer la connexion à la base de données
     $mysql_db->close();
     
 } else {
-    // Email already exists in the database, do not add to the database
+    // L'adresse e-mail existe déjà dans la base de données, ne pas ajouter à la base de données
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Confirmation de réservation';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Plain text alternative
+    $mail->AltBody = getClientPlainTextContent($name); // Alternative texte brut
 
-    // Restaurant email
+    // E-mail au magasin
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Send the restaurant email
+    // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
         echo 'error';
     } 
-    $mail->clearAllRecipients(); // Clear previous recipients
+    $mail->clearAllRecipients(); // Effacer les destinataires précédents
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nouvelle réservation - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Plain text alternative
+    $mail->AltBody = $storePlainTextContent; // Alternative texte brut
 
-    // Send the restaurant email
+    // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
         echo 'error';
     } else {

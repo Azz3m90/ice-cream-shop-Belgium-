@@ -247,6 +247,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             const captchaImage = document.getElementById('captcha_image');
                             const confirmationModal = document.getElementById('confirmationModal');
                             const modalMessage = document.getElementById('modalMessage');
+
                             form.addEventListener("submit", function(event) {
                                 event.preventDefault();
                                 submitForm();
@@ -262,17 +263,18 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         console.log('Captcha:', response.data.captcha);
                                     })
                                     .catch(function(error) {
-                                        console.error('Erreur lors de la récupération du captcha :', error);
+                                        console.error('Fout bij het ophalen van de captcha:', error);
                                     });
                             }
 
-                            // Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+                            // Roep deze functie aan wanneer je de waarde van de captcha wilt ophalen
                             getCaptcha();
 
                             function submitForm() {
                                 const captcha = captchaInput.value;
                                 const formData = new FormData(form);
                                 formData.append('captcha', captcha);
+
                                 // Valideer e-mail
                                 const emailInput = form.querySelector('input[name="email"]');
                                 const email = emailInput.value;
@@ -285,7 +287,6 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 // Valideer elk vereist invoerveld
                                 const inputs = form.querySelectorAll("[required]");
                                 let isValid = true;
-                                console.log(inputs);
                                 inputs.forEach(function(input) {
                                     if (input.value.trim() === "") {
                                         isValid = false;
@@ -302,10 +303,12 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     openModal("Vul alle verplichte velden in.");
                                     return false;
                                 }
+                                submitButton.innerHTML =
+                                    '<span class="description">Bezig met verzenden...</span>';
+
                                 axios.post('./php/booking/validate-captcha.php', formData)
                                     .then(response => {
                                         if (response.data.valid) {
-
                                             // Gebruik AJAX om de formuliergegevens te verzenden
                                             axios.post('./php/booking/booking-professionnels-nl.php',
                                                     formData)
@@ -334,7 +337,6 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                                         'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
                                                     );
                                                 });
-
                                         } else {
                                             openModal(
                                                 'De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.'
@@ -388,6 +390,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             return emailRegex.test(email);
                         }
                         </script>
+
 
                     </div>
                 </div>

@@ -143,19 +143,20 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="sector">Sector of Activity:</label>
+                                    <label for="sector">Sector:</label>
                                     <input type="text" id="sector" name="sector" class="form-control"
-                                        placeholder="Sector of Activity" required>
+                                        placeholder="Sector" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="delivery_date">Desired Delivery Date:</label>
+                                    <label for="delivery_date">Preferred delivery date:</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
-                                        placeholder="Desired Delivery Date" min="<?php echo date('Y-m-d'); ?>" required>
+                                        placeholder="Preferred delivery date" min="<?php echo date('Y-m-d'); ?>"
+                                        required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="delivery_address">Delivery Address:</label>
+                                    <label for="delivery_address">Delivery address:</label>
                                     <input type="text" id="delivery_address" name="delivery_address"
-                                        class="form-control" placeholder="Delivery Address" required>
+                                        class="form-control" placeholder="Delivery address" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="comment">Comment:</label>
@@ -165,9 +166,9 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="row">
                                     <div class="form-group">
                                         <!-- HTML -->
-                                        <label><strong>Enter Captcha Code:</strong></label><br />
-                                        <input type="text" id="captcha" name="captcha" placeholder="Enter Captcha Code"
-                                            required>
+                                        <label><strong>Enter the Captcha code:</strong></label><br />
+                                        <input type="text" id="captcha" name="captcha"
+                                            placeholder="Enter the Captcha code" required>
                                         <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
                                                 id="captcha_image"></p>
                                         <p>Can't read the image? <a href="#" onclick="refreshCaptcha(event);">Click
@@ -178,7 +179,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             <input type="text" id="lang" name="lang" class="form-control" value="en" disabled required
                                 hidden>
                             <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
-                                <span class="description">Make a Reservation!</span>
+                                <span class="description">Reserve!</span>
                                 <span class="success">
                                     <svg x="0px" y="0px" viewBox="0 0 32 32">
                                         <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
@@ -189,6 +190,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <span class="error">Try again...</span>
                             </button>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -256,6 +258,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
             const captchaImage = document.getElementById('captcha_image');
             const confirmationModal = document.getElementById('confirmationModal');
             const modalMessage = document.getElementById('modalMessage');
+
             form.addEventListener("submit", function(event) {
                 event.preventDefault();
                 submitForm();
@@ -271,17 +274,18 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                         console.log('Captcha:', response.data.captcha);
                     })
                     .catch(function(error) {
-                        console.error('Erreur lors de la récupération du captcha :', error);
+                        console.error('Error fetching captcha:', error);
                     });
             }
 
-            // Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+            // Call this function whenever you want to get the value of captcha
             getCaptcha();
 
             function submitForm() {
                 const captcha = captchaInput.value;
                 const formData = new FormData(form);
                 formData.append('captcha', captcha);
+
                 // Validate email
                 const emailInput = form.querySelector('input[name="email"]');
                 const email = emailInput.value;
@@ -291,17 +295,16 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                     return false;
                 }
 
-                // Validate each required input
+                // Validate each required input field
                 const inputs = form.querySelectorAll("[required]");
                 let isValid = true;
-                console.log(inputs);
                 inputs.forEach(function(input) {
                     if (input.value.trim() === "") {
                         isValid = false;
                         // Add red border to empty required fields
                         input.style.border = "1px solid red";
                     } else {
-                        // Reset the border to its default style
+                        // Reset border to default style
                         input.style.border = "";
                     }
                 });
@@ -311,31 +314,32 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                     openModal("Please fill in all required fields.");
                     return false;
                 }
+
                 axios.post('./php/booking/validate-captcha.php', formData)
                     .then(response => {
                         if (response.data.valid) {
-                            // Use AJAX to submit the form data
+                            // Use AJAX to submit form data
+                            submitButton.innerHTML = '<span class="description">Submitting...</span>';
                             axios.post('./php/booking/booking-professionnels-en.php', formData)
                                 .then(response => {
                                     console.log('Form submission response:', response.data);
                                     if (response.data === 'success') {
                                         submitButton.innerHTML =
-                                            '<span class="description">Reservation Successful!</span>';
+                                            '<span class="description">Reservation successful!</span>';
                                         submitButton.classList.remove('btn-secondary');
                                         submitButton.classList.remove('btn-submit');
                                         submitButton.classList.add('btn-success');
                                         submitButton.setAttribute('disabled', 'disabled');
                                     } else {
                                         openModal(
-                                            'An error occurred while submitting the form. Please try again.'
+                                            'There was an error submitting the form. Please try again.'
                                         );
                                     }
                                 })
                                 .catch(error => {
                                     console.error('Error submitting form:', error);
                                     openModal(
-                                        'An error occurred while submitting the form. Please try again.'
-                                    );
+                                        'There was an error submitting the form. Please try again.');
                                 });
                         } else {
                             openModal('The entered CAPTCHA code does not match. Please try again.');

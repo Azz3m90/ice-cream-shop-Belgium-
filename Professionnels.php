@@ -130,9 +130,9 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         placeholder="Prénom" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="company">Société :</label>
+                                    <label for="company">Entreprise :</label>
                                     <input type="text" id="company" name="company" class="form-control"
-                                        placeholder="Société" required>
+                                        placeholder="Entreprise" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Téléphone :</label>
@@ -140,14 +140,14 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         placeholder="Téléphone" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email :</label>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email"
-                                        required>
+                                    <label for="email">E-mail :</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="E-mail" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="sector">Secteur d’activité :</label>
+                                    <label for="sector">Secteur :</label>
                                     <input type="text" id="sector" name="sector" class="form-control"
-                                        placeholder="Secteur d’activité" required>
+                                        placeholder="Secteur" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_date">Date de livraison souhaitée :</label>
@@ -173,7 +173,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                             placeholder="Entrez le code Captcha" required>
                                         <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
                                                 id="captcha_image"></p>
-                                        <p>Vous ne pouvez pas lire l'image ? <a href="#"
+                                        <p>Impossible de lire l'image ? <a href="#"
                                                 onclick="refreshCaptcha(event);">Cliquez ici</a> pour rafraîchir</p>
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             <input type="text" id="lang" name="lang" class="form-control" value="fr" disabled required
                                 hidden>
                             <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
-                                <span class="description">Faire une réservation !</span>
+                                <span class="description">Réserver !</span>
                                 <span class="success">
                                     <svg x="0px" y="0px" viewBox="0 0 32 32">
                                         <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
@@ -192,6 +192,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <span class="error">Réessayez...</span>
                             </button>
                         </form>
+
 
 
                         <style>
@@ -256,6 +257,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             const captchaImage = document.getElementById('captcha_image');
                             const confirmationModal = document.getElementById('confirmationModal');
                             const modalMessage = document.getElementById('modalMessage');
+
                             form.addEventListener("submit", function(event) {
                                 event.preventDefault();
                                 submitForm();
@@ -265,51 +267,66 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 refreshCaptcha();
                             });
 
+                            function getCaptcha() {
+                                axios.get('./php/booking/get-captcha.php')
+                                    .then(function(response) {
+                                        console.log('Captcha :', response.data.captcha);
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Erreur lors de la récupération du captcha :', error);
+                                    });
+                            }
+
+                            // Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+                            getCaptcha();
+
                             function submitForm() {
                                 const captcha = captchaInput.value;
                                 const formData = new FormData(form);
                                 formData.append('captcha', captcha);
-                                // Validate email
+
+                                // Valider l'e-mail
                                 const emailInput = form.querySelector('input[name="email"]');
                                 const email = emailInput.value;
                                 if (!validateEmail(email)) {
-                                    openModal('Please enter a valid email address.');
+                                    openModal('Veuillez entrer une adresse e-mail valide.');
                                     emailInput.style.border = "1px solid red";
                                     return false;
                                 }
 
-                                // Validate each required input
+                                // Valider chaque champ d'entrée requis
                                 const inputs = form.querySelectorAll("[required]");
                                 let isValid = true;
-                                console.log(inputs);
                                 inputs.forEach(function(input) {
                                     if (input.value.trim() === "") {
                                         isValid = false;
-                                        // Add red border to empty required fields
+                                        // Ajouter une bordure rouge aux champs requis vides
                                         input.style.border = "1px solid red";
                                     } else {
-                                        // Reset the border to its default style
+                                        // Réinitialiser la bordure au style par défaut
                                         input.style.border = "";
                                     }
                                 });
 
                                 if (!isValid) {
-                                    // If any required field is empty, show an error message and prevent form submission
-                                    openModal("Please fill in all required fields.");
+                                    // Si un champ requis est vide, afficher un message d'erreur et empêcher l'envoi du formulaire
+                                    openModal("Veuillez remplir tous les champs obligatoires.");
                                     return false;
                                 }
+                                submitButton.innerHTML = '<span class="description">Envoi en cours...</span>';
+
                                 axios.post('./php/booking/validate-captcha.php', formData)
                                     .then(response => {
                                         if (response.data.valid) {
-
-                                            // Use AJAX to submit the form data
-                                            axios.post('./php/booking/booking-professionnels.php', formData)
+                                            // Utiliser AJAX pour envoyer les données du formulaire
+                                            axios.post('./php/booking/booking-professionnels.php',
+                                                    formData)
                                                 .then(response => {
-                                                    console.log('Form submission response:', response
-                                                        .data);
+                                                    console.log('Réponse à l\'envoi du formulaire :',
+                                                        response.data);
                                                     if (response.data === 'success') {
                                                         submitButton.innerHTML =
-                                                            '<span class="description">Reservation Successful!</span>';
+                                                            '<span class="description">Réservation réussie !</span>';
                                                         submitButton.classList.remove('btn-secondary');
                                                         submitButton.classList.remove('btn-submit');
                                                         submitButton.classList.add('btn-success');
@@ -317,17 +334,18 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                                             'disabled');
                                                     } else {
                                                         openModal(
-                                                            'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
+                                                            'Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.'
                                                         );
                                                     }
                                                 })
                                                 .catch(error => {
-                                                    console.error('Error submitting form:', error);
+                                                    console.error(
+                                                        'Erreur lors de l\'envoi du formulaire :',
+                                                        error);
                                                     openModal(
-                                                        'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
+                                                        'Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.'
                                                     );
                                                 });
-
                                         } else {
                                             openModal(
                                                 'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.'
@@ -336,7 +354,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         }
                                     })
                                     .catch(error => {
-                                        console.error('Error validating CAPTCHA:', error);
+                                        console.error('Erreur de validation du CAPTCHA :', error);
                                     });
                             }
                         });
@@ -363,7 +381,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     getCaptcha();
                                 })
                                 .catch(function(error) {
-                                    console.error('Error refreshing CAPTCHA:', error);
+                                    console.error('Erreur lors du rafraîchissement du CAPTCHA :', error);
                                 });
                         }
 
@@ -381,6 +399,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             return emailRegex.test(email);
                         }
                         </script>
+
                     </div>
                 </div>
             </div>

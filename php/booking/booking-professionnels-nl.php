@@ -4,197 +4,138 @@ require_once '.././config/config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-// Functie om een stijlvolle HTML-e-mail voor klanten te genereren
+// Functie voor het genereren van HTML-e-mailinhoud voor klanten
 function getClientEmailContent($name)
 {
-    // HTML-inhoud voor e-mail naar klant
-    $content = "
-    <html>
-    <head>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                width: 80%;
-                margin: 20px auto;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-                background-color: #0073e6;
-                color: #ffffff;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-            .content {
-                padding: 20px;
-            }
-            .footer {
-                background-color: #0073e6;
-                color: #ffffff;
-                text-align: center;
-                padding: 10px;
-                border-radius: 0 0 10px 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Bevestiging van reservering</h1>
-            </div>
-            <div class='content'>
-                <p>Beste $name,</p>
-                <p>Uw reservering is succesvol geregistreerd. Wij danken u voor uw vertrouwen.</p>
-                <p>Wij zullen zo snel mogelijk contact met u opnemen om de details van uw reservering te bevestigen.</p>
+    // HTML-inhoud van de e-mail voor de klant
+    $content = '<html>
+
+<head>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 150px; max-height: 150px;">
+                <h1 style="margin: 0;">Bevestiging van reservering</h1>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
+                <p>Beste '.$name.',</p>
+                <p>Uw reservering is succesvol geregistreerd. Dank u voor uw vertrouwen.</p>
+                <p>We nemen zo snel mogelijk contact met u op om de details van uw reservering te bevestigen.</p>
                 <p>Met vriendelijke groet,</p>
                 <p>Team Gelato Naturale Tarcienne</p>
-            </div>
-            <div class='footer'>
-                <p>Bedankt voor het kiezen van Gelato Naturale Tarcienne!</p>
-            </div>
-        </div>
-    </body>
-    </html>";
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
+                <p>Dank u voor het kiezen van Gelato Naturale Tarcienne!</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>';
 
     return $content;
 }
 
-// Functie om een platte tekst e-mail voor klanten te genereren
+// Functie voor het genereren van platte tekstinhoud van e-mail voor klanten
 function getClientPlainTextContent($name)
 {
-    // Platte tekst inhoud voor e-mail naar klant
-    $content = "Beste $name,\n\nUw reservering is succesvol geregistreerd. Wij danken u voor uw vertrouwen.\nWij zullen zo snel mogelijk contact met u opnemen om de details van uw reservering te bevestigen.\n\nMet vriendelijke groet,\nTeam Gelato Naturale Tarcienne";
+    // Platte tekstinhoud van de e-mail voor de klant
+    $content = "Beste $name,\n\nUw reservering is succesvol geregistreerd. Dank u voor uw vertrouwen.\nWe nemen zo snel mogelijk contact met u op om de details van uw reservering te bevestigen.\n\nMet vriendelijke groet,\nTeam Gelato Naturale Tarcienne";
 
     return $content;
 }
 
-// Functie om een stijlvolle HTML-e-mail voor de winkel te genereren
+// Functie voor het genereren van HTML-e-mailinhoud voor de winkel
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // HTML-inhoud voor e-mail naar de winkel
-    $content = "
-    <html>
-    <head>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                width: 80%;
-                margin: 20px auto;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-                background-color: #0073e6;
-                color: #ffffff;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px 10px 0 0;
-            }
-            .content {
-                padding: 20px;
-            }
-            .footer {
-                background-color: #0073e6;
-                color: #ffffff;
-                text-align: center;
-                padding: 10px;
-                border-radius: 0 0 10px 10px;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th, td {
-                padding: 8px;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
-            th {
-                background-color: #0073e6;
-                color: #ffffff;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h1>Nieuwe reservering</h1>
-            </div>
-            <div class='content'>
-                <p>Er is een nieuwe reservering geregistreerd :</p>
-                <table>
+    // HTML-inhoud van de e-mail voor de winkel
+    $content = '
+<html>
+
+<head>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
+                <h1 style="margin: 0;">Nieuwe reservering</h1>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
+                <p style="margin-top: 0;">Een nieuwe reservering is geregistreerd:</p>
+                <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
-                        <th>Veld</th>
-                        <th>Waarde</th>
+                        <td style="border-bottom: 1px solid #ddd;">Naam</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$name.'</td>
                     </tr>
                     <tr>
-                        <td>Naam</td>
-                        <td>$name</td>
+                        <td style="border-bottom: 1px solid #ddd;">E-mail</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$email.'</td>
                     </tr>
                     <tr>
-                        <td>E-mail</td>
-                        <td>$email</td>
+                        <td style="border-bottom: 1px solid #ddd;">Telefoon</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$phone.'</td>
                     </tr>
                     <tr>
-                        <td>Telefoon</td>
-                        <td>$phone</td>
+                        <td style="border-bottom: 1px solid #ddd;">Leveringsdatum</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_date.'</td>
                     </tr>
                     <tr>
-                        <td>Leveringsdatum</td>
-                        <td>$delivery_date</td>
+                        <td style="border-bottom: 1px solid #ddd;">Leveringsadres</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_address.'</td>
                     </tr>
                     <tr>
-                        <td>Leveringsadres</td>
-                        <td>$delivery_address</td>
-                    </tr>
-                    <tr>
-                        <td>Opmerking</td>
-                        <td>$comment</td>
+                        <td style="border-bottom: 1px solid #ddd;">Opmerking</td>
+                        <td style="border-bottom: 1px solid #ddd;">'.$comment.'</td>
                     </tr>
                 </table>
-            </div>
-            <div class='footer'>
-                <p>Bedankt voor het snel afhandelen van deze reservering.</p>
-            </div>
-        </div>
-    </body>
-    </html>";
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
+                <p style="margin: 0;">Bedankt voor het snel verwerken van deze reservering.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>';
 
     return $content;
 }
 
-// Functie om een platte tekst e-mail voor de winkel te genereren
+// Functie voor het genereren van platte tekstinhoud van e-mail voor de winkel
 function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // Platte tekst inhoud voor e-mail naar de winkel
-    $content = "Er is een nieuwe reservering geregistreerd :\n\n"
+    // Platte tekstinhoud van de e-mail voor de winkel
+    $content = "Een nieuwe reservering is geregistreerd :\n\n"
               . "Naam: $name\n"
               . "E-mail: $email\n"
               . "Telefoon: $phone\n"
               . "Leveringsdatum: $delivery_date\n"
               . "Leveringsadres: $delivery_address\n"
               . "Opmerking: $comment\n\n"
-              . "Bedankt voor het snel afhandelen van deze reservering.";
+              . "Bedankt voor het snel verwerken van deze reservering.";
 
     return $content;
 }
 
-// Maak een nieuw PHPMailer-object aan
+// Maak een nieuw PHPMailer-object
 $mail = new PHPMailer();
 
 // Configureer SMTP
@@ -207,7 +148,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->CharSet = 'UTF-8';
 
-// Haal formuliergegevens op
+// Haal de gegevens op uit het formulier
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
 $company = trim($_POST['company']);
@@ -218,12 +159,12 @@ $delivery_date = trim($_POST['delivery_date']);
 $delivery_address = trim($_POST['delivery_address']);
 $comment = trim($_POST['comment']);
 
-// Controleer of het e-mailadres al bestaat in de database
+// Controleer of het e-mailadres al in de database bestaat
 $emailExistsQuery = "SELECT * FROM emails WHERE email = '$email'";
 $result = $mysql_db->query($emailExistsQuery);
 
-if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, ga dan verder
-    // E-mail naar klant
+if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, doorgaan
+    // E-mail naar de klant
     // E-mail naar de winkel
     $insertSql = "INSERT INTO emails (name, surname, company, phone, email, sector, delivery_date, delivery_address, comment, creation_date, active)
     VALUES ('$name', '$surname', '$company', '$phone', '$email', '$sector', '$delivery_date', '$delivery_address', '$comment', current_timestamp(), 1)";
@@ -234,24 +175,24 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, ga dan verde
     $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Platte tekst alternatief
+    $mail->AltBody = getClientPlainTextContent($name); // Alternatieve platte tekst
 
-    // E-mail naar het restaurant
+    // E-mail naar de winkel
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Verstuur de e-mail naar het restaurant
+    // Verzend de e-mail naar de winkel
     if (!$mail->send()) {
         echo 'error';
     } else {
         echo 'success';
     }
-    $mail->clearAllRecipients(); // Wis eerdere ontvangers
+    $mail->clearAllRecipients(); // Wis vorige ontvangers
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Platte tekst alternatief
+    $mail->AltBody = $storePlainTextContent; // Alternatieve platte tekst
 
-    // Verstuur de e-mail naar het restaurant
+    // Verzend de e-mail naar de winkel
     if (!$mail->send()) {
         echo 'error';
     } else {
@@ -261,28 +202,28 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, ga dan verde
     $mysql_db->close();
     
 } else {
-    // E-mailadres bestaat al in de database, voeg niet toe aan de database
+    // Het e-mailadres bestaat al in de database, niet toevoegen aan de database
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
     $mail->Body = getClientEmailContent($name);
-    $mail->AltBody = getClientPlainTextContent($name); // Platte tekst alternatief
+    $mail->AltBody = getClientPlainTextContent($name); // Alternatieve platte tekst
 
-    // E-mail naar het restaurant
+    // E-mail naar de winkel
     $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
-    // Verstuur de e-mail naar het restaurant
+    // Verzend de e-mail naar de winkel
     if (!$mail->send()) {
         echo 'error';
     } 
-    $mail->clearAllRecipients(); // Wis eerdere ontvangers
+    $mail->clearAllRecipients(); // Wis vorige ontvangers
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
-    $mail->AltBody = $storePlainTextContent; // Platte tekst alternatief
+    $mail->AltBody = $storePlainTextContent; // Alternatieve platte tekst
 
-    // Verstuur de e-mail naar het restaurant
+    // Verzend de e-mail naar de winkel
     if (!$mail->send()) {
         echo 'error';
     } else {
