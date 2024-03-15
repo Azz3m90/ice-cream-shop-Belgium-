@@ -215,8 +215,8 @@
                         <tr>
                             <td class="title">Email :</td>
                             <td class="content">
-                                <a href="mailto:info@matthiasandsea.be" target="_blank">
-                                    <i class="fa fa-lg fa-envelope"></i> info@matthiasandsea.be
+                                <a href="mailto:mattiacollu@msn.com" target="_blank">
+                                    <i class="fa fa-lg fa-envelope"></i> mattiacollu@msn.com
                                 </a>
                             </td>
 
