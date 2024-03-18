@@ -93,7 +93,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
         <!-- Vidéo de fond -->
         <div class="bg-video dark-overlay">
             <!-- BG Photo -->
-            <img class="bg-image dark-overlay" src="./assets/img/professionals/professionals.jpg"
+            <img class="bg-image dark-overlay" src="./assets/img/Reservations/reservation.jpg"
                 alt="Professionals Background">
 
         </div>
@@ -104,7 +104,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                     <div class="utility-box">
                         <div class="utility-box-title bg-dark dark">
                             <div class="bg-image">
-                                <img src="./assets/img/professionals/prof.jpg" alt="bg-image">
+                                <img src="./assets/img/Reservations/reservation_3.jpg" alt="bg-image">
                             </div>
                             <div>
                                 <span class="icon icon-primary">
@@ -132,6 +132,11 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         placeholder="Phone Number" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                        required>
+                                </div>
+                                <div class="form-group">
                                     <label for="delivery_date">Delivery Date:</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
                                         placeholder="Delivery Date" min="<?php echo date('Y-m-d'); ?>" required>
@@ -141,13 +146,14 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="form-group">
                                     <label for="persons">Number of Persons:</label>
                                     <input type="number" id="persons" name="persons" class="form-control"
-                                        placeholder="Number of Persons" min="5" required>
+                                        placeholder="Number of Persons minimum 5 persons" min="5" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">For:</label>
                                     <select id="gender" name="gender" class="form-control" required>
-                                        <option value="Girl">Girl</option>
-                                        <option value="Boy">Boy</option>
+                                        <option value="" selected disabled>Choose...</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -158,34 +164,155 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="form-group" id="first_choice_out">
                                     <label for="first_choice">First Flavor Choice:</label>
                                     <select id="first_choice" name="first_choice" class="form-control" required>
-                                        <option value="">Choose...</option>
-                                        <option value="Vanilla">Vanilla</option>
-                                        <option value="Chocolate">Chocolate</option>
-                                        <option value="Strawberry">Strawberry</option>
-                                        <!-- Add more options as needed -->
+                                        <option value="" selected disabled>Choose...</option>
+                                        <optgroup label="New Flavors">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanilla jam and butter bread">Vanilla jam and butter bread
+                                            </option>
+                                            <option value="Almonds">Almonds</option>
+                                            <option value="Fig">Fig</option>
+                                            <option value="Butter and jam bread">Butter and jam bread</option>
+                                        </optgroup>
+                                        <optgroup label="English Soup">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Homemade Speculoos">Homemade Speculoos</option>
+                                            <option value="Brown sugar">Brown sugar</option>
+                                        </optgroup>
+                                        <optgroup label="Classic Flavors">
+                                            <option value="Vanilla">Vanilla</option>
+                                            <option value="Chocolate">Chocolate</option>
+                                            <option value="Strawberry">Strawberry</option>
+                                            <option value="Mint">Mint</option>
+                                        </optgroup>
+                                        <optgroup label="Nutty Delights">
+                                            <option value="Toasted pistachio">Toasted pistachio</option>
+                                            <option value="Pistachio Italy (classic)">Pistachio Italy (classic)</option>
+                                            <option value="Hazelnut Italy">Hazelnut Italy</option>
+                                            <option value="Almonds">Almonds</option>
+                                        </optgroup>
+                                        <optgroup label="Exotic Flavors">
+                                            <option value="Coconut">Coconut</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passion fruit">Passion fruit</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banana">Banana</option>
+                                            <option value="Raspberry">Raspberry</option>
+                                            <option value="Red Fruits">Red Fruits</option>
+                                            <option value="Blueberry">Blueberry</option>
+                                        </optgroup>
+                                        <optgroup label="Specialties">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Salted Caramel">Salted Caramel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
                                 </div>
 
                                 <div class="form-group" id="second_choice_out">
                                     <label for="second_choice">Second Flavor Choice:</label>
                                     <select id="second_choice" name="second_choice" class="form-control" required>
-                                        <option value="">Choose...</option>
-                                        <option value="Mint">Mint</option>
-                                        <option value="Caramel">Caramel</option>
-                                        <option value="Coffee">Coffee</option>
-                                        <!-- Add more options as needed -->
+                                        <option value="" selected disabled>Choose...</option>
+                                        <optgroup label="New Flavors">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanilla jam and butter bread">Vanilla jam and butter bread
+                                            </option>
+                                            <option value="Almonds">Almonds</option>
+                                            <option value="Fig">Fig</option>
+                                            <option value="Butter and jam bread">Butter and jam bread</option>
+                                        </optgroup>
+                                        <optgroup label="English Soup">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Homemade Speculoos">Homemade Speculoos</option>
+                                            <option value="Brown sugar">Brown sugar</option>
+                                        </optgroup>
+                                        <optgroup label="Classic Flavors">
+                                            <option value="Vanilla">Vanilla</option>
+                                            <option value="Chocolate">Chocolate</option>
+                                            <option value="Strawberry">Strawberry</option>
+                                            <option value="Mint">Mint</option>
+                                        </optgroup>
+                                        <optgroup label="Nutty Delights">
+                                            <option value="Toasted pistachio">Toasted pistachio</option>
+                                            <option value="Pistachio Italy (classic)">Pistachio Italy (classic)</option>
+                                            <option value="Hazelnut Italy">Hazelnut Italy</option>
+                                            <option value="Almonds">Almonds</option>
+                                        </optgroup>
+                                        <optgroup label="Exotic Flavors">
+                                            <option value="Coconut">Coconut</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passion fruit">Passion fruit</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banana">Banana</option>
+                                            <option value="Raspberry">Raspberry</option>
+                                            <option value="Red Fruits">Red Fruits</option>
+                                            <option value="Blueberry">Blueberry</option>
+                                        </optgroup>
+                                        <optgroup label="Specialties">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Salted Caramel">Salted Caramel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
                                 </div>
 
                                 <div class="form-group" id="alternate_choice_out">
                                     <label for="alternate_choice">Alternative Flavor Choice:</label>
                                     <select id="alternate_choice" name="alternate_choice" class="form-control" required>
-                                        <option value="">Choose...</option>
-                                        <option value="Pistachio">Pistachio</option>
-                                        <option value="Lemon">Lemon</option>
-                                        <option value="Raspberry">Raspberry</option>
-                                        <!-- Add more options as needed -->
+                                        <option value="" selected disabled>Choose...</option>
+                                        <optgroup label="New Flavors">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanilla jam and butter bread">Vanilla jam and butter bread
+                                            </option>
+                                            <option value="Almonds">Almonds</option>
+                                            <option value="Fig">Fig</option>
+                                            <option value="Butter and jam bread">Butter and jam bread</option>
+                                        </optgroup>
+                                        <optgroup label="English Soup">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Homemade Speculoos">Homemade Speculoos</option>
+                                            <option value="Brown sugar">Brown sugar</option>
+                                        </optgroup>
+                                        <optgroup label="Classic Flavors">
+                                            <option value="Vanilla">Vanilla</option>
+                                            <option value="Chocolate">Chocolate</option>
+                                            <option value="Strawberry">Strawberry</option>
+                                            <option value="Mint">Mint</option>
+                                        </optgroup>
+                                        <optgroup label="Nutty Delights">
+                                            <option value="Toasted pistachio">Toasted pistachio</option>
+                                            <option value="Pistachio Italy (classic)">Pistachio Italy (classic)</option>
+                                            <option value="Hazelnut Italy">Hazelnut Italy</option>
+                                            <option value="Almonds">Almonds</option>
+                                        </optgroup>
+                                        <optgroup label="Exotic Flavors">
+                                            <option value="Coconut">Coconut</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passion fruit">Passion fruit</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banana">Banana</option>
+                                            <option value="Raspberry">Raspberry</option>
+                                            <option value="Red Fruits">Red Fruits</option>
+                                            <option value="Blueberry">Blueberry</option>
+                                        </optgroup>
+                                        <optgroup label="Specialties">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Salted Caramel">Salted Caramel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
+
                                     <div class="form-helper-text">This choice will be used if either of the first two
                                         choices is unavailable.</div>
                                 </div>
@@ -193,10 +320,12 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 <div class="form-group">
                                     <label for="topping">Topping:</label>
                                     <select id="topping" name="topping" class="form-control" required>
+                                        <option value="">Choose...</option>
                                         <option value="Standard">Standard</option>
                                         <option value="Special">Special</option>
                                     </select>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="comments">Comments:</label>
                                     <textarea id="comments" name="comments" class="form-control"
@@ -207,12 +336,12 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     <input type="file" id="file" name="file" class="form-control-file" required>
                                     <div class="form-helper-text">Only for 12 persons or more.</div>
                                 </div>
+                                <!-- Captcha -->
                                 <div class="row">
                                     <div class="form-group">
-                                        <!-- HTML -->
-                                        <label><strong>Enter Captcha Code:</strong></label><br />
-                                        <input type="text" id="captcha" name="captcha" placeholder="Enter Captcha Code"
-                                            required>
+                                        <label><strong>Enter the Captcha code:</strong></label><br />
+                                        <input type="text" id="captcha" name="captcha"
+                                            placeholder="Enter the Captcha code" required>
                                         <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
                                                 id="captcha_image"></p>
                                         <p>Can't read the image? <a href="#" onclick="refreshCaptcha(event);">Click
@@ -221,8 +350,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 </div>
 
                             </div>
-                            <input type="text" id="lang" name="lang" class="form-control" value="en" disabled required
-                                hidden>
+
                             <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
                                 <span class="description">Make a Reservation!</span>
                                 <span class="success">
@@ -295,9 +423,6 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             const confirmationModal = document.getElementById('confirmationModal');
                             const modalMessage = document.getElementById('modalMessage');
 
-                            // Function to hide not required fields initially
-                            hideNotRequiredFields();
-
                             form.addEventListener("submit", function(event) {
                                 event.preventDefault();
                                 submitForm();
@@ -306,6 +431,19 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             captchaImage.addEventListener("click", function() {
                                 refreshCaptcha();
                             });
+
+                            function getCaptcha() {
+                                axios.get('./php/booking/get-captcha.php')
+                                    .then(function(response) {
+                                        console.log('Captcha:', response.data.captcha);
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Error fetching captcha:', error);
+                                    });
+                            }
+
+                            // Call this function whenever you want to get the value of captcha
+                            getCaptcha();
 
                             function submitForm() {
                                 const captcha = captchaInput.value;
@@ -321,42 +459,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     return false;
                                 }
 
-                                // Check if Number of Persons meets the condition
-                                const personsInput = form.querySelector('input[name="persons"]');
-                                const persons = parseInt(personsInput.value);
-                                if (persons < 5) {
-                                    openModal('Minimum 5 persons required.');
-                                    personsInput.style.border = "1px solid red";
-                                    return false;
-                                }
-
-                                // Check if First and Second Flavor Choices are presented
-                                const firstChoiceValue = document.getElementById('first_choice').value;
-                                const secondChoiceValue = document.getElementById('second_choice').value;
-                                const altChoiceInput = document.getElementById('alternate_choice');
-
-                                if (firstChoiceValue !== '' && secondChoiceValue !== '') {
-                                    // If both first and second choices are selected, make alternate choice not required and hide it
-                                    altChoiceInput.style.display = 'none';
-                                    altChoiceInput.querySelector('select').removeAttribute('required');
-                                } else {
-                                    // If either first or second choice is not selected, make alternate choice required and show it
-                                    altChoiceInput.style.display = '';
-                                    altChoiceInput.querySelector('select').setAttribute('required', 'required');
-                                }
-
-                                // Toggle file input required status based on number of persons
-                                const fileOut = document.getElementById('file_out');
-                                const fileInput = document.getElementById('file');
-                                if (persons >= 12) {
-                                    fileOut.style.display = ''; // Show file_out
-                                    fileInput.setAttribute('required', 'required');
-                                } else {
-                                    fileOut.style.display = 'none'; // Hide file_out
-                                    fileInput.removeAttribute('required');
-                                }
-
-                                // Validate each required input
+                                // Validate each required input field
                                 const inputs = form.querySelectorAll("[required]");
                                 let isValid = true;
                                 inputs.forEach(function(input) {
@@ -365,7 +468,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                         // Add red border to empty required fields
                                         input.style.border = "1px solid red";
                                     } else {
-                                        // Reset the border to its default style
+                                        // Reset border to default style
                                         input.style.border = "";
                                     }
                                 });
@@ -376,11 +479,13 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     return false;
                                 }
 
-                                // Submit the form data
                                 axios.post('./php/booking/validate-captcha.php', formData)
                                     .then(response => {
                                         if (response.data.valid) {
-                                            // Use AJAX to submit the form data
+                                            console.log(formData);
+                                            // Use AJAX to submit form data
+                                            submitButton.innerHTML =
+                                                '<span class="description">Submitting...</span>';
                                             axios.post('./php/booking/booking-reservations-en.php',
                                                     formData)
                                                 .then(response => {
@@ -388,7 +493,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                                         .data);
                                                     if (response.data === 'success') {
                                                         submitButton.innerHTML =
-                                                            '<span class="description">Reservation Successful!</span>';
+                                                            '<span class="description">Reservation successful!</span>';
                                                         submitButton.classList.remove('btn-secondary');
                                                         submitButton.classList.remove('btn-submit');
                                                         submitButton.classList.add('btn-success');
@@ -396,14 +501,14 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                                             'disabled');
                                                     } else {
                                                         openModal(
-                                                            'An error occurred while submitting the form. Please try again.'
+                                                            'There was an error submitting the form. Please try again.'
                                                         );
                                                     }
                                                 })
                                                 .catch(error => {
                                                     console.error('Error submitting form:', error);
                                                     openModal(
-                                                        'An error occurred while submitting the form. Please try again.'
+                                                        'There was an error submitting the form. Please try again.'
                                                     );
                                                 });
                                         } else {
@@ -418,55 +523,48 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     });
                             }
 
-                            function refreshCaptcha(event) {
-                                if (event) {
-                                    event.preventDefault();
-                                }
-
-                                var img = document.getElementById('captcha_image');
-
-                                axios.get('./php/booking/captcha.php', {
-                                        params: {
-                                            rand: Math.random() * 1000
-                                        },
-                                        responseType: 'arraybuffer'
-                                    })
-                                    .then(function(response) {
-                                        var blob = new Blob([response.data], {
-                                            type: 'image/jpeg'
-                                        });
-                                        var imgUrl = URL.createObjectURL(blob);
-                                        img.src = imgUrl;
-                                        getCaptcha();
-                                    })
-                                    .catch(function(error) {
-                                        console.error('Error refreshing CAPTCHA:', error);
-                                    });
-                            }
-                            y
-
-                            function openModal(message) {
-                                modalMessage.innerText = message;
-                                confirmationModal.style.display = 'block';
-                            }
-
-                            function closeModal() {
-                                document.getElementById('confirmationModal').style.display = 'none';
-                            }
-
-                            function validateEmail(email) {
-                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                return emailRegex.test(email);
-                            }
-
-                            // Function to hide not required fields initially
-                            function hideNotRequiredFields() {
-                                const fileInput = document.getElementById('file_out');
-                                fileInput.style.display = 'none'; // Hide the file input
-                            }
                         });
-                        </script>
 
+                        function refreshCaptcha(event) {
+                            if (event) {
+                                event.preventDefault();
+                            }
+
+                            var img = document.getElementById('captcha_image');
+
+                            axios.get('./php/booking/captcha.php', {
+                                    params: {
+                                        rand: Math.random() * 1000
+                                    },
+                                    responseType: 'arraybuffer'
+                                })
+                                .then(function(response) {
+                                    var blob = new Blob([response.data], {
+                                        type: 'image/jpeg'
+                                    });
+                                    var imgUrl = URL.createObjectURL(blob);
+                                    img.src = imgUrl;
+                                    getCaptcha();
+                                })
+                                .catch(function(error) {
+                                    console.error('Error refreshing CAPTCHA:', error);
+                                });
+                        }
+
+                        function openModal(message) {
+                            modalMessage.innerText = message;
+                            confirmationModal.style.display = 'block';
+                        }
+
+                        function closeModal() {
+                            document.getElementById('confirmationModal').style.display = 'none';
+                        }
+
+                        function validateEmail(email) {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            return emailRegex.test(email);
+                        }
+                        </script>
 
 
 

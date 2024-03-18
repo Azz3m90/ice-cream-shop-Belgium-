@@ -217,9 +217,7 @@ include 'table-fr.php'
 </div>
 <!-- Content / End -->
 
- <a href="checkout-nl.php" class="panel-cart-action btn btn-secondary btn-block btn-lg">
-  <span>Go to checkout</span>
- </a>
+
 </div>
 <!-- Panel Mobile -->
 <nav id="panel-mobile">
