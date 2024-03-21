@@ -8,8 +8,8 @@ $_SESSION  = array();
 session_destroy();
 
 // Redirect to login page
-$baseUrl = 'https://www.matthiasandsea.be/';
-$redirectUrl = $baseUrl . './matthias-and-sea/admin/user-login.php';
+$baseUrl = 'https://gelatonaturale.be/';
+$redirectUrl = $baseUrl . './gelatonaturale/admin/user-login.php';
 
 header('Location: ' . $redirectUrl);
 

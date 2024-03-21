@@ -8,9 +8,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 function getClientEmailContent($name)
 {
     // HTML content of the email for the client
-    $content = '<html>
-
+    $content = '<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation</title>
 </head>
 
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
@@ -18,14 +22,14 @@ function getClientEmailContent($name)
         <!-- Header -->
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
-            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 150px; max-height: 150px;">
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale80px.svg" alt="Gelato Naturale" style="max-width: 80px; max-height: 80px;">
                 <h1 style="margin: 0;">Reservation Confirmation</h1>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
-                <p>Dear '. $name .',</p>
+                <p>Dear ' . $name . ',</p>
                 <p>Your reservation has been successfully recorded. Thank you for your trust.</p>
                 <p>We will contact you as soon as possible to confirm the details of your reservation.</p>
                 <p>Best regards,</p>
@@ -56,13 +60,23 @@ function getClientPlainTextContent($name)
 }
 
 // Function to generate HTML email content for the store
-function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
+function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector)
 {
+    if (!empty($comment)) {
+        $commentsRow = '
+        <tr>
+            <td style="border-bottom: 1px solid #ddd;">Comment</td>
+            <td style="border-bottom: 1px solid #ddd;">' . $comment . '</td>
+        </tr>';
+    }
     // HTML content of the email for the store
-    $content = '
-<html>
-
+    $content = '<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation</title>
 </head>
 
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
@@ -70,6 +84,7 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
         <!-- Header -->
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
                 <h1 style="margin: 0;">New Reservation</h1>
             </td>
         </tr>
@@ -80,28 +95,38 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                 <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Name</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$name.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $name . '</td>
+                    </tr> 
+                    <tr>
+                        <td style="border-bottom: 1px solid #ddd;">Surname</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $surname . '</td>
                     </tr>
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Email</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$email.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $email . '</td>
                     </tr>
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Phone</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$phone.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $phone . '</td>
                     </tr>
                     <tr>
+                        <td style="border-bottom: 1px solid #ddd;">Company</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $company . '</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: 1px solid #ddd;">Sector</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $sector . '</td>
+                    </tr>
+                    
+                    <tr>
                         <td style="border-bottom: 1px solid #ddd;">Delivery Date</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_date.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $delivery_date . '</td>
                     </tr>
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Delivery Address</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_address.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $delivery_address . '</td>
                     </tr>
-                    <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Comment</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$comment.'</td>
-                    </tr>
+                    ' . $commentsRow . '
                 </table>
             </td>
         </tr>
@@ -114,7 +139,10 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     </table>
 </body>
 
-</html>';
+</html>
+
+
+';
 
     return $content;
 }
@@ -124,13 +152,13 @@ function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delive
 {
     // Plain text content of the email for the store
     $content = "A new reservation has been recorded :\n\n"
-              . "Name: $name\n"
-              . "Email: $email\n"
-              . "Phone: $phone\n"
-              . "Delivery Date: $delivery_date\n"
-              . "Delivery Address: $delivery_address\n"
-              . "Comment: $comment\n\n"
-              . "Thank you for processing this reservation promptly.";
+        . "Name: $name\n"
+        . "Email: $email\n"
+        . "Phone: $phone\n"
+        . "Delivery Date: $delivery_date\n"
+        . "Delivery Address: $delivery_address\n"
+        . "Comment: $comment\n\n"
+        . "Thank you for processing this reservation promptly.";
 
     return $content;
 }
@@ -178,7 +206,7 @@ if ($result->num_rows === 0) { // If the email address does not exist, continue
     $mail->AltBody = getClientPlainTextContent($name); // Alternative plain text
 
     // Email to the store
-    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
+    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     // Send the email to the store
     if (!$mail->send()) {
@@ -200,7 +228,6 @@ if ($result->num_rows === 0) { // If the email address does not exist, continue
     }
     // Close the database connection
     $mysql_db->close();
-    
 } else {
     // The email address already exists in the database, do not add to the database
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
@@ -211,12 +238,12 @@ if ($result->num_rows === 0) { // If the email address does not exist, continue
     $mail->AltBody = getClientPlainTextContent($name); // Alternative plain text
 
     // Email to the store
-    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
+    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     // Send the email to the store
     if (!$mail->send()) {
         echo 'error';
-    } 
+    }
     $mail->clearAllRecipients(); // Clear previous recipients
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'New Reservation - ' . $name;
@@ -229,6 +256,4 @@ if ($result->num_rows === 0) { // If the email address does not exist, continue
     } else {
         echo 'success';
     }
-   
 }
-?>

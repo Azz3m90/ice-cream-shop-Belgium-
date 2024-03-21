@@ -9,28 +9,31 @@ $image_dir = '../../assets/img/gelatonaturale.svg';
 function getClientEmailContent($name,)
 {
     // Contenu HTML de l'e-mail pour le client
-    $content = '<html>
-
+    $content = '<!DOCTYPE html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Réservation</title>
 </head>
-
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
     <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
         <!-- Header -->
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
-                <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale80px.svg" alt="Gelato Naturale" style="max-width: 80px; max-height: 80px;">
-                <h1 style="margin: 0;">Confirmation de réservation</h1>
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale80px.svg" alt="Gelato Naturale" style="max-width: 80px; max-height: 80px;">
+                <h1 style="margin: 0;">Confirmation de Réservation</h1>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
-                <p>Cher/Chère '.$name.',</p>
-                <p>Votre réservation a été enregistrée avec succès. Nous vous remercions pour votre confiance.</p>
+                <p>Cher ' . $name . ',</p>
+                <p>Votre réservation a été enregistrée avec succès. Merci pour votre confiance.</p>
                 <p>Nous vous contacterons dès que possible pour confirmer les détails de votre réservation.</p>
                 <p>Cordialement,</p>
-                <p>Équipe Gelato Naturale Tarcienne</p>
+                <p>Team Gelato Naturale Tarcienne</p>
             </td>
         </tr>
         <!-- Footer -->
@@ -41,7 +44,6 @@ function getClientEmailContent($name,)
         </tr>
     </table>
 </body>
-
 </html>';
 
     return $content;
@@ -57,13 +59,23 @@ function getClientPlainTextContent($name)
 }
 
 // Fonction pour générer le contenu HTML élégant de l'e-mail pour le magasin
-function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
+function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector)
 {
+    if (!empty($comment)) {
+        $commentsRow = '
+        <tr>
+            <td style="border-bottom: 1px solid #ddd;">Commentaire</td>
+            <td style="border-bottom: 1px solid #ddd;">' . $comment . '</td>
+        </tr>';
+    }
     // Contenu HTML de l'e-mail pour le magasin
-    $content = '
-<html>
-
+    $content = '<!DOCTYPE html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Réservation</title>
 </head>
 
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
@@ -71,7 +83,8 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
         <!-- Header -->
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
-                <h1 style="margin: 0;">Nouvelle réservation</h1>
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
+                <h1 style="margin: 0;">Nouvelle Réservation</h1>
             </td>
         </tr>
         <!-- Content -->
@@ -81,41 +94,52 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
                 <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Nom</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$name.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $name . '</td>
+                    </tr> 
+                    <tr>
+                        <td style="border-bottom: 1px solid #ddd;">Prénom</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $surname . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">E-mail</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$email.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">Email</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $email . '</td>
                     </tr>
                     <tr>
                         <td style="border-bottom: 1px solid #ddd;">Téléphone</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$phone.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $phone . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Date de livraison</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_date.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">Société</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $company . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Adresse de livraison</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$delivery_address.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">Secteur</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $sector . '</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="border-bottom: 1px solid #ddd;">Date de Livraison</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $delivery_date . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Commentaire</td>
-                        <td style="border-bottom: 1px solid #ddd;">'.$comment.'</td>
+                        <td style="border-bottom: 1px solid #ddd;">Adresse de Livraison</td>
+                        <td style="border-bottom: 1px solid #ddd;">' . $delivery_address . '</td>
                     </tr>
+                    ' . $commentsRow . '
                 </table>
             </td>
         </tr>
         <!-- Footer -->
         <tr>
             <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
-                <p style="margin: 0;">Grazie per aver elaborato questa prenotazione rapidamente.</p>
+                <p style="margin: 0;">Nous vous remercions de traiter cette réservation rapidement.</p>
             </td>
         </tr>
     </table>
 </body>
 
-</html>';
+</html>
+';
 
     return $content;
 }
@@ -125,13 +149,13 @@ function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delive
 {
     // Contenu texte brut de l'e-mail pour le magasin
     $content = "Une nouvelle réservation a été enregistrée :\n\n"
-              . "Nom: $name\n"
-              . "E-mail: $email\n"
-              . "Téléphone: $phone\n"
-              . "Date de livraison: $delivery_date\n"
-              . "Adresse de livraison: $delivery_address\n"
-              . "Commentaire: $comment\n\n"
-              . "Merci d'avoir traité cette réservation rapidement.";
+        . "Nom: $name\n"
+        . "E-mail: $email\n"
+        . "Téléphone: $phone\n"
+        . "Date de livraison: $delivery_date\n"
+        . "Adresse de livraison: $delivery_address\n"
+        . "Commentaire: $comment\n\n"
+        . "Merci d'avoir traité cette réservation rapidement.";
 
     return $content;
 }
@@ -179,7 +203,7 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     $mail->AltBody = getClientPlainTextContent($name); // Alternative texte brut
 
     // E-mail au magasin
-    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
+    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
@@ -201,7 +225,6 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     }
     // Fermer la connexion à la base de données
     $mysql_db->close();
-    
 } else {
     // L'adresse e-mail existe déjà dans la base de données, ne pas ajouter à la base de données
     $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
@@ -212,12 +235,12 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     $mail->AltBody = getClientPlainTextContent($name); // Alternative texte brut
 
     // E-mail au magasin
-    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
+    $storeEmailContent = getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector);
     $storePlainTextContent = getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment);
     // Envoyer l'e-mail au magasin
     if (!$mail->send()) {
         echo 'error';
-    } 
+    }
     $mail->clearAllRecipients(); // Effacer les destinataires précédents
     $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nouvelle réservation - ' . $name;
@@ -230,6 +253,4 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     } else {
         echo 'success';
     }
-   
 }
-?>

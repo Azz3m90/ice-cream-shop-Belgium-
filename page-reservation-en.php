@@ -1,20 +1,20 @@
 <?php
 session_start();
 $status = '';
-if ( isset($_POST['captcha']) && ($_POST['captcha']!="") ){
-// Validation: Checking entered captcha code with the generated captcha code
-if(strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0){
-// Note: the captcha code is compared case insensitively.
-// if you want case sensitive match, update the check above to strcmp()
-$status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#FF0000;'>Entered captcha code does not match! Kindly try again.</span></p>";
-}else{
-$status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#46ab4a;'>Your captcha code is match.</span></p>";	
-	}
+if (isset($_POST['captcha']) && ($_POST['captcha'] != "")) {
+    // Validation: Checking entered captcha code with the generated captcha code
+    if (strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0) {
+        // Note: the captcha code is compared case insensitively.
+        // if you want case sensitive match, update the check above to strcmp()
+        $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#FF0000;'>Entered captcha code does not match! Kindly try again.</span></p>";
+    } else {
+        $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#46ab4a;'>Your captcha code is match.</span></p>";
+    }
 }
 
 ?>
 <?php
-    include 'header-en.php';
+include 'header-en.php';
 ?>
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/clearCache.js"></script>
@@ -333,8 +333,8 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                 </div>
                                 <div class="form-group" id="file_out">
                                     <label for="file">Add File/Photo:</label>
-                                    <input type="file" id="file" name="file" class="form-control-file" required>
-                                    <div class="form-helper-text">Only for 12 persons or more.</div>
+                                    <input type="file" id="file" name="file" class="form-control-file">
+                                    <div class="form-helper-text" id="file_helper">Only for 12 persons or more.</div>
                                 </div>
                                 <!-- Captcha -->
                                 <div class="row">
@@ -422,7 +422,24 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                             const captchaImage = document.getElementById('captcha_image');
                             const confirmationModal = document.getElementById('confirmationModal');
                             const modalMessage = document.getElementById('modalMessage');
-
+                            var personsInput = document.getElementById('persons');
+                            var fileOut = document.getElementById('file_out');
+                            var fileHelper = document.getElementById('file_helper');
+                            fileOut.style.display = 'none';
+                            fileHelper.style.display = 'none';
+                            document.getElementById('file').removeAttribute('required');
+                            personsInput.addEventListener('change', function() {
+                                var persons = parseInt(personsInput.value);
+                                if (persons >= 12) {
+                                    fileOut.style.display = 'block';
+                                    fileHelper.style.display = 'block';
+                                    document.getElementById('file').setAttribute('required', true);
+                                } else {
+                                    fileOut.style.display = 'none';
+                                    fileHelper.style.display = 'none';
+                                    document.getElementById('file').removeAttribute('required');
+                                }
+                            });
                             form.addEventListener("submit", function(event) {
                                 event.preventDefault();
                                 submitForm();
@@ -491,7 +508,7 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                                 .then(response => {
                                                     console.log('Form submission response:', response
                                                         .data);
-                                                    if (response.data === 'success') {
+                                                    if (response.data === 'success success') {
                                                         submitButton.innerHTML =
                                                             '<span class="description">Reservation successful!</span>';
                                                         submitButton.classList.remove('btn-secondary');
@@ -574,8 +591,8 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
         </div>
     </section>
     <?php
-  include 'carosuel-main-en.php';
-  ?>
+    include 'carosuel-main-en.php';
+    ?>
     <!-- Footer -->
     <footer id="footer" class="bg-dark dark">
         <div class="container">
@@ -631,8 +648,8 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                     <table class="table">
                         <tbody>
                             <?php
-        include 'table-en.php';
-      ?>
+                            include 'table-en.php';
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -736,4 +753,4 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
     </div>
     <?php
     include 'footer-en.php';
-?>
+    ?>

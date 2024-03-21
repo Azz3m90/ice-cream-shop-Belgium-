@@ -1,20 +1,20 @@
 <?php
 session_start();
 $status = '';
-if ( isset($_POST['captcha']) && ($_POST['captcha']!="") ){
-// Validation: Checking entered captcha code with the generated captcha code
-if(strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0){
-// Note: the captcha code is compared case insensitively.
-// if you want case sensitive match, update the check above to strcmp()
-$status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#FF0000;'>Entered captcha code does not match! Kindly try again.</span></p>";
-}else{
-$status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#46ab4a;'>Your captcha code is match.</span></p>";	
-	}
+if (isset($_POST['captcha']) && ($_POST['captcha'] != "")) {
+    // Validation: Checking entered captcha code with the generated captcha code
+    if (strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0) {
+        // Note: the captcha code is compared case insensitively.
+        // if you want case sensitive match, update the check above to strcmp()
+        $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#FF0000;'>Entered captcha code does not match! Kindly try again.</span></p>";
+    } else {
+        $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-color:#46ab4a;'>Your captcha code is match.</span></p>";
+    }
 }
- 
+
 ?>
 <?php
-    include 'header-nl.php';
+include 'header-nl.php';
 ?>
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/clearCache.js"></script>
@@ -114,37 +114,45 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                         </div>
                         <form id="booking-form" class="booking-form" method="post" data-validate>
                             <div class="utility-box-content">
+
                                 <div class="form-group">
-                                    <label for="name">Naam:</label>
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Naam"
-                                        required>
+                                    <label for="last_name">Achternaam:</label>
+                                    <input type="text" id="last_name" name="last_name" class="form-control"
+                                        placeholder="Achternaam" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="surname">Voornaam:</label>
-                                    <input type="text" id="surname" name="surname" class="form-control"
+                                    <label for="first_name">Voornaam:</label>
+                                    <input type="text" id="first_name" name="first_name" class="form-control"
                                         placeholder="Voornaam" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Telefoon:</label>
+                                    <label for="phone">Telefoonnummer:</label>
                                     <input type="text" id="phone" name="phone" class="form-control"
-                                        placeholder="Telefoon" required>
+                                        placeholder="Telefoonnummer" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="E-mail" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_date">Leveringsdatum:</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
-                                        placeholder="Leveringsdatum" required>
-                                    <div class="form-helper-text"> 3 dagen nodig voor elke bestelling.</div>
+                                        placeholder="Leveringsdatum" min="<?php echo date('Y-m-d'); ?>" required>
+                                    <div class="form-helper-text">Er is minimaal 3 dagen vereist voor alle ingediende
+                                        verzoeken.</div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="persons">Aantal personen:</label>
+                                    <label for="persons">Aantal Personen:</label>
                                     <input type="number" id="persons" name="persons" class="form-control"
-                                        placeholder="Aantal personen" min="5" required>
+                                        placeholder="Aantal Personen minimaal 5 personen" min="5" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Voor:</label>
                                     <select id="gender" name="gender" class="form-control" required>
-                                        <option value="Meisje">Meisje</option>
-                                        <option value="Jongen">Jongen</option>
+                                        <option value="" selected disabled>Kies...</option>
+                                        <option value="Man">Man</option>
+                                        <option value="Vrouw">Vrouw</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -152,63 +160,202 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                     <input type="number" id="age" name="age" class="form-control" placeholder="Leeftijd"
                                         required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="first_choice">Eerste smaakkeuze:</label>
+                                <div class="form-group" id="first_choice_out">
+                                    <label for="first_choice">Eerste Smaakkeuze:</label>
                                     <select id="first_choice" name="first_choice" class="form-control" required>
-                                        <option value="">Kies...</option>
-                                        <!-- Voeg hier de opties toe voor de selectie -->
+                                        <option value="" selected disabled>Kies...</option>
+                                        <optgroup label="Nieuwe Smaken">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanilla jam and butter bread">Vanilla jam and butter bread
+                                            </option>
+                                            <option value="Amandelen">Amandelen</option>
+                                            <option value="Vijg">Vijg</option>
+                                            <option value="Boter en jam brood">Boter en jam brood</option>
+                                        </optgroup>
+                                        <optgroup label="Engelse Soep">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
+                                            <option value="Bruine suiker">Bruine suiker</option>
+                                        </optgroup>
+                                        <optgroup label="Klassieke Smaken">
+                                            <option value="Vanille">Vanille</option>
+                                            <option value="Chocolade">Chocolade</option>
+                                            <option value="Aardbei">Aardbei</option>
+                                            <option value="Munt">Munt</option>
+                                        </optgroup>
+                                        <optgroup label="Notige Verleidingen">
+                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
+                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
+                                            </option>
+                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
+                                            <option value="Amandelen">Amandelen</option>
+                                        </optgroup>
+                                        <optgroup label="Exotische Smaken">
+                                            <option value="Kokosnoot">Kokosnoot</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passievrucht">Passievrucht</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banaan">Banaan</option>
+                                            <option value="Framboos">Framboos</option>
+                                            <option value="Rode Vruchten">Rode Vruchten</option>
+                                            <option value="Bosbes">Bosbes</option>
+                                        </optgroup>
+                                        <optgroup label="Specialiteiten">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="second_choice">Tweede smaakkeuze:</label>
+
+                                <div class="form-group" id="second_choice_out">
+                                    <label for="second_choice">Tweede Smaakkeuze:</label>
                                     <select id="second_choice" name="second_choice" class="form-control" required>
-                                        <option value="">Kies...</option>
-                                        <!-- Voeg hier de opties toe voor de selectie -->
+                                        <option value="" selected disabled>Kies...</option>
+                                        <optgroup label="Nieuwe Smaakvarianten">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanille jam en boterbrood">Vanille jam en boterbrood</option>
+                                            <option value="Amandelen">Amandelen</option>
+                                            <option value="Vijgen">Vijgen</option>
+                                            <option value="Boter en jam brood">Boter en jam brood</option>
+                                        </optgroup>
+                                        <optgroup label="Engelse Soepen">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
+                                            <option value="Bruine suiker">Bruine suiker</option>
+                                        </optgroup>
+                                        <optgroup label="Klassieke Smaakvarianten">
+                                            <option value="Vanille">Vanille</option>
+                                            <option value="Chocolade">Chocolade</option>
+                                            <option value="Aardbei">Aardbei</option>
+                                            <option value="Munt">Munt</option>
+                                        </optgroup>
+                                        <optgroup label="Notenlekkernijen">
+                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
+                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
+                                            </option>
+                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
+                                            <option value="Amandelen">Amandelen</option>
+                                        </optgroup>
+                                        <optgroup label="Exotische Smaakvarianten">
+                                            <option value="Kokosnoot">Kokosnoot</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passievrucht">Passievrucht</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banaan">Banaan</option>
+                                            <option value="Raspberry">Raspberry</option>
+                                            <option value="Rode Vruchten">Rode Vruchten</option>
+                                            <option value="Bosbes">Bosbes</option>
+                                        </optgroup>
+                                        <optgroup label="Specialiteiten">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="alternate_choice">Alternatieve smaakkeuze:</label>
+
+                                <div class="form-group" id="alternate_choice_out">
+                                    <label for="alternate_choice">Alternatieve Smaakkeuze:</label>
                                     <select id="alternate_choice" name="alternate_choice" class="form-control" required>
-                                        <option value="">Kies...</option>
-                                        <!-- Voeg hier de opties toe voor de selectie -->
+                                        <option value="" selected disabled>Kies...</option>
+                                        <optgroup label="Nieuwe Smaakvarianten">
+                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
+                                            <option value="Vanille jam en boterbrood">Vanille jam en boterbrood</option>
+                                            <option value="Amandelen">Amandelen</option>
+                                            <option value="Vijgen">Vijgen</option>
+                                            <option value="Boter en jam brood">Boter en jam brood</option>
+                                        </optgroup>
+                                        <optgroup label="Engelse Soepen">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Abruzzese cake">Abruzzese cake</option>
+                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
+                                            <option value="Bruine suiker">Bruine suiker</option>
+                                        </optgroup>
+                                        <optgroup label="Klassieke Smaakvarianten">
+                                            <option value="Vanille">Vanille</option>
+                                            <option value="Chocolade">Chocolade</option>
+                                            <option value="Aardbei">Aardbei</option>
+                                            <option value="Munt">Munt</option>
+                                        </optgroup>
+                                        <optgroup label="Notenlekkernijen">
+                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
+                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
+                                            </option>
+                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
+                                            <option value="Amandelen">Amandelen</option>
+                                        </optgroup>
+                                        <optgroup label="Exotische Smaakvarianten">
+                                            <option value="Kokosnoot">Kokosnoot</option>
+                                            <option value="Mango">Mango</option>
+                                            <option value="Passievrucht">Passievrucht</option>
+                                            <option value="Lychee">Lychee</option>
+                                        </optgroup>
+                                        <optgroup label="Sorbet">
+                                            <option value="Banaan">Banaan</option>
+                                            <option value="Raspberry">Raspberry</option>
+                                            <option value="Rode Vruchten">Rode Vruchten</option>
+                                            <option value="Bosbes">Bosbes</option>
+                                        </optgroup>
+                                        <optgroup label="Specialiteiten">
+                                            <option value="Tiramisu">Tiramisu</option>
+                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
+                                            <option value="Zabayon">Zabayon</option>
+                                            <option value="Bacio">Bacio</option>
+                                        </optgroup>
                                     </select>
+
                                     <div class="form-helper-text">Deze keuze wordt gebruikt als een van de eerste twee
                                         keuzes niet beschikbaar is.</div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label for="filling">Vulling:</label>
-                                    <select id="filling" name="filling" class="form-control" required>
+                                    <label for="topping">Topping:</label>
+                                    <select id="topping" name="topping" class="form-control" required>
+                                        <option value="">Kies...</option>
                                         <option value="Standaard">Standaard</option>
                                         <option value="Speciaal">Speciaal</option>
                                     </select>
                                 </div>
+
                                 <div class="form-group">
-                                    <label for="comment">Opmerkingen:</label>
-                                    <textarea id="comment" name="comment" class="form-control"
+                                    <label for="comments">Opmerkingen:</label>
+                                    <textarea id="comments" name="comments" class="form-control"
                                         placeholder="Opmerkingen"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="file">Bestand/foto toevoegen:</label>
+
+                                <div class="form-group" id="file_out">
+                                    <label for="file">Bestand/Foto toevoegen:</label>
                                     <input type="file" id="file" name="file" class="form-control-file">
-                                    <div class="form-helper-text">Alleen bij 12 personen of meer.</div>
+                                    <div class="form-helper-text" id="file_helper">Alleen voor 12 personen of meer.
+                                    </div>
                                 </div>
+
+                                <!-- Captcha -->
                                 <div class="row">
                                     <div class="form-group">
-                                        <!-- HTML -->
                                         <label><strong>Voer de Captcha-code in:</strong></label><br />
                                         <input type="text" id="captcha" name="captcha"
                                             placeholder="Voer de Captcha-code in" required>
                                         <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
                                                 id="captcha_image"></p>
-                                        <p>Kunt u de afbeelding niet lezen? <a href="#"
+                                        <p>Kan de afbeelding niet lezen? <a href="#"
                                                 onclick="refreshCaptcha(event);">Klik hier</a> om te vernieuwen</p>
                                     </div>
                                 </div>
+
                             </div>
-                            <input type="text" id="lang" name="lang" class="form-control" value="nl" disabled required
-                                hidden>
+
                             <button class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="submit">
-                                <span class="description">Reserveren!</span>
+                                <span class="description">Reservering maken!</span>
                                 <span class="success">
                                     <svg x="0px" y="0px" viewBox="0 0 32 32">
                                         <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
@@ -216,10 +363,10 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                                             stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
                                     </svg>
                                 </span>
-                                <span class="error">Probeer opnieuw...</span>
+                                <span class="error">Opnieuw proberen...</span>
                             </button>
-                        </form>
 
+                        </form>
                     </div>
                 </div>
             </div>
@@ -277,61 +424,132 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
     </div>
 
     <script>
-    // Get the current date and time
-    var currentDate = new Date();
-
-    // Format the current date and time into the required format for the input element
-    var formattedCurrentDate = currentDate.getFullYear() + '-' + ('0' + (currentDate.getMonth() +
-        1)).slice(-2) + '-' + ('0' + currentDate.getDate()).slice(-2) + 'T' + ('0' + currentDate
-        .getHours()).slice(-2) + ':' + ('0' + currentDate.getMinutes()).slice(-2);
-
-    // Set the minimum value of the input element to the formatted current date and time
-    document.getElementById("DateTime").min = formattedCurrentDate;
-
-    function getCaptcha() {
-        axios.get('./php/booking/get-captcha.php')
-            .then(function(response) {
-                console.log('Captcha:', response.data.captcha);
-            })
-            .catch(function(error) {
-                console.error('Erreur lors de la récupération du captcha :', error);
-            });
-    }
-
-    // Appeler cette fonction chaque fois que vous voulez obtenir la valeur du captcha
-    getCaptcha();
-
-    function submitForm() {
+    document.addEventListener("DOMContentLoaded", function() {
         const form = document.getElementById("booking-form");
+        const submitButton = form.querySelector(".btn-submit");
         const captchaInput = form.querySelector('input[name="captcha"]');
-        const captcha = captchaInput.value;
+        const captchaImage = document.getElementById('captcha_image');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const modalMessage = document.getElementById('modalMessage');
+        var personsInput = document.getElementById('persons');
+        var fileOut = document.getElementById('file_out');
+        var fileHelper = document.getElementById('file_helper');
+        fileOut.style.display = 'none';
+        fileHelper.style.display = 'none';
+        document.getElementById('file').removeAttribute('required');
+        personsInput.addEventListener('change', function() {
+            var persons = parseInt(personsInput.value);
+            if (persons >= 12) {
+                fileOut.style.display = 'block';
+                fileHelper.style.display = 'block';
+                document.getElementById('file').setAttribute('required', true);
+            } else {
+                fileOut.style.display = 'none';
+                fileHelper.style.display = 'none';
+                document.getElementById('file').removeAttribute('required');
+            }
+        });
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            submitForm();
+        });
 
-        // Créer un objet FormData et ajouter le champ captcha
-        const formData = new FormData();
-        formData.append('captcha', captcha);
+        captchaImage.addEventListener("click", function() {
+            refreshCaptcha();
+        });
 
-        axios.post('./php/booking/validate-captcha.php', formData)
-            .then(response => {
-                console.log('Réponse de validation :', response.data.valid);
+        function getCaptcha() {
+            axios.get('./php/booking/get-captcha.php')
+                .then(function(response) {
+                    console.log('Captcha:', response.data.captcha);
+                })
+                .catch(function(error) {
+                    console.error('Error fetching captcha:', error);
+                });
+        }
 
-                if (response.data.valid) {
-                    const submitButton = form.querySelector(".btn-submit");
-                    submitButton.removeAttribute('disabled');
+        // Call this function whenever you want to get the value of captcha
+        getCaptcha();
 
+        function submitForm() {
+            const captcha = captchaInput.value;
+            const formData = new FormData(form);
+            formData.append('captcha', captcha);
+
+            // Validate email
+            const emailInput = form.querySelector('input[name="email"]');
+            const email = emailInput.value;
+            if (!validateEmail(email)) {
+                openModal('Voer een geldig e-mailadres in.');
+                emailInput.style.border = "1px solid red";
+                return false;
+            }
+
+            // Validate each required input field
+            const inputs = form.querySelectorAll("[required]");
+            let isValid = true;
+            inputs.forEach(function(input) {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    // Add red border to empty required fields
+                    input.style.border = "1px solid red";
                 } else {
-                    openModal('Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.');
-                    refreshCaptcha();
+                    // Reset border to default style
+                    input.style.border = "";
                 }
-            })
-            .catch(error => {
-                console.error('Erreur lors de la validation du CAPTCHA :', error);
             });
-    }
 
-    function openModal(message) {
-        modalMessage.innerText = message;
-        confirmationModal.style.display = 'block';
-    }
+            if (!isValid) {
+                // If any required field is empty, show an error message and prevent form submission
+                openModal("Vul alle verplichte velden in.");
+                return false;
+            }
+
+            axios.post('./php/booking/validate-captcha.php', formData)
+                .then(response => {
+                    if (response.data.valid) {
+                        console.log(formData);
+                        // Use AJAX to submit form data
+                        submitButton.innerHTML =
+                            '<span class="description">Bezig met verzenden...</span>';
+                        axios.post('./php/booking/booking-reservations-nl.php',
+                                formData)
+                            .then(response => {
+                                console.log('Form submission response:', response
+                                    .data);
+                                if (response.data === 'success success') {
+                                    submitButton.innerHTML =
+                                        '<span class="description">Reservering succesvol!</span>';
+                                    submitButton.classList.remove('btn-secondary');
+                                    submitButton.classList.remove('btn-submit');
+                                    submitButton.classList.add('btn-success');
+                                    submitButton.setAttribute('disabled',
+                                        'disabled');
+                                } else {
+                                    openModal(
+                                        'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
+                                    );
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error submitting form:', error);
+                                openModal(
+                                    'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
+                                );
+                            });
+                    } else {
+                        openModal(
+                            'De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.'
+                        );
+                        refreshCaptcha();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error validating CAPTCHA:', error);
+                });
+        }
+
+    });
 
     function refreshCaptcha(event) {
         if (event) {
@@ -355,144 +573,9 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                 getCaptcha();
             })
             .catch(function(error) {
-                console.error('Erreur lors de l\'actualisation du CAPTCHA :', error);
+                console.error('Error refreshing CAPTCHA:', error);
             });
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("booking-form");
-        const submitButton = form.querySelector(".btn-submit");
-
-        const datetimeInput = form.querySelector('input[name="datetime"]');
-        const confirmationModal = document.getElementById('confirmationModal');
-        const modalMessage = document.getElementById('modalMessage');
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const formData = new FormData(form);
-            const selectedDateTime = new Date(formData.get('datetime'));
-            const captchaInput = form.querySelector('input[name="captcha"]');
-            const captcha = captchaInput.value;
-
-            // Inclure la valeur du CAPTCHA dans FormData
-            formData.append('captcha', captcha);
-            // Valider chaque champ requis
-            const inputs = form.querySelectorAll("[required]");
-            let isValid = true;
-            inputs.forEach(function(input) {
-                if (input.value.trim() === "") {
-                    isValid = false;
-                    // Optionnel : vous pouvez ajouter un retour visuel pour l'utilisateur, comme ajouter une bordure rouge à l'entrée invalide
-                    input.style.border = "1px solid red";
-                } else {
-                    // Réinitialiser la bordure à son style par défaut
-                    input.style.border = "";
-                }
-            });
-
-            // Vérifier si la date sélectionnée est le 14 février 2024
-            if (selectedDateTime.getDate() === 14 && selectedDateTime.getMonth() ===
-                1 && selectedDateTime.getFullYear() === 2024) {
-                openModal(
-                    "Nous sommes désolé, toutes nos tables sont réservées le 14 février 2024"
-                );
-                return; // Empêcher le traitement ultérieur
-            }
-            // Si tous les champs requis sont remplis, soumettre le formulaire
-            if (isValid) {
-                // Valider CAPTCHA
-                axios.post('./php/booking/validate-captcha.php', formData)
-                    .then(function(response) {
-                        console.log('Réponse de validation :', response.data
-                            .valid);
-
-                        if (response.data.valid) {
-                            // CAPTCHA est valide, procéder à la soumission du formulaire
-                            if (isDateTimeValid(selectedDateTime)) {
-                                submitButton.innerHTML =
-                                    '<span class="description">Envoi...</span>';
-
-                                axios.post('./php/booking/booking-form.php',
-                                        formData)
-                                    .then(function(response) {
-                                        submitButton.innerHTML =
-                                            '<span class="description">Réservation réussie !</span>';
-                                        submitButton.classList.remove(
-                                            'btn-secondary');
-                                        submitButton.classList.remove(
-                                            'btn-submit');
-                                        submitButton.classList.add(
-                                            'btn-success');
-                                        submitButton.setAttribute(
-                                            'disabled', 'disabled');
-                                    })
-                                    .catch(function(error) {
-                                        submitButton.innerHTML =
-                                            '<span class="error">Réessayer...</span>';
-                                        submitButton.classList.remove(
-                                            'btn-submit');
-                                        submitButton.classList.remove(
-                                            'btn-secondary');
-                                        submitButton.classList.add(
-                                            'btn-danger');
-                                    });
-                            } else {
-                                // Afficher un message d'erreur et empêcher la soumission du formulaire
-                                modalMessage.innerText =
-                                    'Date ou heure invalide. Veuillez sélectionner une date et une heure valides dans les plages horaires autorisées.';
-                                confirmationModal.style.display = 'block';
-                                // Empêcher la soumission du formulaire
-                                return false;
-                            }
-                        } else {
-                            // Afficher un message d'erreur et empêcher la soumission du formulaire
-                            modalMessage.innerText =
-                                'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.';
-                            confirmationModal.style.display = 'block';
-                            // Empêcher la soumission du formulaire
-                            return false;
-                        }
-                    })
-                    .catch(function(error) {
-                        console.error(
-                            'Erreur lors de la validation du CAPTCHA :',
-                            error);
-                    });
-            } else {
-                // Optionnel : vous pouvez informer l'utilisateur qu'il y a des champs requis vides
-                modalMessage.innerText =
-                    "Veuillez remplir tous les champs obligatoires.";
-                confirmationModal.style.display = 'block';
-            }
-        });
-
-        function isDateTimeValid(dateTime) {
-            const day = dateTime.getDay();
-            const hours = dateTime.getHours();
-            const minutes = dateTime.getMinutes();
-            switch (day) {
-                case 0: // Sunday
-                    return (hours >= 18 && hours < 22) || (hours >= 12 && hours < 14);
-                case 1: // Monday
-                    return hours >= 18 && hours < 22;
-                case 2: // Tuesday
-                    return false; // Closed on Tuesday
-                case 3: // Wednesday
-                    return hours >= 18 && hours < 22;
-                case 4: // Thursday
-                    return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-                case 5: // Friday
-                    return (hours >= 12 && hours < 14) || (hours >= 18 && hours < 22);
-                case 6: // Saturday
-                    return hours >= 18 && hours < 22;
-                default:
-                    return false;
-            }
-        }
-
-
-    });
 
     function openModal(message) {
         modalMessage.innerText = message;
@@ -502,7 +585,13 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
     function closeModal() {
         document.getElementById('confirmationModal').style.display = 'none';
     }
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     </script>
+
 
 </div>
 </div>
@@ -510,8 +599,8 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
 </div>
 </section>
 <?php
-  include 'carosuel-main-nl.php';
-  ?>
+include 'carosuel-main-nl.php';
+?>
 <!-- Pied de page -->
 <footer id="footer" class="bg-dark dark">
     <div class="container">
@@ -566,9 +655,9 @@ $status = "<p style='color:#FFFFFF; font-size:20px'><span style='background-colo
                 <h5 class="text-muted">Heures d'ouverture</h5>
                 <table class="table">
                     <tbody>
-                        <?php 
-include 'table-nl.php'
-?>
+                        <?php
+                        include 'table-nl.php'
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -672,4 +761,4 @@ include 'table-nl.php'
     </div>
     <?php
     include 'footer-nl.php';
-?>
+    ?>

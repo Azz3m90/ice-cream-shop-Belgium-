@@ -8,6 +8,5 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to the login page after logging out.
-header("Location: ../../../../../matthias-and-sea-2023/admin/user-login.html");
+header("Location: ../../../../../gelatonaturale/admin/user-login.html");
 exit();
-?>
