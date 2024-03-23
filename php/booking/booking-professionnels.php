@@ -61,6 +61,7 @@ function getClientPlainTextContent($name)
 // Fonction pour générer le contenu HTML élégant de l'e-mail pour le magasin
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector)
 {
+    $commentsRow = $comment;
     if (!empty($comment)) {
         $commentsRow = '
         <tr>
@@ -167,7 +168,7 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@matthiasandsea.be';
+$mail->Username = 'info@gelatonaturale.be';
 $mail->Password = 'Matteo1998';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
@@ -195,7 +196,7 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     VALUES ('$name', '$surname', '$company', '$phone', '$email', '$sector', '$delivery_date', '$delivery_address', '$comment', current_timestamp(), 1)";
 
     $mysql_db->query($insertSql);
-    $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Confirmation de réservation';
     $mail->isHTML(true);
@@ -212,7 +213,7 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
         echo 'success';
     }
     $mail->clearAllRecipients(); // Effacer les destinataires précédents
-    $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->addAddress('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nouvelle réservation - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Alternative texte brut
@@ -227,7 +228,7 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
     $mysql_db->close();
 } else {
     // L'adresse e-mail existe déjà dans la base de données, ne pas ajouter à la base de données
-    $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Confirmation de réservation';
     $mail->isHTML(true);
@@ -242,7 +243,7 @@ if ($result->num_rows === 0) { // Si l'adresse e-mail n'existe pas, continuer
         echo 'error';
     }
     $mail->clearAllRecipients(); // Effacer les destinataires précédents
-    $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->addAddress('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nouvelle réservation - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Alternative texte brut

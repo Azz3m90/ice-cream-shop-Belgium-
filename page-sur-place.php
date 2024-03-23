@@ -1,5 +1,5 @@
 <?php
-    include 'header.php';
+include 'header.php';
 ?>
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/clearCache.js"></script>
@@ -80,14 +80,13 @@
         <div class="container offset-md-1">
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                <h2 class="mb-5 ml-5 ">Nos Services de Petite Restauration:</h2>
-                <p class="lead text-muted mb-5 ml-5">Experience the ocean's delights at Matthias and Sea, nestled in the
-                    charming
-                    Besoin d'une petite pause gourmande ou d'une collation rapide? Explorez notre sélection de plats
-                    légers et savoureux proposés dans notre service de petite restauration. Que ce soit des sandwiches
-                    frais, des salades croquantes ou des plats du jour faits maison, nous avons de quoi satisfaire
-                    toutes vos envies, même en cas de petite faim.
-                </p>
+                <h2 class="mb-5 ml-5">Gelato Naturale - Boutique de crèmes glacées:</h2>
+                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Découvrez le plaisir de la crème glacée chez Gelato Naturale, où
+                    chaque bouchée vous transporte vers un monde de délices. Avec une sélection exquise de saveurs
+                    artisanales, nous vous offrons une expérience glacée inoubliable. Que vous aimiez les classiques
+                    intemporels ou les créations uniques, notre boutique a quelque chose pour satisfaire toutes vos
+                    envies de sucreries glacées.</p>
+
                 <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
             </div>
         </div>
@@ -163,8 +162,7 @@
                 </div>
                 <!-- Notre Ice Burgger -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Notre Ice Burgger" width="400px"
-                        height="200px">
+                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Notre Ice Burgger" width="400px" height="200px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Notre Ice Burgger:</h2>
                         <h5 class="text-muted mb-5">
@@ -177,8 +175,7 @@
                 </div>
                 <!-- Nos Boissons Chaudes -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Nos Boissons Chaudes" width="400px"
-                        height="200px">
+                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Nos Boissons Chaudes" width="400px" height="200px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Boissons Chaudes:</h2>
                         <h5 class="text-muted mb-5">
@@ -211,8 +208,8 @@
 
 
 <?php
-  include 'carosuel-main.php';
-  ?>
+include 'carosuel-main.php';
+?>
 <!-- Pied de page -->
 <footer id="footer" class="bg-dark dark">
     <div class="container">
@@ -220,56 +217,55 @@
         <div class="footer-first-row row">
             <div class="col-lg-3 text-center">
                 <a href="index.php">
-                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                        width="88" class="mt-5 mb-5">
+                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                 </a>
             </div>
             <style>
-            .styled-table {
-                --background-color: #343a40;
-                /* Couleur de fond sombre */
-                color: #ffffff;
-                /* Couleur du texte */
-                border-radius: 10px;
-                /* Coins arrondis */
-                margin-top: 20px;
-                /* Ajouter un espace en haut */
-            }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Couleur de fond sombre */
+                    color: #ffffff;
+                    /* Couleur du texte */
+                    border-radius: 10px;
+                    /* Coins arrondis */
+                    margin-top: 20px;
+                    /* Ajouter un espace en haut */
+                }
 
-            .styled-table h5 {
-                color: #007bff;
-                /* Couleur thème bleu */
-            }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Couleur thème bleu */
+                }
 
-            .styled-table td.title {
-                --font-weight: bold;
-                color: #ffffff;
-                /* Couleur du texte */
-            }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Couleur du texte */
+                }
 
-            .styled-table td.content {
-                color: #a8b2b7;
-                /* Couleur de texte plus claire */
-            }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Couleur de texte plus claire */
+                }
 
-            .styled-table a {
-                color: #ffffff;
-                /* Couleur du lien */
-            }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Couleur du lien */
+                }
 
-            .styled-table a:hover {
-                text-decoration: none;
-                /* Supprimer le soulignement au survol */
-            }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Supprimer le soulignement au survol */
+                }
             </style>
 
             <div class="col-lg-4 col-md-6 styled-table">
                 <h5 class="text-muted">Heures d'ouverture</h5>
                 <table class="table">
                     <tbody>
-                        <?php 
-include 'table-fr.php'
-?>
+                        <?php
+                        include 'table-fr.php'
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -290,8 +286,8 @@ include 'table-fr.php'
                         <tr>
                             <td class="title">Email :</td>
                             <td class="content">
-                                <a href="mailto:mattiacollu@msn.com" target="_blank">
-                                    <i class="fa fa-lg fa-envelope"></i> mattiacollu@msn.com
+                                <a href="mailto:info@gelatonaturale.be" target="_blank">
+                                    <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be
                                 </a>
                             </td>
 
@@ -300,8 +296,7 @@ include 'table-fr.php'
                 </table>
 
                 <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                    class="icon icon-social icon-circle icon-sm icon-facebook">
+                <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -321,7 +316,7 @@ include 'table-fr.php'
         <!-- Deuxième rangée du pied de page -->
         <div class="footer-second-row">
             <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                 </script>©. </span>
         </div>
     </div>
@@ -338,8 +333,7 @@ include 'table-fr.php'
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -348,8 +342,7 @@ include 'table-fr.php'
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-france m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">
@@ -373,4 +366,4 @@ include 'table-fr.php'
     </div>
     <?php
     include 'footer.php';
-?>
+    ?>

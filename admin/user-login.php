@@ -35,8 +35,7 @@ include './header.php';
     </div>
     <div class="module module-logo">
         <a href="index.php">
-            <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;"
-                width="88">
+            <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;" width="88">
         </a>
     </div>
     <!-- Cart -->
@@ -52,8 +51,7 @@ include './header.php';
         <!-- Background Video -->
         <div class="bg-video dark-overlay">
             <!-- Background Photo -->
-            <img class="bg-image dark-overlay" src=".././assets/img/professionals/professionals.jpg"
-                alt="Professionals Background">
+            <img class="bg-image dark-overlay" src=".././assets/img/professionals/professionals.jpg" alt="Professionals Background">
         </div>
         <div class="container">
             <div class="row justify-content-center">
@@ -75,8 +73,7 @@ include './header.php';
                         </div>
                         <div class="utility-box-content">
                             <h2>Connexion</h2>
-                            <form action="./php/login/login.php" id="booking-form" class="booking-form" type="POST"
-                                data-validate>
+                            <form action="./php/login/login.php" id="booking-form" class="booking-form" type="POST" data-validate>
                                 <div class="form-group">
                                     <label>Nom d'utilisateur :</label>
                                     <input type="text" name="username" id="username" class="form-control" required>
@@ -85,15 +82,11 @@ include './header.php';
                                     <label>Mot de passe :</label>
                                     <input type="password" name="password" id="password" class="form-control" required>
                                 </div>
-                                <button id="submit"
-                                    class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="button"
-                                    onclick="login()">
+                                <button id="submit" class="utility-box-btn btn btn-secondary btn-block btn-lg btn-submit" type="button" onclick="login()">
                                     <span class="description">Se connecter</span>
                                     <span class="success">
                                         <svg x="0px" y="0px" viewBox="0 0 32 32">
-                                            <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
-                                                stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"
-                                                stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
+                                            <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
                                         </svg>
                                     </span>
                                     <span class="error">Mot de passe ou nom d'utilisateur invalide</span>
@@ -104,42 +97,42 @@ include './header.php';
 
                             <script src="./dist/js/menu/axios.min.js"></script>
                             <script>
-                            function login() {
-                                var username = document.getElementById('username').value;
-                                var password = document.getElementById('password').value;
-                                var formData = new FormData();
-                                formData.append('login', true);
-                                formData.append('username', username);
-                                formData.append('password', password);
+                                function login() {
+                                    var username = document.getElementById('username').value;
+                                    var password = document.getElementById('password').value;
+                                    var formData = new FormData();
+                                    formData.append('login', true);
+                                    formData.append('username', username);
+                                    formData.append('password', password);
 
-                                axios.post('./php/login/login.php', formData)
-                                    .then(function(response) {
-                                        var responseData = response.data;
-                                        var messageContainer = document.getElementById('response-message');
+                                    axios.post('./php/login/login.php', formData)
+                                        .then(function(response) {
+                                            var responseData = response.data;
+                                            var messageContainer = document.getElementById('response-message');
 
-                                        if (responseData.status === 'success') {
+                                            if (responseData.status === 'success') {
 
-                                            const submitButton = document.getElementById('submit');
-                                            //submitButton.querySelector('.description').style.display = 'none';
-                                            submitButton.querySelector('.success').style.display = 'block';
-                                            submitButton.querySelector('.error').style.display = 'none';
+                                                const submitButton = document.getElementById('submit');
+                                                //submitButton.querySelector('.description').style.display = 'none';
+                                                submitButton.querySelector('.success').style.display = 'block';
+                                                submitButton.querySelector('.error').style.display = 'none';
 
-                                            messageContainer.innerHTML = 'Login successful. Redirecting...';
+                                                messageContainer.innerHTML = 'Login successful. Redirecting...';
 
-                                            // Redirect to the specified page after a short delay
-                                            setTimeout(function() {
-                                                window.location.href = responseData.redirect;
-                                            }, 2000);
-                                        } else {
-                                            // Check if responseData.message is defined before accessing it
-                                            var errorMessage = responseData.message || 'An unknown error occurred.';
-                                            messageContainer.innerHTML = 'Error: ' + errorMessage;
-                                        }
-                                    })
-                                    .catch(function(error) {
-                                        console.error('Error:', error);
-                                    });
-                            }
+                                                // Redirect to the specified page after a short delay
+                                                setTimeout(function() {
+                                                    window.location.href = responseData.redirect;
+                                                }, 2000);
+                                            } else {
+                                                // Check if responseData.message is defined before accessing it
+                                                var errorMessage = responseData.message || 'An unknown error occurred.';
+                                                messageContainer.innerHTML = 'Error: ' + errorMessage;
+                                            }
+                                        })
+                                        .catch(function(error) {
+                                            console.error('Error:', error);
+                                        });
+                                }
                             </script>
                         </div>
                     </div>
@@ -153,47 +146,46 @@ include './header.php';
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index.php">
-                        <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                            style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                .styled-table {
-                    --background-color: #343a40;
-                    /* Couleur de fond sombre */
-                    color: #ffffff;
-                    /* Couleur du texte */
-                    border-radius: 10px;
-                    /* Coins arrondis */
-                    margin-top: 20px;
-                    /* Ajouter un espace en haut */
-                }
+                    .styled-table {
+                        --background-color: #343a40;
+                        /* Couleur de fond sombre */
+                        color: #ffffff;
+                        /* Couleur du texte */
+                        border-radius: 10px;
+                        /* Coins arrondis */
+                        margin-top: 20px;
+                        /* Ajouter un espace en haut */
+                    }
 
-                .styled-table h5 {
-                    color: #007bff;
-                    /* Couleur thème bleu */
-                }
+                    .styled-table h5 {
+                        color: #007bff;
+                        /* Couleur thème bleu */
+                    }
 
-                .styled-table td.title {
-                    --font-weight: bold;
-                    color: #ffffff;
-                    /* Couleur du texte */
-                }
+                    .styled-table td.title {
+                        --font-weight: bold;
+                        color: #ffffff;
+                        /* Couleur du texte */
+                    }
 
-                .styled-table td.content {
-                    color: #a8b2b7;
-                    /* Couleur de texte plus claire */
-                }
+                    .styled-table td.content {
+                        color: #a8b2b7;
+                        /* Couleur de texte plus claire */
+                    }
 
-                .styled-table a {
-                    color: #ffffff;
-                    /* Couleur du lien */
-                }
+                    .styled-table a {
+                        color: #ffffff;
+                        /* Couleur du lien */
+                    }
 
-                .styled-table a:hover {
-                    text-decoration: none;
-                    /* Supprimer le soulignement au survol */
-                }
+                    .styled-table a:hover {
+                        text-decoration: none;
+                        /* Supprimer le soulignement au survol */
+                    }
                 </style>
 
                 <div class="col-lg-4 col-md-6 styled-table">
@@ -201,8 +193,8 @@ include './header.php';
                     <table class="table">
                         <tbody>
                             <?php
-              include 'table-fr.php'
-              ?>
+                            include 'table-fr.php'
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -223,8 +215,8 @@ include './header.php';
                             <tr>
                                 <td class="title">Email :</td>
                                 <td class="content">
-                                    <a href="mailto:mattiacollu@msn.com" target="_blank">
-                                        <i class="fa fa-lg fa-envelope"></i> mattiacollu@msn.com
+                                    <a href="mailto:info@gelatonaturale.be" target="_blank">
+                                        <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be
                                     </a>
                                 </td>
 
@@ -233,8 +225,7 @@ include './header.php';
                     </table>
 
                     <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                        class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -254,7 +245,7 @@ include './header.php';
             <!-- Deuxième rangée du pied de page -->
             <div class="footer-second-row">
                 <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                    document.write(new Date().getFullYear())
+                        document.write(new Date().getFullYear())
                     </script>©. </span>
             </div>
         </div>
@@ -270,8 +261,7 @@ include './header.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="../assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -280,8 +270,7 @@ include './header.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-france m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown1">
@@ -294,5 +283,5 @@ include './header.php';
         </ul>
     </div>
     <?php
-  include './footer.php';
-  ?>
+    include './footer.php';
+    ?>

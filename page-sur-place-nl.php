@@ -1,5 +1,5 @@
 <?php
-    include 'header-nl.php';
+include 'header-nl.php';
 ?>
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/clearCache.js"></script>
@@ -80,14 +80,13 @@
         <div class="container offset-md-1">
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                <h2 class="mb-5 ml-5 ">Onze Kleine Restauratiediensten:</h2>
-                <p class="lead text-muted mb-5 ml-5">Ervaar de geneugten van de oceaan bij Matthias and Sea, gelegen in
-                    het charmante
-                    Behoefte aan een kleine culinaire pauze of een snelle snack? Verken onze selectie van lichte en
-                    smakelijke gerechten aangeboden in ons assortiment van kleine restauratiediensten. Of het nu gaat om
-                    verse broodjes, knapperige salades of huisgemaakte dagelijkse specials, we hebben alles om aan al uw
-                    wensen te voldoen, zelfs als u een kleine trek heeft.
-                </p>
+                <h2 class="mb-5 ml-5">Gelato Naturale - IJssalon:</h2>
+                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Ervaar het plezier van ijs bij Gelato Naturale, waar elke hap je
+                    meeneemt op een reis naar een wereld vol genoegens. Met een uitgelezen selectie ambachtelijke smaken
+                    bieden we je een onvergetelijke ijzige ervaring. Of je nu houdt van tijdloze klassiekers of unieke
+                    creaties, onze salon heeft voor elk wat wils om je verlangens naar bevroren lekkernijen te
+                    bevredigen.</p>
+
                 <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
             </div>
         </div>
@@ -175,8 +174,7 @@
                 </div>
                 <!-- Onze Warme Dranken -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Onze Warme Dranken" width="400px"
-                        height="200px">
+                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Onze Warme Dranken" width="400px" height="200px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Warme Dranken:</h2>
                         <h5 class="text-muted mb-5">
@@ -202,7 +200,7 @@
         </div>
     </section>
     <?php
-      include 'carosuel-main-nl.php';
+    include 'carosuel-main-nl.php';
     ?>
     <!-- Voet -->
     <footer id="footer" class="bg-dark dark">
@@ -211,47 +209,46 @@
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index.php">
-                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                            style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                .styled-table {
-                    --background-color: #343a40;
-                    /* Donkere achtergrondkleur */
-                    color: #ffffff;
-                    /* Tekstkleur */
-                    border-radius: 10px;
-                    /* Afgeronde hoeken */
-                    margin-top: 20px;
-                    /* Ruimte toevoegen aan de bovenkant */
-                }
+                    .styled-table {
+                        --background-color: #343a40;
+                        /* Donkere achtergrondkleur */
+                        color: #ffffff;
+                        /* Tekstkleur */
+                        border-radius: 10px;
+                        /* Afgeronde hoeken */
+                        margin-top: 20px;
+                        /* Ruimte toevoegen aan de bovenkant */
+                    }
 
-                .styled-table h5 {
-                    color: #007bff;
-                    /* Blauwe themakleur */
-                }
+                    .styled-table h5 {
+                        color: #007bff;
+                        /* Blauwe themakleur */
+                    }
 
-                .styled-table td.title {
-                    --font-weight: bold;
-                    color: #ffffff;
-                    /* Tekstkleur */
-                }
+                    .styled-table td.title {
+                        --font-weight: bold;
+                        color: #ffffff;
+                        /* Tekstkleur */
+                    }
 
-                .styled-table td.content {
-                    color: #a8b2b7;
-                    /* Lichtere tekstkleur */
-                }
+                    .styled-table td.content {
+                        color: #a8b2b7;
+                        /* Lichtere tekstkleur */
+                    }
 
-                .styled-table a {
-                    color: #ffffff;
-                    /* Linkkleur */
-                }
+                    .styled-table a {
+                        color: #ffffff;
+                        /* Linkkleur */
+                    }
 
-                .styled-table a:hover {
-                    text-decoration: none;
-                    /* Onderstreping verwijderen bij zweven */
-                }
+                    .styled-table a:hover {
+                        text-decoration: none;
+                        /* Onderstreping verwijderen bij zweven */
+                    }
                 </style>
                 <div class="col-lg-4 col-md-6 styled-table">
                     <h5 class="text-muted">Openingstijden</h5>
@@ -277,8 +274,8 @@
                             <tr>
                                 <td class="title">E-mail :</td>
                                 <td class="content">
-                                    <a href="mailto:mattiacollu@msn.com" target="_blank">
-                                        <i class="fa fa-lg fa-envelope"></i>mattiacollu@msn.com
+                                    <a href="mailto:info@gelatonaturale.be" target="_blank">
+                                        <i class="fa fa-lg fa-envelope"></i>info@gelatonaturale.be
                                     </a>
                                 </td>
 
@@ -287,8 +284,7 @@
                         </tbody>
                     </table>
                     <h5 class="text-muted mb-3 mt-4">Sociale Media</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                        class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -308,7 +304,7 @@
             <!-- Tweede rij van voet -->
             <div class="footer-second-row">
                 <span class="text-muted">Aangepast door FAST CAISSE <script>
-                    document.write(new Date().getFullYear())
+                        document.write(new Date().getFullYear())
                     </script>©. </span>
             </div>
         </div>
@@ -326,8 +322,7 @@
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -336,8 +331,7 @@
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-md-2 right mt-5">
-        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-netherlands m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown1">
@@ -361,4 +355,4 @@
     </div>
     <?php
     include 'footer-nl.php';
-?>
+    ?>

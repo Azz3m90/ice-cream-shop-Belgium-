@@ -1,6 +1,6 @@
  <?php
     include 'header.php';
-?>
+    ?>
  <script src="./dist/js/menu/axios.min.js"></script>
  <script src="./dist/js/clearCache.js"></script>
 
@@ -48,8 +48,7 @@
      </div>
      <div class="module module-logo">
          <a href="index.php">
-             <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;"
-                 width="88">
+             <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 75px;" width="88">
          </a>
      </div>
      <!-- Cart -->
@@ -75,8 +74,7 @@
          <div class="container">
              <div class="row align-items-center">
                  <div class="col-lg-4 offset-lg-1 col-md-6 mb-5 mb-md-0">
-                     <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" class="mb-5" width="80px"
-                         height="80px">
+                     <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" class="mb-5" width="80px" height="80px">
                      <h4 class="mb-0">
                          <strong>Gelato Naturale</strong>
                      </h4>
@@ -98,14 +96,12 @@
                          </div>
                          <div class="col-sm-6">
                              <h6 class="mb-1 text-muted">Email :</h6>
-                             <a href="#"><a href="mailto:mattiacollu@msn.com"
-                                     target="_blank">mattiacollu@msn.com</a></a>
+                             <a href="#"><a href="mailto:info@gelatonaturale.be" target="_blank">info@gelatonaturale.be</a></a>
                          </div>
                      </div>
                      <hr class="hr-md">
                      <h6 class="mb-3 text-muted">Suivez-nous !</h6>
-                     <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                         class="icon icon-social icon-circle icon-sm icon-facebook" target="_blank">
+                     <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook" target="_blank">
                          <i class="fa fa-facebook"></i>
                      </a>
                      <a href="#" class="icon icon-social icon-circle icon-sm icon-google" target="_blank">
@@ -124,10 +120,7 @@
                  <div class="col-lg-5 offset-lg-2 col-md-6">
                      <!--<div class="google-map h-500 shadow" data-lat="50.320699" data-lon="4.477533"></div>-->
                      <div class="shadow">
-                         <iframe
-                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.5363750566223!2d4.476622585934864!3d50.32076810597861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c221325d0a8525%3A0x31b8297aee08da00!2sGelato%20Naturale!5e0!3m2!1sen!2sus!4v1710497290806!5m2!1sen!2sus"
-                             width="445" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                             referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.5363750566223!2d4.476622585934864!3d50.32076810597861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c221325d0a8525%3A0x31b8297aee08da00!2sGelato%20Naturale!5e0!3m2!1sen!2sus!4v1710497290806!5m2!1sen!2sus" width="445" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                      </div>
                  </div>
              </div>
@@ -146,56 +139,55 @@
              <div class="footer-first-row row">
                  <div class="col-lg-3 text-center">
                      <a href="index.php">
-                         <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                             style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                         <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                      </a>
                  </div>
                  <style>
-                 .styled-table {
-                     --background-color: #343a40;
-                     /* Couleur de fond sombre */
-                     color: #ffffff;
-                     /* Couleur du texte */
-                     border-radius: 10px;
-                     /* Coins arrondis */
-                     margin-top: 20px;
-                     /* Ajouter un espace en haut */
-                 }
+                     .styled-table {
+                         --background-color: #343a40;
+                         /* Couleur de fond sombre */
+                         color: #ffffff;
+                         /* Couleur du texte */
+                         border-radius: 10px;
+                         /* Coins arrondis */
+                         margin-top: 20px;
+                         /* Ajouter un espace en haut */
+                     }
 
-                 .styled-table h5 {
-                     color: #007bff;
-                     /* Couleur thème bleu */
-                 }
+                     .styled-table h5 {
+                         color: #007bff;
+                         /* Couleur thème bleu */
+                     }
 
-                 .styled-table td.title {
-                     --font-weight: bold;
-                     color: #ffffff;
-                     /* Couleur du texte */
-                 }
+                     .styled-table td.title {
+                         --font-weight: bold;
+                         color: #ffffff;
+                         /* Couleur du texte */
+                     }
 
-                 .styled-table td.content {
-                     color: #a8b2b7;
-                     /* Couleur de texte plus claire */
-                 }
+                     .styled-table td.content {
+                         color: #a8b2b7;
+                         /* Couleur de texte plus claire */
+                     }
 
-                 .styled-table a {
-                     color: #ffffff;
-                     /* Couleur du lien */
-                 }
+                     .styled-table a {
+                         color: #ffffff;
+                         /* Couleur du lien */
+                     }
 
-                 .styled-table a:hover {
-                     text-decoration: none;
-                     /* Supprimer le soulignement au survol */
-                 }
+                     .styled-table a:hover {
+                         text-decoration: none;
+                         /* Supprimer le soulignement au survol */
+                     }
                  </style>
 
                  <div class="col-lg-4 col-md-6 styled-table">
                      <h5 class="text-muted">Heures d'ouverture</h5>
                      <table class="table">
                          <tbody>
-                             <?php 
-include 'table-fr.php'
-?>
+                             <?php
+                                include 'table-fr.php'
+                                ?>
                          </tbody>
                      </table>
                  </div>
@@ -216,8 +208,8 @@ include 'table-fr.php'
                              <tr>
                                  <td class="title">Email :</td>
                                  <td class="content">
-                                     <a href="mailto:mattiacollu@msn.com" target="_blank">
-                                         <i class="fa fa-lg fa-envelope"></i> mattiacollu@msn.com
+                                     <a href="mailto:info@gelatonaturale.be" target="_blank">
+                                         <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be
                                      </a>
                                  </td>
 
@@ -226,8 +218,7 @@ include 'table-fr.php'
                      </table>
 
                      <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                     <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                         class="icon icon-social icon-circle icon-sm icon-facebook">
+                     <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                          <i class="fa fa-facebook"></i>
                      </a>
                      <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -247,7 +238,7 @@ include 'table-fr.php'
              <!-- Deuxième rangée du pied de page -->
              <div class="footer-second-row">
                  <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                     document.write(new Date().getFullYear())
+                         document.write(new Date().getFullYear())
                      </script>©. </span>
              </div>
          </div>
@@ -265,8 +256,7 @@ include 'table-fr.php'
  <nav id="panel-mobile">
      <div class="module module-logo bg-dark dark">
          <a href="#">
-             <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                 width="88">
+             <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
          </a>
          <button class="close" data-toggle="panel-mobile">
              <i class="ti ti-close"></i>
@@ -275,8 +265,7 @@ include 'table-fr.php'
      <nav class="module module-navigation"></nav>
      <!--language selector-->
      <div class="dropdown col-12">
-         <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
-             aria-expanded="false">
+         <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
              <i class="flag flag-france m-0"></i>
          </a>
          <ul class="dropdown-menu" aria-labelledby="Dropdown1">
@@ -299,5 +288,5 @@ include 'table-fr.php'
          </ul>
      </div>
      <?php
-    include 'footer.php';
-?>
+        include 'footer.php';
+        ?>

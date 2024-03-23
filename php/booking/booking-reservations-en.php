@@ -61,28 +61,30 @@ function getClientPlainTextContent()
 // Function to generate HTML email content for the store
 function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $delivery_date, $number_of_persons, $for_person, $age, $first_flavor_choice, $second_flavor_choice, $alternative_flavor_choice, $topping, $comments, $file_name)
 {
+    $commentsRow = $comments;
+    $fileRow = $file_name;
     if (!empty($file_name)) {
         $fileRow = '
         <tr>
-            <td style="border-bottom: 1px solid #ddd;">File/Photo</td>
+            <td style="border-bottom: 1px solid #ddd;">Fichier/Photo</td>
             <td style="border-bottom: 1px solid #ddd;">' . $file_name . '</td>
         </tr>';
     }
     if (!empty($comments)) {
         $commentsRow = '
         <tr>
-            <td style="border-bottom: 1px solid #ddd;">Comment</td>
+            <td style="border-bottom: 1px solid #ddd;">Commentaire</td>
             <td style="border-bottom: 1px solid #ddd;">' . $comments . '</td>
         </tr>';
     }
     // HTML content of the email for the store
     $content = '<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation Confirmation</title>
+    <title>Confirmation de Réservation</title>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
     <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
@@ -90,60 +92,60 @@ function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $d
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
             <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
-                <h1 style="margin: 0;">New Reservation</h1>
+                <h1 style="margin: 0;">Confirmation de Réservation</h1>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
-                <p style="margin-top: 0;">A new reservation has been recorded:</p>
+                <p style="margin-top: 0;">Une nouvelle réservation a été enregistrée :</p>
                 <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Last Name</td>
+                        <td style="border-bottom: 1px solid #ddd;">Nom</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $last_name . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">First Name</td>
+                        <td style="border-bottom: 1px solid #ddd;">Prénom</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $first_name . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Email</td>
+                        <td style="border-bottom: 1px solid #ddd;">E-mail</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $email . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Phone Number</td>
+                        <td style="border-bottom: 1px solid #ddd;">Numéro de Téléphone</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $phone_number . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Delivery Date</td>
+                        <td style="border-bottom: 1px solid #ddd;">Date de Livraison</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $delivery_date . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Number of Persons</td>
+                        <td style="border-bottom: 1px solid #ddd;">Nombre de Personnes</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $number_of_persons . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">For</td>
+                        <td style="border-bottom: 1px solid #ddd;">Pour</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $for_person . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Age</td>
+                        <td style="border-bottom: 1px solid #ddd;">Âge</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $age . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">First Flavor Choice</td>
+                        <td style="border-bottom: 1px solid #ddd;">Premier Choix de Parfum</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $first_flavor_choice . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Second Flavor Choice</td>
+                        <td style="border-bottom: 1px solid #ddd;">Deuxième Choix de Parfum</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $second_flavor_choice . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Alternative Flavor Choice</td>
+                        <td style="border-bottom: 1px solid #ddd;">Choix de Parfum Alternatif</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $alternative_flavor_choice . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Topping</td>
+                        <td style="border-bottom: 1px solid #ddd;">Garniture</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $topping . '</td>
                     </tr>
                     ' . $commentsRow . '
@@ -154,7 +156,7 @@ function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $d
         <!-- Footer -->
         <tr>
             <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
-                <p style="margin: 0;">Thank you for processing this reservation promptly.</p>
+                <p style="margin: 0;">Merci de traiter cette réservation rapidement.</p>
             </td>
         </tr>
     </table>
@@ -163,7 +165,6 @@ function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $d
 
     return $content;
 }
-
 // Create a new PHPMailer object
 $mail = new PHPMailer();
 
@@ -171,7 +172,7 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@matthiasandsea.be';
+$mail->Username = 'info@gelatonaturale.be';
 $mail->Password = 'Matteo1998';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
@@ -197,7 +198,7 @@ $file_tmp = isset($_FILES['file']['tmp_name']) ? $_FILES['file']['tmp_name'] : '
 
 
 // Email to the client
-$mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale');
+$mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale');
 $mail->addAddress($email, $first_name . ' ' . $last_name);
 $mail->Subject = 'Reservation Confirmation';
 $mail->isHTML(true);
@@ -213,7 +214,7 @@ if (!$mail->send()) {
 
 // Email to the store
 $mail->clearAddresses();
-$mail->addAddress('info@matthiasandsea.be'); // Replace with actual store email address
+$mail->addAddress('info@gelatonaturale.be'); // Replace with actual store email address
 $mail->Subject = 'New Reservation - ' . $first_name . ' ' . $last_name;
 $mail->Body = getStoreEmailContent($last_name, $first_name, $email, $phone_number, $delivery_date, $number_of_persons, $for_person, $age, $first_flavor_choice, $second_flavor_choice, $alternative_flavor_choice, $topping, $comments, $file_name);
 // Check if a file is uploaded

@@ -61,6 +61,8 @@ function getClientPlainTextContent()
 // Function to generate HTML email content for the store
 function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $delivery_date, $number_of_persons, $for_person, $age, $first_flavor_choice, $second_flavor_choice, $alternative_flavor_choice, $topping, $comments, $file_name)
 {
+    $commentsRow = $comments;
+    $fileRow = $file_name;
     if (!empty($file_name)) {
         $fileRow = '
         <tr>
@@ -171,7 +173,7 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@matthiasandsea.be';
+$mail->Username = 'info@gelatonaturale.be';
 $mail->Password = 'Matteo1998';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
@@ -197,7 +199,7 @@ $file_tmp = isset($_FILES['file']['tmp_name']) ? $_FILES['file']['tmp_name'] : '
 
 
 // Email to the client
-$mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale');
+$mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale');
 $mail->addAddress($email, $first_name . ' ' . $last_name);
 $mail->Subject = 'Reservation Confirmation';
 $mail->isHTML(true);
@@ -213,7 +215,7 @@ if (!$mail->send()) {
 
 // Email to the store
 $mail->clearAddresses();
-$mail->addAddress('info@matthiasandsea.be'); // Replace with actual store email address
+$mail->addAddress('info@gelatonaturale.be'); // Replace with actual store email address
 $mail->Subject = 'New Reservation - ' . $first_name . ' ' . $last_name;
 $mail->Body = getStoreEmailContent($last_name, $first_name, $email, $phone_number, $delivery_date, $number_of_persons, $for_person, $age, $first_flavor_choice, $second_flavor_choice, $alternative_flavor_choice, $topping, $comments, $file_name);
 // Check if a file is uploaded

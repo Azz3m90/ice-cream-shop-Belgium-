@@ -60,21 +60,22 @@ function getClientPlainTextContent($name)
 // Functie voor het genereren van HTML-e-mailinhoud voor de winkel
 function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_address, $comment, $surname, $company, $sector)
 {
+    $commentsRow = $comment;
     if (!empty($comment)) {
         $commentsRow = '
         <tr>
-            <td style="border-bottom: 1px solid #ddd;">Opmerking</td>
+            <td style="border-bottom: 1px solid #ddd;">Commentaire</td>
             <td style="border-bottom: 1px solid #ddd;">' . $comment . '</td>
         </tr>';
     }
-    // HTML-inhoud van de e-mail voor de winkel
+    // Contenu HTML de l'e-mail pour le magasin
     $content = '<!DOCTYPE html>
-<html lang="nl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserveringsbevestiging</title>
+    <title>Confirmation de Réservation</title>
 </head>
 
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
@@ -83,45 +84,45 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
             <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
-                <h1 style="margin: 0;">Nieuwe Reservering</h1>
+                <h1 style="margin: 0;">Nouvelle Réservation</h1>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td bgcolor="#ffffff" style="padding: 20px; border-radius: 0 0 10px 10px;">
-                <p style="margin-top: 0;">Een nieuwe reservering is gemaakt:</p>
+                <p style="margin-top: 0;">Une nouvelle réservation a été enregistrée :</p>
                 <table cellpadding="8" cellspacing="0" width="100%" style="border-collapse: collapse;">
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Naam</td>
+                        <td style="border-bottom: 1px solid #ddd;">Nom</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $name . '</td>
                     </tr> 
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Achternaam</td>
+                        <td style="border-bottom: 1px solid #ddd;">Prénom</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $surname . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">E-mail</td>
+                        <td style="border-bottom: 1px solid #ddd;">Email</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $email . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Telefoon</td>
+                        <td style="border-bottom: 1px solid #ddd;">Téléphone</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $phone . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Bedrijf</td>
+                        <td style="border-bottom: 1px solid #ddd;">Société</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $company . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Sector</td>
+                        <td style="border-bottom: 1px solid #ddd;">Secteur</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $sector . '</td>
                     </tr>
                     
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Leverdatum</td>
+                        <td style="border-bottom: 1px solid #ddd;">Date de Livraison</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $delivery_date . '</td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ddd;">Leveradres</td>
+                        <td style="border-bottom: 1px solid #ddd;">Adresse de Livraison</td>
                         <td style="border-bottom: 1px solid #ddd;">' . $delivery_address . '</td>
                     </tr>
                     ' . $commentsRow . '
@@ -131,7 +132,7 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
         <!-- Footer -->
         <tr>
             <td bgcolor="#ce2b37" style="padding: 10px; text-align: center; border-radius: 0 0 10px 10px; color: #fff;">
-                <p style="margin: 0;">Bedankt voor het snel verwerken van deze reservering.</p>
+                <p style="margin: 0;">Nous vous remercions de traiter cette réservation rapidement.</p>
             </td>
         </tr>
     </table>
@@ -143,22 +144,21 @@ function getStoreEmailContent($name, $email, $phone, $delivery_date, $delivery_a
     return $content;
 }
 
-// Functie voor het genereren van platte tekstinhoud van e-mail voor de winkel
+// Fonction pour générer le contenu texte brut de l'e-mail pour le magasin
 function getStorePlainTextContent($name, $email, $phone, $delivery_date, $delivery_address, $comment)
 {
-    // Platte tekstinhoud van de e-mail voor de winkel
-    $content = "Een nieuwe reservering is geregistreerd :\n\n"
-        . "Naam: $name\n"
+    // Contenu texte brut de l'e-mail pour le magasin
+    $content = "Une nouvelle réservation a été enregistrée :\n\n"
+        . "Nom: $name\n"
         . "E-mail: $email\n"
-        . "Telefoon: $phone\n"
-        . "Leveringsdatum: $delivery_date\n"
-        . "Leveringsadres: $delivery_address\n"
-        . "Opmerking: $comment\n\n"
-        . "Bedankt voor het snel verwerken van deze reservering.";
+        . "Téléphone: $phone\n"
+        . "Date de livraison: $delivery_date\n"
+        . "Adresse de livraison: $delivery_address\n"
+        . "Commentaire: $comment\n\n"
+        . "Merci d'avoir traité cette réservation rapidement.";
 
     return $content;
 }
-
 // Maak een nieuw PHPMailer-object
 $mail = new PHPMailer();
 
@@ -166,7 +166,7 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'mail.infomaniak.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@matthiasandsea.be';
+$mail->Username = 'info@gelatonaturale.be';
 $mail->Password = 'Matteo1998';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
@@ -194,7 +194,7 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, doorgaan
     VALUES ('$name', '$surname', '$company', '$phone', '$email', '$sector', '$delivery_date', '$delivery_address', '$comment', current_timestamp(), 1)";
 
     $mysql_db->query($insertSql);
-    $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
@@ -211,7 +211,7 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, doorgaan
         echo 'success';
     }
     $mail->clearAllRecipients(); // Wis vorige ontvangers
-    $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->addAddress('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Alternatieve platte tekst
@@ -226,7 +226,7 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, doorgaan
     $mysql_db->close();
 } else {
     // Het e-mailadres bestaat al in de database, niet toevoegen aan de database
-    $mail->setFrom('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->setFrom('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->addAddress($email, $name);
     $mail->Subject = 'Bevestiging van reservering';
     $mail->isHTML(true);
@@ -241,7 +241,7 @@ if ($result->num_rows === 0) { // Als het e-mailadres niet bestaat, doorgaan
         echo 'error';
     }
     $mail->clearAllRecipients(); // Wis vorige ontvangers
-    $mail->addAddress('info@matthiasandsea.be', 'Gelato Naturale Tarcienne');
+    $mail->addAddress('info@gelatonaturale.be', 'Gelato Naturale Tarcienne');
     $mail->Subject = 'Nieuwe reservering - ' . $name;
     $mail->Body = $storeEmailContent;
     $mail->AltBody = $storePlainTextContent; // Alternatieve platte tekst
