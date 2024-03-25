@@ -119,7 +119,10 @@ include 'header-nl.php';
         });
     </script>
 
-    <!-- Footer -->
+    <?php
+    include 'carosuel-main-nl.php';
+    ?>
+    <!-- Pied de page -->
     <footer id="footer" class="bg-dark dark">
         <div class="container">
             <!-- Footer 1st Row -->

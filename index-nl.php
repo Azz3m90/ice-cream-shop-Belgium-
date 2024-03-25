@@ -122,8 +122,9 @@
                      </div>
                      <div class="container">
                          <div class="col-lg-5 col-md-9">
-                             <h1>Over Onze Vestiging</h1>
-                             <p class="lead text-muted mb-5 text-justify">Onze vestiging, geopend in 2021 na jaren van
+                             <h1 style="color: #000000;">Over Onze Vestiging</h1>
+                             <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Onze vestiging,
+                                 geopend in 2021 na jaren van
                                  voorbereiding, is gespecialiseerd in de productie en distributie van ijs en sorbets. We
                                  bedienen een verscheidenheid aan klanten, waaronder ijssalons, restaurants,
                                  instellingen, groothandels en delicatessewinkels, met inbegrepen bezorgservice. Onze
@@ -135,9 +136,109 @@
                                  reservering.</p>
                          </div>
                      </div>
-             </div>
+                 </section>
+                 <br>
+                 <!-- Onze Ter plaatse Diensten -->
+                 <section class="section section-bg-edge">
+                     <div class="image left bottom col-md-7">
+                         <div class="bg-image">
+                             <img src="./assets/img/surplace/surplace_4.jpeg" alt="surplace_4">
+                         </div>
+                     </div>
+                     <div class="container offset-md-1">
+                         <div class="col-lg-5 offset-lg-7 col-md-6">
+                             <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                             <h2 style="color: #000000;">Ter plaatse</h2>
+                             <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Onze vestiging, Gelato
+                                 Naturale - IJssalon,
+                                 biedt een heerlijke ervaring met onze ambachtelijke ijsjes gemaakt van 💯 verse
+                                 vruchten en zonder kunstmatige smaken. Of je nu zin hebt in klassieke smaken of unieke
+                                 creaties, onze winkel heeft voor ieder wat wils. Daarnaast bieden we een
+                                 verscheidenheid aan andere kleine voedseldiensten, waaronder sorbets, ijscoupes,
+                                 wafels, pannenkoeken, ijsburgers, warme dranken en hapjes. Elk item op ons menu is met
+                                 zorg samengesteld om je een onvergetelijke culinaire ervaring te bieden.</p>
+                             <a href="./page-sur-place-nl.php" class="btn btn-primary ml-5"><span class="description">lees
+                                     meer >></span></a>
+                             <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+                         </div>
+                     </div>
+                 </section>
+                 <br>
+                 <!-- Sectie - Over -->
+                 <section class="section section-bg-edge">
+                     <div class="image right col-md-6 offset-md-6">
+                         <div class="bg-image">
+                             <br>
+                             <img src="assets/img/Reservations/reservation_4.jpg" alt="reservation">
+                         </div>
+                     </div>
+                     <div class="container">
+                         <div class="col-lg-5 col-md-9">
+                             <h2 style="color: #000000;">Onze IJsgebakjes en IJsstammen</h2>
+                             <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Trakteer jezelf op
+                                 onze exclusieve ijsgebakjes
+                                 en ijsstammen, met zorg samengesteld om je smaakpapillen te prikkelen. Bij Gelato
+                                 Naturale doen we er alles aan om bevroren lekkernijen te leveren die je verwachtingen
+                                 overtreffen. Vergeet niet, je kunt ook reserveren om je favoriete traktaties van
+                                 tevoren veilig te stellen.</p>
+                             <a href="./page-reservations-nl.php" class="btn btn-primary ml-5"><span class="description">lees meer >></span></a>
+                         </div>
+                     </div>
+                 </section>
+                 <br>
+                 <!-- Onze Kleine Voedseldiensten -->
+                 <section class="section section-bg-edge">
+                     <div class="image left bottom col-md-7">
+                         <div class="bg-image">
+                             <img src="./assets/img/professionals/prof_1.jpg" alt="professionals">
+                         </div>
+                     </div>
+                     <div class="container offset-md-1">
+                         <div class="col-lg-5 offset-lg-7 col-md-6">
+                             <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                             <h2 style="color: #000000;">Professionals</h2>
+                             <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Verrijk je
+                                 professionele ervaring met de op
+                                 maat gemaakte ijsdiensten van Gelato Naturale. Of je nu actief bent in de wereld van
+                                 fijne boodschappen, cacaoproductie of een Michelin-sterrenrestaurant bezit, wij zijn er
+                                 om aan jouw behoeften te voldoen. Onze specialiteit ligt in het creëren van unieke
+                                 ijssmaken, aangepast aan jouw smaak, traditie en eisen. Profiteer bovendien van het
+                                 gemak van onze bezorgservice. Reserveer vandaag nog je plek en ontdek de uitzonderlijke
+                                 smaak van Gelato Naturale.</p>
+                             <a href="./Professionnels-nl.php" class="btn btn-primary ml-5"><span class="description">lees
+                                     meer >></span></a>
+                             <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+                         </div>
+                     </div>
+                 </section>
+                 <br>
 
-             </section>
+                 <!-- Sectie - Over -->
+                 <section class="section section-bg-edge">
+                     <div class="image right col-md-6 offset-md-6">
+                         <div class="bg-image">
+                             <br>
+                             <img src="assets/img/comming-soon/coming-soon.jpeg" alt="coming soon">
+                         </div>
+                     </div>
+                     <div class="container">
+                         <div class="col-lg-5 col-md-9">
+                             <h3 style="color: #000000;">Reserveringen, Catering & Evenementen</h3>
+                             <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Deze pagina zal
+                                 binnenkort beschikbaar zijn.
+                                 Ondertussen, als u vragen heeft over een evenement, neem dan gerust contact met ons op
+                                 via telefoon op <a href="tel:+0497476548" target="_blank">
+                                     <i class="fa fa-mobile-phone fa-lg"></i><span class="description">0497 47 65
+                                         48</span>
+                                 </a>.</p>
+                             <a href="tel:+0497476548" target="_blank" class="btn btn-primary ml-5"><span class="description"><i class="fa fa-mobile-phone fa-lg"></i> Bel ons op >>
+                                 </span></a>
+                         </div>
+                     </div>
+                 </section>
+
+
+             </div>
 
              <?php
                 include 'carosuel-main-nl.php';

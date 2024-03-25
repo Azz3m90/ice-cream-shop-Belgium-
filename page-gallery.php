@@ -112,6 +112,9 @@
              }
          });
      </script>
+     <?php
+        include 'carosuel-main.php';
+        ?>
      <!-- Pied de page -->
      <footer id="footer" class="bg-dark dark">
          <div class="container">

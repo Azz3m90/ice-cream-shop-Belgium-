@@ -122,8 +122,9 @@ include 'header-en.php';
         </div>
         <div class="container">
             <div class="col-lg-5 col-md-9">
-                <h1>About Our Establishment</h1>
-                <p class="lead text-muted mb-5 text-justify">Our establishment, opened in 2021 after years of
+                <h1 style="color: #000000;">About Our Establishment</h1>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Our establishment, opened in 2021
+                    after years of
                     preparation, specializes in the production and distribution of ice creams and sorbets. We serve a
                     variety of clients, including ice cream parlors, restaurants, institutions, wholesalers, and
                     delicatessens, with included delivery service. Our commitment to natural products enables us to
@@ -133,9 +134,109 @@ include 'header-en.php';
                     to availability, without prior reservation.</p>
             </div>
         </div>
-</div>
+    </section>
+    <br>
 
-</section>
+    <!-- Our Small Food Services -->
+    <section class="section section-bg-edge">
+        <div class="image left bottom col-md-7">
+            <div class="bg-image">
+                <img src="./assets/img/surplace/surplace_4.jpeg" alt="surplace_4">
+            </div>
+        </div>
+        <div class="container offset-md-1">
+            <div class="col-lg-5 offset-lg-7 col-md-6">
+                <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                <h2 style="color: #000000;">On-site Dining</h2>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Our establishment, Gelato Naturale
+                    - Ice Cream Shop, offers
+                    a delightful experience with our artisanal ice creams made from 💯 fresh fruits and without
+                    artificial flavors. Whether you're craving classic flavors or unique creations, our shop has
+                    something for everyone. Additionally, we offer a variety of other small food services including
+                    sorbets, ice cream cups, waffles, crepes, ice burggers, hot drinks, and appetizers. Each item on our
+                    menu is crafted with care to provide you with a memorable culinary experience.</p>
+                <a href="./page-sur-place-en.php" class="btn btn-primary ml-5"><span class="description">view more
+                        >></span></a>
+                <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Section - About -->
+    <section class="section section-bg-edge">
+        <div class="image right col-md-6 offset-md-6">
+            <div class="bg-image">
+                <br>
+                <img src="assets/img/Reservations/reservation_4.jpg" alt="reservation">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-lg-5 col-md-9">
+                <h1 style="color: #000000;">Order Custom Ice Cream Cakes and Logs</h1>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Treat yourself to our exclusive ice
+                    cream cakes and logs,
+                    meticulously crafted to tantalize your taste buds. At Gelato Naturale, we go above and beyond to
+                    deliver frozen delights that will surpass your expectations. Don't forget, you can also make
+                    reservations to secure your favorite treats in advance.</p>
+                <a href="./page-reservation-en.php" class="btn btn-primary ml-5"><span class="description">view more
+                        >></span></a>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Our Small Food Services -->
+    <section class="section section-bg-edge">
+        <div class="image left bottom col-md-7">
+            <div class="bg-image">
+                <img src="./assets/img/professionals/prof_1.jpg" alt="professionals">
+            </div>
+        </div>
+        <div class="container offset-md-1">
+            <div class="col-lg-5 offset-lg-7 col-md-6">
+                <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                <h2 style="color: #000000;">Professionals</h2>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Elevate your professional
+                    experience with Gelato Naturale's
+                    bespoke ice cream services. Whether you're in the world of fine groceries, cocoa production, or own
+                    a Michelin-starred restaurant, we're here to cater to your needs. Our specialty lies in crafting
+                    signature ice cream flavors tailored to your taste, tradition, and requirements. Plus, enjoy the
+                    convenience of our delivery service. Reserve your spot today and discover the exceptional taste of
+                    Gelato Naturale.</p>
+                <a href="./Professionnels-en.php" class="btn btn-primary ml-5"><span class="description">view more
+                        >></span></a>
+                <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Section - About -->
+    <section class="section section-bg-edge">
+        <div class="image right col-md-6 offset-md-6">
+            <div class="bg-image">
+                <br>
+                <img src="assets/img/comming-soon/coming-soon.jpeg" alt="coming soon">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-lg-5 col-md-9">
+                <h3 style="color: #000000;">Reservations, Catering & Events</h3>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">This page will be available very
+                    soon. In the meantime, if
+                    you have any inquiries regarding an event, feel free to contact us by phone at <a href="tel:+0497476548" target="_blank">
+                        <i class="fa fa-mobile-phone fa-lg"></i><span class="description">0497 47 65 48</span>
+                    </a>.</p>
+                <a href="tel:+0497476548" target="_blank" class="btn btn-primary ml-5">
+                    <span class="description"><i class="fa fa-mobile-phone fa-lg"></i> Call us at >></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</div>
 
 <?php
 include 'carosuel-main-en.php';
@@ -147,47 +248,46 @@ include 'carosuel-main-en.php';
         <div class="footer-first-row row">
             <div class="col-lg-3 text-center">
                 <a href="index-en.php">
-                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 200px;"
-                        width="88" class="mt-5 mb-5">
+                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 200px;" width="88" class="mt-5 mb-5">
                 </a>
             </div>
             <style>
-            .styled-table {
-                --background-color: #343a40;
-                /* Dark background color */
-                color: #ffffff;
-                /* Text color */
-                border-radius: 10px;
-                /* Rounded corners */
-                margin-top: 20px;
-                /* Add some space at the top */
-            }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Dark background color */
+                    color: #ffffff;
+                    /* Text color */
+                    border-radius: 10px;
+                    /* Rounded corners */
+                    margin-top: 20px;
+                    /* Add some space at the top */
+                }
 
-            .styled-table h5 {
-                color: #007bff;
-                /* Blue theme color */
-            }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Blue theme color */
+                }
 
-            .styled-table td.title {
-                --font-weight: bold;
-                color: #ffffff;
-                /* Text color */
-            }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Text color */
+                }
 
-            .styled-table td.content {
-                color: #a8b2b7;
-                /* Lighter text color */
-            }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Lighter text color */
+                }
 
-            .styled-table a {
-                color: #ffffff;
-                /* Link color */
-            }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Link color */
+                }
 
-            .styled-table a:hover {
-                text-decoration: none;
-                /* Remove underline on hover */
-            }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Remove underline on hover */
+                }
             </style>
 
             <div class="col-lg-4 col-md-6 styled-table">
@@ -213,15 +313,13 @@ include 'carosuel-main-en.php';
                         </tr>
                         <tr>
                             <td class="title">Email:</td>
-                            <td class="content"><a href="mailto:info@gelatonaturale.be" target="_blank"> <i
-                                        class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be</a></td>
+                            <td class="content"><a href="mailto:info@gelatonaturale.be" target="_blank"> <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be</a></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <h5 class="text-muted mb-3 mt-4">Social Media</h5>
-                <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                    class="icon icon-social icon-circle icon-sm icon-facebook">
+                <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -241,7 +339,7 @@ include 'carosuel-main-en.php';
         <!-- Footer 2nd Row -->
         <div class="footer-second-row">
             <span class="text-muted">Customized by FAST CAISSE <script>
-                document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                 </script>©. </span>
         </div>
     </div>
@@ -260,8 +358,7 @@ include 'carosuel-main-en.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="index-en.php">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -270,8 +367,7 @@ include 'carosuel-main-en.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-united-kingdom m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">

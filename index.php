@@ -118,8 +118,9 @@ include 'header.php';
         </div>
         <div class="container">
             <div class="col-lg-5 col-md-9">
-                <h1>À propos de Notre Établissement</h1>
-                <p class="lead text-muted mb-5 text-justify">Notre établissement, ouvert en 2021 après des années de
+                <h1 style="color: #000000;">À propos de Notre Établissement</h1>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Notre établissement, ouvert en 2021
+                    après des années de
                     préparation, est spécialisé dans la production et la distribution de crèmes glacées et sorbets. Nous
                     servons une variété de clients, notamment les glaciers, les restaurants, les collectivités, les
                     grossistes et les épiceries fines, avec un service de livraison inclus. Notre engagement envers les
@@ -130,9 +131,114 @@ include 'header.php';
                     préalable.</p>
             </div>
         </div>
+    </section>
+    <br>
+    <!-- Nos Services de Restauration sur Place -->
+    <section class="section section-bg-edge">
+        <div class="image left bottom col-md-7">
+            <div class="bg-image">
+                <img src="./assets/img/surplace/surplace_4.jpeg" alt="surplace_4">
+            </div>
+        </div>
+        <div class="container offset-md-1">
+            <div class="col-lg-5 offset-lg-7 col-md-6">
+                <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                <h2 style="color: #000000;">Sur Place</h2>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Notre établissement, Gelato
+                    Naturale - Glacier, vous
+                    propose
+                    une expérience délicieuse avec nos glaces artisanales élaborées à partir de 💯 fruits frais et sans
+                    arômes artificiels. Que vous ayez envie de saveurs classiques ou de créations uniques, notre
+                    boutique a quelque chose pour chacun. De plus, nous proposons une variété d'autres services de
+                    restauration sur place, notamment des sorbets, des coupes glacées, des gaufres, des crêpes, des
+                    glaces burgers, des boissons chaudes et des apéritifs. Chaque élément de notre menu est conçu avec
+                    soin pour vous offrir une expérience culinaire mémorable.</p>
+                <a href="./page-sur-place.php" class="btn btn-primary ml-5"><span class="description">en savoir plus
+                        >></span></a>
+                <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- Section - À Propos -->
+    <section class="section section-bg-edge">
+        <div class="image right col-md-6 offset-md-6">
+            <div class="bg-image">
+                <br>
+                <img src="assets/img/Reservations/reservation_4.jpg" alt="reservation">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-lg-5 col-md-9">
+                <h2 style="color: #000000;">Nos gâteaux</h2>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Offrez-vous nos gâteaux de glace
+                    exclusifs,
+                    méticuleusement confectionnés pour ravir vos papilles. Chez Gelato Naturale, nous faisons tout notre
+                    possible pour vous offrir des délices glacés qui dépasseront vos attentes. N'oubliez pas, vous
+                    pouvez
+                    également réserver pour garantir vos friandises préférées à l'avance.</p>
+                <a href="./page-reservation.php" class="btn btn-primary ml-5"><span class="description">en savoir plus
+                        >></span></a>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- Nos Services de Restauration pour Professionnels -->
+    <section class="section section-bg-edge">
+        <div class="image left bottom col-md-7">
+            <div class="bg-image">
+                <img src="./assets/img/professionals/prof_1.jpg" alt="professionals">
+            </div>
+        </div>
+        <div class="container offset-md-1">
+            <div class="col-lg-5 offset-lg-7 col-md-6">
+                <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
+                <h2 style="color: #000000;">Professionnels</h2>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Élevez votre expérience
+                    professionnelle avec les services
+                    de
+                    glaces sur mesure de Gelato Naturale. Que vous soyez dans le domaine des produits d'épicerie fine,
+                    de
+                    la production de cacao, ou que vous possédiez un restaurant étoilé au Michelin, nous sommes là pour
+                    répondre à vos besoins. Notre spécialité réside dans la création de saveurs de glace uniques,
+                    adaptées
+                    à vos goûts, à votre tradition et à vos exigences. De plus, profitez de la commodité de notre
+                    service
+                    de livraison. Réservez votre place dès aujourd'hui et découvrez le goût exceptionnel de Gelato
+                    Naturale.</p>
+                <a href="./Professionnels.php" class="btn btn-primary ml-5"><span class="description">en savoir plus
+                        >></span></a>
+                <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Section - About -->
+    <section class="section section-bg-edge">
+        <div class="image right col-md-6 offset-md-6">
+            <div class="bg-image">
+                <br>
+                <img src="assets/img/comming-soon/coming-soon.jpeg" alt="coming soon">
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-lg-5 col-md-9">
+                <h3 style="color: #000000;">Réservations, Traiteurs & Événements</h3>
+                <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Cette page sera très bientôt
+                    disponible. En attendant, si
+                    vous avez des demandes concernant un événement, n'hésitez pas à nous contacter par téléphone au <a href="tel:+0497476548" target="_blank">
+                        <i class="fa fa-mobile-phone fa-lg"></i><span class="description">0497 47 65 48</span>
+                    </a>.</p>
+                <a href="tel:+0497476548" target="_blank" class="btn btn-primary ml-5">
+                    <span class="description"><i class="fa fa-mobile-phone fa-lg"></i> Appelez-nous au >></span>
+                </a>
+            </div>
+        </div>
+    </section>
 </div>
 
-</section>
+
 <br>
 
 <?php

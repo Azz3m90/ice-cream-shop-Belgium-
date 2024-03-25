@@ -138,7 +138,10 @@ include 'header-nl.php';
                                 +48 21200 2122 221
                             </div><div class="col-sm-6"><h6 class="mb-1 text-muted">E-mail:</h6><a href="#">hello@example.com</a></div></div><hr class="hr-md"><h6 class="mb-3 text-muted">Follow Us!</h6><a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a><a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a></div><div class="col-lg-5 offset-lg-1 col-md-6"><div class="google-map h-500 shadow" data-lat="52.229675" data-lon="21.012230"></div></div></div></div></section>
       -->
-    <!-- Footer -->
+    <?php
+    include 'carosuel-main-nl.php';
+    ?>
+    <!-- Pied de page -->
     <footer id="footer" class="bg-dark dark">
         <div class="container">
             <!-- Footer 1st Row -->

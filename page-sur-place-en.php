@@ -118,8 +118,9 @@ include 'header.php';
             <div class="container offset-md-1">
                 <div class="col-lg-5 offset-lg-7 col-md-6">
                     <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                    <h2 class="mb-5 ml-5">Gelato Naturale - Ice Cream Shop:</h2>
-                    <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Experience the pleasure of ice
+                    <h2 class="mb-5 ml-5" style="color: #000000;">Gelato Naturale - Ice Cream Shop:</h2>
+                    <p class="lead text-muted mb-5 ml-5" style="text-align: justify;color: #000000;">Experience the
+                        pleasure of ice
                         cream at Gelato Naturale, where every bite takes you on a journey to a world of delights. With
                         an exquisite selection of artisanal flavors, we offer you an unforgettable icy experience.
                         Whether you love timeless classics or unique creations, our shop has something to satisfy all
@@ -246,47 +247,46 @@ include 'header.php';
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
                         <a href="index.php">
-                            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                                style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                         </a>
                     </div>
                     <style>
-                    .styled-table {
-                        --background-color: #343a40;
-                        /* Dark background color */
-                        color: #ffffff;
-                        /* Text color */
-                        border-radius: 10px;
-                        /* Rounded corners */
-                        margin-top: 20px;
-                        /* Add space on top */
-                    }
+                        .styled-table {
+                            --background-color: #343a40;
+                            /* Dark background color */
+                            color: #ffffff;
+                            /* Text color */
+                            border-radius: 10px;
+                            /* Rounded corners */
+                            margin-top: 20px;
+                            /* Add space on top */
+                        }
 
-                    .styled-table h5 {
-                        color: #007bff;
-                        /* Blue theme color */
-                    }
+                        .styled-table h5 {
+                            color: #007bff;
+                            /* Blue theme color */
+                        }
 
-                    .styled-table td.title {
-                        --font-weight: bold;
-                        color: #ffffff;
-                        /* Text color */
-                    }
+                        .styled-table td.title {
+                            --font-weight: bold;
+                            color: #ffffff;
+                            /* Text color */
+                        }
 
-                    .styled-table td.content {
-                        color: #a8b2b7;
-                        /* Lighter text color */
-                    }
+                        .styled-table td.content {
+                            color: #a8b2b7;
+                            /* Lighter text color */
+                        }
 
-                    .styled-table a {
-                        color: #ffffff;
-                        /* Link color */
-                    }
+                        .styled-table a {
+                            color: #ffffff;
+                            /* Link color */
+                        }
 
-                    .styled-table a:hover {
-                        text-decoration: none;
-                        /* Remove underline on hover */
-                    }
+                        .styled-table a:hover {
+                            text-decoration: none;
+                            /* Remove underline on hover */
+                        }
                     </style>
                     <div class="col-lg-4 col-md-6 styled-table">
                         <h5 class="text-muted">Opening Hours</h5>
@@ -321,8 +321,7 @@ include 'header.php';
                             </tbody>
                         </table>
                         <h5 class="text-muted mb-3 mt-4">Social Media</h5>
-                        <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                            class="icon icon-social icon-circle icon-sm icon-facebook">
+                        <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
                         <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -342,7 +341,7 @@ include 'header.php';
                 <!-- Second row of footer -->
                 <div class="footer-second-row">
                     <span class="text-muted">Customized by FAST CAISSE <script>
-                        document.write(new Date().getFullYear())
+                            document.write(new Date().getFullYear())
                         </script>©. </span>
                 </div>
             </div>
@@ -360,8 +359,7 @@ include 'header.php';
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                    width="88">
+                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
             </a>
             <button class="close" data-toggle="panel-mobile">
                 <i class="ti ti-close"></i>
@@ -370,8 +368,7 @@ include 'header.php';
         <nav class="module module-navigation"></nav>
         <!--language selector-->
         <div class="dropdown col-md-2 right mt-5">
-            <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
-                aria-expanded="false">
+            <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                 <i class="flag flag-united-kingdom  m-0"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="Dropdown1">

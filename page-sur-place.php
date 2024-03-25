@@ -115,8 +115,10 @@ include 'header.php';
         <div class="container offset-md-1">
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                <h2 class="mb-5 ml-5">Gelato Naturale - Boutique de crèmes glacées:</h2>
-                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Découvrez le plaisir de la glace chez
+                <h2 class="mb-5 ml-5" <h2 class="mb-5 ml-5" style="color: #000000;">>Gelato Naturale - Boutique de
+                    crèmes glacées:</h2>
+                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;color: #000000;">Découvrez le plaisir de
+                    la glace chez
                     Gelato Naturale, où chaque bouchée vous transporte dans un monde de délices. Avec une sélection
                     exquise de saveurs artisanales, nous vous offrons une expérience glacée inoubliable. Toutes nos
                     glaces sont préparées avec 💯 fruits frais et 💯 sans arômes, incarnant ainsi l'essence même du
