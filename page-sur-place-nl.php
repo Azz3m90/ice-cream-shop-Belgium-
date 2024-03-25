@@ -69,6 +69,42 @@ include 'header-nl.php';
             </div>
         </div>
     </div>
+    <!-- Section -->
+    <section id="gallery" class="section section-gallery cover">
+
+        <!-- Gallery Carousel -->
+        <div class="gallery-carousel inner-controls">
+
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_2.jpg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_3.jpeg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_6.jpg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_4.jpeg" alt=""></div>
+            </div>
+        </div>
+
+
+        <!-- Gallery Carousel Nav -->
+        <div class="gallery-nav">
+            <img src="./assets/img/surplace/surplace_2_min.jpg" alt="">
+            <img src="./assets/img/surplace/surplace_3_min.jpeg" alt="">
+            <img src="./assets/img/surplace/surplace_6_min.jpg" alt="">
+            <img src="./assets/img/surplace/surplace_4_min.jpg" alt="">
+
+        </div>
+
+        <div class="set-fullscreen" data-local-scroll>
+            <a href="#gallery"><i class="ti ti-fullscreen"></i></a>
+        </div>
+
+    </section>
+    <br>
     <!-- Sectie -->
     <!-- Onze Kleine Restauratiediensten -->
     <section class="section section-bg-edge">
@@ -81,11 +117,12 @@ include 'header-nl.php';
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
                 <h2 class="mb-5 ml-5">Gelato Naturale - IJssalon:</h2>
-                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Ervaar het plezier van ijs bij Gelato Naturale, waar elke hap je
-                    meeneemt op een reis naar een wereld vol genoegens. Met een uitgelezen selectie ambachtelijke smaken
-                    bieden we je een onvergetelijke ijzige ervaring. Of je nu houdt van tijdloze klassiekers of unieke
-                    creaties, onze salon heeft voor elk wat wils om je verlangens naar bevroren lekkernijen te
-                    bevredigen.</p>
+                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">
+                    Experienceer het genot van ijs bij Gelato Naturale, waar elke hap je meeneemt op een reis naar een
+                    wereld van genot. Met een uitgelezen selectie ambachtelijke smaken bieden we je een onvergetelijke
+                    ijzige ervaring. Of je nu houdt van tijdloze klassiekers of unieke creaties, onze winkel heeft voor
+                    elk wat wils om je verlangen naar bevroren lekkernijen te bevredigen. Al onze ijsjes worden bereid
+                    met 💯 verse vruchten en 💯 zonder kunstmatige smaakstoffen, waardoor ze echt natuurlijk zijn..</p>
 
                 <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
             </div>
@@ -98,11 +135,11 @@ include 'header-nl.php';
             <div class="carousel" data-slick='{"dots": true}'>
                 <!-- Ons Ijs -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/natural.jpg" alt="Ons Ijs" width="400px" height="200px">
+                    <img src="./assets/img/surplace/our-icecream.jpeg" alt="Ons Ijs">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Ons Ijs:</h2>
                         <h5 class="text-muted mb-5">
-                            Onze ijsproductie is 100% natuurlijk van verse producten. We bieden een verscheidenheid aan
+                            Onze ijsproductie is 💯 natuurlijk van verse producten. We bieden een verscheidenheid aan
                             smaken afhankelijk van de beschikbaarheid van vers fruit en chocolade, die afhankelijk van
                             het seizoen kunnen variëren. Gemiddeld worden er permanent tussen de 30 en 40 smaken
                             aangeboden. Italiaanse toonbankbediening: Onze proeflokaal en terras zijn beschikbaar voor
@@ -112,11 +149,11 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Sorbets -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/natural-drinks.jpg" alt="Onze Sorbets" width="400px" height="200px">
+                    <img src="./assets/img/surplace/natural-drinks.jpg" alt="Onze Sorbets">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Sorbets:</h2>
                         <h5 class="text-muted mb-5">
-                            Onze sorbetproductie is 100% natuurlijk van verse producten. We bieden een verscheidenheid
+                            Onze sorbetproductie is 💯 natuurlijk van verse producten. We bieden een verscheidenheid
                             aan smaken afhankelijk van de beschikbaarheid van vers fruit en chocolade, die afhankelijk
                             van het seizoen kunnen variëren. Gemiddeld worden er permanent tussen de 30 en 40 smaken
                             aangeboden. Italiaanse toonbankbediening: Onze proeflokaal en terras zijn beschikbaar voor
@@ -126,7 +163,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Ijs Coupe -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/coupes.jpg" alt="Onze Ijs Coupe" width="400px" height="200px">
+                    <img src="./assets/img/surplace/coupes.jpg" alt="Onze Ijs Coupe">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Ijs Coupe:</h2>
                         <h5 class="text-muted mb-5">
@@ -137,7 +174,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Wafels -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/gaufres.jpg" alt="Onze Wafels" width="400px" height="200px">
+                    <img src="./assets/img/surplace/gaufres.jpg" alt="Onze Wafels">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Wafels:</h2>
                         <h5 class="text-muted mb-5">
@@ -149,7 +186,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Pannenkoeken -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/Crepes.jpg" alt="Onze Pannenkoeken" width="400px" height="200px">
+                    <img src="./assets/img/surplace/Crepes.jpg" alt="Onze Pannenkoeken">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Pannenkoeken:</h2>
                         <p class="lead text-muted mb-5">
@@ -161,7 +198,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Ice Burgger -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Onze Ice Burgger" width="400px" height="200px">
+                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Onze Ice Burgger">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Ice Burgger:</h2>
                         <h5 class="text-muted mb-5">
@@ -174,7 +211,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Warme Dranken -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Onze Warme Dranken" width="400px" height="200px">
+                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Onze Warme Dranken" width="400px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Warme Dranken:</h2>
                         <h5 class="text-muted mb-5">
@@ -186,7 +223,7 @@ include 'header-nl.php';
                 </div>
                 <!-- Onze Aperitieven -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/nos-aperos.jpg" alt="Onze Aperitieven" width="400px" height="200px">
+                    <img src="./assets/img/surplace/nos-aperos.jpg" alt="Onze Aperitieven">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Onze Aperitieven:</h2>
                         <h5 class="text-muted mb-5">
@@ -209,46 +246,47 @@ include 'header-nl.php';
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index.php">
-                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
+                            style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                    .styled-table {
-                        --background-color: #343a40;
-                        /* Donkere achtergrondkleur */
-                        color: #ffffff;
-                        /* Tekstkleur */
-                        border-radius: 10px;
-                        /* Afgeronde hoeken */
-                        margin-top: 20px;
-                        /* Ruimte toevoegen aan de bovenkant */
-                    }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Donkere achtergrondkleur */
+                    color: #ffffff;
+                    /* Tekstkleur */
+                    border-radius: 10px;
+                    /* Afgeronde hoeken */
+                    margin-top: 20px;
+                    /* Ruimte toevoegen aan de bovenkant */
+                }
 
-                    .styled-table h5 {
-                        color: #007bff;
-                        /* Blauwe themakleur */
-                    }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Blauwe themakleur */
+                }
 
-                    .styled-table td.title {
-                        --font-weight: bold;
-                        color: #ffffff;
-                        /* Tekstkleur */
-                    }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Tekstkleur */
+                }
 
-                    .styled-table td.content {
-                        color: #a8b2b7;
-                        /* Lichtere tekstkleur */
-                    }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Lichtere tekstkleur */
+                }
 
-                    .styled-table a {
-                        color: #ffffff;
-                        /* Linkkleur */
-                    }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Linkkleur */
+                }
 
-                    .styled-table a:hover {
-                        text-decoration: none;
-                        /* Onderstreping verwijderen bij zweven */
-                    }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Onderstreping verwijderen bij zweven */
+                }
                 </style>
                 <div class="col-lg-4 col-md-6 styled-table">
                     <h5 class="text-muted">Openingstijden</h5>
@@ -284,7 +322,8 @@ include 'header-nl.php';
                         </tbody>
                     </table>
                     <h5 class="text-muted mb-3 mt-4">Sociale Media</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
+                        class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -304,7 +343,7 @@ include 'header-nl.php';
             <!-- Tweede rij van voet -->
             <div class="footer-second-row">
                 <span class="text-muted">Aangepast door FAST CAISSE <script>
-                        document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                     </script>©. </span>
             </div>
         </div>
@@ -322,7 +361,8 @@ include 'header-nl.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -331,7 +371,8 @@ include 'header-nl.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-md-2 right mt-5">
-        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
+            aria-expanded="false">
             <i class="flag flag-netherlands m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown1">

@@ -30,58 +30,60 @@
     <link rel="stylesheet" href="dist/css/core.css" />
     <!-- CSS Theme -->
     <link id="theme" rel="stylesheet" href="dist/css/theme-blue.css" />
+
     <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.matthiasandsea.be/matthias-and-sea/index-en.php">
+    <link rel="canonical" href="https://gelatonaturale.be/gelatonaturale/index-en.php">
     <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
-    <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
-    <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
-    <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index-en.php">
+    <meta property="og:title" content="Gelato Naturale - Finest Artisanal Creamery in Tarcienne">
+    <meta property="og:description" content="Discover the unique artisanal flavors of Gelato Naturale in Tarcienne.">
+    <meta property="og:image" content="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg">
+    <meta property="og:url" content="https://gelatonaturale.be/gelatonaturale/index-en.php">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="sh4MDpPL9Ljv6PW11FN2obhXSK4QPfMnlmZtkr6NEh4" />
-    <script src="./dist/js/menu/axios.min.js"></script>
-    <script src="./dist/js/clearCache.js"></script>
     <!-- Structured Data using JSON-LD for better search engine understanding -->
     <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Restaurant",
-        "name": "gelatonaturale",
-        "description": "Tarcienne's finest seafood restaurant.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Route de Philippeville 34",
-            "addressLocality": "Tarcienne",
-            "addressRegion": "Walloon Region",
-            "postalCode": "5651",
-            "addressCountry": "Belgium"
-        },
-        "priceRange": "€€",
-        "url": "https://www.matthiasandsea.be/matthias-and-sea/index-en.php",
-        "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
-        "telephone": "+32-071-21-86-20"
-    }
+        {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "name": "Gelato Naturale",
+            "description": "Finest artisanal creamery in Tarcienne.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Route de Philippeville 34",
+                "addressLocality": "Tarcienne",
+                "addressRegion": "Wallonia",
+                "postalCode": "5651",
+                "addressCountry": "Belgium"
+            },
+            "priceRange": "€",
+            "url": "https://gelatonaturale.be/gelatonaturale/index-en.php",
+            "image": "https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg",
+            "telephone": "+32 497 47 65 48"
+        }
     </script>
+    <!-- Additional SEO optimizations -->
+    <meta name="description" content="Discover the unique artisanal flavors of Gelato Naturale in Tarcienne.">
+    <meta name="keywords" content="Gelato Naturale, artisanal creamery, Tarcienne, ice cream, sorbet">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body>
     <style>
-    .italian-flag {
-        background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
-        display: inline-block;
-        padding: 10px;
-    }
+        .italian-flag {
+            background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
+            display: inline-block;
+            padding: 10px;
+        }
 
-    .title {
-        font-size: 24px;
-        /* Adjust the font size */
-        font-weight: bold;
-        /* Add bold font weight */
-        margin-top: 10px;
-        /* Add some top margin for spacing */
-        color: #333;
-        /* Set the color to a darker shade for better readability */
-    }
+        .title {
+            font-size: 24px;
+            /* Adjust the font size */
+            font-weight: bold;
+            /* Add bold font weight */
+            margin-top: 10px;
+            /* Add some top margin for spacing */
+            color: #333;
+            /* Set the color to a darker shade for better readability */
+        }
     </style>
     <!-- Body Wrapper -->
     <div id="body-wrapper" class="animsition">
@@ -93,8 +95,7 @@
                         <!-- Logo -->
                         <div class="module module-logo dark italian-flag">
                             <a href="index-en.php">
-                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                                    style="width: 200px;height: 100px;" width="88">
+                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
                             </a>
                         </div>
                     </div>

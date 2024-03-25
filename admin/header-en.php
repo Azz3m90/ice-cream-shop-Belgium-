@@ -43,45 +43,46 @@
     <script src="./dist/js/clearCache.js"></script>
     <!-- Structured Data using JSON-LD for better search engine understanding -->
     <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Restaurant",
-        "name": "gelatonaturale",
-        "description": "Tarcienne's finest seafood restaurant.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Route de Philippeville 34",
-            "addressLocality": "Tarcienne",
-            "addressRegion": "Walloon Region",
-            "postalCode": "5651",
-            "addressCountry": "Belgium"
-        },
-        "priceRange": "€€",
-        "url": "https://www.matthiasandsea.be/matthias-and-sea/index-en.php",
-        "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
-        "telephone": "+32-071-21-86-20"
-    }
+        {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "name": "gelatonaturale",
+            "description": "Tarcienne's finest seafood restaurant.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Route de Philippeville 34",
+                "addressLocality": "Tarcienne",
+                "addressRegion": "Walloon Region",
+                "postalCode": "5651",
+                "addressCountry": "Belgium"
+            },
+            "priceRange": "€€",
+            "url": "https://www.matthiasandsea.be/matthias-and-sea/index-en.php",
+            "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
+            "telephone": "+32-071-21-86-20"
+        }
     </script>
+    <script src="dist/js/menu/axios.min.js"></script>
 </head>
 
 <body>
     <style>
-    .italian-flag {
-        background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
-        display: inline-block;
-        padding: 10px;
-    }
+        .italian-flag {
+            background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
+            display: inline-block;
+            padding: 10px;
+        }
 
-    .title {
-        font-size: 24px;
-        /* Adjust the font size */
-        font-weight: bold;
-        /* Add bold font weight */
-        margin-top: 10px;
-        /* Add some top margin for spacing */
-        color: #333;
-        /* Set the color to a darker shade for better readability */
-    }
+        .title {
+            font-size: 24px;
+            /* Adjust the font size */
+            font-weight: bold;
+            /* Add bold font weight */
+            margin-top: 10px;
+            /* Add some top margin for spacing */
+            color: #333;
+            /* Set the color to a darker shade for better readability */
+        }
     </style>
     <!-- Body Wrapper -->
     <div id="body-wrapper" class="animsition">
@@ -93,8 +94,7 @@
                         <!-- Logo -->
                         <div class="module module-logo dark italian-flag">
                             <a href="index-en.php">
-                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                                    style="width: 200px;height: 100px;" width="88">
+                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
                             </a>
                         </div>
                     </div>

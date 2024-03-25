@@ -90,7 +90,7 @@ function getStoreEmailContent($last_name, $first_name, $email, $phone_number, $d
         <!-- Header -->
         <tr>
             <td bgcolor="#009246" style="padding: 20px; text-align: center; border-radius: 10px 10px 0 0; color: #fff;">
-            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
+            <img src="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale80px.svg" alt="Gelato Naturale" style="max-width: 80px;  max-height: 80px;">
                 <h1 style="margin: 0;">Confirmation de Réservation</h1>
             </td>
         </tr>

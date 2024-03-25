@@ -1,55 +1,83 @@
-<tr>
-    <td class="title">Maandag:</td>
-    <td class="content">18:00 – 22:00</td>
-</tr>
-<tr>
-    <td class="title">Dinsdag:</td>
-    <td class="content">gesloten</td>
-</tr>
-<tr>
-    <td class="title">Woensdag:</td>
-    <td class="content">18:00 – 22:00</td>
-</tr>
-<tr>
-    <td class="title">Donderdag:</td>
-    <td class="content">12:00 – 14:30, 18:00 – 22:00</td>
-</tr>
-<tr>
-    <td class="title">Vrijdag:</td>
-    <td class="content">12:00 – 14:00, 18:00 – 22:00</td>
-</tr>
-<tr>
-    <td class="title">Zaterdag:</td>
-    <td class="content">18:00 – 22:00</td>
-</tr>
-<tr>
-    <td class="title">Zondag:</td>
-    <td class="content">12:00 – 14:30, 18:00 – 22:00</td>
-</tr>
+<script src="./dist/js/menu/axios.min.js"></script>
+<div id="openingHoursTable"></div>
+<script>
+    axios.get('https://data.accentapi.com/feed/25386616.json?no_cache=20240324131712')
+        .then(response => {
+            const data = response.data;
 
+            // Extract open hours
+            const openHours = {};
 
+            if (data.content.open_hours && typeof data.content.open_hours === 'string') {
+                // Parse the stringified JSON if open_hours is a string
+                const openHoursArray = JSON.parse(data.content.open_hours);
 
-<style>
-@keyframes blink {
-    0% {
-        opacity: 1;
+                openHoursArray.forEach(schedule => {
+                    const day = schedule.day;
+                    const startTime = formatTime(schedule.time_start); // Format start time
+                    const endTime = formatTime(schedule.time_end); // Format end time
+
+                    // Add to openHours object
+                    if (!openHours[day]) {
+                        openHours[day] = [];
+                    }
+
+                    // Check for duplicates before adding
+                    if (!openHours[day].find(entry => entry.startTime === startTime && entry.endTime ===
+                            endTime)) {
+                        openHours[day].push({
+                            startTime,
+                            endTime
+                        });
+                    }
+                });
+            }
+
+            // Create table
+            let tableContent = '<table class="table"><tbody>';
+
+            // Display open hours
+            const daysOfWeek = {
+                "Monday": "Maandag",
+                "Tuesday": "Dinsdag",
+                "Wednesday": "Woensdag",
+                "Thursday": "Donderdag",
+                "Friday": "Vrijdag",
+                "Saturday": "Zaterdag",
+                "Sunday": "Zondag"
+            };
+
+            for (const day in daysOfWeek) {
+                const dutchDay = daysOfWeek[day];
+                if (openHours[day]) {
+                    tableContent += `<tr><td class="title">${dutchDay}:</td><td class="content">`;
+                    if (openHours[day].length === 0) {
+                        tableContent += "Gesloten";
+                    } else {
+                        openHours[day].forEach(entry => {
+                            tableContent += ` ${entry.startTime} - ${entry.endTime}<br>`;
+                        });
+                    }
+                    tableContent += "</td></tr>";
+                } else {
+                    tableContent += `<tr><td class="title">${dutchDay}:</td><td class="content">Gesloten</td></tr>`;
+                }
+            }
+
+            // Close table
+            tableContent += '</tbody></table>';
+
+            // Append table to the document
+            document.getElementById('openingHoursTable').innerHTML = tableContent;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+    // Function to format time from "1800" to "18:00"
+    function formatTime(time) {
+        const hours = time.substring(0, 2);
+        const minutes = time.substring(2);
+        return `${hours}:${minutes}`;
     }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.blink {
-    animation: blink 1s infinite;
-}
-</style>
-<tr>
-    <td class="title"><strong class="blink">Attention</strong></td>
-    <td class="content"><strong>le restaurant peut ouvrir sur demande à partir de 8 personnes, merci de nous contacter
-            au <a href="tel:+071218620" target="_blank">071 21 86 20</a></strong></td>
-</tr>
+</script>

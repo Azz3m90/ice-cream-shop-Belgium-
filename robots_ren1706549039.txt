@@ -1,0 +1,13 @@
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/
+
+User-agent: Googlebot-mobile
+Allow: /
+
+User-agent: Mediapartners-Google*
+Allow: /
+
+Sitemap: http://www.caresine.com/sitemap.xml

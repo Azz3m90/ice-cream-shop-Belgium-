@@ -70,6 +70,41 @@ include 'header.php';
         </div>
     </div>
     <!-- Section -->
+    <section id="gallery" class="section section-gallery cover">
+
+        <!-- Gallery Carousel -->
+        <div class="gallery-carousel inner-controls">
+
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_2.jpg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_3.jpeg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_6.jpg" alt=""></div>
+            </div>
+            <div class="slide">
+                <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_4.jpeg" alt=""></div>
+            </div>
+        </div>
+
+
+        <!-- Gallery Carousel Nav -->
+        <div class="gallery-nav">
+            <img src="./assets/img/surplace/surplace_2_min.jpg" alt="">
+            <img src="./assets/img/surplace/surplace_3_min.jpeg" alt="">
+            <img src="./assets/img/surplace/surplace_6_min.jpg" alt="">
+            <img src="./assets/img/surplace/surplace_4_min.jpg" alt="">
+
+        </div>
+
+        <div class="set-fullscreen" data-local-scroll>
+            <a href="#gallery"><i class="ti ti-fullscreen"></i></a>
+        </div>
+
+    </section>
+    <!-- Section -->
     <!-- Nos Services de Petite Restauration -->
     <section class="section section-bg-edge">
         <div class="image left bottom col-md-7">
@@ -81,11 +116,12 @@ include 'header.php';
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
                 <h2 class="mb-5 ml-5">Gelato Naturale - Boutique de crèmes glacées:</h2>
-                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Découvrez le plaisir de la crème glacée chez Gelato Naturale, où
-                    chaque bouchée vous transporte vers un monde de délices. Avec une sélection exquise de saveurs
-                    artisanales, nous vous offrons une expérience glacée inoubliable. Que vous aimiez les classiques
-                    intemporels ou les créations uniques, notre boutique a quelque chose pour satisfaire toutes vos
-                    envies de sucreries glacées.</p>
+                <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Découvrez le plaisir de la glace chez
+                    Gelato Naturale, où chaque bouchée vous transporte dans un monde de délices. Avec une sélection
+                    exquise de saveurs artisanales, nous vous offrons une expérience glacée inoubliable. Toutes nos
+                    glaces sont préparées avec 💯 fruits frais et 💯 sans arômes, incarnant ainsi l'essence même du
+                    gelato naturale. Que vous aimiez les classiques intemporels ou les créations uniques, notre boutique
+                    a de quoi satisfaire toutes vos envies de friandises glacées.</p>
 
                 <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
             </div>
@@ -99,11 +135,11 @@ include 'header.php';
             <div class="carousel" data-slick='{"dots": true}'>
                 <!-- Nos Glaces -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/natural.jpg" alt="Nos Glaces" width="400px" height="200px">
+                    <img src="./assets/img/surplace/our-icecream.jpeg" alt="Nos Glaces">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Glaces:</h2>
                         <h5 class="text-muted mb-5">
-                            Notre production de glaces est 100% naturelle à partir des produits frais. Nous proposons
+                            Notre production de glaces est 💯 naturelle à partir des produits frais. Nous proposons
                             une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut
                             varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence.
                             Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre
@@ -113,11 +149,11 @@ include 'header.php';
                 </div>
                 <!-- Nos Sorbets -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/natural-drinks.jpg" alt="Nos Sorbets" width="400px" height="200px">
+                    <img src="./assets/img/surplace/natural-drinks.jpg" alt="Nos Sorbets">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Sorbets:</h2>
                         <h5 class="text-muted mb-5">
-                            Notre production de sorbets est 100% naturelle à partir des produits frais. Nous proposons
+                            Notre production de sorbets est 💯 naturelle à partir des produits frais. Nous proposons
                             une variété de saveurs en fonction de l'arrivage des fruits frais et du chocolat, qui peut
                             varier selon la saison. En moyenne, entre 30 et 40 saveurs sont proposées en permanence.
                             Service au comptoir à l'italienne: Notre salon et terrasse sont disponibles pour votre
@@ -127,7 +163,7 @@ include 'header.php';
                 </div>
                 <!-- Nos Coupes de Glaces -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/coupes.jpg" alt="Nos Coupes de Glaces" width="400px" height="200px">
+                    <img src="./assets/img/surplace/coupes.jpg" alt="Nos Coupes de Glaces">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Coupes de Glaces:</h2>
                         <h5 class="text-muted mb-5">
@@ -138,7 +174,7 @@ include 'header.php';
                 </div>
                 <!-- Nos Gaufres -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/gaufres.jpg" alt="Nos Gaufres" width="400px" height="200px">
+                    <img src="./assets/img/surplace/gaufres.jpg" alt="Nos Gaufres">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Gaufres:</h2>
                         <h5 class="text-muted mb-5">
@@ -150,7 +186,7 @@ include 'header.php';
                 </div>
                 <!-- Nos Crêpes -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/Crepes.jpg" alt="Nos Crêpes" width="400px" height="200px">
+                    <img src="./assets/img/surplace/Crepes.jpg" alt="Nos Crêpes">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Crêpes:</h2>
                         <p class="lead text-muted mb-5">
@@ -162,7 +198,7 @@ include 'header.php';
                 </div>
                 <!-- Notre Ice Burgger -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Notre Ice Burgger" width="400px" height="200px">
+                    <img src="./assets/img/surplace/ice-burger.jpg" alt="Notre Ice Burgger" width="400px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Notre Ice Burgger:</h2>
                         <h5 class="text-muted mb-5">
@@ -175,7 +211,7 @@ include 'header.php';
                 </div>
                 <!-- Nos Boissons Chaudes -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Nos Boissons Chaudes" width="400px" height="200px">
+                    <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Nos Boissons Chaudes" width="400px">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Boissons Chaudes:</h2>
                         <h5 class="text-muted mb-5">
@@ -187,7 +223,7 @@ include 'header.php';
                 </div>
                 <!-- Nos Apéros -->
                 <div class="special-offer">
-                    <img src="./assets/img/surplace/nos-aperos.jpg" alt="Nos Apéros" width="400px" height="200px">
+                    <img src="./assets/img/surplace/nos-aperos.jpg" alt="Nos Apéros">
                     <div class="special-offer-content">
                         <h2 class="mb-5">Nos Apéros:</h2>
                         <h5 class="text-muted mb-5">
@@ -217,46 +253,47 @@ include 'carosuel-main.php';
         <div class="footer-first-row row">
             <div class="col-lg-3 text-center">
                 <a href="index.php">
-                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                        width="88" class="mt-5 mb-5">
                 </a>
             </div>
             <style>
-                .styled-table {
-                    --background-color: #343a40;
-                    /* Couleur de fond sombre */
-                    color: #ffffff;
-                    /* Couleur du texte */
-                    border-radius: 10px;
-                    /* Coins arrondis */
-                    margin-top: 20px;
-                    /* Ajouter un espace en haut */
-                }
+            .styled-table {
+                --background-color: #343a40;
+                /* Couleur de fond sombre */
+                color: #ffffff;
+                /* Couleur du texte */
+                border-radius: 10px;
+                /* Coins arrondis */
+                margin-top: 20px;
+                /* Ajouter un espace en haut */
+            }
 
-                .styled-table h5 {
-                    color: #007bff;
-                    /* Couleur thème bleu */
-                }
+            .styled-table h5 {
+                color: #007bff;
+                /* Couleur thème bleu */
+            }
 
-                .styled-table td.title {
-                    --font-weight: bold;
-                    color: #ffffff;
-                    /* Couleur du texte */
-                }
+            .styled-table td.title {
+                --font-weight: bold;
+                color: #ffffff;
+                /* Couleur du texte */
+            }
 
-                .styled-table td.content {
-                    color: #a8b2b7;
-                    /* Couleur de texte plus claire */
-                }
+            .styled-table td.content {
+                color: #a8b2b7;
+                /* Couleur de texte plus claire */
+            }
 
-                .styled-table a {
-                    color: #ffffff;
-                    /* Couleur du lien */
-                }
+            .styled-table a {
+                color: #ffffff;
+                /* Couleur du lien */
+            }
 
-                .styled-table a:hover {
-                    text-decoration: none;
-                    /* Supprimer le soulignement au survol */
-                }
+            .styled-table a:hover {
+                text-decoration: none;
+                /* Supprimer le soulignement au survol */
+            }
             </style>
 
             <div class="col-lg-4 col-md-6 styled-table">
@@ -296,7 +333,8 @@ include 'carosuel-main.php';
                 </table>
 
                 <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                <a href="https://www.facebook.com/gelatonaturaletarcienne"
+                    class="icon icon-social icon-circle icon-sm icon-facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -316,7 +354,7 @@ include 'carosuel-main.php';
         <!-- Deuxième rangée du pied de page -->
         <div class="footer-second-row">
             <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                    document.write(new Date().getFullYear())
+                document.write(new Date().getFullYear())
                 </script>©. </span>
         </div>
     </div>
@@ -333,7 +371,8 @@ include 'carosuel-main.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -342,7 +381,8 @@ include 'carosuel-main.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+            aria-expanded="false">
             <i class="flag flag-france m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">

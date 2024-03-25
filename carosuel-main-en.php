@@ -40,7 +40,7 @@
         <!-- Menu Sample -->
         <div class="menu-sample">
             <a href="./page-sur-place-en.php">
-                <img src="./assets/img/surplace/surplace.jpg" alt="On-site dining" style="width: 500px;height:400px;">
+                <img src="./assets/img/surplace/surplace.jpeg" alt="On-site dining" style="width: 500px;height:400px;">
                 <h3 class="title" title="On-site dining">On-site Dining</h3>
             </a>
         </div>
@@ -65,7 +65,7 @@
             <a href="#" id="reservation">
                 <img src="./assets/img/Reservations/reservation.jpg" alt="Catering Events Reservations"
                     style="width: 500px;height:400px;">
-                <h3 class="title" title="Catering Events Reservations">Catering Reserv- ations</h3>
+                <h3 class="title" title="Catering Events Reservations">Catering Reservations</h3>
             </a>
         </div>
     </div>

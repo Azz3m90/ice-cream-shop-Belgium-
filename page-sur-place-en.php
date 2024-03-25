@@ -72,6 +72,42 @@ include 'header.php';
             </div>
         </div>
         <!-- Section -->
+        <section id="gallery" class="section section-gallery cover">
+
+            <!-- Gallery Carousel -->
+            <div class="gallery-carousel inner-controls">
+
+                <div class="slide">
+                    <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_2.jpg" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_3.jpeg" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_6.jpg" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_4.jpeg" alt=""></div>
+                </div>
+            </div>
+
+
+            <!-- Gallery Carousel Nav -->
+            <div class="gallery-nav">
+                <img src="./assets/img/surplace/surplace_2_min.jpg" alt="">
+                <img src="./assets/img/surplace/surplace_3_min.jpeg" alt="">
+                <img src="./assets/img/surplace/surplace_6_min.jpg" alt="">
+                <img src="./assets/img/surplace/surplace_4_min.jpg" alt="">
+
+            </div>
+
+            <div class="set-fullscreen" data-local-scroll>
+                <a href="#gallery"><i class="ti ti-fullscreen"></i></a>
+            </div>
+
+        </section>
+        <br>
+        <!-- Section -->
         <!-- Our Small Food Services -->
         <section class="section section-bg-edge">
             <div class="image left bottom col-md-7">
@@ -84,11 +120,11 @@ include 'header.php';
                     <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
                     <h2 class="mb-5 ml-5">Gelato Naturale - Ice Cream Shop:</h2>
                     <p class="lead text-muted mb-5 ml-5" style="text-align: justify;">Experience the pleasure of ice
-                        cream at Gelato Naturale, where
-                        every bite takes you on a journey to a world of delights. With an exquisite selection of
-                        artisanal flavors, we offer you an unforgettable icy experience. Whether you love timeless
-                        classics or unique creations, our shop has something to satisfy all your cravings for frozen
-                        treats.</p>
+                        cream at Gelato Naturale, where every bite takes you on a journey to a world of delights. With
+                        an exquisite selection of artisanal flavors, we offer you an unforgettable icy experience.
+                        Whether you love timeless classics or unique creations, our shop has something to satisfy all
+                        your cravings for frozen treats. All our ice creams are made with 💯 fresh fruits and 💯 without
+                        artificial flavors, embodying the essence of gelato naturale.</p>
 
                     <!--<h6>Mark Johnson, Chef</h6><img src="assets/img/svg/sign.svg" alt="" class="mb-5"><h4>What people say about Us?</h4><a href="page-reviews.php" class="btn btn-outline-primary"><span>Check our reviews</span></a>-->
                 </div>
@@ -101,7 +137,7 @@ include 'header.php';
                 <div class="carousel" data-slick='{"dots": true}'>
                     <!-- Our Ice Creams -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/natural.jpg" alt="Our Ice Creams" width="400px" height="200px">
+                        <img src="./assets/img/surplace/our-icecream.jpeg" alt="Our Ice Creams">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Ice Creams:</h2>
                             <h5 class="text-muted mb-5">
@@ -114,7 +150,7 @@ include 'header.php';
                     </div>
                     <!-- Our Sorbets -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/natural-drinks.jpg" alt="Our Sorbets" width="400px" height="200px">
+                        <img src="./assets/img/surplace/natural-drinks.jpg" alt="Our Sorbets">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Sorbets:</h2>
                             <h5 class="text-muted mb-5">
@@ -127,7 +163,7 @@ include 'header.php';
                     </div>
                     <!-- Our Ice Cream Cups -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/coupes.jpg" alt="Our Ice Cream Cups" width="400px" height="200px">
+                        <img src="./assets/img/surplace/coupes.jpg" alt="Our Ice Cream Cups">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Ice Cream Cups:</h2>
                             <h5 class="text-muted mb-5">
@@ -138,7 +174,7 @@ include 'header.php';
                     </div>
                     <!-- Our Waffles -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/gaufres.jpg" alt="Our Waffles" width="400px" height="200px">
+                        <img src="./assets/img/surplace/gaufres.jpg" alt="Our Waffles">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Waffles:</h2>
                             <h5 class="text-muted mb-5">
@@ -150,7 +186,7 @@ include 'header.php';
                     </div>
                     <!-- Our Crepes -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/Crepes.jpg" alt="Our Crepes" width="400px" height="200px">
+                        <img src="./assets/img/surplace/Crepes.jpg" alt="Our Crepes">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Crepes:</h2>
                             <p class="lead text-muted mb-5">
@@ -162,7 +198,7 @@ include 'header.php';
                     </div>
                     <!-- Our Ice Burgger -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/ice-burger.jpg" alt="Our Ice Burgger" width="400px" height="200px">
+                        <img src="./assets/img/surplace/ice-burger.jpg" alt="Our Ice Burgger">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Ice Burgger:</h2>
                             <h5 class="text-muted mb-5">
@@ -175,7 +211,7 @@ include 'header.php';
                     </div>
                     <!-- Our Hot Drinks -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Our Hot Drinks" width="400px" height="200px">
+                        <img src="./assets/img/surplace/boissons-chaudes.jpg" alt="Our Hot Drinks">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Hot Drinks:</h2>
                             <h5 class="text-muted mb-5">
@@ -187,7 +223,7 @@ include 'header.php';
                     </div>
                     <!-- Our Appetizers -->
                     <div class="special-offer">
-                        <img src="./assets/img/surplace/nos-aperos.jpg" alt="Our Appetizers" width="400px" height="200px">
+                        <img src="./assets/img/surplace/nos-aperos.jpg" alt="Our Appetizers">
                         <div class="special-offer-content">
                             <h2 class="mb-5">Our Appetizers:</h2>
                             <h5 class="text-muted mb-5">
@@ -210,46 +246,47 @@ include 'header.php';
                 <div class="footer-first-row row">
                     <div class="col-lg-3 text-center">
                         <a href="index.php">
-                            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
+                                style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                         </a>
                     </div>
                     <style>
-                        .styled-table {
-                            --background-color: #343a40;
-                            /* Dark background color */
-                            color: #ffffff;
-                            /* Text color */
-                            border-radius: 10px;
-                            /* Rounded corners */
-                            margin-top: 20px;
-                            /* Add space on top */
-                        }
+                    .styled-table {
+                        --background-color: #343a40;
+                        /* Dark background color */
+                        color: #ffffff;
+                        /* Text color */
+                        border-radius: 10px;
+                        /* Rounded corners */
+                        margin-top: 20px;
+                        /* Add space on top */
+                    }
 
-                        .styled-table h5 {
-                            color: #007bff;
-                            /* Blue theme color */
-                        }
+                    .styled-table h5 {
+                        color: #007bff;
+                        /* Blue theme color */
+                    }
 
-                        .styled-table td.title {
-                            --font-weight: bold;
-                            color: #ffffff;
-                            /* Text color */
-                        }
+                    .styled-table td.title {
+                        --font-weight: bold;
+                        color: #ffffff;
+                        /* Text color */
+                    }
 
-                        .styled-table td.content {
-                            color: #a8b2b7;
-                            /* Lighter text color */
-                        }
+                    .styled-table td.content {
+                        color: #a8b2b7;
+                        /* Lighter text color */
+                    }
 
-                        .styled-table a {
-                            color: #ffffff;
-                            /* Link color */
-                        }
+                    .styled-table a {
+                        color: #ffffff;
+                        /* Link color */
+                    }
 
-                        .styled-table a:hover {
-                            text-decoration: none;
-                            /* Remove underline on hover */
-                        }
+                    .styled-table a:hover {
+                        text-decoration: none;
+                        /* Remove underline on hover */
+                    }
                     </style>
                     <div class="col-lg-4 col-md-6 styled-table">
                         <h5 class="text-muted">Opening Hours</h5>
@@ -284,7 +321,8 @@ include 'header.php';
                             </tbody>
                         </table>
                         <h5 class="text-muted mb-3 mt-4">Social Media</h5>
-                        <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                        <a href="https://www.facebook.com/gelatonaturaletarcienne"
+                            class="icon icon-social icon-circle icon-sm icon-facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
                         <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -304,7 +342,7 @@ include 'header.php';
                 <!-- Second row of footer -->
                 <div class="footer-second-row">
                     <span class="text-muted">Customized by FAST CAISSE <script>
-                            document.write(new Date().getFullYear())
+                        document.write(new Date().getFullYear())
                         </script>©. </span>
                 </div>
             </div>
@@ -322,7 +360,8 @@ include 'header.php';
     <nav id="panel-mobile">
         <div class="module module-logo bg-dark dark">
             <a href="#">
-                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                    width="88">
             </a>
             <button class="close" data-toggle="panel-mobile">
                 <i class="ti ti-close"></i>
@@ -331,7 +370,8 @@ include 'header.php';
         <nav class="module module-navigation"></nav>
         <!--language selector-->
         <div class="dropdown col-md-2 right mt-5">
-            <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
+                aria-expanded="false">
                 <i class="flag flag-united-kingdom  m-0"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="Dropdown1">

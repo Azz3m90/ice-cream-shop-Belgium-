@@ -30,40 +30,41 @@
     <link rel="stylesheet" href="dist/css/core.css">
     <!-- CSS Theme -->
     <link id="theme" rel="stylesheet" href="dist/css/theme-blue.css">
+    <script src="./dist/js/menu/axios.min.js"></script>
+    <script src="./dist/js/clearCache.js"></script>
     <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.matthiasandsea.be/matthias-and-sea/index.php">
-    <script src="./dist/js/menu/axios.min.js"></script>
-    <script src="./dist/js/clearCache.js"></script>
+    <link rel="canonical" href="https://gelatonaturale.be/gelatonaturale/index.php">
     <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
-    <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
-    <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
-    <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index.php">
-    <script src="./dist/js/menu/axios.min.js"></script>
-    <script src="./dist/js/clearCache.js"></script>
+    <meta property="og:title" content="Gelato Naturale - Meilleure crèmerie artisanale à Tarcienne">
+    <meta property="og:description" content="Découvrez les saveurs artisanales uniques de Gelato Naturale à Tarcienne.">
+    <meta property="og:image" content="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg">
+    <meta property="og:url" content="https://gelatonaturale.be/gelatonaturale/index.php">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="sh4MDpPL9Ljv6PW11FN2obhXSK4QPfMnlmZtkr6NEh4" />
     <!-- Structured Data using JSON-LD for better search engine understanding -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "Restaurant",
-        "name": "gelatonaturale",
-        "description": "Tarcienne's finest seafood restaurant.",
+        "name": "Gelato Naturale",
+        "description": "Meilleure crèmerie artisanale à Tarcienne.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Route de Philippeville 34",
             "addressLocality": "Tarcienne",
-            "addressRegion": "Walloon Region",
+            "addressRegion": "Wallonie",
             "postalCode": "5651",
-            "addressCountry": "Belgium"
+            "addressCountry": "Belgique"
         },
-        "priceRange": "€€",
-        "url": "https://www.matthiasandsea.be/matthias-and-sea/index.php",
-        "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
-        "telephone": "+32-071-21-86-20"
+        "priceRange": "€",
+        "url": "https://gelatonaturale.be/gelatonaturale/index.php",
+        "image": "https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg",
+        "telephone": "+32 497 47 65 48"
     }
     </script>
+    <!-- Additional SEO optimizations -->
+    <meta name="description" content="Découvrez les saveurs artisanales uniques de Gelato Naturale à Tarcienne.">
+    <meta name="keywords" content="Gelato Naturale, crèmerie artisanale, Tarcienne, crème glacée, sorbet">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body>

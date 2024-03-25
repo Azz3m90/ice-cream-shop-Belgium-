@@ -88,34 +88,34 @@ include 'header-en.php';
     </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var galleryCarousel = document.querySelector('.gallery-carousel');
-            var galleryNav = document.querySelector('.gallery-nav');
-            var numImages = 12; // Total number of images
-            var imgPath = './assets/img/gallery/';
+    document.addEventListener("DOMContentLoaded", function() {
+        var galleryCarousel = document.querySelector('.gallery-carousel');
+        var galleryNav = document.querySelector('.gallery-nav');
+        var numImages = 12; // Total number of images
+        var imgPath = './assets/img/gallery/';
 
-            // Loop through images and dynamically add them to the carousel and nav
-            for (var i = 0; i < numImages; i++) {
-                var slide = document.createElement('div');
-                slide.classList.add('slide');
+        // Loop through images and dynamically add them to the carousel and nav
+        for (var i = 0; i < numImages; i++) {
+            var slide = document.createElement('div');
+            slide.classList.add('slide');
 
-                var bgImage = document.createElement('div');
-                bgImage.classList.add('bg-image', 'bg-parallax');
-                var img = document.createElement('img');
-                img.src = imgPath + i + '.jpg';
-                img.alt = 'Gallery Image ' + (i + 1);
+            var bgImage = document.createElement('div');
+            bgImage.classList.add('bg-image', 'bg-parallax');
+            var img = document.createElement('img');
+            img.src = imgPath + i + '.jpg';
+            img.alt = 'Gallery Image ' + (i + 1);
 
-                bgImage.appendChild(img);
-                slide.appendChild(bgImage);
-                galleryCarousel.appendChild(slide);
+            bgImage.appendChild(img);
+            slide.appendChild(bgImage);
+            galleryCarousel.appendChild(slide);
 
-                // Adding thumbnail to the gallery nav
-                var thumbnail = document.createElement('img');
-                thumbnail.src = imgPath + i + '.jpg';
-                thumbnail.alt = 'Thumbnail ' + (i + 1);
-                galleryNav.appendChild(thumbnail);
-            }
-        });
+            // Adding thumbnail to the gallery nav
+            var thumbnail = document.createElement('img');
+            thumbnail.src = imgPath + i + '-min.jpg';
+            thumbnail.alt = 'Thumbnail ' + (i + 1);
+            galleryNav.appendChild(thumbnail);
+        }
+    });
     </script>
     <!-- Footer -->
     <footer id="footer" class="bg-dark dark">
@@ -124,46 +124,47 @@ include 'header-en.php';
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index-en.php">
-                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px; height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
+                            style="width: 200px; height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                    .styled-table {
-                        --background-color: #343a40;
-                        /* Dark background color */
-                        color: #ffffff;
-                        /* Text color */
-                        border-radius: 10px;
-                        /* Rounded corners */
-                        margin-top: 20px;
-                        /* Add some space at the top */
-                    }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Dark background color */
+                    color: #ffffff;
+                    /* Text color */
+                    border-radius: 10px;
+                    /* Rounded corners */
+                    margin-top: 20px;
+                    /* Add some space at the top */
+                }
 
-                    .styled-table h5 {
-                        color: #007bff;
-                        /* Blue theme color */
-                    }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Blue theme color */
+                }
 
-                    .styled-table td.title {
-                        --font-weight: bold;
-                        color: #ffffff;
-                        /* Text color */
-                    }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Text color */
+                }
 
-                    .styled-table td.content {
-                        color: #a8b2b7;
-                        /* Lighter text color */
-                    }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Lighter text color */
+                }
 
-                    .styled-table a {
-                        color: #ffffff;
-                        /* Link color */
-                    }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Link color */
+                }
 
-                    .styled-table a:hover {
-                        text-decoration: none;
-                        /* Remove underline on hover */
-                    }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Remove underline on hover */
+                }
                 </style>
 
                 <div class="col-lg-4 col-md-6 styled-table">
@@ -204,7 +205,8 @@ include 'header-en.php';
                     </table>
 
                     <h5 class="text-muted mb-3 mt-4">Social Media</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
+                        class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -226,7 +228,7 @@ include 'header-en.php';
             <div class="footer-second-row">
                 <span class="text-muted">Customized by FAST CAISSE
                     <script>
-                        document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                     </script>©.
                 </span>
             </div>
@@ -244,7 +246,8 @@ include 'header-en.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="index-nl.php">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -253,7 +256,8 @@ include 'header-en.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown"
+            aria-expanded="false">
             <i class="flag flag-netherlands m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown1">

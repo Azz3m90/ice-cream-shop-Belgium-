@@ -40,7 +40,8 @@
         <!-- Voorbeeldmenu -->
         <div class="menu-sample">
             <a href="./page-sur-place-nl.php">
-                <img src="./assets/img/surplace/surplace.jpg" alt="Ter plaatse eten" style="width: 500px;height:400px;">
+                <img src="./assets/img/surplace/surplace.jpeg" alt="Ter plaatse eten"
+                    style="width: 500px;height:400px;">
                 <h3 class="title" title="Ter plaatse eten">Ter plaatse</h3>
             </a>
         </div>
@@ -49,7 +50,7 @@
             <a href="./page-reservations-nl.php">
                 <img src="./assets/img/ourcake/cake.jpg" alt="Onze boomstammen en taarten"
                     style="width: 500px;height:400px;">
-                <h3 class="title" title="Onze boomstammen en taarten">Booms- tammen & Taarten</h3>
+                <h3 class="title" title="Onze boomstammen en taarten">Boomstammen & Taarten</h3>
             </a>
         </div>
         <!-- Voorbeeldmenu -->
@@ -65,7 +66,7 @@
             <a href="#" id="reservation">
                 <img src="./assets/img/Reservations/reservation.jpg" alt="Catering Evenementen Reserveringen"
                     style="width: 500px;height:400px;">
-                <h3 class="title" title="Catering Evenementen Reserveringen">Catering Reserve- ringen</h3>
+                <h3 class="title" title="Catering Evenementen Reserveringen">Catering Reserveringen</h3>
             </a>
         </div>
     </div>
