@@ -168,12 +168,12 @@ include 'header-en.php';
         <div class="image right col-md-6 offset-md-6">
             <div class="bg-image">
                 <br>
-                <img src="assets/img/Reservations/reservation_4.jpg" alt="reservation">
+                <img src="./assets/img/icecream/cake.jpg" alt="reservation">
             </div>
         </div>
         <div class="container">
             <div class="col-lg-5 col-md-9">
-                <h1 style="color: #000000;">Order Custom Ice Cream Cakes and Logs</h1>
+                <h1 style="color: #000000;">Order Custom Ice Cream Cakes </h1>
                 <p class="lead text-muted mb-5 text-justify" style="color: #000000;">Treat yourself to our exclusive ice
                     cream cakes and logs,
                     meticulously crafted to tantalize your taste buds. At Gelato Naturale, we go above and beyond to
