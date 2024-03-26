@@ -78,9 +78,9 @@ include 'header-en.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
-                    <h1 class="mb-0">Form for Our Yule Logs and Cakes</h1>
+                    <h1 class="mb-0">Form for Our Yule Cakes</h1>
                     <h4 class="text-muted mb-0" style="text-align: justify;">Please fill out the form below to place
-                        your order for yule logs and
+                        your order for yule and
                         cakes. Thank you for your trust!</h4>
                 </div>
             </div>
@@ -104,7 +104,7 @@ include 'header-en.php';
                     <div class="utility-box">
                         <div class="utility-box-title bg-dark dark">
                             <div class="bg-image">
-                                <img src="./assets/img/Reservations/reservation_3.jpg" alt="bg-image">
+                                <img src="./assets/img/icecream/cake.jpg" alt="bg-image">
                             </div>
                             <div>
                                 <span class="icon icon-primary">
@@ -579,7 +579,9 @@ include 'header-en.php';
                 </div>
             </div>
         </div>
+
     </section>
+    <br>
     <?php
     include 'carosuel-main-en.php';
     ?>

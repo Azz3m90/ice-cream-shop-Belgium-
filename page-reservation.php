@@ -80,10 +80,10 @@ include 'header.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
-                    <h1 class="mb-0">Formulaire pour Nos Bûches et Gâteaux</h1>
+                    <h1 class="mb-0">Formulaire pour Nos Gâteaux</h1>
                     <h4 class="text-muted mb-0" style="text-align: justify;">Veuillez remplir le formulaire ci-dessous
                         pour passer votre commande de
-                        bûches et gâteaux. Merci de votre confiance !</h4>
+                        gâteaux. Merci de votre confiance !</h4>
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@ include 'header.php';
                     <div class="utility-box">
                         <div class="utility-box-title bg-dark dark">
                             <div class="bg-image">
-                                <img src="./assets/img/Reservations/reservation_3.jpg" alt="bg-image">
+                                <img src="./assets/img/icecream/cake.jpg" alt="bg-image">
                             </div>
                             <div>
                                 <span class="icon icon-primary">
@@ -361,358 +361,360 @@ include 'header.php';
                             </button>
 
                         </form>
+
+
+                        <style>
+                            .btn-success {
+                                background-color: #28a745;
+                                border-color: #28a745;
+                            }
+
+                            .btn-danger {
+                                background-color: #dc3545;
+                                border-color: #dc3545;
+                            }
+
+                            #confirmationModal {
+                                display: none;
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                z-index: 1000;
+                            }
+
+                            #confirmationModal p {
+                                margin-bottom: 20px;
+                            }
+
+                            #confirmationModal button {
+                                padding: 10px;
+                                background-color: #007bff;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+
+                            .invalid-input {
+                                border: 1px solid red;
+                            }
+                        </style>
+
+                        <!-- Simple confirmation modal -->
+                        <div id="confirmationModal">
+                            <div>
+                                <p id="modalMessage"></p>
+                                <button onclick="closeModal()">OK</button>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                const form = document.getElementById("booking-form");
+                                const submitButton = form.querySelector(".btn-submit");
+                                const captchaInput = form.querySelector('input[name="captcha"]');
+                                const captchaImage = document.getElementById('captcha_image');
+                                const confirmationModal = document.getElementById('confirmationModal');
+                                const modalMessage = document.getElementById('modalMessage');
+                                var personsInput = document.getElementById('persons');
+                                var fileOut = document.getElementById('file_out');
+                                var fileHelper = document.getElementById('file_helper');
+                                fileOut.style.display = 'none';
+                                fileHelper.style.display = 'none';
+                                document.getElementById('file').removeAttribute('required');
+                                personsInput.addEventListener('change', function() {
+                                    var persons = parseInt(personsInput.value);
+                                    if (persons >= 12) {
+                                        fileOut.style.display = 'block';
+                                        fileHelper.style.display = 'block';
+                                        document.getElementById('file').setAttribute('required', true);
+                                    } else {
+                                        fileOut.style.display = 'none';
+                                        fileHelper.style.display = 'none';
+                                        document.getElementById('file').removeAttribute('required');
+                                    }
+                                });
+                                form.addEventListener("submit", function(event) {
+                                    event.preventDefault();
+                                    submitForm();
+                                });
+
+                                captchaImage.addEventListener("click", function() {
+                                    refreshCaptcha();
+                                });
+
+                                function getCaptcha() {
+                                    axios.get('./php/booking/get-captcha.php')
+                                        .then(function(response) {
+                                            console.log('Captcha:', response.data.captcha);
+                                        })
+                                        .catch(function(error) {
+                                            console.error('Erreur lors de la récupération du captcha:', error);
+                                        });
+                                }
+
+                                // Appelez cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+                                getCaptcha();
+
+                                function submitForm() {
+
+                                    const captcha = captchaInput.value;
+                                    const formData = new FormData(form);
+                                    formData.append('captcha', captcha);
+
+                                    // Valider l'e-mail
+                                    const emailInput = form.querySelector('input[name="email"]');
+                                    const email = emailInput.value;
+                                    if (!validateEmail(email)) {
+                                        openModal('Veuillez saisir une adresse e-mail valide.');
+                                        emailInput.style.border = "1px solid red";
+                                        return false;
+                                    }
+
+                                    // Valider chaque champ d'entrée requis
+                                    const inputs = form.querySelectorAll("[required]");
+                                    let isValid = true;
+                                    inputs.forEach(function(input) {
+                                        if (input.value.trim() === "") {
+                                            isValid = false;
+                                            // Ajouter une bordure rouge aux champs requis vides
+                                            input.style.border = "1px solid red";
+                                        } else {
+                                            // Réinitialiser la bordure au style par défaut
+                                            input.style.border = "";
+                                        }
+                                    });
+
+                                    if (!isValid) {
+                                        // Si un champ requis est vide, afficher un message d'erreur et empêcher l'envoi du formulaire
+                                        openModal("Veuillez remplir tous les champs requis.");
+                                        return false;
+                                    }
+
+                                    axios.post('./php/booking/validate-captcha.php', formData)
+                                        .then(response => {
+                                            if (response.data.valid) {
+                                                console.log(formData);
+                                                // Utilisez AJAX pour soumettre les données du formulaire
+                                                submitButton.innerHTML =
+                                                    '<span class="description">Soumission en cours...</span>';
+                                                axios.post('./php/booking/booking-reservations.php',
+                                                        formData)
+                                                    .then(response => {
+                                                        console.log(
+                                                            'Réponse de la soumission du formulaire:',
+                                                            response
+                                                            .data);
+                                                        if (response.data === 'success success') {
+                                                            submitButton.innerHTML =
+                                                                '<span class="description">Réservation réussie!</span>';
+                                                            submitButton.classList.remove('btn-secondary');
+                                                            submitButton.classList.remove('btn-submit');
+                                                            submitButton.classList.add('btn-success');
+                                                            submitButton.setAttribute('disabled',
+                                                                'disabled');
+                                                        } else {
+                                                            openModal(
+                                                                'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
+                                                            );
+                                                        }
+                                                    })
+                                                    .catch(error => {
+                                                        console.error(
+                                                            'Erreur lors de la soumission du formulaire:',
+                                                            error);
+                                                        openModal(
+                                                            'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
+                                                        );
+                                                    });
+                                            } else {
+                                                openModal(
+                                                    'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.'
+                                                );
+                                                refreshCaptcha();
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Erreur de validation du CAPTCHA:', error);
+                                        });
+                                }
+
+                            });
+
+                            function refreshCaptcha(event) {
+                                if (event) {
+                                    event.preventDefault();
+                                }
+
+                                var img = document.getElementById('captcha_image');
+
+                                axios.get('./php/booking/captcha.php', {
+                                        params: {
+                                            rand: Math.random() * 1000
+                                        },
+                                        responseType: 'arraybuffer'
+                                    })
+                                    .then(function(response) {
+                                        var blob = new Blob([response.data], {
+                                            type: 'image/jpeg'
+                                        });
+                                        var imgUrl = URL.createObjectURL(blob);
+                                        img.src = imgUrl;
+                                        getCaptcha();
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Erreur lors de l\'actualisation du CAPTCHA: ', error);
+                                    });
+                            }
+
+                            function openModal(message) {
+                                modalMessage.innerText = message;
+                                confirmationModal.style.display = 'block';
+                            }
+
+                            function closeModal() {
+                                document.getElementById('confirmationModal').style.display = 'none';
+                            }
+
+                            function validateEmail(email) {
+                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                return emailRegex.test(email);
+                            }
+                        </script>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
-
-    <style>
-        .btn-success {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-
-        .btn-danger {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
-
-        #confirmationModal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        #confirmationModal p {
-            margin-bottom: 20px;
-        }
-
-        #confirmationModal button {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .invalid-input {
-            border: 1px solid red;
-        }
-    </style>
-
-    <!-- Simple confirmation modal -->
-    <div id="confirmationModal">
-        <div>
-            <p id="modalMessage"></p>
-            <button onclick="closeModal()">OK</button>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const form = document.getElementById("booking-form");
-            const submitButton = form.querySelector(".btn-submit");
-            const captchaInput = form.querySelector('input[name="captcha"]');
-            const captchaImage = document.getElementById('captcha_image');
-            const confirmationModal = document.getElementById('confirmationModal');
-            const modalMessage = document.getElementById('modalMessage');
-            var personsInput = document.getElementById('persons');
-            var fileOut = document.getElementById('file_out');
-            var fileHelper = document.getElementById('file_helper');
-            fileOut.style.display = 'none';
-            fileHelper.style.display = 'none';
-            document.getElementById('file').removeAttribute('required');
-            personsInput.addEventListener('change', function() {
-                var persons = parseInt(personsInput.value);
-                if (persons >= 12) {
-                    fileOut.style.display = 'block';
-                    fileHelper.style.display = 'block';
-                    document.getElementById('file').setAttribute('required', true);
-                } else {
-                    fileOut.style.display = 'none';
-                    fileHelper.style.display = 'none';
-                    document.getElementById('file').removeAttribute('required');
-                }
-            });
-            form.addEventListener("submit", function(event) {
-                event.preventDefault();
-                submitForm();
-            });
-
-            captchaImage.addEventListener("click", function() {
-                refreshCaptcha();
-            });
-
-            function getCaptcha() {
-                axios.get('./php/booking/get-captcha.php')
-                    .then(function(response) {
-                        console.log('Captcha:', response.data.captcha);
-                    })
-                    .catch(function(error) {
-                        console.error('Erreur lors de la récupération du captcha:', error);
-                    });
-            }
-
-            // Appelez cette fonction chaque fois que vous voulez obtenir la valeur du captcha
-            getCaptcha();
-
-            function submitForm() {
-
-                const captcha = captchaInput.value;
-                const formData = new FormData(form);
-                formData.append('captcha', captcha);
-
-                // Valider l'e-mail
-                const emailInput = form.querySelector('input[name="email"]');
-                const email = emailInput.value;
-                if (!validateEmail(email)) {
-                    openModal('Veuillez saisir une adresse e-mail valide.');
-                    emailInput.style.border = "1px solid red";
-                    return false;
-                }
-
-                // Valider chaque champ d'entrée requis
-                const inputs = form.querySelectorAll("[required]");
-                let isValid = true;
-                inputs.forEach(function(input) {
-                    if (input.value.trim() === "") {
-                        isValid = false;
-                        // Ajouter une bordure rouge aux champs requis vides
-                        input.style.border = "1px solid red";
-                    } else {
-                        // Réinitialiser la bordure au style par défaut
-                        input.style.border = "";
+    <br>
+    <?php
+    include 'carosuel-main.php';
+    ?>
+    <!-- Pied de page -->
+    <footer id="footer" class="bg-dark dark">
+        <div class="container">
+            <!-- Première rangée du pied de page -->
+            <div class="footer-first-row row">
+                <div class="col-lg-3 text-center">
+                    <a href="index.php">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                    </a>
+                </div>
+                <style>
+                    .styled-table {
+                        --background-color: #343a40;
+                        /* Couleur de fond sombre */
+                        color: #ffffff;
+                        /* Couleur du texte */
+                        border-radius: 10px;
+                        /* Coins arrondis */
+                        margin-top: 20px;
+                        /* Ajouter un espace en haut */
                     }
-                });
 
-                if (!isValid) {
-                    // Si un champ requis est vide, afficher un message d'erreur et empêcher l'envoi du formulaire
-                    openModal("Veuillez remplir tous les champs requis.");
-                    return false;
-                }
+                    .styled-table h5 {
+                        color: #007bff;
+                        /* Couleur thème bleu */
+                    }
 
-                axios.post('./php/booking/validate-captcha.php', formData)
-                    .then(response => {
-                        if (response.data.valid) {
-                            console.log(formData);
-                            // Utilisez AJAX pour soumettre les données du formulaire
-                            submitButton.innerHTML =
-                                '<span class="description">Soumission en cours...</span>';
-                            axios.post('./php/booking/booking-reservations.php',
-                                    formData)
-                                .then(response => {
-                                    console.log('Réponse de la soumission du formulaire:', response
-                                        .data);
-                                    if (response.data === 'success success') {
-                                        submitButton.innerHTML =
-                                            '<span class="description">Réservation réussie!</span>';
-                                        submitButton.classList.remove('btn-secondary');
-                                        submitButton.classList.remove('btn-submit');
-                                        submitButton.classList.add('btn-success');
-                                        submitButton.setAttribute('disabled',
-                                            'disabled');
-                                    } else {
-                                        openModal(
-                                            'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
-                                        );
-                                    }
-                                })
-                                .catch(error => {
-                                    console.error('Erreur lors de la soumission du formulaire:', error);
-                                    openModal(
-                                        'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
-                                    );
-                                });
-                        } else {
-                            openModal(
-                                'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.'
-                            );
-                            refreshCaptcha();
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erreur de validation du CAPTCHA:', error);
-                    });
-            }
+                    .styled-table td.title {
+                        --font-weight: bold;
+                        color: #ffffff;
+                        /* Couleur du texte */
+                    }
 
-        });
+                    .styled-table td.content {
+                        color: #a8b2b7;
+                        /* Couleur de texte plus claire */
+                    }
 
-        function refreshCaptcha(event) {
-            if (event) {
-                event.preventDefault();
-            }
+                    .styled-table a {
+                        color: #ffffff;
+                        /* Couleur du lien */
+                    }
 
-            var img = document.getElementById('captcha_image');
+                    .styled-table a:hover {
+                        text-decoration: none;
+                        /* Supprimer le soulignement au survol */
+                    }
+                </style>
 
-            axios.get('./php/booking/captcha.php', {
-                    params: {
-                        rand: Math.random() * 1000
-                    },
-                    responseType: 'arraybuffer'
-                })
-                .then(function(response) {
-                    var blob = new Blob([response.data], {
-                        type: 'image/jpeg'
-                    });
-                    var imgUrl = URL.createObjectURL(blob);
-                    img.src = imgUrl;
-                    getCaptcha();
-                })
-                .catch(function(error) {
-                    console.error('Erreur lors de l\'actualisation du CAPTCHA: ', error);
-                });
-        }
+                <div class="col-lg-4 col-md-6 styled-table">
+                    <h5 class="text-muted">Heures d'ouverture</h5>
+                    <table class="table">
+                        <tbody>
+                            <?php
+                            include 'table-fr.php'
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
 
-        function openModal(message) {
-            modalMessage.innerText = message;
-            confirmationModal.style.display = 'block';
-        }
+                <div class="col-lg-5 col-md-6 styled-table">
+                    <h5 class="text-muted mb-3">Coordonnées</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="title">Téléphone :</td>
+                                <td class="content">
+                                    <a href="tel:+0497476548" target="_blank">
+                                        <i class="fa fa-phone fa-lg"></i> 0497 47 65 48
+                                    </a>
+                                </td>
 
-        function closeModal() {
-            document.getElementById('confirmationModal').style.display = 'none';
-        }
+                            </tr>
+                            <tr>
+                                <td class="title">Email :</td>
+                                <td class="content">
+                                    <a href="mailto:info@gelatonaturale.be" target="_blank">
+                                        <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be
+                                    </a>
+                                </td>
 
-        function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    </script>
+                            </tr>
+                        </tbody>
+                    </table>
 
-
-
-</div>
-</div>
-</div>
-</div>
-</section>
-<?php
-include 'carosuel-main.php';
-?>
-<!-- Pied de page -->
-<footer id="footer" class="bg-dark dark">
-    <div class="container">
-        <!-- Première rangée du pied de page -->
-        <div class="footer-first-row row">
-            <div class="col-lg-3 text-center">
-                <a href="index.php">
-                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
-                </a>
+                    <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
             </div>
-            <style>
-                .styled-table {
-                    --background-color: #343a40;
-                    /* Couleur de fond sombre */
-                    color: #ffffff;
-                    /* Couleur du texte */
-                    border-radius: 10px;
-                    /* Coins arrondis */
-                    margin-top: 20px;
-                    /* Ajouter un espace en haut */
-                }
-
-                .styled-table h5 {
-                    color: #007bff;
-                    /* Couleur thème bleu */
-                }
-
-                .styled-table td.title {
-                    --font-weight: bold;
-                    color: #ffffff;
-                    /* Couleur du texte */
-                }
-
-                .styled-table td.content {
-                    color: #a8b2b7;
-                    /* Couleur de texte plus claire */
-                }
-
-                .styled-table a {
-                    color: #ffffff;
-                    /* Couleur du lien */
-                }
-
-                .styled-table a:hover {
-                    text-decoration: none;
-                    /* Supprimer le soulignement au survol */
-                }
-            </style>
-
-            <div class="col-lg-4 col-md-6 styled-table">
-                <h5 class="text-muted">Heures d'ouverture</h5>
-                <table class="table">
-                    <tbody>
-                        <?php
-                        include 'table-fr.php'
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col-lg-5 col-md-6 styled-table">
-                <h5 class="text-muted mb-3">Coordonnées</h5>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td class="title">Téléphone :</td>
-                            <td class="content">
-                                <a href="tel:+0497476548" target="_blank">
-                                    <i class="fa fa-phone fa-lg"></i> 0497 47 65 48
-                                </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td class="title">Email :</td>
-                            <td class="content">
-                                <a href="mailto:info@gelatonaturale.be" target="_blank">
-                                    <i class="fa fa-lg fa-envelope"></i> info@gelatonaturale.be
-                                </a>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
-                    <i class="fa fa-google"></i>
-                </a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube">
-                    <i class="fa fa-youtube"></i>
-                </a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
+            <!-- Deuxième rangée du pied de page -->
+            <div class="footer-second-row">
+                <span class="text-muted">Personnalisé par FAST CAISSE <script>
+                        document.write(new Date().getFullYear())
+                    </script>©. </span>
             </div>
         </div>
-        <!-- Deuxième rangée du pied de page -->
-        <div class="footer-second-row">
-            <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                    document.write(new Date().getFullYear())
-                </script>©. </span>
-        </div>
-    </div>
-    <!-- Retour en haut -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="ti ti-angle-up"></i>
-    </button>
-</footer>
-<!-- Pied de page / Fin -->
+        <!-- Retour en haut -->
+        <button id="back-to-top" class="back-to-top">
+            <i class="ti ti-angle-up"></i>
+        </button>
+    </footer>
+    <!-- Pied de page / Fin -->
 </div>
 <!-- Content / End -->
 
