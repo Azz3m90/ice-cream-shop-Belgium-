@@ -22,7 +22,7 @@
 <div id="body-overlay"></div>
 </div>
 <?php
-include 'cookies.php';
+    include 'cookies.php';
 ?>
 <!-- JS Core -->
 <script src="dist/js/core.js"></script>
@@ -34,7 +34,7 @@ include 'cookies.php';
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/menu/cheerio.js"></script>
 <script src="./dist/js/menu/pretty.js"></script>
-
+<script src="./dist/js/offers/offers.js"></script>
 </body>
 
 </html>

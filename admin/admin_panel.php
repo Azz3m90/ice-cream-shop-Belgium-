@@ -94,10 +94,10 @@ include './header.php';
         <div class="container mt-5">
             <div class="card-container">
                 <div class="card col-12">
-                    <a href="./shop_state.php">
-                        <img src="./assets/img/admin/open_closed.jpg" alt="open_closed">
-                        <h4 class="title"><b>Shop State</b></h4>
-                        <p class="text-muted">Check and manage the current state of the shop</p>
+                    <a href="./gallery.php">
+                        <img src="./assets/img/admin/surplace2.jpeg" alt="Gallery">
+                        <h4 class="title"><b>Gallery</b></h4>
+                        <p class="text-muted">Add Delete some photos to your shop</p>
                     </a>
                 </div>
 
