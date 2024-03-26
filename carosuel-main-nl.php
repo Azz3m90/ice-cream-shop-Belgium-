@@ -48,7 +48,7 @@
         <!-- Voorbeeldmenu -->
         <div class="menu-sample">
             <a href="./page-reservations-nl.php">
-                <img src="./assets/img/ourcake/cake.jpg" alt="taarten" style="width: 500px;height:400px;">
+                <img src="./assets/img/icecream/cake.jpg" alt="taarten" style="width: 500px;height:400px;">
                 <h3 class="title" title="taarten">Taarten</h3>
             </a>
         </div>

@@ -47,7 +47,7 @@
         <!-- Menu Sample -->
         <div class="menu-sample">
             <a href="./page-reservation-en.php">
-                <img src="./assets/img/ourcake/cake.jpg" alt="cakes" style="width: 500px;height:400px;">
+                <img src="./assets/img/icecream/cake.jpg" alt="cakes" style="width: 500px;height:400px;">
                 <h3 class="title" title="Our logs and cakes">Cakes</h3>
             </a>
         </div>

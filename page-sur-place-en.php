@@ -66,7 +66,7 @@ include 'header.php';
                 <div class="row">
                     <div class="col-lg-7 offset-lg-5">
                         <h1 class="mb-0">Sur Place</h1>
-                        <h4 class="text-muted mb-0">Tasting Room & Terraces: Photos</h4>
+                        <h4 class="text-muted mb-0">Tasting Room & Terraces</h4>
                     </div>
                 </div>
             </div>
@@ -131,11 +131,12 @@ include 'header.php';
                 </div>
             </div>
         </section>
+
         <!-- Section - Offers -->
         <section class="section bg-light">
             <div class="container">
                 <!--<h1 class="text-center mb-6">Special offers</h1>-->
-                <div class="carousel" data-slick='{"dots": true}'>
+                <div class="carousel" data-slick='{"dots": true,"arrows":true,}'>
                     <!-- Our Ice Creams -->
                     <div class="special-offer">
                         <img src="./assets/img/surplace/our-icecream.jpeg" alt="Our Ice Creams">

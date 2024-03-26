@@ -22,7 +22,7 @@ include 'header-nl.php';
                 <i class="flag flag-united-kingdom"></i>English </a>
         </li>
         <li>
-            <a class="dropdown-item" href="./page-sur-place-nl.php">
+            <a class="dropdown-item" href="./page-sur-place.php">
                 <i class="flag-france flag"></i>Français </a>
         </li>
     </ul>
@@ -64,7 +64,7 @@ include 'header-nl.php';
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
                     <h1 class="mb-0">Sur Place</h1>
-                    <h4 class="text-muted mb-0">Proeflokaal & terrassen: foto's</h4>
+                    <h4 class="text-muted mb-0">Proeflokaal & terrassen </h4>
                 </div>
             </div>
         </div>
@@ -128,6 +128,7 @@ include 'header-nl.php';
             </div>
         </div>
     </section>
+
     <!-- Sectie - Aanbiedingen -->
     <section class="section bg-light">
         <div class="container">
@@ -385,7 +386,7 @@ include 'header-nl.php';
                     <i class="flag flag-united-kingdom"></i>English </a>
             </li>
             <li>
-                <a class="dropdown-item" href="./page-sur-place-nl.php">
+                <a class="dropdown-item" href="./page-sur-place.php">
                     <i class="flag-france flag"></i>Français </a>
             </li>
         </ul>

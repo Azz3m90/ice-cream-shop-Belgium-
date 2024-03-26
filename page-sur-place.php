@@ -64,7 +64,7 @@ include 'header.php';
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
                     <h1 class="mb-0">Sur Place</h1>
-                    <h4 class="text-muted mb-0">Salon de dégustation & terrasses: photos</h4>
+                    <h4 class="text-muted mb-0">Salle de dégustation et terrasses</h4>
                 </div>
             </div>
         </div>
@@ -73,7 +73,8 @@ include 'header.php';
     <section id="gallery" class="section section-gallery cover">
 
         <!-- Gallery Carousel -->
-        <div class="gallery-carousel inner-controls">
+        <div class="gallery-carousel inner-controls" data-slick='{
+        "dots": true,"arrows":true}'>
 
             <div class="slide">
                 <div class="bg-image bg-parallax"><img src="./assets/img/surplace/surplace_2.jpg" alt=""></div>
@@ -115,7 +116,7 @@ include 'header.php';
         <div class="container offset-md-1">
             <div class="col-lg-5 offset-lg-7 col-md-6">
                 <!--<div class="rate mb-5 rate-lg"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i></div>-->
-                <h2 class="mb-5 ml-5" <h2 class="mb-5 ml-5" style="color: #000000;">>Gelato Naturale - Boutique de
+                <h2 class="mb-5 ml-5" style="color: #000000;">Gelato Naturale - Boutique de
                     crèmes glacées:</h2>
                 <p class="lead text-muted mb-5 ml-5" style="text-align: justify;color: #000000;">Découvrez le plaisir de
                     la glace chez
@@ -129,12 +130,13 @@ include 'header.php';
             </div>
         </div>
     </section>
+
     <!-- Section - Offers -->
     <section class="section bg-light">
 
         <div class="container">
             <!--<h1 class="text-center mb-6">Special offers</h1>-->
-            <div class="carousel" data-slick='{"dots": true}'>
+            <div class="carousel" data-slick='{"dots": true,"arrows":true}'>
                 <!-- Nos Glaces -->
                 <div class="special-offer">
                     <img src="./assets/img/surplace/our-icecream.jpeg" alt="Nos Glaces">
@@ -255,47 +257,46 @@ include 'carosuel-main.php';
         <div class="footer-first-row row">
             <div class="col-lg-3 text-center">
                 <a href="index.php">
-                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                        width="88" class="mt-5 mb-5">
+                    <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                 </a>
             </div>
             <style>
-            .styled-table {
-                --background-color: #343a40;
-                /* Couleur de fond sombre */
-                color: #ffffff;
-                /* Couleur du texte */
-                border-radius: 10px;
-                /* Coins arrondis */
-                margin-top: 20px;
-                /* Ajouter un espace en haut */
-            }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Couleur de fond sombre */
+                    color: #ffffff;
+                    /* Couleur du texte */
+                    border-radius: 10px;
+                    /* Coins arrondis */
+                    margin-top: 20px;
+                    /* Ajouter un espace en haut */
+                }
 
-            .styled-table h5 {
-                color: #007bff;
-                /* Couleur thème bleu */
-            }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Couleur thème bleu */
+                }
 
-            .styled-table td.title {
-                --font-weight: bold;
-                color: #ffffff;
-                /* Couleur du texte */
-            }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Couleur du texte */
+                }
 
-            .styled-table td.content {
-                color: #a8b2b7;
-                /* Couleur de texte plus claire */
-            }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Couleur de texte plus claire */
+                }
 
-            .styled-table a {
-                color: #ffffff;
-                /* Couleur du lien */
-            }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Couleur du lien */
+                }
 
-            .styled-table a:hover {
-                text-decoration: none;
-                /* Supprimer le soulignement au survol */
-            }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Supprimer le soulignement au survol */
+                }
             </style>
 
             <div class="col-lg-4 col-md-6 styled-table">
@@ -335,8 +336,7 @@ include 'carosuel-main.php';
                 </table>
 
                 <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                    class="icon icon-social icon-circle icon-sm icon-facebook">
+                <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -356,7 +356,7 @@ include 'carosuel-main.php';
         <!-- Deuxième rangée du pied de page -->
         <div class="footer-second-row">
             <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                 </script>©. </span>
         </div>
     </div>
@@ -373,8 +373,7 @@ include 'carosuel-main.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -383,8 +382,7 @@ include 'carosuel-main.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-12">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-france m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">
