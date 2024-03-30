@@ -73,8 +73,9 @@ include 'header-nl.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
-                    <h1 class="mb-0">professionals</h1>
-                    <h4 class="text-muted mb-0" style="text-align: justify;">We kunnen aan al uw verzoeken voldoen op het gebied van delicatessen,
+                    <h1 class="mb-0">Professionals</h1>
+                    <h4 class="text-muted mb-0" style="text-align: justify;">We kunnen aan al uw verzoeken voldoen op
+                        het gebied van delicatessen,
                         cacaoproductie, sterrenrestaurants, etc.
                         Of u nu een Frans, Maghrebijns, Aziatisch, Italiaans gastronomisch restaurant bent, wij zullen
                         uw kenmerkende ijs naar uw smaak, traditie en behoefte creëren.

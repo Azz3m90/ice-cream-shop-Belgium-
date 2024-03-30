@@ -40,24 +40,24 @@
     <meta property="og:type" content="website">
     <!-- Structured Data using JSON-LD for better search engine understanding -->
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Restaurant",
-            "name": "Gelato Naturale",
-            "description": "Beste ambachtelijke ijsmakerij in Tarcienne.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Route de Philippeville 34",
-                "addressLocality": "Tarcienne",
-                "addressRegion": "Wallonië",
-                "postalCode": "5651",
-                "addressCountry": "België"
-            },
-            "priceRange": "€",
-            "url": "https://gelatonaturale.be/gelatonaturale/index-nl.php",
-            "image": "https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg",
-            "telephone": "+32 497 47 65 48"
-        }
+    {
+        "@context": "http://schema.org",
+        "@type": "Restaurant",
+        "name": "Gelato Naturale",
+        "description": "Beste ambachtelijke ijsmakerij in Tarcienne.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Route de Philippeville 34",
+            "addressLocality": "Tarcienne",
+            "addressRegion": "Wallonië",
+            "postalCode": "5651",
+            "addressCountry": "België"
+        },
+        "priceRange": "€",
+        "url": "https://gelatonaturale.be/gelatonaturale/index-nl.php",
+        "image": "https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg",
+        "telephone": "+32 497 47 65 48"
+    }
     </script>
     <!-- Additional SEO optimizations -->
     <meta name="description" content="Ontdek de unieke ambachtelijke smaken van Gelato Naturale in Tarcienne.">
@@ -68,22 +68,50 @@
 <body>
     <!-- Body Wrapper -->
     <style>
-        .italian-flag {
-            background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
-            display: inline-block;
-            padding: 10px;
+    .italian-flag {
+        background: linear-gradient(90deg, #008C45 0%, #008C45 30%, #FFFFFF 30%, #FFFFFF 70%, #FF0000 66%, #FF0000 100%);
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+        /* Adjust the font size */
+        font-weight: bold;
+        /* Add bold font weight */
+        margin-top: 10px;
+        /* Add some top margin for spacing */
+        color: #333;
+        /* Set the color to a darker shade for better readability */
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
         }
 
-        .title {
-            font-size: 24px;
-            /* Adjust the font size */
-            font-weight: bold;
-            /* Add bold font weight */
-            margin-top: 10px;
-            /* Add some top margin for spacing */
-            color: #333;
-            /* Set the color to a darker shade for better readability */
+        50% {
+            opacity: 0;
         }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #Cartening {
+        background-image: url('assets/img/comming-soon/coming-soon.jpeg');
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        padding-right: -30px;
+        background-position: right center;
+        /* Image positioned from the right */
+        /* Adjust as needed */
+        /* Font size */
+        animation: blink 3s infinite;
+        pointer-events: none;
+        /* Make it unclickable */
+    }
     </style>
     <div id="body-wrapper" class="animsition">
         <!-- Header -->
@@ -94,7 +122,8 @@
                         <!-- Logo -->
                         <div class="module module-logo dark italian-flag">
                             <a href="index-nl.php">
-                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
+                                    style="width: 200px;height: 100px;" width="88">
                             </a>
                         </div>
                     </div>
@@ -104,6 +133,20 @@
                             <ul id="nav-main" class="nav nav-main">
                                 <li>
                                     <a href="index-nl.php">Thuis</a>
+                                </li>
+                                <li>
+                                    <a href="./page-sur-place-nl.php">Ter plaatse</a>
+                                </li>
+                                <li>
+                                    <a href="./page-reservations-nl.php">Taarten</a>
+                                </li>
+                                <li>
+                                    <a href="./Professionnels-nl.php">Professionnels</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="Cartening">Catering Reserveringen</a>
+                                    <!-- Translate "Coming Soon" -->
+
                                 </li>
                                 <li>
                                     <a href="page-gallery-nl.php">Galerij</a>

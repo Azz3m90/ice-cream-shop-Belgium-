@@ -79,8 +79,9 @@ include 'header.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
-                    <h1 class="mb-0">professionnels</h1>
-                    <h4 class="text-muted mb-0" style="text-align: justify;">Nous pouvons répondre à toute vous demandes de l’épicerie fine,
+                    <h1 class="mb-0">Professionnels</h1>
+                    <h4 class="text-muted mb-0" style="text-align: justify;">Nous pouvons répondre à toute vous demandes
+                        de l’épicerie fine,
                         production de cacao, restaurants étoilés,.
                         Que vous soyez un restaurant gastronomique français, maghrébin, asiatique, italien, nous allons
                         créer votre crème glacée signature selon votre goût, tradition et besoin.

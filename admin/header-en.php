@@ -30,39 +30,40 @@
     <link rel="stylesheet" href="dist/css/core.css" />
     <!-- CSS Theme -->
     <link id="theme" rel="stylesheet" href="dist/css/theme-blue.css" />
+
     <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.matthiasandsea.be/matthias-and-sea/index-en.php">
+    <link rel="canonical" href="https://gelatonaturale.be/gelatonaturale/index-en.php">
     <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Matthias and Sea - Tarcienne's Finest Seafood Restaurant">
-    <meta property="og:description" content="Experience the ocean's bounty at Matthias and Sea in Tarcienne.">
-    <meta property="og:image" content="https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg">
-    <meta property="og:url" content="https://www.matthiasandsea.be/matthias-and-sea/index-en.php">
+    <meta property="og:title" content="Gelato Naturale - Finest Artisanal Creamery in Tarcienne">
+    <meta property="og:description" content="Discover the unique artisanal flavors of Gelato Naturale in Tarcienne.">
+    <meta property="og:image" content="https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg">
+    <meta property="og:url" content="https://gelatonaturale.be/gelatonaturale/index-en.php">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="sh4MDpPL9Ljv6PW11FN2obhXSK4QPfMnlmZtkr6NEh4" />
-    <script src="./dist/js/menu/axios.min.js"></script>
-    <script src="./dist/js/clearCache.js"></script>
     <!-- Structured Data using JSON-LD for better search engine understanding -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "Restaurant",
-            "name": "gelatonaturale",
-            "description": "Tarcienne's finest seafood restaurant.",
+            "name": "Gelato Naturale",
+            "description": "Finest artisanal creamery in Tarcienne.",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Route de Philippeville 34",
                 "addressLocality": "Tarcienne",
-                "addressRegion": "Walloon Region",
+                "addressRegion": "Wallonia",
                 "postalCode": "5651",
                 "addressCountry": "Belgium"
             },
-            "priceRange": "€€",
-            "url": "https://www.matthiasandsea.be/matthias-and-sea/index-en.php",
-            "image": "https://www.matthiasandsea.be/matthias-and-sea/assets/img/gelatonaturale.svg",
-            "telephone": "+32-071-21-86-20"
+            "priceRange": "€",
+            "url": "https://gelatonaturale.be/gelatonaturale/index-en.php",
+            "image": "https://gelatonaturale.be/gelatonaturale/assets/img/gelatonaturale.svg",
+            "telephone": "+32 497 47 65 48"
         }
     </script>
-    <script src="dist/js/menu/axios.min.js"></script>
+    <!-- Additional SEO optimizations -->
+    <meta name="description" content="Discover the unique artisanal flavors of Gelato Naturale in Tarcienne.">
+    <meta name="keywords" content="Gelato Naturale, artisanal creamery, Tarcienne, ice cream, sorbet">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body>
@@ -83,6 +84,34 @@
             color: #333;
             /* Set the color to a darker shade for better readability */
         }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #Cartening {
+            background-image: url('assets/img/comming-soon/coming-soon.jpeg');
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+            padding-right: -30px;
+            background-position: right center;
+            /* Image positioned from the right */
+            /* Adjust as needed */
+            /* Font size */
+            animation: blink 3s infinite;
+            pointer-events: none;
+            /* Make it unclickable */
+        }
     </style>
     <!-- Body Wrapper -->
     <div id="body-wrapper" class="animsition">
@@ -94,7 +123,7 @@
                         <!-- Logo -->
                         <div class="module module-logo dark italian-flag">
                             <a href="index-en.php">
-                                <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+                                <img src="..././.././assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
                             </a>
                         </div>
                     </div>
@@ -103,7 +132,20 @@
                         <nav class="module module-navigation left mr-4">
                             <ul id="nav-main" class="nav nav-main">
                                 <li>
-                                    <a href="index-en.php">Home</a>
+                                    <a href=".././index-en.php">Home</a>
+                                </li>
+                                <li>
+                                    <a href=".././page-sur-place-en.php">On-site Dining</a>
+                                </li>
+                                <li>
+                                    <a href=".././page-reservation-en.php">Cakes</a>
+                                </li>
+                                <li>
+                                    <a href=".././Professionnels-en.php">Professionnels</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="Cartening">Catering Reservations</a>
+
                                 </li>
                                 <li>
                                     <a href="page-gallery-en.php">Gallery</a>

@@ -435,47 +435,50 @@ include './header.php';
         const navContainer = document.getElementById('galleryNav');
 
         // Loop through gallery images and create HTML elements
-        galleryImages.forEach(image => {
+        galleryImages.forEach((image, index) => {
           // Create carousel slide
           const slide = document.createElement('div');
           slide.className = 'slide';
-          slide.id = `slide${image.id}`
+          slide.id = `slide${index+1}`;
 
           const bgParallax = document.createElement('div');
           bgParallax.className = 'bg-parallax';
 
           const img = document.createElement('img');
-          img.src = `${image.path}`;
+          img.src = image.path;
           img.alt = '';
-
 
           bgParallax.appendChild(img);
           slide.appendChild(bgParallax);
           carouselContainer.appendChild(slide);
 
-          const deleteButton = document.createElement('button')
+          const deleteButton = document.createElement('button');
 
           // Create delete button
-          deleteButton.classList.add('btn', 'btn-sm', 'btn-submit', 'btn-danger', 'delete-button')
-          const deleteContent = document.createElement('span')
-          deleteContent.innerHTML = 'Delete'
-          deleteContent.classList.add('description')
-          deleteButton.appendChild(deleteContent)
-          deleteButton.dataset.imageId = image.id; // Assuming you have data-image-id attribute
-          deleteButton.addEventListener('click', () => handleDelete(image.id));
+          deleteButton.classList.add('btn', 'btn-sm', 'btn-submit', 'btn-danger', 'delete-button');
+          const deleteContent = document.createElement('span');
+          deleteContent.innerHTML = 'Delete';
+          deleteContent.classList.add('description');
+          deleteButton.appendChild(deleteContent);
+          deleteButton.dataset.imageId = index; // Assuming you have data-image-id attribute
+          deleteButton.addEventListener('click', () => handleDelete(index));
 
           // Append delete button to slide
           slide.appendChild(deleteButton);
 
-          // Create nav image
+          // Create nav image using the corresponding "-min" image path
           const navImg = document.createElement('img');
-          navImg.src = `${image.path}`;
+          navImg.src = galleryImages[index]
+            .path; // Get the path of the corresponding "-min" image
           navImg.alt = '';
-          navImg.id = `nav${image.id}`
+          navImg.id = `nav${index}`;
           navContainer.appendChild(navImg);
+
+          // Skip the next image (which is the "-min" version) in the iteration
+          index++;
         });
-        showSuccessMessage()
-        document.getElementById('successButton').click()
+        showSuccessMessage();
+        document.getElementById('successButton').click();
       })
       .catch(error => {
         console.error('Error fetching JSON data:', error);

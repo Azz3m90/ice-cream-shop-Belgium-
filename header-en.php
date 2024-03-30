@@ -84,6 +84,34 @@
             color: #333;
             /* Set the color to a darker shade for better readability */
         }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #Cartening {
+            background-image: url('assets/img/comming-soon/coming-soon.jpeg');
+            background-size: 24px 24px;
+            background-repeat: no-repeat;
+            padding-right: -30px;
+            background-position: right center;
+            /* Image positioned from the right */
+            /* Adjust as needed */
+            /* Font size */
+            animation: blink 3s infinite;
+            pointer-events: none;
+            /* Make it unclickable */
+        }
     </style>
     <!-- Body Wrapper -->
     <div id="body-wrapper" class="animsition">
@@ -105,6 +133,19 @@
                             <ul id="nav-main" class="nav nav-main">
                                 <li>
                                     <a href="index-en.php">Home</a>
+                                </li>
+                                <li>
+                                    <a href="./page-sur-place-en.php">On-site Dining</a>
+                                </li>
+                                <li>
+                                    <a href="./page-reservation-en.php">Cakes</a>
+                                </li>
+                                <li>
+                                    <a href="./Professionnels-en.php">Professionnels</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="Cartening">Catering Reservations</a>
+
                                 </li>
                                 <li>
                                     <a href="page-gallery-en.php">Gallery</a>
