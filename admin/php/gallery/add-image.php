@@ -7,7 +7,7 @@ if (!isset($_FILES['image'])) {
 
 // Directory where original and resized images will be stored
 $originalDirectory = '../../../../icecream/./assets/img/gallery';
-$resizedDirectory = '../../../../icecream/./assets/img/gallery/thumbnails';
+$resizedDirectory = '../../../../icecream/./assets/img/gallery';
 
 // Check if the directories exist, if not, create them
 if (!is_dir($originalDirectory)) {

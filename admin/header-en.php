@@ -13,7 +13,7 @@
     <title>GELATO NATURALE - Discover Our Artisan Flavors</title>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/img/svg/gelatonaturale.svg">
+    <link rel="shortcut icon" href=".././assets/img/svg/gelatonaturale.svg">
     <!--<link rel="apple-touch-icon" href="assets/img/favicon_60x60.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon_120x120.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon_152x152.png">-->
     <!-- Fonts -->
     <!--<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@100;200;400;500&display=swap" rel="stylesheet">-->
@@ -100,7 +100,7 @@
         }
 
         #Cartening {
-            background-image: url('assets/img/comming-soon/coming-soon.jpeg');
+            background-image: url('.././assets/img/comming-soon/coming-soon.jpeg');
             background-size: 24px 24px;
             background-repeat: no-repeat;
             padding-right: -30px;

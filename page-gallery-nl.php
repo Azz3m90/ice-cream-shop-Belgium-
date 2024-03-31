@@ -112,7 +112,7 @@ include 'header-nl.php';
 
                 // Adding thumbnail to the gallery nav
                 var thumbnail = document.createElement('img');
-                thumbnail.src = imgPath + i + '.jpg';
+                thumbnail.src = imgPath + '/min/' + i + '-min.jpg';
                 thumbnail.alt = 'Thumbnail ' + (i + 1);
                 galleryNav.appendChild(thumbnail);
             }

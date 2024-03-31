@@ -1,34 +1,21 @@
 <?php
-// Directory where images are stored
-$imageDirectory = '../../../../icecream/./assets/img/gallery';
+require_once '.././login/config/config.php';
 
-// Check if the directory exists
-if (!is_dir($imageDirectory)) {
-    echo json_encode(['error' => 'Image directory not found']);
-    exit; // Terminate script execution
-}
+// Fetch all gallery images from the database
+$result = $mysql_db->query("SELECT g.id, g.path, m.path AS minified_path FROM gallery_images g
+                            LEFT JOIN minified_images m ON g.id = m.image_id");
 
-// Scan the directory for image files
-$imageFiles = scandir($imageDirectory);
-
-// Check if scandir() returned false, indicating an error
-if ($imageFiles === false) {
-    echo json_encode(['error' => 'Error reading directory']);
-    exit; // Terminate script execution
-}
-
-// Filter out '.' and '..' from the list of files
-$imageFiles = array_diff($imageFiles, ['.', '..']);
-
-// Construct an array of image paths
 $galleryImages = [];
-foreach ($imageFiles as $file) {
-    // Construct the full path to the image
-    $imagePath = $imageDirectory . '/' . $file;
 
-    // Add the image path to the array
-    $galleryImages[] = ['path' => $imagePath];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $galleryImages[] = [
+            'id' => $row['id'],
+            'original_path' => $row['path'],
+            'minified_path' => $row['minified_path']
+        ];
+    }
 }
 
-// Respond with the gallery images in JSON format
+// Respond with the gallery images and their minified paths in JSON format
 echo json_encode(['galleryImages' => $galleryImages]);
