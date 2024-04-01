@@ -93,7 +93,8 @@ include 'header-nl.php';
     <!-- Section -->
     <section class="section section-lg bg-dark">
         <div class="bg-video dark-overlay">
-            <img class="bg-image dark-overlay" src="./assets/img/Reservations/reservation.jpg" alt="Professionals Background">
+            <img class="bg-image dark-overlay" src="./assets/img/Reservations/reservation.jpg"
+                alt="Professionals Background">
         </div>
         <div class="container">
             <div class="row justify-content-center">
@@ -116,29 +117,35 @@ include 'header-nl.php';
 
                                 <div class="form-group">
                                     <label for="last_name">Achternaam:</label>
-                                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Achternaam" required>
+                                    <input type="text" id="last_name" name="last_name" class="form-control"
+                                        placeholder="Achternaam" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="first_name">Voornaam:</label>
-                                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Voornaam" required>
+                                    <input type="text" id="first_name" name="first_name" class="form-control"
+                                        placeholder="Voornaam" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Telefoonnummer:</label>
-                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Telefoonnummer" required>
+                                    <input type="text" id="phone" name="phone" class="form-control"
+                                        placeholder="Telefoonnummer" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail:</label>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="E-mail" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_date">Leveringsdatum:</label>
-                                    <input type="date" id="delivery_date" name="delivery_date" class="form-control" placeholder="Leveringsdatum" min="<?php echo date('Y-m-d'); ?>" required>
+                                    <input type="date" id="delivery_date" name="delivery_date" class="form-control"
+                                        placeholder="Leveringsdatum" min="<?php echo date('Y-m-d'); ?>" required>
                                     <div class="form-helper-text">Er is minimaal 3 dagen vereist voor alle ingediende
                                         verzoeken.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="persons">Aantal Personen:</label>
-                                    <input type="number" id="persons" name="persons" class="form-control" placeholder="Aantal Personen minimaal 5 personen" min="5" required>
+                                    <input type="number" id="persons" name="persons" class="form-control"
+                                        placeholder="Aantal Personen minimaal 5 personen" min="5" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Voor:</label>
@@ -150,56 +157,43 @@ include 'header-nl.php';
                                 </div>
                                 <div class="form-group">
                                     <label for="age">Leeftijd:</label>
-                                    <input type="number" id="age" name="age" class="form-control" placeholder="Leeftijd" required>
+                                    <input type="number" id="age" name="age" class="form-control" placeholder="Leeftijd"
+                                        required>
                                 </div>
                                 <div class="form-group" id="first_choice_out">
                                     <label for="first_choice">Eerste Smaakkeuze:</label>
                                     <select id="first_choice" name="first_choice" class="form-control" required>
                                         <option value="" selected disabled>Kies...</option>
-                                        <optgroup label="Nieuwe Smaken">
-                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
-                                            <option value="Vanilla jam and butter bread">Vanilla jam and butter bread
-                                            </option>
-                                            <option value="Amandelen">Amandelen</option>
-                                            <option value="Vijg">Vijg</option>
-                                            <option value="Boter en jam brood">Boter en jam brood</option>
-                                        </optgroup>
-                                        <optgroup label="Engelse Soep">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Abruzzese cake">Abruzzese cake</option>
-                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
-                                            <option value="Bruine suiker">Bruine suiker</option>
-                                        </optgroup>
+
                                         <optgroup label="Klassieke Smaken">
                                             <option value="Vanille">Vanille</option>
                                             <option value="Chocolade">Chocolade</option>
-                                            <option value="Aardbei">Aardbei</option>
-                                            <option value="Munt">Munt</option>
-                                        </optgroup>
-                                        <optgroup label="Notige Verleidingen">
-                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
-                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
-                                            </option>
-                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
-                                            <option value="Amandelen">Amandelen</option>
-                                        </optgroup>
-                                        <optgroup label="Exotische Smaken">
+                                            <option value="Stracciatella">Stracciatella</option>
+                                            <option value="Beter dan Kinder Bueno">Beter dan Kinder Bueno</option>
+                                            <option value="Beter dan Rocher">Beter dan Rocher</option>
+                                            <option value="Beter dan Snickers">Beter dan Snickers</option>
+                                            <option value="Beter dan Nutella">Beter dan Nutella</option>
+                                            <option value="Pistache">Pistache</option>
+                                            <option value="Koffie">Koffie</option>
+                                            <option value="Fior di latte">Fior di latte</option>
+                                            <option value="Gezouten Boter Karamel">Gezouten Boter Karamel</option>
+                                            <option value="Speculoos">Speculoos</option>
+                                            <option value="Engelse Soep">Engelse Soep</option>
+                                            <option value="Tiramisù">Tiramisù</option>
                                             <option value="Kokosnoot">Kokosnoot</option>
-                                            <option value="Mango">Mango</option>
-                                            <option value="Passievrucht">Passievrucht</option>
-                                            <option value="Lychee">Lychee</option>
                                         </optgroup>
                                         <optgroup label="Sorbet">
-                                            <option value="Banaan">Banaan</option>
-                                            <option value="Framboos">Framboos</option>
-                                            <option value="Rode Vruchten">Rode Vruchten</option>
-                                            <option value="Bosbes">Bosbes</option>
-                                        </optgroup>
-                                        <optgroup label="Specialiteiten">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
-                                            <option value="Zabayon">Zabayon</option>
-                                            <option value="Bacio">Bacio</option>
+                                            <option value="Aardbeien sorbet">Aardbeien sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Banaan sorbet">Banaan sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Litchi sorbet">Litchi sorbet</option>
+                                            <option value="Mango sorbet">Mango sorbet</option>
+                                            <option value="Passievrucht sorbet">Passievrucht sorbet</option>
+                                            <option value="Limoen sorbet">Limoen sorbet</option>
+                                            <option value="Gele citroen sorbet">Gele citroen sorbet</option>
+                                            <option value="Meloen cavaillon sorbet">Meloen cavaillon sorbet</option>
+                                            <option value="Watermeloen sorbet">Watermeloen sorbet</option>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -208,49 +202,35 @@ include 'header-nl.php';
                                     <label for="second_choice">Tweede Smaakkeuze:</label>
                                     <select id="second_choice" name="second_choice" class="form-control" required>
                                         <option value="" selected disabled>Kies...</option>
-                                        <optgroup label="Nieuwe Smaakvarianten">
-                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
-                                            <option value="Vanille jam en boterbrood">Vanille jam en boterbrood</option>
-                                            <option value="Amandelen">Amandelen</option>
-                                            <option value="Vijgen">Vijgen</option>
-                                            <option value="Boter en jam brood">Boter en jam brood</option>
-                                        </optgroup>
-                                        <optgroup label="Engelse Soepen">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Abruzzese cake">Abruzzese cake</option>
-                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
-                                            <option value="Bruine suiker">Bruine suiker</option>
-                                        </optgroup>
-                                        <optgroup label="Klassieke Smaakvarianten">
+                                        <optgroup label="Klassieke Smaken">
                                             <option value="Vanille">Vanille</option>
                                             <option value="Chocolade">Chocolade</option>
-                                            <option value="Aardbei">Aardbei</option>
-                                            <option value="Munt">Munt</option>
-                                        </optgroup>
-                                        <optgroup label="Notenlekkernijen">
-                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
-                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
-                                            </option>
-                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
-                                            <option value="Amandelen">Amandelen</option>
-                                        </optgroup>
-                                        <optgroup label="Exotische Smaakvarianten">
+                                            <option value="Stracciatella">Stracciatella</option>
+                                            <option value="Beter dan Kinder Bueno">Beter dan Kinder Bueno</option>
+                                            <option value="Beter dan Rocher">Beter dan Rocher</option>
+                                            <option value="Beter dan Snickers">Beter dan Snickers</option>
+                                            <option value="Beter dan Nutella">Beter dan Nutella</option>
+                                            <option value="Pistache">Pistache</option>
+                                            <option value="Koffie">Koffie</option>
+                                            <option value="Fior di latte">Fior di latte</option>
+                                            <option value="Gezouten Boter Karamel">Gezouten Boter Karamel</option>
+                                            <option value="Speculoos">Speculoos</option>
+                                            <option value="Engelse Soep">Engelse Soep</option>
+                                            <option value="Tiramisù">Tiramisù</option>
                                             <option value="Kokosnoot">Kokosnoot</option>
-                                            <option value="Mango">Mango</option>
-                                            <option value="Passievrucht">Passievrucht</option>
-                                            <option value="Lychee">Lychee</option>
                                         </optgroup>
                                         <optgroup label="Sorbet">
-                                            <option value="Banaan">Banaan</option>
-                                            <option value="Raspberry">Raspberry</option>
-                                            <option value="Rode Vruchten">Rode Vruchten</option>
-                                            <option value="Bosbes">Bosbes</option>
-                                        </optgroup>
-                                        <optgroup label="Specialiteiten">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
-                                            <option value="Zabayon">Zabayon</option>
-                                            <option value="Bacio">Bacio</option>
+                                            <option value="Aardbeien sorbet">Aardbeien sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Banaan sorbet">Banaan sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Litchi sorbet">Litchi sorbet</option>
+                                            <option value="Mango sorbet">Mango sorbet</option>
+                                            <option value="Passievrucht sorbet">Passievrucht sorbet</option>
+                                            <option value="Limoen sorbet">Limoen sorbet</option>
+                                            <option value="Gele citroen sorbet">Gele citroen sorbet</option>
+                                            <option value="Meloen cavaillon sorbet">Meloen cavaillon sorbet</option>
+                                            <option value="Watermeloen sorbet">Watermeloen sorbet</option>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -259,49 +239,35 @@ include 'header-nl.php';
                                     <label for="alternate_choice">Alternatieve Smaakkeuze:</label>
                                     <select id="alternate_choice" name="alternate_choice" class="form-control" required>
                                         <option value="" selected disabled>Kies...</option>
-                                        <optgroup label="Nieuwe Smaakvarianten">
-                                            <option value="Panna et ciocolatto bacio">Panna et ciocolatto bacio</option>
-                                            <option value="Vanille jam en boterbrood">Vanille jam en boterbrood</option>
-                                            <option value="Amandelen">Amandelen</option>
-                                            <option value="Vijgen">Vijgen</option>
-                                            <option value="Boter en jam brood">Boter en jam brood</option>
-                                        </optgroup>
-                                        <optgroup label="Engelse Soepen">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Abruzzese cake">Abruzzese cake</option>
-                                            <option value="Zelfgemaakte Speculoos">Zelfgemaakte Speculoos</option>
-                                            <option value="Bruine suiker">Bruine suiker</option>
-                                        </optgroup>
-                                        <optgroup label="Klassieke Smaakvarianten">
+                                        <optgroup label="Klassieke Smaken">
                                             <option value="Vanille">Vanille</option>
                                             <option value="Chocolade">Chocolade</option>
-                                            <option value="Aardbei">Aardbei</option>
-                                            <option value="Munt">Munt</option>
-                                        </optgroup>
-                                        <optgroup label="Notenlekkernijen">
-                                            <option value="Geroosterde pistache">Geroosterde pistache</option>
-                                            <option value="Pistache Italië (klassiek)">Pistache Italië (klassiek)
-                                            </option>
-                                            <option value="Hazelnoot Italië">Hazelnoot Italië</option>
-                                            <option value="Amandelen">Amandelen</option>
-                                        </optgroup>
-                                        <optgroup label="Exotische Smaakvarianten">
+                                            <option value="Stracciatella">Stracciatella</option>
+                                            <option value="Beter dan Kinder Bueno">Beter dan Kinder Bueno</option>
+                                            <option value="Beter dan Rocher">Beter dan Rocher</option>
+                                            <option value="Beter dan Snickers">Beter dan Snickers</option>
+                                            <option value="Beter dan Nutella">Beter dan Nutella</option>
+                                            <option value="Pistache">Pistache</option>
+                                            <option value="Koffie">Koffie</option>
+                                            <option value="Fior di latte">Fior di latte</option>
+                                            <option value="Gezouten Boter Karamel">Gezouten Boter Karamel</option>
+                                            <option value="Speculoos">Speculoos</option>
+                                            <option value="Engelse Soep">Engelse Soep</option>
+                                            <option value="Tiramisù">Tiramisù</option>
                                             <option value="Kokosnoot">Kokosnoot</option>
-                                            <option value="Mango">Mango</option>
-                                            <option value="Passievrucht">Passievrucht</option>
-                                            <option value="Lychee">Lychee</option>
                                         </optgroup>
                                         <optgroup label="Sorbet">
-                                            <option value="Banaan">Banaan</option>
-                                            <option value="Raspberry">Raspberry</option>
-                                            <option value="Rode Vruchten">Rode Vruchten</option>
-                                            <option value="Bosbes">Bosbes</option>
-                                        </optgroup>
-                                        <optgroup label="Specialiteiten">
-                                            <option value="Tiramisu">Tiramisu</option>
-                                            <option value="Gezouten Karamel">Gezouten Karamel</option>
-                                            <option value="Zabayon">Zabayon</option>
-                                            <option value="Bacio">Bacio</option>
+                                            <option value="Aardbeien sorbet">Aardbeien sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Banaan sorbet">Banaan sorbet</option>
+                                            <option value="Frambozen sorbet">Frambozen sorbet</option>
+                                            <option value="Litchi sorbet">Litchi sorbet</option>
+                                            <option value="Mango sorbet">Mango sorbet</option>
+                                            <option value="Passievrucht sorbet">Passievrucht sorbet</option>
+                                            <option value="Limoen sorbet">Limoen sorbet</option>
+                                            <option value="Gele citroen sorbet">Gele citroen sorbet</option>
+                                            <option value="Meloen cavaillon sorbet">Meloen cavaillon sorbet</option>
+                                            <option value="Watermeloen sorbet">Watermeloen sorbet</option>
                                         </optgroup>
                                     </select>
 
@@ -320,7 +286,8 @@ include 'header-nl.php';
 
                                 <div class="form-group">
                                     <label for="comments">Opmerkingen:</label>
-                                    <textarea id="comments" name="comments" class="form-control" placeholder="Opmerkingen"></textarea>
+                                    <textarea id="comments" name="comments" class="form-control"
+                                        placeholder="Opmerkingen"></textarea>
                                 </div>
 
                                 <div class="form-group" id="file_out">
@@ -334,9 +301,12 @@ include 'header-nl.php';
                                 <div class="row">
                                     <div class="form-group">
                                         <label><strong>Voer de Captcha-code in:</strong></label><br />
-                                        <input type="text" id="captcha" name="captcha" placeholder="Voer de Captcha-code in" required>
-                                        <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id="captcha_image"></p>
-                                        <p>Kan de afbeelding niet lezen? <a href="#" onclick="refreshCaptcha(event);">Klik hier</a> om te vernieuwen</p>
+                                        <input type="text" id="captcha" name="captcha"
+                                            placeholder="Voer de Captcha-code in" required>
+                                        <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
+                                                id="captcha_image"></p>
+                                        <p>Kan de afbeelding niet lezen? <a href="#"
+                                                onclick="refreshCaptcha(event);">Klik hier</a> om te vernieuwen</p>
                                     </div>
                                 </div>
 
@@ -346,7 +316,9 @@ include 'header-nl.php';
                                 <span class="description">Reservering maken!</span>
                                 <span class="success">
                                     <svg x="0px" y="0px" viewBox="0 0 32 32">
-                                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
+                                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
+                                            stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"
+                                            stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
                                     </svg>
                                 </span>
                                 <span class="error">Opnieuw proberen...</span>
@@ -355,45 +327,45 @@ include 'header-nl.php';
                         </form>
 
                         <style>
-                            .btn-success {
-                                background-color: #28a745;
-                                border-color: #28a745;
-                            }
+                        .btn-success {
+                            background-color: #28a745;
+                            border-color: #28a745;
+                        }
 
-                            .btn-danger {
-                                background-color: #dc3545;
-                                border-color: #dc3545;
-                            }
+                        .btn-danger {
+                            background-color: #dc3545;
+                            border-color: #dc3545;
+                        }
 
-                            #confirmationModal {
-                                display: none;
-                                position: fixed;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                background-color: white;
-                                padding: 20px;
-                                border-radius: 10px;
-                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                                z-index: 1000;
-                            }
+                        #confirmationModal {
+                            display: none;
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: white;
+                            padding: 20px;
+                            border-radius: 10px;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        }
 
-                            #confirmationModal p {
-                                margin-bottom: 20px;
-                            }
+                        #confirmationModal p {
+                            margin-bottom: 20px;
+                        }
 
-                            #confirmationModal button {
-                                padding: 10px;
-                                background-color: #007bff;
-                                color: white;
-                                border: none;
-                                border-radius: 5px;
-                                cursor: pointer;
-                            }
+                        #confirmationModal button {
+                            padding: 10px;
+                            background-color: #007bff;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
 
-                            .invalid-input {
-                                border: 1px solid red;
-                            }
+                        .invalid-input {
+                            border: 1px solid red;
+                        }
                         </style>
 
                         <!-- Simple confirmation modal -->
@@ -405,173 +377,173 @@ include 'header-nl.php';
                         </div>
 
                         <script>
-                            document.addEventListener("DOMContentLoaded", function() {
-                                const form = document.getElementById("booking-form");
-                                const submitButton = form.querySelector(".btn-submit");
-                                const captchaInput = form.querySelector('input[name="captcha"]');
-                                const captchaImage = document.getElementById('captcha_image');
-                                const confirmationModal = document.getElementById('confirmationModal');
-                                const modalMessage = document.getElementById('modalMessage');
-                                var personsInput = document.getElementById('persons');
-                                var fileOut = document.getElementById('file_out');
-                                var fileHelper = document.getElementById('file_helper');
-                                fileOut.style.display = 'none';
-                                fileHelper.style.display = 'none';
-                                document.getElementById('file').removeAttribute('required');
-                                personsInput.addEventListener('change', function() {
-                                    var persons = parseInt(personsInput.value);
-                                    if (persons >= 12) {
-                                        fileOut.style.display = 'block';
-                                        fileHelper.style.display = 'block';
-                                        document.getElementById('file').setAttribute('required', true);
-                                    } else {
-                                        fileOut.style.display = 'none';
-                                        fileHelper.style.display = 'none';
-                                        document.getElementById('file').removeAttribute('required');
-                                    }
-                                });
-                                form.addEventListener("submit", function(event) {
-                                    event.preventDefault();
-                                    submitForm();
-                                });
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const form = document.getElementById("booking-form");
+                            const submitButton = form.querySelector(".btn-submit");
+                            const captchaInput = form.querySelector('input[name="captcha"]');
+                            const captchaImage = document.getElementById('captcha_image');
+                            const confirmationModal = document.getElementById('confirmationModal');
+                            const modalMessage = document.getElementById('modalMessage');
+                            var personsInput = document.getElementById('persons');
+                            var fileOut = document.getElementById('file_out');
+                            var fileHelper = document.getElementById('file_helper');
+                            fileOut.style.display = 'none';
+                            fileHelper.style.display = 'none';
+                            document.getElementById('file').removeAttribute('required');
+                            personsInput.addEventListener('change', function() {
+                                var persons = parseInt(personsInput.value);
+                                if (persons >= 12) {
+                                    fileOut.style.display = 'block';
+                                    fileHelper.style.display = 'block';
+                                    document.getElementById('file').setAttribute('required', true);
+                                } else {
+                                    fileOut.style.display = 'none';
+                                    fileHelper.style.display = 'none';
+                                    document.getElementById('file').removeAttribute('required');
+                                }
+                            });
+                            form.addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                submitForm();
+                            });
 
-                                captchaImage.addEventListener("click", function() {
-                                    refreshCaptcha();
-                                });
+                            captchaImage.addEventListener("click", function() {
+                                refreshCaptcha();
+                            });
 
-                                function getCaptcha() {
-                                    axios.get('./php/booking/get-captcha.php')
-                                        .then(function(response) {
-                                            console.log('Captcha:', response.data.captcha);
-                                        })
-                                        .catch(function(error) {
-                                            console.error('Error fetching captcha:', error);
-                                        });
+                            function getCaptcha() {
+                                axios.get('./php/booking/get-captcha.php')
+                                    .then(function(response) {
+                                        console.log('Captcha:', response.data.captcha);
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Error fetching captcha:', error);
+                                    });
+                            }
+
+                            // Call this function whenever you want to get the value of captcha
+                            getCaptcha();
+
+                            function submitForm() {
+
+                                const captcha = captchaInput.value;
+                                const formData = new FormData(form);
+                                formData.append('captcha', captcha);
+
+                                // Validate email
+                                const emailInput = form.querySelector('input[name="email"]');
+                                const email = emailInput.value;
+                                if (!validateEmail(email)) {
+                                    openModal('Voer een geldig e-mailadres in.');
+                                    emailInput.style.border = "1px solid red";
+                                    return false;
                                 }
 
-                                // Call this function whenever you want to get the value of captcha
-                                getCaptcha();
-
-                                function submitForm() {
-
-                                    const captcha = captchaInput.value;
-                                    const formData = new FormData(form);
-                                    formData.append('captcha', captcha);
-
-                                    // Validate email
-                                    const emailInput = form.querySelector('input[name="email"]');
-                                    const email = emailInput.value;
-                                    if (!validateEmail(email)) {
-                                        openModal('Voer een geldig e-mailadres in.');
-                                        emailInput.style.border = "1px solid red";
-                                        return false;
+                                // Validate each required input field
+                                const inputs = form.querySelectorAll("[required]");
+                                let isValid = true;
+                                inputs.forEach(function(input) {
+                                    if (input.value.trim() === "") {
+                                        isValid = false;
+                                        // Add red border to empty required fields
+                                        input.style.border = "1px solid red";
+                                    } else {
+                                        // Reset border to default style
+                                        input.style.border = "";
                                     }
+                                });
 
-                                    // Validate each required input field
-                                    const inputs = form.querySelectorAll("[required]");
-                                    let isValid = true;
-                                    inputs.forEach(function(input) {
-                                        if (input.value.trim() === "") {
-                                            isValid = false;
-                                            // Add red border to empty required fields
-                                            input.style.border = "1px solid red";
-                                        } else {
-                                            // Reset border to default style
-                                            input.style.border = "";
-                                        }
-                                    });
+                                if (!isValid) {
+                                    // If any required field is empty, show an error message and prevent form submission
+                                    openModal("Vul alle verplichte velden in.");
+                                    return false;
+                                }
 
-                                    if (!isValid) {
-                                        // If any required field is empty, show an error message and prevent form submission
-                                        openModal("Vul alle verplichte velden in.");
-                                        return false;
-                                    }
-
-                                    axios.post('./php/booking/validate-captcha.php', formData)
-                                        .then(response => {
-                                            if (response.data.valid) {
-                                                console.log(formData);
-                                                // Use AJAX to submit form data
-                                                submitButton.innerHTML =
-                                                    '<span class="description">Bezig met verzenden...</span>';
-                                                axios.post('./php/booking/booking-reservations-nl.php',
-                                                        formData)
-                                                    .then(response => {
-                                                        console.log('Form submission response:', response
-                                                            .data);
-                                                        if (response.data === 'success success') {
-                                                            submitButton.innerHTML =
-                                                                '<span class="description">Reservering succesvol!</span>';
-                                                            submitButton.classList.remove('btn-secondary');
-                                                            submitButton.classList.remove('btn-submit');
-                                                            submitButton.classList.add('btn-success');
-                                                            submitButton.setAttribute('disabled',
-                                                                'disabled');
-                                                        } else {
-                                                            openModal(
-                                                                'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
-                                                            );
-                                                        }
-                                                    })
-                                                    .catch(error => {
-                                                        console.error('Error submitting form:', error);
+                                axios.post('./php/booking/validate-captcha.php', formData)
+                                    .then(response => {
+                                        if (response.data.valid) {
+                                            console.log(formData);
+                                            // Use AJAX to submit form data
+                                            submitButton.innerHTML =
+                                                '<span class="description">Bezig met verzenden...</span>';
+                                            axios.post('./php/booking/booking-reservations-nl.php',
+                                                    formData)
+                                                .then(response => {
+                                                    console.log('Form submission response:', response
+                                                        .data);
+                                                    if (response.data === 'success success') {
+                                                        submitButton.innerHTML =
+                                                            '<span class="description">Reservering succesvol!</span>';
+                                                        submitButton.classList.remove('btn-secondary');
+                                                        submitButton.classList.remove('btn-submit');
+                                                        submitButton.classList.add('btn-success');
+                                                        submitButton.setAttribute('disabled',
+                                                            'disabled');
+                                                    } else {
                                                         openModal(
                                                             'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
                                                         );
-                                                    });
-                                            } else {
-                                                openModal(
-                                                    'De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.'
-                                                );
-                                                refreshCaptcha();
-                                            }
-                                        })
-                                        .catch(error => {
-                                            console.error('Error validating CAPTCHA:', error);
-                                        });
-                                }
-
-                            });
-
-                            function refreshCaptcha(event) {
-                                if (event) {
-                                    event.preventDefault();
-                                }
-
-                                var img = document.getElementById('captcha_image');
-
-                                axios.get('./php/booking/captcha.php', {
-                                        params: {
-                                            rand: Math.random() * 1000
-                                        },
-                                        responseType: 'arraybuffer'
+                                                    }
+                                                })
+                                                .catch(error => {
+                                                    console.error('Error submitting form:', error);
+                                                    openModal(
+                                                        'Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw.'
+                                                    );
+                                                });
+                                        } else {
+                                            openModal(
+                                                'De ingevoerde CAPTCHA-code komt niet overeen. Probeer het opnieuw.'
+                                            );
+                                            refreshCaptcha();
+                                        }
                                     })
-                                    .then(function(response) {
-                                        var blob = new Blob([response.data], {
-                                            type: 'image/jpeg'
-                                        });
-                                        var imgUrl = URL.createObjectURL(blob);
-                                        img.src = imgUrl;
-                                        getCaptcha();
-                                    })
-                                    .catch(function(error) {
-                                        console.error('Error refreshing CAPTCHA:', error);
+                                    .catch(error => {
+                                        console.error('Error validating CAPTCHA:', error);
                                     });
                             }
 
-                            function openModal(message) {
-                                modalMessage.innerText = message;
-                                confirmationModal.style.display = 'block';
+                        });
+
+                        function refreshCaptcha(event) {
+                            if (event) {
+                                event.preventDefault();
                             }
 
-                            function closeModal() {
-                                document.getElementById('confirmationModal').style.display = 'none';
-                            }
+                            var img = document.getElementById('captcha_image');
 
-                            function validateEmail(email) {
-                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                return emailRegex.test(email);
-                            }
+                            axios.get('./php/booking/captcha.php', {
+                                    params: {
+                                        rand: Math.random() * 1000
+                                    },
+                                    responseType: 'arraybuffer'
+                                })
+                                .then(function(response) {
+                                    var blob = new Blob([response.data], {
+                                        type: 'image/jpeg'
+                                    });
+                                    var imgUrl = URL.createObjectURL(blob);
+                                    img.src = imgUrl;
+                                    getCaptcha();
+                                })
+                                .catch(function(error) {
+                                    console.error('Error refreshing CAPTCHA:', error);
+                                });
+                        }
+
+                        function openModal(message) {
+                            modalMessage.innerText = message;
+                            confirmationModal.style.display = 'block';
+                        }
+
+                        function closeModal() {
+                            document.getElementById('confirmationModal').style.display = 'none';
+                        }
+
+                        function validateEmail(email) {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            return emailRegex.test(email);
+                        }
                         </script>
 
 
@@ -593,46 +565,47 @@ include 'header-nl.php';
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index.php">
-                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
+                            style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                    .styled-table {
-                        --background-color: #343a40;
-                        /* Couleur de fond sombre */
-                        color: #ffffff;
-                        /* Couleur du texte */
-                        border-radius: 10px;
-                        /* Coins arrondis */
-                        margin-top: 20px;
-                        /* Ajouter un espace en haut */
-                    }
+                .styled-table {
+                    --background-color: #343a40;
+                    /* Couleur de fond sombre */
+                    color: #ffffff;
+                    /* Couleur du texte */
+                    border-radius: 10px;
+                    /* Coins arrondis */
+                    margin-top: 20px;
+                    /* Ajouter un espace en haut */
+                }
 
-                    .styled-table h5 {
-                        color: #007bff;
-                        /* Couleur thème bleu */
-                    }
+                .styled-table h5 {
+                    color: #007bff;
+                    /* Couleur thème bleu */
+                }
 
-                    .styled-table td.title {
-                        --font-weight: bold;
-                        color: #ffffff;
-                        /* Couleur du texte */
-                    }
+                .styled-table td.title {
+                    --font-weight: bold;
+                    color: #ffffff;
+                    /* Couleur du texte */
+                }
 
-                    .styled-table td.content {
-                        color: #a8b2b7;
-                        /* Couleur de texte plus claire */
-                    }
+                .styled-table td.content {
+                    color: #a8b2b7;
+                    /* Couleur de texte plus claire */
+                }
 
-                    .styled-table a {
-                        color: #ffffff;
-                        /* Couleur du lien */
-                    }
+                .styled-table a {
+                    color: #ffffff;
+                    /* Couleur du lien */
+                }
 
-                    .styled-table a:hover {
-                        text-decoration: none;
-                        /* Supprimer le soulignement au survol */
-                    }
+                .styled-table a:hover {
+                    text-decoration: none;
+                    /* Supprimer le soulignement au survol */
+                }
                 </style>
 
                 <div class="col-lg-4 col-md-6 styled-table">
@@ -672,7 +645,8 @@ include 'header-nl.php';
                     </table>
 
                     <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
+                        class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -692,7 +666,7 @@ include 'header-nl.php';
             <!-- Deuxième rangée du pied de page -->
             <div class="footer-second-row">
                 <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                        document.write(new Date().getFullYear())
+                    document.write(new Date().getFullYear())
                     </script>©. </span>
             </div>
         </div>
@@ -709,7 +683,8 @@ include 'header-nl.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
+                width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -718,7 +693,8 @@ include 'header-nl.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-md-2 right mt-5">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+            aria-expanded="false">
             <i class="flag flag-netherlands m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">
