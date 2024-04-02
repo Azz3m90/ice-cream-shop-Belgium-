@@ -84,34 +84,47 @@
      </section>
 
      <script>
-     document.addEventListener("DOMContentLoaded", function() {
-         var galleryCarousel = document.querySelector('.gallery-carousel');
-         var galleryNav = document.querySelector('.gallery-nav');
-         var numImages = 12; // Total number of images
-         var imgPath = './assets/img/gallery/';
+     var galleryCarousel = document.querySelector('.gallery-carousel');
+     var galleryNav = document.querySelector('.gallery-nav');
 
-         // Loop through images and dynamically add them to the carousel and nav
-         for (var i = 0; i < numImages; i++) {
-             var slide = document.createElement('div');
-             slide.classList.add('slide');
+     // Make AJAX request to fetch gallery images using Axios
+     axios.get('./admin/php/gallery/get-image.php')
+         .then(function(response) {
+             var galleryImages = response.data.galleryImages;
 
-             var bgImage = document.createElement('div');
-             bgImage.classList.add('bg-image', 'bg-parallax');
-             var img = document.createElement('img');
-             img.src = imgPath + i + '.jpg';
-             img.alt = 'Gallery Image ' + (i + 1);
+             // Loop through images and dynamically add them to the carousel and nav
+             galleryImages.forEach(function(image) {
+                 var slide = document.createElement('div');
+                 slide.classList.add('slide');
 
-             bgImage.appendChild(img);
-             slide.appendChild(bgImage);
-             galleryCarousel.appendChild(slide);
+                 var bgImage = document.createElement('div');
+                 bgImage.classList.add('bg-image', 'bg-parallax');
+                 var img = document.createElement('img');
+                 img.src = 'https://gelatonaturale.be/gelatonaturale/assets/img/gallery/' + getBaseFileName(
+                     image
+                     .original_path);
+                 img.alt = 'Gallery Image ' + image.id;
 
-             // Adding thumbnail to the gallery nav
-             var thumbnail = document.createElement('img');
-             thumbnail.src = imgPath + '/min/' + i + '-min.jpg';
-             thumbnail.alt = 'Thumbnail ' + (i + 1);
-             galleryNav.appendChild(thumbnail);
-         }
-     });
+                 bgImage.appendChild(img);
+                 slide.appendChild(bgImage);
+                 galleryCarousel.appendChild(slide);
+
+                 // Adding thumbnail to the gallery nav
+                 var thumbnail = document.createElement('img');
+                 thumbnail.src = 'https://gelatonaturale.be/gelatonaturale/assets/img/gallery/min/' +
+                     getBaseFileName(image
+                         .minified_path);
+                 thumbnail.alt = 'Thumbnail ' + image.id;
+                 galleryNav.appendChild(thumbnail);
+             });
+         })
+         .catch(function(error) {
+             console.error('Error fetching gallery images:', error);
+         });
+
+     function getBaseFileName(url) {
+         return url.substring(url.lastIndexOf('/') + 1);
+     }
      </script>
      <?php
         include 'carosuel-main.php';

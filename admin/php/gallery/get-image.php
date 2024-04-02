@@ -5,6 +5,7 @@ require_once '.././login/config/config.php';
 $result = $mysql_db->query("SELECT g.id, g.path, m.path AS minified_path FROM gallery_images g
                             LEFT JOIN minified_images m ON g.id = m.image_id");
 
+//var_dump($result->fetch_assoc());
 $galleryImages = [];
 
 if ($result->num_rows > 0) {
