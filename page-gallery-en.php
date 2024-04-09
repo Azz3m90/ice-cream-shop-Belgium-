@@ -1,6 +1,8 @@
 <?php
 include 'header-en.php';
 ?>
+<script src="./dist/js/menu/axios.min.js"></script>
+<script src="./dist/js/clearCache.js"></script>
 <!--language selector-->
 <div class="dropdown col-md-2 right mt-5">
     <a class="dropdown-toggle" href="#" id="Dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -104,7 +106,7 @@ include 'header-en.php';
                 var bgImage = document.createElement('div');
                 bgImage.classList.add('bg-image', 'bg-parallax');
                 var img = document.createElement('img');
-                img.src = 'https://gelatonaturale.be/gelatonaturale/assets/img/gallery/' + getBaseFileName(
+                img.src = 'http://localhost/icecream/assets/img/gallery/' + getBaseFileName(
                     image
                     .original_path);
                 img.alt = 'Gallery Image ' + image.id;
@@ -115,7 +117,7 @@ include 'header-en.php';
 
                 // Adding thumbnail to the gallery nav
                 var thumbnail = document.createElement('img');
-                thumbnail.src = 'https://gelatonaturale.be/gelatonaturale/assets/img/gallery/min/' +
+                thumbnail.src = 'http://localhost/icecream/assets/img/gallery/min/' +
                     getBaseFileName(image
                         .minified_path);
                 thumbnail.alt = 'Thumbnail ' + image.id;

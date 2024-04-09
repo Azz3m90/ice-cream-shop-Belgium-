@@ -1,7 +1,6 @@
 <div class="module module-social">
     <h6 class="text-sm mb-3">Suivez-nous !</h6>
-    <a href="https://www.facebook.com/gelatonaturaletarcienne"
-        class="icon icon-social icon-circle icon-sm icon-facebook">
+    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
         <i class="fa fa-facebook"></i>
     </a>
     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -22,7 +21,7 @@
 <div id="body-overlay"></div>
 </div>
 <?php
-    include 'cookies.php';
+include 'cookies.php';
 ?>
 <!-- JS Core -->
 <script src="dist/js/core.js"></script>
@@ -34,7 +33,7 @@
 <script src="./dist/js/menu/axios.min.js"></script>
 <script src="./dist/js/menu/cheerio.js"></script>
 <script src="./dist/js/menu/pretty.js"></script>
-<script src="./dist/js/offers/offers.js"></script>
+
 </body>
 
 </html>

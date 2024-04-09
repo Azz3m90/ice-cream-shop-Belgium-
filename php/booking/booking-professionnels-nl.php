@@ -1,4 +1,9 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // If the request method is not POST, return an error
+    http_response_code(405); // Method Not Allowed
+    exit('Method Not Allowed');
+}
 require_once '.././vendor/autoload.php';
 require_once '.././config/config.php';
 

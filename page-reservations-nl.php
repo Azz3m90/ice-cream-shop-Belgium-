@@ -139,8 +139,10 @@ include 'header-nl.php';
                                     <label for="delivery_date">Leveringsdatum:</label>
                                     <input type="date" id="delivery_date" name="delivery_date" class="form-control"
                                         placeholder="Leveringsdatum" min="<?php echo date('Y-m-d'); ?>" required>
-                                    <div class="form-helper-text">Er is minimaal 3 dagen vereist voor alle ingediende
-                                        verzoeken.</div>
+                                    <div class="form-helper-text">Voor alle ingediende aanvragen geldt een minimum van 3
+                                        dagen.
+                                        <br />Voor elk dringend verzoek kunt u ons bellen.
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="persons">Aantal Personen:</label>
@@ -674,6 +676,96 @@ include 'header-nl.php';
         <button id="back-to-top" class="back-to-top">
             <i class="ti ti-angle-up"></i>
         </button>
+        <style>
+        .window {
+            position: fixed;
+            top: 40%;
+            right: 20px;
+            /* Initially hidden */
+            width: auto;
+            max-width: 300px;
+            background: linear-gradient(to right, #009246 0%, #009246 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ce2b37 66.66%, #ce2b37 100%);
+            /* Italian flag gradient */
+            border: 2px solid #ffffff;
+            /* White border */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: right 0.5s;
+            z-index: 99999;
+            cursor: pointer;
+        }
+
+        .window.active {
+            right: 20px;
+            /* Slide in from the right */
+        }
+
+        .window-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #808080;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            /* Rotate the header vertically */
+            transform-origin: center;
+            /* Set rotation origin */
+            transition: font-size 0.5s, transform 0.5s;
+            /* Transition for font size and rotation */
+        }
+
+        .window.active .window-header {
+            /* Rotate and center the header */
+            transform-origin: left center;
+            color: #343a40;
+            /* Set rotation origin */
+        }
+
+        .window:not(.active) .window-header {
+            font-size: 18px;
+            transform: rotate(-90deg);
+
+            /* Smaller font size when not active */
+        }
+
+        .window-body {
+            font-size: 16px;
+            color: #343a40;
+            /* White text */
+            line-height: 1.6;
+            display: none;
+            /* Initially hidden */
+        }
+
+        /* Class to show sticky note body when active */
+        .active .window-body {
+            display: block;
+        }
+        </style>
+
+
+        <div class="window" id="window">
+            <div class="window-header">Tarief</div>
+            <div class="window-body">
+                <strong>Italiaanse meringue bedekking:</strong><br>
+                - €4,5 per persoon voor 8 personen of meer<br>
+                - €5 voor kleinere taarten<br><br>
+                <strong>Hazelnoot-knapperige chocolade bedekking:</strong><br>
+                - €6 per persoon
+            </div>
+
+
+        </div>
+
+        <script>
+        const windowElement = document.getElementById('window');
+
+
+        // Toggle active class on click
+        windowElement.addEventListener('click', () => {
+            windowElement.classList.toggle('active');
+        });
+        </script>
     </footer>
     <!-- Pied de page / Fin -->
 </div>

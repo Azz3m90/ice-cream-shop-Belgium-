@@ -338,6 +338,7 @@ include './header.php';
         document.getElementById('add-image-form').reset();
         previewContainer.innerHTML = ''; // Clear previous previews
         document.getElementById('addImageModal').style.display = 'none';
+		document.getElementById('add-image-form').reset();
     }
 
     // Function to handle file selection and preview

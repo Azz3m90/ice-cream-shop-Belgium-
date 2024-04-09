@@ -93,8 +93,7 @@ include 'header.php';
     <!-- Section -->
     <section class="section section-lg bg-dark">
         <div class="bg-video dark-overlay">
-            <img class="bg-image dark-overlay" src="./assets/img/Reservations/reservation.jpg"
-                alt="Professionals Background">
+            <img class="bg-image dark-overlay" src="./assets/img/Reservations/reservation.jpg" alt="Professionals Background">
         </div>
         <div class="container">
             <div class="row justify-content-center">
@@ -117,35 +116,31 @@ include 'header.php';
 
                                 <div class="form-group">
                                     <label for="last_name">Nom de Famille :</label>
-                                    <input type="text" id="last_name" name="last_name" class="form-control"
-                                        placeholder="Nom de Famille" required>
+                                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Nom de Famille" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="first_name">Prénom :</label>
-                                    <input type="text" id="first_name" name="first_name" class="form-control"
-                                        placeholder="Prénom" required>
+                                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Prénom" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Numéro de Téléphone :</label>
-                                    <input type="text" id="phone" name="phone" class="form-control"
-                                        placeholder="Numéro de Téléphone" required>
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Numéro de Téléphone" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail :</label>
-                                    <input type="email" id="email" name="email" class="form-control"
-                                        placeholder="E-mail" required>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="delivery_date">Date de Livraison :</label>
-                                    <input type="date" id="delivery_date" name="delivery_date" class="form-control"
-                                        placeholder="Date de Livraison" min="<?php echo date('Y-m-d'); ?>" required>
+                                    <input type="date" id="delivery_date" name="delivery_date" class="form-control" placeholder="Date de Livraison" min="<?php echo date('Y-m-d'); ?>" required>
                                     <div class="form-helper-text">Un minimum de 3 jours est requis pour toutes les
-                                        demandes soumises.</div>
+                                        demandes soumises.
+                                        <br />Pour toute demande urgente, merci de nous appeler.
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="persons">Nombre de Personnes :</label>
-                                    <input type="number" id="persons" name="persons" class="form-control"
-                                        placeholder="Nombre de Personnes (minimum 5 personnes)" min="5" required>
+                                    <input type="number" id="persons" name="persons" class="form-control" placeholder="Nombre de Personnes (minimum 5 personnes)" min="5" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Pour :</label>
@@ -157,8 +152,7 @@ include 'header.php';
                                 </div>
                                 <div class="form-group">
                                     <label for="age">Âge :</label>
-                                    <input type="number" id="age" name="age" class="form-control" placeholder="Âge"
-                                        required>
+                                    <input type="number" id="age" name="age" class="form-control" placeholder="Âge" required>
                                 </div>
 
                                 <div class="form-group" id="first_choice_out">
@@ -291,8 +285,7 @@ include 'header.php';
 
                                 <div class="form-group">
                                     <label for="comments">Commentaires :</label>
-                                    <textarea id="comments" name="comments" class="form-control"
-                                        placeholder="Commentaires"></textarea>
+                                    <textarea id="comments" name="comments" class="form-control" placeholder="Commentaires"></textarea>
                                 </div>
 
                                 <div class="form-group" id="file_out">
@@ -306,12 +299,9 @@ include 'header.php';
                                 <div class="row">
                                     <div class="form-group">
                                         <label><strong>Entrez le code Captcha :</strong></label><br />
-                                        <input type="text" id="captcha" name="captcha"
-                                            placeholder="Entrez le code Captcha" required>
-                                        <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>"
-                                                id="captcha_image"></p>
-                                        <p>Vous ne pouvez pas lire l'image ? <a href="#"
-                                                onclick="refreshCaptcha(event);">Cliquez ici</a> pour rafraîchir</p>
+                                        <input type="text" id="captcha" name="captcha" placeholder="Entrez le code Captcha" required>
+                                        <p><br /><img src="./php/booking/captcha.php?rand=<?php echo rand(); ?>" id="captcha_image"></p>
+                                        <p>Vous ne pouvez pas lire l'image ? <a href="#" onclick="refreshCaptcha(event);">Cliquez ici</a> pour rafraîchir</p>
                                     </div>
                                 </div>
 
@@ -321,9 +311,7 @@ include 'header.php';
                                 <span class="description">Faire une réservation !</span>
                                 <span class="success">
                                     <svg x="0px" y="0px" viewBox="0 0 32 32">
-                                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none"
-                                            stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"
-                                            stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
+                                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11" />
                                     </svg>
                                 </span>
                                 <span class="error">Réessayer...</span>
@@ -333,45 +321,45 @@ include 'header.php';
 
 
                         <style>
-                        .btn-success {
-                            background-color: #28a745;
-                            border-color: #28a745;
-                        }
+                            .btn-success {
+                                background-color: #28a745;
+                                border-color: #28a745;
+                            }
 
-                        .btn-danger {
-                            background-color: #dc3545;
-                            border-color: #dc3545;
-                        }
+                            .btn-danger {
+                                background-color: #dc3545;
+                                border-color: #dc3545;
+                            }
 
-                        #confirmationModal {
-                            display: none;
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: white;
-                            padding: 20px;
-                            border-radius: 10px;
-                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                            z-index: 1000;
-                        }
+                            #confirmationModal {
+                                display: none;
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                z-index: 1000;
+                            }
 
-                        #confirmationModal p {
-                            margin-bottom: 20px;
-                        }
+                            #confirmationModal p {
+                                margin-bottom: 20px;
+                            }
 
-                        #confirmationModal button {
-                            padding: 10px;
-                            background-color: #007bff;
-                            color: white;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
-                        }
+                            #confirmationModal button {
+                                padding: 10px;
+                                background-color: #007bff;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
 
-                        .invalid-input {
-                            border: 1px solid red;
-                        }
+                            .invalid-input {
+                                border: 1px solid red;
+                            }
                         </style>
 
                         <!-- Simple confirmation modal -->
@@ -383,177 +371,177 @@ include 'header.php';
                         </div>
 
                         <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                            const form = document.getElementById("booking-form");
-                            const submitButton = form.querySelector(".btn-submit");
-                            const captchaInput = form.querySelector('input[name="captcha"]');
-                            const captchaImage = document.getElementById('captcha_image');
-                            const confirmationModal = document.getElementById('confirmationModal');
-                            const modalMessage = document.getElementById('modalMessage');
-                            var personsInput = document.getElementById('persons');
-                            var fileOut = document.getElementById('file_out');
-                            var fileHelper = document.getElementById('file_helper');
-                            fileOut.style.display = 'none';
-                            fileHelper.style.display = 'none';
-                            document.getElementById('file').removeAttribute('required');
-                            personsInput.addEventListener('change', function() {
-                                var persons = parseInt(personsInput.value);
-                                if (persons >= 12) {
-                                    fileOut.style.display = 'block';
-                                    fileHelper.style.display = 'block';
-                                    document.getElementById('file').setAttribute('required', true);
-                                } else {
-                                    fileOut.style.display = 'none';
-                                    fileHelper.style.display = 'none';
-                                    document.getElementById('file').removeAttribute('required');
-                                }
-                            });
-                            form.addEventListener("submit", function(event) {
-                                event.preventDefault();
-                                submitForm();
-                            });
-
-                            captchaImage.addEventListener("click", function() {
-                                refreshCaptcha();
-                            });
-
-                            function getCaptcha() {
-                                axios.get('./php/booking/get-captcha.php')
-                                    .then(function(response) {
-                                        console.log('Captcha:', response.data.captcha);
-                                    })
-                                    .catch(function(error) {
-                                        console.error('Erreur lors de la récupération du captcha:', error);
-                                    });
-                            }
-
-                            // Appelez cette fonction chaque fois que vous voulez obtenir la valeur du captcha
-                            getCaptcha();
-
-                            function submitForm() {
-
-                                const captcha = captchaInput.value;
-                                const formData = new FormData(form);
-                                formData.append('captcha', captcha);
-
-                                // Valider l'e-mail
-                                const emailInput = form.querySelector('input[name="email"]');
-                                const email = emailInput.value;
-                                if (!validateEmail(email)) {
-                                    openModal('Veuillez saisir une adresse e-mail valide.');
-                                    emailInput.style.border = "1px solid red";
-                                    return false;
-                                }
-
-                                // Valider chaque champ d'entrée requis
-                                const inputs = form.querySelectorAll("[required]");
-                                let isValid = true;
-                                inputs.forEach(function(input) {
-                                    if (input.value.trim() === "") {
-                                        isValid = false;
-                                        // Ajouter une bordure rouge aux champs requis vides
-                                        input.style.border = "1px solid red";
+                            document.addEventListener("DOMContentLoaded", function() {
+                                const form = document.getElementById("booking-form");
+                                const submitButton = form.querySelector(".btn-submit");
+                                const captchaInput = form.querySelector('input[name="captcha"]');
+                                const captchaImage = document.getElementById('captcha_image');
+                                const confirmationModal = document.getElementById('confirmationModal');
+                                const modalMessage = document.getElementById('modalMessage');
+                                var personsInput = document.getElementById('persons');
+                                var fileOut = document.getElementById('file_out');
+                                var fileHelper = document.getElementById('file_helper');
+                                fileOut.style.display = 'none';
+                                fileHelper.style.display = 'none';
+                                document.getElementById('file').removeAttribute('required');
+                                personsInput.addEventListener('change', function() {
+                                    var persons = parseInt(personsInput.value);
+                                    if (persons >= 12) {
+                                        fileOut.style.display = 'block';
+                                        fileHelper.style.display = 'block';
+                                        document.getElementById('file').setAttribute('required', true);
                                     } else {
-                                        // Réinitialiser la bordure au style par défaut
-                                        input.style.border = "";
+                                        fileOut.style.display = 'none';
+                                        fileHelper.style.display = 'none';
+                                        document.getElementById('file').removeAttribute('required');
                                     }
                                 });
+                                form.addEventListener("submit", function(event) {
+                                    event.preventDefault();
+                                    submitForm();
+                                });
 
-                                if (!isValid) {
-                                    // Si un champ requis est vide, afficher un message d'erreur et empêcher l'envoi du formulaire
-                                    openModal("Veuillez remplir tous les champs requis.");
-                                    return false;
+                                captchaImage.addEventListener("click", function() {
+                                    refreshCaptcha();
+                                });
+
+                                function getCaptcha() {
+                                    axios.get('./php/booking/get-captcha.php')
+                                        .then(function(response) {
+                                            console.log('Captcha:', response.data.captcha);
+                                        })
+                                        .catch(function(error) {
+                                            console.error('Erreur lors de la récupération du captcha:', error);
+                                        });
                                 }
 
-                                axios.post('./php/booking/validate-captcha.php', formData)
-                                    .then(response => {
-                                        if (response.data.valid) {
-                                            console.log(formData);
-                                            // Utilisez AJAX pour soumettre les données du formulaire
-                                            submitButton.innerHTML =
-                                                '<span class="description">Soumission en cours...</span>';
-                                            axios.post('./php/booking/booking-reservations.php',
-                                                    formData)
-                                                .then(response => {
-                                                    console.log(
-                                                        'Réponse de la soumission du formulaire:',
-                                                        response
-                                                        .data);
-                                                    if (response.data === 'success success') {
-                                                        submitButton.innerHTML =
-                                                            '<span class="description">Réservation réussie!</span>';
-                                                        submitButton.classList.remove('btn-secondary');
-                                                        submitButton.classList.remove('btn-submit');
-                                                        submitButton.classList.add('btn-success');
-                                                        submitButton.setAttribute('disabled',
-                                                            'disabled');
-                                                    } else {
+                                // Appelez cette fonction chaque fois que vous voulez obtenir la valeur du captcha
+                                getCaptcha();
+
+                                function submitForm() {
+
+                                    const captcha = captchaInput.value;
+                                    const formData = new FormData(form);
+                                    formData.append('captcha', captcha);
+
+                                    // Valider l'e-mail
+                                    const emailInput = form.querySelector('input[name="email"]');
+                                    const email = emailInput.value;
+                                    if (!validateEmail(email)) {
+                                        openModal('Veuillez saisir une adresse e-mail valide.');
+                                        emailInput.style.border = "1px solid red";
+                                        return false;
+                                    }
+
+                                    // Valider chaque champ d'entrée requis
+                                    const inputs = form.querySelectorAll("[required]");
+                                    let isValid = true;
+                                    inputs.forEach(function(input) {
+                                        if (input.value.trim() === "") {
+                                            isValid = false;
+                                            // Ajouter une bordure rouge aux champs requis vides
+                                            input.style.border = "1px solid red";
+                                        } else {
+                                            // Réinitialiser la bordure au style par défaut
+                                            input.style.border = "";
+                                        }
+                                    });
+
+                                    if (!isValid) {
+                                        // Si un champ requis est vide, afficher un message d'erreur et empêcher l'envoi du formulaire
+                                        openModal("Veuillez remplir tous les champs requis.");
+                                        return false;
+                                    }
+
+                                    axios.post('./php/booking/validate-captcha.php', formData)
+                                        .then(response => {
+                                            if (response.data.valid) {
+                                                console.log(formData);
+                                                // Utilisez AJAX pour soumettre les données du formulaire
+                                                submitButton.innerHTML =
+                                                    '<span class="description">Soumission en cours...</span>';
+                                                axios.post('./php/booking/booking-reservations.php',
+                                                        formData)
+                                                    .then(response => {
+                                                        console.log(
+                                                            'Réponse de la soumission du formulaire:',
+                                                            response
+                                                            .data);
+                                                        if (response.data === 'success success') {
+                                                            submitButton.innerHTML =
+                                                                '<span class="description">Réservation réussie!</span>';
+                                                            submitButton.classList.remove('btn-secondary');
+                                                            submitButton.classList.remove('btn-submit');
+                                                            submitButton.classList.add('btn-success');
+                                                            submitButton.setAttribute('disabled',
+                                                                'disabled');
+                                                        } else {
+                                                            openModal(
+                                                                'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
+                                                            );
+                                                        }
+                                                    })
+                                                    .catch(error => {
+                                                        console.error(
+                                                            'Erreur lors de la soumission du formulaire:',
+                                                            error);
                                                         openModal(
                                                             'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
                                                         );
-                                                    }
-                                                })
-                                                .catch(error => {
-                                                    console.error(
-                                                        'Erreur lors de la soumission du formulaire:',
-                                                        error);
-                                                    openModal(
-                                                        'Une erreur est survenue lors de la soumission du formulaire. Veuillez réessayer.'
-                                                    );
-                                                });
-                                        } else {
-                                            openModal(
-                                                'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.'
-                                            );
-                                            refreshCaptcha();
-                                        }
+                                                    });
+                                            } else {
+                                                openModal(
+                                                    'Le code CAPTCHA saisi ne correspond pas. Veuillez réessayer.'
+                                                );
+                                                refreshCaptcha();
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Erreur de validation du CAPTCHA:', error);
+                                        });
+                                }
+
+                            });
+
+                            function refreshCaptcha(event) {
+                                if (event) {
+                                    event.preventDefault();
+                                }
+
+                                var img = document.getElementById('captcha_image');
+
+                                axios.get('./php/booking/captcha.php', {
+                                        params: {
+                                            rand: Math.random() * 1000
+                                        },
+                                        responseType: 'arraybuffer'
                                     })
-                                    .catch(error => {
-                                        console.error('Erreur de validation du CAPTCHA:', error);
+                                    .then(function(response) {
+                                        var blob = new Blob([response.data], {
+                                            type: 'image/jpeg'
+                                        });
+                                        var imgUrl = URL.createObjectURL(blob);
+                                        img.src = imgUrl;
+                                        getCaptcha();
+                                    })
+                                    .catch(function(error) {
+                                        console.error('Erreur lors de l\'actualisation du CAPTCHA: ', error);
                                     });
                             }
 
-                        });
-
-                        function refreshCaptcha(event) {
-                            if (event) {
-                                event.preventDefault();
+                            function openModal(message) {
+                                modalMessage.innerText = message;
+                                confirmationModal.style.display = 'block';
                             }
 
-                            var img = document.getElementById('captcha_image');
+                            function closeModal() {
+                                document.getElementById('confirmationModal').style.display = 'none';
+                            }
 
-                            axios.get('./php/booking/captcha.php', {
-                                    params: {
-                                        rand: Math.random() * 1000
-                                    },
-                                    responseType: 'arraybuffer'
-                                })
-                                .then(function(response) {
-                                    var blob = new Blob([response.data], {
-                                        type: 'image/jpeg'
-                                    });
-                                    var imgUrl = URL.createObjectURL(blob);
-                                    img.src = imgUrl;
-                                    getCaptcha();
-                                })
-                                .catch(function(error) {
-                                    console.error('Erreur lors de l\'actualisation du CAPTCHA: ', error);
-                                });
-                        }
-
-                        function openModal(message) {
-                            modalMessage.innerText = message;
-                            confirmationModal.style.display = 'block';
-                        }
-
-                        function closeModal() {
-                            document.getElementById('confirmationModal').style.display = 'none';
-                        }
-
-                        function validateEmail(email) {
-                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            return emailRegex.test(email);
-                        }
+                            function validateEmail(email) {
+                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                return emailRegex.test(email);
+                            }
                         </script>
 
 
@@ -575,47 +563,46 @@ include 'header.php';
             <div class="footer-first-row row">
                 <div class="col-lg-3 text-center">
                     <a href="index.php">
-                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale"
-                            style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
+                        <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88" class="mt-5 mb-5">
                     </a>
                 </div>
                 <style>
-                .styled-table {
-                    --background-color: #343a40;
-                    /* Couleur de fond sombre */
-                    color: #ffffff;
-                    /* Couleur du texte */
-                    border-radius: 10px;
-                    /* Coins arrondis */
-                    margin-top: 20px;
-                    /* Ajouter un espace en haut */
-                }
+                    .styled-table {
+                        --background-color: #343a40;
+                        /* Couleur de fond sombre */
+                        color: #ffffff;
+                        /* Couleur du texte */
+                        border-radius: 10px;
+                        /* Coins arrondis */
+                        margin-top: 20px;
+                        /* Ajouter un espace en haut */
+                    }
 
-                .styled-table h5 {
-                    color: #007bff;
-                    /* Couleur thème bleu */
-                }
+                    .styled-table h5 {
+                        color: #007bff;
+                        /* Couleur thème bleu */
+                    }
 
-                .styled-table td.title {
-                    --font-weight: bold;
-                    color: #ffffff;
-                    /* Couleur du texte */
-                }
+                    .styled-table td.title {
+                        --font-weight: bold;
+                        color: #ffffff;
+                        /* Couleur du texte */
+                    }
 
-                .styled-table td.content {
-                    color: #a8b2b7;
-                    /* Couleur de texte plus claire */
-                }
+                    .styled-table td.content {
+                        color: #a8b2b7;
+                        /* Couleur de texte plus claire */
+                    }
 
-                .styled-table a {
-                    color: #ffffff;
-                    /* Couleur du lien */
-                }
+                    .styled-table a {
+                        color: #ffffff;
+                        /* Couleur du lien */
+                    }
 
-                .styled-table a:hover {
-                    text-decoration: none;
-                    /* Supprimer le soulignement au survol */
-                }
+                    .styled-table a:hover {
+                        text-decoration: none;
+                        /* Supprimer le soulignement au survol */
+                    }
                 </style>
 
                 <div class="col-lg-4 col-md-6 styled-table">
@@ -655,8 +642,7 @@ include 'header.php';
                     </table>
 
                     <h5 class="text-muted mb-3 mt-4">Médias sociaux</h5>
-                    <a href="https://www.facebook.com/gelatonaturaletarcienne"
-                        class="icon icon-social icon-circle icon-sm icon-facebook">
+                    <a href="https://www.facebook.com/gelatonaturaletarcienne" class="icon icon-social icon-circle icon-sm icon-facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="#" class="icon icon-social icon-circle icon-sm icon-google">
@@ -676,7 +662,7 @@ include 'header.php';
             <!-- Deuxième rangée du pied de page -->
             <div class="footer-second-row">
                 <span class="text-muted">Personnalisé par FAST CAISSE <script>
-                    document.write(new Date().getFullYear())
+                        document.write(new Date().getFullYear())
                     </script>©. </span>
             </div>
         </div>
@@ -684,6 +670,94 @@ include 'header.php';
         <button id="back-to-top" class="back-to-top">
             <i class="ti ti-angle-up"></i>
         </button>
+        <style>
+            .window {
+                position: fixed;
+                top: 40%;
+                right: 20px;
+                /* Initially hidden */
+                width: auto;
+                max-width: 300px;
+                background: linear-gradient(to right, #009246 0%, #009246 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ce2b37 66.66%, #ce2b37 100%);
+                /* Italian flag gradient */
+                border: 2px solid #ffffff;
+                /* White border */
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                transition: right 0.5s;
+                z-index: 99999;
+                cursor: pointer;
+            }
+
+            .window.active {
+                right: 20px;
+                /* Slide in from the right */
+            }
+
+            .window-header {
+                font-size: 18px;
+                font-weight: bold;
+                color: #808080;
+                margin-bottom: 10px;
+                white-space: nowrap;
+                /* Rotate the header vertically */
+                transform-origin: center;
+                /* Set rotation origin */
+                transition: font-size 0.5s, transform 0.5s;
+                /* Transition for font size and rotation */
+            }
+
+            .window.active .window-header {
+                /* Rotate and center the header */
+                transform-origin: left center;
+                color: #343a40;
+                /* Set rotation origin */
+            }
+
+            .window:not(.active) .window-header {
+                font-size: 18px;
+                transform: rotate(-90deg);
+
+                /* Smaller font size when not active */
+            }
+
+            .window-body {
+                font-size: 16px;
+                color: #343a40;
+                /* White text */
+                line-height: 1.6;
+                display: none;
+                /* Initially hidden */
+            }
+
+            /* Class to show sticky note body when active */
+            .active .window-body {
+                display: block;
+            }
+        </style>
+
+        <div class="window" id="window">
+            <div class="window-header">Prix </div>
+            <div class="window-body">
+                <strong>Couverture meringue à italienne:</strong><br>
+                - 4,5 € par personne à partir de 8 personnes<br>
+                - 5 € pour des gâteaux plus petits<br><br>
+                <strong>Couverture chocolat croquant noisette:</strong><br>
+                - 6 € par personne
+            </div>
+
+        </div>
+
+        <script>
+            const windowElement = document.getElementById('window');
+
+
+            // Toggle active class on click
+            windowElement.addEventListener('click', () => {
+                windowElement.classList.toggle('active');
+            });
+        </script>
     </footer>
     <!-- Pied de page / Fin -->
 </div>
@@ -693,8 +767,7 @@ include 'header.php';
 <nav id="panel-mobile">
     <div class="module module-logo bg-dark dark">
         <a href="#">
-            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;"
-                width="88">
+            <img src="assets/img/gelatonaturale.svg" alt="gelatonaturale" style="width: 200px;height: 100px;" width="88">
         </a>
         <button class="close" data-toggle="panel-mobile">
             <i class="ti ti-close"></i>
@@ -703,8 +776,7 @@ include 'header.php';
     <nav class="module module-navigation"></nav>
     <!--language selector-->
     <div class="dropdown col-md-2 right mt-5">
-        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
             <i class="flag flag-france m-0"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="Dropdown">
